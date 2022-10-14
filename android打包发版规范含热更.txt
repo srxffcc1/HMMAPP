@@ -1,0 +1,13 @@
+1.备份基准包
+打渠道包发版前 请删除掉 mod-app\build  确保 tinker-support.gradle 里的 
+tinkerId = rootProject.ext.versionName+"-base" 为base基准包 设置
+然后再执行RunChanels.bat 打渠道包 
+打完渠道包 需要对基准包进行备份 mod-app\build\bakApk\里的打完渠道包出现的最新的就是基准包备份文件 mod-app-时间串 上传到 \\192.168.10.105\公共\android基准包备份 下 对应好 
+2.生成补丁
+打开已经修改好的项目 将基准包复制黏贴到 mod-app\build\bakApk下 
+删除 mod-app\build\outputs
+修改 tinker-support.gradle 里的 
+tinkerId = rootProject.ext.versionName+".N-patch" 为base基准包 设置 N为补丁版本
+使用 buildTinkerPathRelease 打出补丁包 
+mod-app\build\outputs\patch\release\mod-app-release-patch_signed_7zip.apk 
+然后发布补丁即可 

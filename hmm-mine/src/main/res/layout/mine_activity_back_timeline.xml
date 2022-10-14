@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource,SpUsage">
+
+    <TextView
+        android:id="@+id/tvTopLine"
+        android:layout_width="0.5dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true"
+        android:background="#999" />
+    <TextView
+        android:id="@+id/tvDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTopLine"
+        app:layout_constraintLeft_toLeftOf="@id/tvTopLine"
+        app:layout_constraintRight_toRightOf="@id/tvTopLine"
+        android:background="@drawable/timelline_dot_green" />
+    <TextView
+        android:id="@+id/tvBottomLine"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDot"
+        app:layout_constraintLeft_toLeftOf="@id/tvDot"
+        app:layout_constraintRight_toRightOf="@id/tvDot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#999" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="退款申请已提交"
+        android:layout_marginLeft="15dp"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvDot"
+        app:layout_constraintBottom_toBottomOf="@id/tvDot"
+        app:layout_constraintLeft_toRightOf="@id/tvDot"
+        />
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        tools:text="微信正将1028.12元入账至您的微信账户，您可以打开微信，依次点击我的->钱包->支付中心（页面右上角）->账单核实，预计最晚2019年11月29日完成入账，具体入账进度请使用交易号，拨打微信客服95017查询"
+        android:layout_marginTop="5dp"
+        android:textColor="#ff9596a4"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2019-11-12 16:56:09"
+        android:layout_marginTop="5dp"
+        android:textColor="#ff9596a4"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        android:textSize="11sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

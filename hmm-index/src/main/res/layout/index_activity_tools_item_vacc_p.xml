@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_marginTop="10dp"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:id="@+id/vaccDate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020年08月21日 1.5岁"
+        android:textColor="#ffff6266"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/vacTip"
+        android:visibility="gone"
+        android:background="@drawable/shape_tools_vacc_rr"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="4dp"
+        android:layout_marginLeft="15dp"
+        android:paddingRight="4dp"
+        app:layout_constraintLeft_toRightOf="@+id/vaccDate"
+        app:layout_constraintTop_toTopOf="@+id/vaccDate"
+        app:layout_constraintBottom_toBottomOf="@id/vaccDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本次"
+        android:textColor="#ffffffff"
+        android:textSize="13sp"
+        />
+    <LinearLayout
+        android:id="@+id/vaccS"
+        app:layout_constraintTop_toBottomOf="@id/vaccDate"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sll_content"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginLeft="12dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="6dp"
+    app:shape_radius="16dp">
+
+    <!--  后续加入  android:layout_marginLeft="12dp" -->
+
+    <ImageView
+        android:id="@+id/iv_tip_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/item_ic_hottip_post_left_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tipNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/din_bold"
+        android:text="01"
+        android:textColor="#9596A4"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tipName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/din_medium"
+        android:paddingLeft="8dp"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        tools:text="婆婆要不要带孩子" />
+</com.example.lib_ShapeView.layout.ShapeLinearLayout>

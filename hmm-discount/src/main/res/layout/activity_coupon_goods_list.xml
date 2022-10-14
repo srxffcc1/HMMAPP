@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F9F9">
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_public_coupon_top_bg"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/status_2020"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@mipmap/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/seachLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_search_loc_country"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_back"
+                app:layout_constraintRight_toLeftOf="@+id/listImg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/serarchKeyWord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/service_ic_search"
+                    android:drawablePadding="11dp"
+                    android:hint="美素佳儿"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="#ff222222"
+                    android:textColorHint="#ff9596a4"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/clearEdit"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/clear_edit" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_categoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/listImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="17dp"
+                android:src="@drawable/coupon_goods_list_portrait"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/seachLL"
+                app:layout_constraintRight_toLeftOf="@+id/shareImg"
+                app:layout_constraintTop_toTopOf="parent"  />
+            <ImageView
+                android:id="@+id/shareImg"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/index_ic_share2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+               />
+
+            <RelativeLayout
+                android:id="@+id/shop_cart_rel"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/top_shopCatImg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/service_sort_top_shopcat_white" />
+
+                <TextView
+                    android:id="@+id/shop_cart_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/service_shopping_cart_white"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#F02846"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_discount_list_top_lab_bg">
+
+            <TextView
+                android:id="@+id/topLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_discount_list_top_lab"
+                android:padding="3dp"
+                android:text="优惠券"
+                android:textColor="#ffffffff"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/topLablePre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="满300减30元"
+                android:textColor="#ff7d5626"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/topLable"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/goodsTimeLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/kickFinish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/din_medium"
+                    android:text="距结束"
+                    android:textColor="#7D5626"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/goodsTimeLLS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/kickDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/shape_group_org_small"
+                        android:fontFamily="@font/din_medium"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="23"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:text="天"
+                        android:textColor="#FF6266"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/kickHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/shape_group_org_small"
+                        android:fontFamily="@font/din_medium"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="23"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="#FC2347"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/kickMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/shape_group_org_small"
+                        android:fontFamily="@font/din_medium"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="23"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textColor="#FC2347"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/kickSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/shape_group_org_small"
+                        android:fontFamily="@font/din_medium"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="23"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabLL"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/shape_dialog"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sort_liner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_default"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="11dp"
+                            android:text="综合"
+                            android:textColor="#222222"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_sales_volume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="11dp"
+                            android:text="销量"
+                            android:textColor="#444444"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txt_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="11dp"
+                            android:text="价格"
+                            android:textColor="#444444"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/price_up_img"
+                                android:layout_width="7dp"
+                                android:layout_height="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:rotation="180"
+                                android:src="@mipmap/service_price_sort_red" />
+
+
+                            <ImageView
+                                android:id="@+id/price_down_img"
+                                android:layout_width="7dp"
+                                android:layout_height="4dp"
+                                android:layout_marginTop="2dp"
+                                android:src="@mipmap/service_price_sort_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F5F5F9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

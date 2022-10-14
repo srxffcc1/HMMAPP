@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.servicecenter">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application>
+
+        <activity android:name=".activity.ServiceSeach" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ServiceGoodsDetail" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ServiceSort" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.NearbyStores"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ProvinceCity"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.OrderList"  android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".activity.OrderDetialActivity"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.OrderBack"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.OrderBackDetial"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.SubmitBack"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ServiceSortGoods" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.HotGoods" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.OrderZxing" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.AddReceivingAddress" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.AddressSearch"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.AddressList"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.AddressSearchList"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+
+        <activity android:name=".activity.ServiceGoodsBasket"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ServiceGoodsOrderFinish"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.CheckOutCounterSevCenterActivity"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ServiceGoodsSet"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.ServiceGoodsService"  android:screenOrientation="portrait" android:launchMode="singleTop"/>
+
+
+
+        <activity android:name=".activity.ServiceGoodsOrderFinalCopy" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.OrderBackSelectGoods" android:screenOrientation="portrait"/>
+
+        <!-- 预约结果详情页 -->
+        <activity android:name=".activity.AppointmentResultActivity" android:screenOrientation="portrait"/>
+        <!-- 预约服务 -->
+        <activity android:name=".activity.AppointmentMainActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <!-- 我的预约 -->
+        <activity android:name=".activity.AppointmentListActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <!-- 预约服务（商品详情页) -->
+        <activity android:name=".activity.AppointmentDetailActivity" android:screenOrientation="portrait"/>
+        <!-- 预约支付页面 -->
+        <activity android:name=".activity.AppointmentPayActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <!-- 预约支付结果页 -->
+        <activity android:name=".activity.AppointmentPayResultActivity" android:screenOrientation="portrait"/>
+        <!-- 所有门店 -->
+        <activity android:name=".activity.AppointmentShopListActivity" android:screenOrientation="portrait"/>
+        <!-- 签到打卡 -->
+        <activity android:name=".activity.PointsSignInActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ServiceGoodsBasketDiscountActivity" />
+        <activity android:name=".activity.ServiceGoodsBasketDiscountSingleActivity" />
+        <activity android:name=".activity.CouponNeedGetPeopleDetailActivity" />
+    </application>
+
+</manifest>

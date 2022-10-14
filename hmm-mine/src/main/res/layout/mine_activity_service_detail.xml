@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ServiceDetailActivity"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back_img_src="@drawable/ic_back_white"
+        app:bg_color="@color/colorTransparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:data_err_drawable="@drawable/status_data_err_light"
+        app:empty_drawable="@drawable/status_empty_normal_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:net_err_drawable="@drawable/status_net_err_light"
+        app:retry_txt_bg="@drawable/selector_retry_light"
+        app:retry_txt_color="@color/colorWhite"
+        app:txt_color="@color/colorWhite"
+        tools:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_bg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/mine_service_detail_bg"
+                app:layout_constraintBottom_toBottomOf="@id/tv_reserve_date"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.healthy.library.widget.DrawableTextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="47dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="47dp"
+                android:drawableStart="@drawable/mine_ic_store"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:textColor="#ff222222"
+                android:textSize="13dp"
+                app:drawable_size="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view_bg"
+                tools:text="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/tv_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:textColor="#ff222222"
+                android:textSize="21dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_shop_name"
+                app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+                tools:text="调经暖宫 止痛祛寒"/>
+
+            <TextView
+                android:id="@+id/tv_reserve_date_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/mine_service_reserve_date"
+                android:textColor="#ff000000"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_service"/>
+
+            <TextView
+                android:id="@+id/tv_reserve_date"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:fontFamily="@font/din_medium"
+                android:gravity="end"
+                android:textColor="#ff222222"
+                android:textSize="18dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_reserve_date_pre"
+                app:layout_constraintEnd_toEndOf="@id/tv_service"
+                app:layout_constraintStart_toEndOf="@id/tv_reserve_date_pre"
+                tools:text="2019-05-29 15:47:06"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="21dp"
+        app:shape_radius="6dp"
+        app:shape_solidColor="#F7F7FA">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_expert_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_expert_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="您好医生，我在哺乳期患上了感冒咳嗽，想问一下怎么办？" />
+
+        <com.healthy.library.widget.RoundedImageView
+            android:id="@+id/iv_expert_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tx06"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_expert_title"
+            app:riv_corner_radius="8dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_expert_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="肖群英   住院医师"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_expert_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_expert_GoodAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="擅长：产后女性健康调理、中医理疗、妇…"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/tv_expert_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_expert_name" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+</LinearLayout>

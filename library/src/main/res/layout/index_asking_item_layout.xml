@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_city_white"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/index_ask_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:text="大家都在问"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginRight="14dp"
+        android:id="@+id/iv_asking_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/index_ask_arrow"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/questionAll"
+        app:layout_constraintTop_toTopOf="@id/iv_asking_arrow"
+        app:layout_constraintRight_toLeftOf="@id/iv_asking_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/iv_asking_arrow"
+        android:layout_marginRight="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我也要问"
+        android:textColor="#3E7EFF"
+        android:textSize="12sp"/>
+
+    <com.healthy.library.widget.AutoPollRecyclerView
+        android:paddingHorizontal="10dp"
+        android:id="@+id/banner_SpeedyConsultation"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <com.example.lib_ShapeView.view.ShapeView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        app:layout_constraintTop_toTopOf="@id/banner_SpeedyConsultation"
+        app:shape_angle="80"
+        app:shape_startColor="#CCFFFFFF"
+        app:shape_endColor="#00FFFFFF"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:id="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@id/banner_SpeedyConsultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    <com.healthy.library.banner.ViewPager2Banner-->
+<!--        android:id="@+id/banner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingHorizontal="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/banner_SpeedyConsultation"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <com.healthy.library.banner.UIndicator
+        app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerView"
+        app:layout_constraintRight_toRightOf="@id/recyclerView"
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        app:circle_rect_itemHeight="5dp"
+        app:circle_rect_itemWidth="12dp"
+        app:circle_rect_radius="3dp"
+        app:rect_rect_corner="3dp"
+        app:circle_rect_corner="3dp"
+        app:rect_rect_itemWidth="6dp"
+        app:normal_color="#33000000"
+        app:selected_color="#3E7EFF"
+        app:spacing="4dp"
+        app:style="circle_rect" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

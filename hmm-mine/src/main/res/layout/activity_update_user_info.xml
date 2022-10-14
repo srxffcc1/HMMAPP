@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:status_init="content"
+    tools:ignore="ResourceName">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <com.healthy.library.widget.TopBar
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_1_1_default"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:show_moss="false" />
+
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="54dp"
+            android:onClick="updatePic"
+            android:scaleType="centerCrop"
+            android:src="@drawable/update_info_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+        <com.healthy.library.widget.NewInputView
+            android:id="@+id/widget_input_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+            app:newInput_isEdit="true"
+            app:newInput_right_hint="请填写昵称"
+            app:newInput_title="昵称" />
+
+        <com.healthy.library.widget.NewInputView
+            android:id="@+id/widget_input_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="30dp"
+            android:onClick="updateBirthday"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/widget_input_nickName"
+            app:newInput_right="请选择生日日期"
+            app:newInput_title="生日" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/BtnStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:onClick="saveUserInfo"
+            android:text="保存"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.healthy.library.widget.StatusLayout>

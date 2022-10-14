@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clAdapterBottom"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:clickable="true"
+    android:elevation="@dimen/dp_10"
+    >
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_faq_bottom_bg"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/faq_prefix_ask"
+        android:textColor="#ffffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintStart_toStartOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+    <LinearLayout
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:paddingLeft="5dp"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1px"
+            android:layout_marginEnd="1px"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_faq_close_q"
+            app:layout_constraintEnd_toEndOf="@id/view_bottom"
+            app:layout_constraintTop_toTopOf="@id/view_bottom" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvAskExpert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_ask_expert"
+        android:paddingStart="13dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="6dp"
+        android:text="@string/faq_ask_expert"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toStartOf="@id/ivClose"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+
+    <TextView
+        android:id="@+id/tvReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_reward"
+        android:paddingStart="13dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="6dp"
+        android:text="@string/faq_reward"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toStartOf="@id/tvAskExpert"
+        app:layout_constraintTop_toTopOf="@id/view_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

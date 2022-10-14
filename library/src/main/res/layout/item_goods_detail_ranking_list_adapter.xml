@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    app:shape_radius="8dp"
+    app:shape_solidColor="@color/color_fa3c5a">
+
+
+    <LinearLayout
+        android:id="@+id/shareMisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="12dp"
+        android:elevation="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:text="活动攻略"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_gift_rank_question_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/goods_detail_ranking_list_top_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.healthy.library.widget.AutoClickImageView
+        android:id="@+id/autoImg"
+        android:layout_width="280dp"
+        android:layout_height="107dp"
+        android:elevation="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/goods_detail_ranking_list_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingTop="40dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radius="12dp"
+        app:shape_solidColor="#FDF7EE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="排名"
+                android:textColor="#ff761828"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="用户"
+                android:textColor="#ff761828"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="邀请人数"
+                android:textColor="#ff761828"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="奖励"
+                android:textColor="#ff761828"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rankingLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <!--            <include layout="@layout/item_goods_ranking_list_layout"/>-->
+        </LinearLayout>
+
+        <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+            android:id="@+id/profitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="15dp"
+            android:elevation="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="4dp"
+            app:shape_solidColor="#FFE0C5"
+
+            tools:ignore="MissingClass">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/share_gift_rank_dollar_icon"
+                android:drawableEnd="@drawable/share_gift_rank_more_icon"
+                android:drawablePadding="4dp"
+                android:text="我的收益"
+                android:textColor="#ff761828"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="·  分享下单 即送大礼包  ·"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentLayout" />
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

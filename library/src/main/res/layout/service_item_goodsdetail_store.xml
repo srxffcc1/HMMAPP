@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_mall_goods_ol_vid_float"
+    android:orientation="vertical"
+    android:padding="14dp"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storeTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/storeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="爱婴金摇篮天街店"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:drawable="@drawable/goodsorderstore"
+            app:drawableHeight="21dp"
+            app:drawableWidth="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/storeTip"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/storeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:drawablePadding="3dp"
+            android:text="营业资质"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:drawable="@drawable/goodsorderstoreright"
+            app:drawableHeight="18dp"
+            app:drawableWidth="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/storeMore"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/storeMore"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_more_pin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/storeTop">
+
+        <LinearLayout
+            android:id="@+id/layout_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/shape_divider_img"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle|end" />
+
+    </HorizontalScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/locLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/scroll_img">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/locDetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="1dp"
+            android:text="苏州市高新区滨河路299号乐嘉汇大厦1栋16F"
+            android:textColor="#ff444444"
+            android:textSize="11sp"
+            app:drawable="@drawable/ic_sub_left_loc"
+            app:drawableHeight="14dp"
+            app:drawableWidth="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/right_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/right_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/locMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="3.2km"
+                android:textColor="#ff444444"
+                android:textSize="11sp"
+                app:drawable="@drawable/ic_more_pin"
+                app:drawableHeight="15dp"
+                app:drawableWidth="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:position="3" />
+
+            <com.healthy.library.widget.ImageTextView
+                android:visibility="gone"
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:text="电话"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                app:drawable="@drawable/appointment_phone"
+                app:drawableHeight="16dp"
+                app:drawableWidth="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:position="2" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/tabs"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="18dp"
+                android:background="#d8d8d8"
+                app:layout_constraintBottom_toBottomOf="@id/phone"
+                app:layout_constraintRight_toLeftOf="@id/phone"
+                app:layout_constraintTop_toTopOf="@id/phone" />
+
+            <!--android:layout_marginRight="21dp" -->
+            <com.healthy.library.widget.ImageTextView
+                android:visibility="gone"
+                android:id="@+id/navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="2dp"
+                android:text="导航"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                app:drawable="@drawable/appointment_navigation"
+                app:drawableHeight="16dp"
+                app:drawableWidth="16dp"
+                app:layout_constraintRight_toLeftOf="@+id/tabs"
+                app:layout_constraintTop_toTopOf="@id/phone"
+                app:position="2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

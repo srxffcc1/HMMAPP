@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imgLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/imgLLTopT"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="6dp"
+            android:padding="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="本商品为本地商家提供销售和售后服务"
+            android:background="@drawable/shape_mall_goods_ol_vid_card"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#fffa3c5a"
+            android:textSize="12sp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgLLTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/imgLLTopT"
+            android:paddingRight="15dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="-  继续拖动查看图文详情  -"
+                android:textColor="#ff666666"
+                android:textSize="12sp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/videoLL"
+            app:layout_constraintTop_toBottomOf="@id/imgLLTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<!--            <include layout="@layout/item_order_detial_video"/>-->
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/imgLLDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/videoLL"
+            tools:ignore="WebViewLayout" />
+        <LinearLayout
+            android:id="@+id/picLL"
+            app:layout_constraintTop_toBottomOf="@id/imgLLDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<!--            <include layout="@layout/item_order_detial_pic"/>-->
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@drawable/shape_invite_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingDefaultResource,ResourceName">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/invitecardbottomt"
+            app:layout_constraintBottom_toBottomOf="@id/canUseCardStoreSc"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/titleLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="7dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/invitelinebg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动奖励"
+                android:textColor="#ffffe1aa"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="7dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/invitelinebg" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/canUseCardStoreSc"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleLL">
+
+            <LinearLayout
+                android:id="@+id/actLineL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <include layout="@layout/mine_item_adapter_invitecenter_mine" />-->
+
+<!--                <include layout="@layout/mine_item_adapter_invitecenter_mine" />-->
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/invitecardbottom"
+        app:layout_constraintBottom_toBottomOf="@id/scrollParent"
+        app:layout_constraintDimensionRatio="563:195" />
+
+    <ImageView
+        android:id="@+id/actGoButton"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:elevation="2dp"
+        android:src="@drawable/invitegoinvite2"
+        app:layout_constraintBottom_toBottomOf="@id/scrollParent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/inviteUnderString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您已获得邀请奖励，您也可以邀请更多好友~"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actGoButton"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

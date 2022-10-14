@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Library</string>
+
+
+    <string name="lib_share_wx">1</string>
+    <string name="lib_share_circle">2</string>
+    <string name="lib_share_qq">3</string>
+    <string name="lib_share_qzone">4</string>
+    <string name="lib_share_sina">5</string>
+
+
+    <string name="share_vote_title">我是“%s”，我的编号是“%s”，我正在参与“%s”活动，请给我投上宝贵的一票吧！</string>
+    <string name="share_winning_jackpot">恭喜您在“%s”活动中力挽狂澜，喜中大奖！</string>
+    <string name="font_sans_serif_light">sans-serif-light</string>
+    <!--<string name="font_sans_serif_light">sans-serif</string>-->
+    <string name="font_sans_serif_medium">sans-serif-medium	</string>
+    <string name="font_sans_serif">sans-serif</string>
+    <string name="money_format">%,.2f</string>
+    <string name="wheel_cancel">取消</string>
+    <string name="wheel_confirm">完成</string>
+    <string name="net_err">网络异常，请检查您的网络设置</string>
+    <string name="choose_service_time">请选择服务时间</string>
+    <string name="date_year">年</string>
+    <string name="date_month">月</string>
+    <string name="date_day">日</string>
+    <string name="date_hour">时</string>
+    <string name="date_min">分</string>
+    <string name="pop_set_pay_code">"请输入<font color='#FF6266'>支付密码</font>验证身份"</string>
+    <string name="pop_code_fail">"密码错误,还可以尝试%s次"</string>
+    <string name="pop_text">"您还<font color='#FF6266'>未设置支付密码</font>验证身份后设置"</string>
+
+    <string name="footer_detail_horizontal_pulling">滑动查看图文详情</string>
+    <string name="footer_detail_horizontal_release">释放查看图文详情</string>
+
+    <string name="cancel">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="confirm">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+    <string name="no_more">已经到底了</string>
+    <string name="char_rmb">¥</string>
+    <plurals name="error_over_count">
+        <item quantity="one">You can only select one media file</item>
+        <item quantity="many">You can only select up to %1$d media files</item>
+    </plurals>
+</resources>

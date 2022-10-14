@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="78dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/killImg"
+        app:corner_radius="2dp"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:src="@drawable/img_1_1_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/kick_left_kkk" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="#fff00028"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/killPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="39.9"
+            android:textColor="#fff00028"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/killOldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥79"
+        android:visibility="gone"
+        android:textColor="#ff868799"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/killTotalNumLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_act_r_under"
+        android:orientation="horizontal"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+        <TextView
+            android:id="@+id/killTotalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="96"
+            android:textColor="#ffffffff"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人已砍"
+            android:textColor="#ffffffff"
+            android:textSize="9sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+        }
+        product{
+        }
+        debug {
+        }
+        check{
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // https://mvnrepository.com/artifact/com.google.zxing/core
+    compile group: 'com.google.zxing', name: 'core', version: '3.4.1'
+    api 'io.github.devilsen:czxing:1.1.0'//czxing二维码
+
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'androidx.legacy:legacy-support-v4:1.0.0'
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PersonalInfoDetailActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit="true"
+        app:submit="删除"
+        app:submit_color="#666666"
+        app:title="编辑信息"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="loading">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F5F5F9">
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_status"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseStatus"
+                app:section_des_margin_end="10dp"
+                app:section_divider_full_width="false"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_title="我的阶段"/>
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_baby_birth_date"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseBirthDate"
+                app:section_des_margin_end="10dp"
+                app:section_divider_full_width="false"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_title="宝宝年龄"/>
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_baby_sex"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseBabySex"
+                app:section_des_margin_end="10dp"
+                app:section_divider_full_width="false"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_title="宝宝性别"/>
+
+
+<!--            <com.healthy.library.widget.SectionView-->
+<!--                android:id="@+id/section_baby_name"-->
+<!--                style="@style/RippleClick"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:background="@color/colorWhite"-->
+<!--                android:onClick="chooseBabySex"-->
+<!--                app:section_des_margin_end="10dp"-->
+<!--                app:section_divider_full_width="false"-->
+<!--                app:section_end_height="11dp"-->
+<!--                app:section_end_src="@drawable/mine_ic_more"-->
+<!--                app:section_end_width="6dp"-->
+<!--                app:section_title="宝宝名字"/>-->
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_baby_birth_type"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseBabyBirthType"
+                app:section_des_margin_end="10dp"
+                app:section_divider_full_width="false"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_title="生产方式"/>
+
+<!--            <com.healthy.library.widget.SectionView-->
+<!--                style="@style/RippleClick"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:background="@color/colorWhite"-->
+<!--                android:onClick="chooseBabyBirthType"-->
+<!--                app:section_des_margin_end="10dp"-->
+<!--                app:section_end_height="11dp"-->
+<!--                app:section_end_src="@drawable/mine_ic_more"-->
+<!--                app:section_end_width="6dp"-->
+<!--                app:section_show_divider="true"-->
+<!--                app:section_title="分娩方式"/>-->
+            <com.healthy.library.widget.CommonSection
+                android:id="@+id/section_baby_name"
+                android:layout_width="match_parent"
+                app:et_content_drawable_right="@drawable/mall_ic_phone"
+                android:layout_height="@dimen/sectionHeight"
+                app:et_content_hint="点此输入宝宝名字"
+                app:section_mode="et"
+                app:show_divider="false"
+                android:background="#FFF"
+                app:title="宝宝名字"/>
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_men_last_date"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseMenLastDate"
+                app:section_des_margin_end="10dp"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_show_divider="false"
+                app:section_title="末次月经时间"/>
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_menstruation_date"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorWhite"
+                android:onClick="chooseMenStartDate"
+                app:section_des_margin_end="10dp"
+                app:section_divider_full_width="false"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_title="月经开始时间"/>
+
+            <com.healthy.library.widget.SectionView
+                android:id="@+id/section_menstruation_cycle"
+                style="@style/RippleClick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="chooseMenCycle"
+                android:background="@color/colorWhite"
+                app:section_des_margin_end="10dp"
+                app:section_end_height="11dp"
+                app:section_end_src="@drawable/mine_ic_more"
+                app:section_end_width="6dp"
+                app:section_show_divider="false"
+                app:section_title="月经周期和时长"/>
+            <TextView
+                android:id="@+id/saveNow"
+                style="@style/BtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:text="保存"/>
+
+        </LinearLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

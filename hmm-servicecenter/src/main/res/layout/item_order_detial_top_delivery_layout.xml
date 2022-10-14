@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/mainOrderView"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topHomeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_txt_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:text="- 配送到家 -"
+                android:textColor="#ff444444"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/title_img_home"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/servicecenter_nearby_address"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_txt_home" />
+
+            <TextView
+                android:id="@+id/address_txt_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toRightOf="@id/title_img_home"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_txt_home" />
+
+            <TextView
+                android:id="@+id/house_number_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@+id/address_txt_home"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_txt_home" />
+
+            <TextView
+                android:id="@+id/name_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="@+id/address_txt_home"
+                app:layout_constraintTop_toBottomOf="@id/house_number_home" />
+
+            <TextView
+                android:id="@+id/phone_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:paddingTop="4dp"
+                android:text=""
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toRightOf="@+id/name_home"
+                app:layout_constraintTop_toBottomOf="@id/house_number_home" />
+
+
+            <TextView
+                android:id="@+id/name_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/phone_home"
+                app:layout_constraintLeft_toLeftOf="@id/name_home"/>
+
+            <ImageView
+                android:id="@+id/goodsLimitUnder"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/goodstypeunderline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_store" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topShopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_txt_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                android:text="- 到店自提 -"
+                android:textColor="#ff444444"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/title_img_store"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/service_order_detial_store_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_txt_store" />
+
+            <TextView
+                android:id="@+id/address_txt_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/title_img_store"
+                app:layout_constraintTop_toBottomOf="@+id/title_txt_store" />
+
+            <ImageView
+                android:id="@+id/img_to_down_store"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/order_detial_more_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/address_txt_store"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/house_number_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="4dp"
+                android:text=""
+                android:textColor="#ff868799"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="@+id/address_txt_store"
+                app:layout_constraintTop_toBottomOf="@+id/address_txt_store" />
+
+            <ImageView
+                android:id="@+id/title_img_clock_store"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:src="@mipmap/order_detial_clock_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/house_number_store" />
+
+            <TextView
+                android:id="@+id/time_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_img_clock_store"
+                app:layout_constraintLeft_toRightOf="@+id/title_img_clock_store"
+                app:layout_constraintTop_toTopOf="@id/title_img_clock_store" />
+
+            <ImageView
+                android:id="@+id/goodsLimitUnder_store"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/goodstypeunderline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/time_store" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/heightView"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/orderDetialGoodsLiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/service_item_order_flow_goods" />
+
+    </LinearLayout>
+</LinearLayout>

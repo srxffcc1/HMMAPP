@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_20"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01/22" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toRightOf="@+id/tvDate"
+        app:layout_constraintTop_toTopOf="@id/tvDate"
+        tools:text="悬赏问题被采纳" />
+
+
+    <TextView
+        android:id="@+id/tvHdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp_20"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/color_444444"
+        android:text="憨豆豆"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_ff6266"
+        android:textSize="@dimen/sp_18"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvHdd"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="+50" />
+    <TextView
+        android:id="@+id/tvDateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:paddingLeft="@dimen/dp_20"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        tools:text="周六" />
+
+    <TextView
+        android:id="@+id/tvAdoptTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvDateName"
+        tools:text="08:58:25" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@color/color_e4e8ee"
+        app:layout_constraintLeft_toLeftOf="@+id/tvAdoptTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdoptTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

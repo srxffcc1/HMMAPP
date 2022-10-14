@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.health.second">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+
+    <application>
+        <!-- 订单核销 -->
+        <activity
+            android:name=".activity.OrderTicketActivity"
+            android:screenOrientation="portrait" />
+        <!-- 异业服务详情 -->
+        <activity
+            android:name=".activity.SecondServiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 异业门店列表 -->
+        <activity
+            android:name=".activity.SecondShopListActivity"
+            android:screenOrientation="portrait" />
+        <!-- 门店详情 -->
+        <activity
+            android:name=".activity.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondActMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondAllTypeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondActBlockActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondSeachActivity" android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".activity.TechnicianDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SecondActShopsBlockActivity" />
+        <activity android:name=".activity.SecondActBlockWithMainActivity" />
+    </application>
+
+</manifest>

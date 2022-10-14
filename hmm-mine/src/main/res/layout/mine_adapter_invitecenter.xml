@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_invite_top_center_bg"
+        android:minHeight="120dp"
+        android:paddingBottom="15dp"
+        tools:ignore="MissingDefaultResource,ResourceName">
+
+        <TextView
+            android:id="@+id/actTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingLeft="26dp"
+            android:paddingTop="3dp"
+            android:paddingRight="26dp"
+            android:paddingBottom="3dp"
+            android:textStyle="bold"
+            android:text="活动时间：2021.02.23-2021.07.24"
+            android:textColor="#F32D24"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/canUseCardStoreSc"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/actTime">
+
+            <LinearLayout
+                android:id="@+id/actLineL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--                <include layout="@layout/mine_item_adapter_invitecenter_mine" />-->
+
+                <!--                <include layout="@layout/mine_item_adapter_invitecenter_mine" />-->
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/actGoButton"
+            android:layout_width="190dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/invitegoinvite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/canUseCardStoreSc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+

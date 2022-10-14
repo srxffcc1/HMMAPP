@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/translate">
+
+    <ImageView
+        android:id="@+id/finishIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp"
+        android:src="@drawable/order_ticket_finish_icon" />
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="40dp"
+        app:shape_bottomLeftRadius="0dp"
+        app:shape_bottomRightRadius="0dp"
+        app:shape_solidColor="@color/colorWhite"
+        app:shape_topLeftRadius="12dp"
+        app:shape_topRightRadius="12dp">
+
+        <TextView
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="核销成功"
+            android:textColor="#ff333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="返回（3）"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:shape_endColor="#806FFF"
+            app:shape_radius="22dp"
+            app:shape_startColor="#705DFF" />
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+</RelativeLayout>

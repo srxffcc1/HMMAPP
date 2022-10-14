@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_2020"
+        app:bg_color="@color/colorTransparent"
+        app:is_show_submit_image="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:submit_img_src="@drawable/tools_diary_sum"
+        app:title="确认订单" />
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#F5F5F9"
+                app:layout_constraintBottom_toTopOf="@+id/submitOrderLL"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="blocksDescendants"
+                    android:overScrollMode="never" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_bottom_shader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_bottom_ty"
+                app:layout_constraintBottom_toTopOf="@id/submitOrderLL"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/discountNotCanUse"
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                android:background="@drawable/shape_mall_goods_ol_vid_orderdiscountnot"
+                app:layout_constraintBottom_toTopOf="@id/submitOrderLL"
+                android:text="订单内有商品已参与促销活动，优惠券暂时不可使用。"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/submitOrderLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/orderShopBack"
+                    app:layout_constraintBottom_toBottomOf="@+id/orderSubmit"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:id="@+id/ofderLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="¥"
+                        android:textColor="#F02846"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/orderMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="#F02846"
+                        android:textSize="25sp"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/ofderLeft"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="0" />
+
+
+                    <TextView
+                        android:id="@+id/orderMoneyOld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/orderMoney"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                <TextView
+                    android:id="@+id/orderShopBack"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_mall_goods_ol_vid_shopbtn"
+                    android:onClick="shopback"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="7dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingRight="18dp"
+                    android:paddingBottom="7dp"
+                    android:text="返回初入门店"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/orderSubmit"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/orderSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_mall_goods_ol_vid_orderbtn"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="18dp"
+                    android:onClick="submit"
+                    android:paddingBottom="7dp"
+                    android:text="提交订单"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/limitLine"
+                android:minHeight="7dp"
+                app:layout_constraintBottom_toTopOf="@id/submitOrderLL"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_height="1dp"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/limitLineText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginBottom="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#D5DBE4"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/limitCon"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/limitConTop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="8dp"
+                        android:rotation="180"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/act_tri_top"/>
+                    <Space
+                        android:id="@+id/limitSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15px"
+                        app:layout_constraintBottom_toBottomOf="@id/limitConTop"/>
+                    <TextView
+                        android:id="@+id/limitText"
+                        android:background="@drawable/act_money_limit_bg"
+                        app:layout_constraintBottom_toTopOf="@id/limitSpace"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="wrap_content"
+                        android:maxWidth="250dp"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"
+                        tools:text="购买超过3件时，不再享受优惠！"
+                        android:textSize="11sp"
+                        android:textColor="#ffffff"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

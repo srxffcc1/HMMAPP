@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="精选"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/indictor"
+        android:layout_width="8dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/shape_shop_detail_tab_indictor"
+        app:layout_constraintLeft_toLeftOf="@+id/titleFirst"
+        app:layout_constraintRight_toRightOf="@+id/titleFirst"
+        app:layout_constraintTop_toBottomOf="@+id/titleFirst" />
+</androidx.constraintlayout.widget.ConstraintLayout>

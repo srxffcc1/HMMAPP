@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.ImageTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/selector_mall_goods_ol_vid_tag"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingTop="3dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="3dp"
+    android:text="红色"
+    android:textColor="@drawable/selector_tag_goods_color"
+    android:textSize="12dp">
+
+</com.healthy.library.widget.ImageTextView>

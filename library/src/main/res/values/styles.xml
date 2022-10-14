@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+    <style name="DialogFullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:background">@drawable/blue_button_background</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="LibAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorMajorText</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@string/font_sans_serif</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <declare-styleable name="IncreaseDecreaseView">
+        <attr name="decrease_src" format="reference"/>
+        <attr name="decrease_disable_src" format="reference"/>
+        <attr name="increase_src" format="reference"/>
+        <attr name="increase_disable_src" format="reference"/>
+        <attr name="min_count" format="integer"/>
+        <attr name="max_count" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="TopBar">
+        <attr name="back" format="string"/>
+        <attr name="title"/>
+        <attr name="submit"/>
+        <attr name="show_moss"/>
+        <attr name="bg_color"/>
+        <attr name="title_color"/>
+        <attr name="submit_color"/>
+        <attr name="back_color" format="color"/>
+        <attr name="back_img_src"/>
+        <attr name="submit_img_src"/>
+        <attr name="is_show_back_txt" format="boolean"/>
+        <attr name="is_show_back" format="boolean"/>
+        <attr name="is_show_submit" format="boolean"/>
+        <attr name="is_show_submit_image" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="com_ExpandTextView">
+        <attr name="com_maxLines" format="integer" />
+    </declare-styleable>
+
+    <style name="MallAppTheme" parent="LibAppTheme">
+        <item name="colorPrimaryDark">@color/colorMallTitle</item>
+    </style>
+
+    <style name="LoadingDialog" parent="Base.Theme.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Translucent" parent="LibAppTheme">
+    </style>
+
+    <style name="PayTranslucent" parent="Translucent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorTranslucent</item>
+    </style>
+
+    <style name="TranslucentLight" parent="Translucent">
+    </style>
+
+    <style name="H1">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@string/font_sans_serif_medium</item>
+    </style>
+
+    <style name="H2">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@string/font_sans_serif</item>
+    </style>
+
+    <style name="H3">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">#444444</item>
+    </style>
+
+    <style name="More">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">#9596A4</item>
+    </style>
+
+    <style name="H5">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">#9596A4</item>
+    </style>
+    <style name="TransparentBottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/SheetStyle</item>
+    </style>
+    <style name="SheetStyle" parent="android:Widget">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">false</item>
+    </style>
+    <style name="BtnStyle">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:background">@drawable/selector_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="BackIvStyle">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:src">@drawable/ic_back</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_show_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_hidden_to_bottom</item>
+    </style>
+
+    <style name="RippleClick">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+
+    </style>
+
+    <style name="ImgPicker" parent="Matisse.Zhihu"></style>
+
+    <style name="DialogAnim">
+        <item name="android:windowEnterAnimation">@anim/anim_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_to_bottom</item>
+    </style>
+    <!--密码框-->
+    <style name="password">
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginLeft">@dimen/dp_5</item>
+        <item name="android:layout_marginRight">@dimen/dp_5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="ScaleAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_lottery_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_lottery_out</item>
+    </style>
+
+    <!--时间选择器-->
+    <style name="date_picker_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/date_picker_bg</item>
+    </style>
+    <style name="commentDialogStyle">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!-- 弹框取消遮罩色 纯透明 -->
+    <style name="TransBottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog"><!--
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item><!--
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>-->
+    </style>
+</resources>

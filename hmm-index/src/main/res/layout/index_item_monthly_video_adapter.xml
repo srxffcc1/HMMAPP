@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage">
+
+    <LinearLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:background="@drawable/index_monthly_video_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/videoRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp" />
+    </LinearLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+        android:id="@+id/pkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radius="12dp"
+        app:shape_solidColor="#F6F7F9">
+
+        <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shape_endColor="#FFFFFF"
+            app:shape_radius="8dp"
+            app:shape_startColor="#FFF2F4">
+
+            <ImageView
+                android:id="@+id/pkTitleImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/index_monthly_pk_title_bg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/postingTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="你会选择给孩子选哪种婴幼儿奶粉？" />
+
+            <com.healthy.library.widget.CollapsedTextView
+                android:id="@+id/tipContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textColor="@color/color_666666"
+                android:textSize="12sp"
+                app:collapsedDrawable="@null"
+                app:collapsedLines="2"
+                app:collapsedText="收起"
+                app:expandedDrawable="@null"
+                app:expandedText="展开"
+                app:layout_constraintTop_toBottomOf="@id/postingTitle"
+                app:tipsClickable="true"
+                app:tipsColor="#4369D3"
+                app:tipsGravity="end"
+                app:tipsUnderline="false"
+                tools:text="宋金元时期，药浴的应用转为普及了" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fl_pkVoting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tipContent">
+
+                <include layout="@layout/index_pk_voting_body_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/bgImg"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/live_list_bg_bottom"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/goodsImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_1_1_default"
+                app:corner_radius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/liveingImg"
+                android:layout_width="54dp"
+                android:layout_height="20dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_list_liveing_btn"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+                app:layout_constraintTop_toTopOf="@+id/goodsImg" />
+
+            <ImageView
+                android:id="@+id/liveingAfter"
+                android:layout_width="54dp"
+                android:layout_height="20dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_list_live_btn"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+                app:layout_constraintTop_toTopOf="@+id/goodsImg" />
+
+            <ImageView
+                android:id="@+id/liveingHistory"
+                android:layout_width="54dp"
+                android:layout_height="20dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_list_live_history_btn"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+                app:layout_constraintTop_toTopOf="@+id/goodsImg" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+                app:layout_constraintLeft_toRightOf="@id/goodsImg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodsImg">
+
+                <TextView
+                    android:id="@+id/liveFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="私密"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_live_flag_pink"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/liveTitle"
+                    app:layout_constraintRight_toLeftOf="@id/liveTitle"
+                    android:layout_marginRight="3dp"
+                    app:layout_constraintBottom_toBottomOf="@id/liveTitle"
+                    android:textColor="#ffffffff"
+                    android:textSize="9sp"
+                    />
+                <TextView
+                    android:id="@+id/liveTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="快来参加端午盖楼送好礼！"
+                    android:textColor="#ff222222"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/liveFlag"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/liveManIcon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="6dp"
+                    app:is_circle="true"
+                    android:src="@drawable/img_avatar_default"
+                    app:layout_constraintTop_toBottomOf="@+id/liveTitle"
+                    />
+
+                <TextView
+                    android:id="@+id/liveHoster"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="6dp"
+                    android:maxLines="1"
+                    android:text="优贝儿母婴超市"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/liveManIcon"
+                    app:layout_constraintTop_toTopOf="@id/liveManIcon"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/liveManIcon"/>
+                <TextView
+                    android:id="@+id/liveHosterEpc"
+                    android:layout_marginLeft="6dp"
+                    app:layout_constraintLeft_toRightOf="@id/liveHoster"
+                    app:layout_constraintTop_toTopOf="@id/liveManIcon"
+                    app:layout_constraintBottom_toBottomOf="@id/liveManIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="国家高级育婴师"
+                    android:textColor="#ff666666"
+                    android:textSize="11sp"
+                    />
+                <TextView
+                    android:id="@+id/remindTxt"
+                    android:layout_width="68dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/shape_live_list_yellow_btn"
+                    android:gravity="center"
+                    android:text="预约"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/goSee"
+                    android:layout_width="68dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/shape_live_list_purple_btn"
+                    android:gravity="center"
+                    android:text="立即观看"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/liveListGoodsLin"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toTopOf="@+id/goSee"
+                    app:layout_constraintTop_toBottomOf="@id/liveManIcon">
+                    <TextView
+                        android:id="@+id/liveIntroduce"
+                        android:textColor="#ff868799"
+                        android:textSize="12sp"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </TextView>
+
+                    <GridLayout
+                        android:id="@+id/liveListGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

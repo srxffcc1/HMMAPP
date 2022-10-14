@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="6dp"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:background="@drawable/shape_mall_goods_bg"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/mall_goods_img"
+            android:layout_width="108dp"
+            app:corner_radius="3dp"
+            android:layout_height="108dp"
+            android:src="@drawable/img_1_1_default"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            app:layout_constraintTop_toTopOf="@id/discountTip"
+            app:layout_constraintBottom_toBottomOf="@id/discountTip"
+            app:layout_constraintLeft_toLeftOf="@id/discountTip"
+            app:layout_constraintRight_toRightOf="@id/discountTip"
+            android:src="@drawable/discountbg2"
+            android:layout_height="0dp">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/discountTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.8折"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/mall_goods_img"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            />
+        <TextView
+            android:id="@+id/numberTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#FF0000"
+            app:layout_constraintRight_toRightOf="parent"></TextView>
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/mall_online_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_mall_goods_ol_bg"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:text="直播中"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:drawable="@drawable/mall_online_left_tip"
+            app:drawableHeight="8dp"
+            app:drawableWidth="8dp"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            app:layout_constraintTop_toTopOf="@id/mall_goods_img" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mall_goods_img_under"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_img">
+
+            <TextView
+                android:id="@+id/mall_goods_context"
+                android:layout_width="0dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="婴儿纯棉纱布浴巾宝宝盖毯儿童全棉洗澡巾新生儿抱毯毛巾…"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                android:maxLines="2"
+                android:lines="2"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mall_goods_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone"
+                android:text="粉色 100cm"
+                android:textColor="#ff868799"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@+id/mall_goods_context"
+                app:layout_constraintTop_toBottomOf="@+id/mall_goods_context" />
+
+            <TextView
+                android:id="@+id/mall_goods_moneyflag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#F02846"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="@+id/mall_goods_moneyvalue"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toLeftOf="@id/mall_goods_context" />
+
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="18.8"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#fff02846"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_moneyflag"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_space" />
+
+            <TextView
+                android:id="@+id/mall_goods_sales"
+                android:layout_width="54dp"
+                android:layout_height="14dp"
+                android:text="3096人付款"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue" />
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/passbasket"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:visibility="gone"
+                android:src="@drawable/basket_red"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_context" />
+
+            <HorizontalScrollView
+                android:id="@+id/couponListLL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:scrollbars="none"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/passbasket"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_moneyvalue">
+
+                <LinearLayout
+                    android:id="@+id/couponList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/item_mall_goods_coupon" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/mall_goods_sales2"
+                android:layout_width="54dp"
+                android:layout_height="14dp"
+                android:text="3096人付款"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couponListLL" />
+
+            <TextView
+                android:id="@+id/mall_goods_sales2_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%好评"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_sales2"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_sales2"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_sales2" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/normalTypeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="mall_goods_sales" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/seachTypeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="mall_goods_sales2,mall_goods_sales2_dis" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

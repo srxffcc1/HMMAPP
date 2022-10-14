@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.health.tencentlive">
+
+    <application>
+        <activity android:name=".activity.PushLiveActivity" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activity.CreateLiveActivity" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".activity.LookLiveActivity" android:launchMode="singleTop" />
+        <activity android:name=".activity.LiveMainBodyActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveHostRoomActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveMineListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveNoticeMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveHostMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveUserMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LiveDetailActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name=".activity.LiveDataChartActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SpeedTestActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:name=".activity.LiverRosterListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

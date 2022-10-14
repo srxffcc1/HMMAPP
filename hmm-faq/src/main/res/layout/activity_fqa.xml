@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:tools2="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools2:ignore="MissingConstraints"></com.healthy.library.widget.TopBar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tlFqa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_constraintTop_toBottomOf="@id/top_bar"
+                tools:tabIndicatorColor="#FF8181"
+                tools:tabIndicatorFullWidth="false"
+                tools:tabSelectedTextColor="#FF6266"
+                tools:tabTextColor="#444444" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpFaq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F9"
+                tools:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_constraintTop_toBottomOf="@id/tlFqa" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/adapter_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mine_shape_order"
+        android:paddingBottom="10dp"
+        tools:ignore="SpUsage">
+
+        <com.healthy.library.widget.DrawableTextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:textColor="#222222"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2020-06-21 17:18:35" />
+
+        <RelativeLayout
+            android:id="@+id/re_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_store_name"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tv_order_status_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#222222"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="退款成功" />
+
+            <TextView
+                android:id="@+id/tv_order_status_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F02846"
+                android:textSize="13dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="待商家处理" />
+
+            <TextView
+                android:id="@+id/tv_order_status_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#868799"
+                android:textSize="13dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="申请已撤销" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider_header"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="14dp"
+            android:background="@null"
+            app:layout_constraintTop_toBottomOf="@id/tv_store_name" />
+
+        <LinearLayout
+            android:id="@+id/goodsLiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toBottomOf="@id/divider_header">
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/goodsLiner"
+            app:layout_constraintTop_toBottomOf="@id/goodsLiner"
+            tools:text="退款金额：￥256.00" />
+
+        <TextView
+            android:id="@+id/tv_total_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="退订数量 5"
+            android:textColor="#ff444444"
+
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_total_price"
+            app:layout_constraintEnd_toStartOf="@id/tv_total_price"
+            app:layout_constraintTop_toTopOf="@+id/tv_total_price" />
+
+
+        <View
+            android:id="@+id/divider_bottom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="@id/re_order_status"
+            app:layout_constraintStart_toStartOf="@id/tv_store_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_price" />
+
+        <TextView
+            android:id="@+id/tv_detial"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_order_list_grey_button"
+            android:gravity="center"
+            android:text="售后详情"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/divider_bottom"
+            app:layout_constraintTop_toBottomOf="@id/divider_bottom" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_order_list_red_button"
+            android:gravity="center"
+            android:text="撤销申请"
+            android:textColor="#fff02846"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_detial"
+            app:layout_constraintTop_toBottomOf="@id/divider_bottom" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_order_list_grey_button"
+            android:gravity="center"
+            android:text="删除售后单"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tv_detial"
+            app:layout_constraintTop_toBottomOf="@id/divider_bottom" />
+
+
+        <!---->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

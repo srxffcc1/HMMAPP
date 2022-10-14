@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/shape_disact_list_bg"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="18dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    tools:ignore="MissingDefaultResource">
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/orderTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="优贝儿母婴连锁金山路店"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        app:drawable="@drawable/goodsorderstore"
+        app:drawableHeight="21dp"
+        app:drawableWidth="21dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/orderStatusValue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/orderStatusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拼团中"
+        android:textColor="#fff02846"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/orderTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/orderTitle" />
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderTitle" />
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="婴儿纯棉纱布浴巾宝宝盖毯儿童全棉洗澡巾新生儿纯棉纱布…"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/goodsImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="2dp"
+        android:textColor="#F02846"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+        app:layout_constraintLeft_toRightOf="@id/tv_total_price_pre"
+        tools:text="256.00" />
+
+    <TextView
+        android:id="@+id/tv_total_price_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="底价¥"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+        app:layout_constraintLeft_toLeftOf="@id/goodsName"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_price" />
+
+    <TextView
+        android:id="@+id/tv_need_price_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="， 还需砍¥"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+        app:layout_constraintLeft_toRightOf="@id/tv_total_price"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_price" />
+
+    <TextView
+        android:id="@+id/tv_need_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="2dp"
+        android:textColor="#F02846"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+        app:layout_constraintLeft_toRightOf="@id/tv_need_price_pre" />
+
+    <LinearLayout
+        android:id="@+id/goodsTimeLL"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLL"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonLL"
+        app:layout_constraintTop_toTopOf="@id/buttonLL">
+
+        <TextView
+            android:id="@+id/kickHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kickMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kickSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/kickFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="后结束"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodsImg">
+
+        <TextView
+            android:id="@+id/buttonLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_period_4"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:text="砍价详情"
+            android:textColor="#ff444444"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/buttonRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_period_5"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:text="立即支付"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

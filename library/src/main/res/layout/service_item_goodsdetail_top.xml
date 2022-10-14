@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/goodsTopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/img_banner"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="375dp" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/dotLL"
+            app:layout_constraintRight_toRightOf="@id/dotLL"
+            app:layout_constraintTop_toTopOf="@id/dotLL"
+            android:src="@drawable/vp_banner_dot_bg"
+            app:layout_constraintBottom_toBottomOf="@id/dotLL">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/fpLL"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:layout_constraintBottom_toTopOf="@id/dotLL"
+            android:background="@drawable/shape_mall_goods_ol_vid_top_play"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/play_first"/>
+            <TextView
+                android:id="@+id/fpTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="0′18″"
+                android:layout_marginLeft="6dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            app:layout_constraintBottom_toBottomOf="@id/img_banner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/dotLL"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/nowPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:padding="5dp"
+                android:textColor="#ffffffff"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="#ffffffff"
+                android:textSize="6sp"
+                />
+            <TextView
+                android:id="@+id/allPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:padding="5dp"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_mall_goods_ol_vid_float_under"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/img_banner">
+
+            <TextView
+                android:id="@+id/goodMoneyFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="¥"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#fff02846"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/goodMoneyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="39.8"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#fff02846"
+                android:textSize="27sp"
+                app:layout_constraintLeft_toRightOf="@id/goodMoneyFlag"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/goodMoneyValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="¥208"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ff666666"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintLeft_toRightOf="@id/goodMoneyValue"
+                app:layout_constraintTop_toTopOf="@id/goodMoneyValue" />
+
+            <TextView
+                android:id="@+id/goodssalecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="已售1087件"
+                android:textColor="#ff666666"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodMoneyValue" />
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="Babycare吸管杯学饮杯宝宝水杯重力球鸭嘴杯防漏水儿童婴儿食品级硅胶吸管婴儿鸭嘴型210ml带重力球测试"
+                android:textColor="#ff222222"
+                android:textSize="16sp"
+                android:maxLines="2"
+
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodMoneyValue" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/goodsTipsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodsTitle">
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:background="@drawable/shape_mall_goods_ol_vid_yellow"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingTop="1dp"-->
+<!--                    android:paddingRight="4dp"-->
+<!--                    android:paddingBottom="1dp"-->
+<!--                    android:text="满50元免运费"-->
+<!--                    android:textColor="#ff815c35"-->
+<!--                    android:textSize="11sp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:background="@drawable/shape_mall_goods_ol_vid_yellow"-->
+<!--                    android:paddingLeft="4dp"-->
+<!--                    android:paddingTop="1dp"-->
+<!--                    android:paddingRight="4dp"-->
+<!--                    android:paddingBottom="1dp"-->
+<!--                    android:text="配送到家"-->
+<!--                    android:textColor="#ff815c35"-->
+<!--                    android:textSize="11sp" />-->
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

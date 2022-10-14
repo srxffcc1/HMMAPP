@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    app:shape_bottomLeftRadius="6dp"
+    app:shape_bottomRightRadius="6dp"
+    app:shape_solidColor="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tv_center_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="6dp"
+        android:text="活动规则"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<com.healthy.library.widget.X5WebView
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        app:layout_constraintLeft_toLeftOf="@id/tv_center_title"
+        app:layout_constraintRight_toRightOf="@id/tv_center_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_center_title"
+        tools:ignore="WebViewLayout" />-->
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintLeft_toLeftOf="@id/tv_center_title"
+        app:layout_constraintRight_toRightOf="@id/tv_center_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_center_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_center_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:text="苏宁易购“818发烧购物节”买指定自营家电单笔订单在线实付满4999元送价值1999元手持吸尘器，满9999元送价值4999元空气净化器。规则如下：\n\n一、活动时间：\n 2017年8月14日0:00:00-2017年8月20日23:59:59 \n\n二、参与条件： \n\n1、所购买商品为指定自营家用电器和家装建材（含彩电、冰洗、厨卫、空调、生活电器、建材六个品类，不含虚拟商品）； \n\n2、参与步骤：选择参与活动的家电→加入购物车→去结算→提交订单→支付完成→获得赠品返券→购买商品选择券全额支付；苏宁易购“818发烧购物节”买指定自营家电单笔订单在线实付满4999元送价值1999元手持吸尘器，满9999元送价值4999元空气净化器。规则如下：\n\n一、活动时间：\n 2017年8月14日0:00:00-2017年8月20日23:59:59 \n\n二、参与条件： \n\n1、所购买商品为指定自营家用电器和家装建材（含彩电、冰洗、厨卫、空调、生活电器、建材六个品类，不含虚拟商品）； \n\n2、参与步骤：选择参与活动的家电→加入购物车→去结算→提交订单→支付完成→获得赠品返券→购买商品选择券全额支付；苏宁易购“818发烧购物节”买指定自营家电单笔订单在线实付满4999元送价值1999元手持吸尘器，满9999元送价值4999元空气净化器。规则如下：\n\n一、活动时间：\n 2017年8月14日0:00:00-2017年8月20日23:59:59 \n\n二、参与条件： \n\n1、所购买商品为指定自营家用电器和家装建材（含彩电、冰洗、厨卫、空调、生活电器、建材六个品类，不含虚拟商品）； \n\n2、参与步骤：选择参与活动的家电→加入购物车→去结算→提交订单→支付完成→获得赠品返券→购买商品选择券全额支付；"
+        app:layout_constraintLeft_toLeftOf="@id/tv_center_title"
+        app:layout_constraintRight_toRightOf="@id/tv_center_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_center_title" />
+
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

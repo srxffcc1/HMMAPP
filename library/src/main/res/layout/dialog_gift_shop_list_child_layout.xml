@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/checkOk"
+        android:layout_marginLeft="12dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/pickshopok"/>
+
+
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:id="@+id/tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="婷美摩力产"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/checkOk"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_shop_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="高新区狮山区75号中信银行后门峰汇大厦10…"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_distance"
+        app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_name" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_address"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_distance"
+        app:layout_constraintRight_toRightOf="@id/tv_distance"
+        app:layout_constraintTop_toTopOf="@id/tv_shop_name"/>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        tools:text="1.2km"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_address"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

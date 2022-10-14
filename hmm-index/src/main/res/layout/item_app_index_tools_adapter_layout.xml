@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    tools:ignore="ResourceName">
+
+    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:shape_radius="16dp"
+        app:shape_solidColor="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="12dp"
+            android:text="备孕工具"
+            android:textColor="#ff333333"
+            android:textSize="15sp" />
+
+        <GridLayout
+            android:id="@+id/toolsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+</LinearLayout>

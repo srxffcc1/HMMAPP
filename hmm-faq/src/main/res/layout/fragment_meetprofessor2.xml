@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false"
+        android:elevation="0dp"
+        app:title="专家答疑"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar"
+                    android:elevation="0dp"
+                    app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsingToolbarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentScrim="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:statusBarScrim="@android:color/transparent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/hotpro_con"
+                                android:paddingTop="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:id="@+id/hotpro_title"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="热门专业领域"
+                                        android:textStyle="bold"
+                                        android:textColor="#ff354056"
+                                        android:textSize="16sp"
+                                        />
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="所有专业领域"
+                                        android:drawablePadding="5dp"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        android:textColor="#ff83899a"
+                                        android:textSize="13sp"
+                                        app:drawable="@drawable/ic_more"
+                                        app:drawableHeight="12dp"
+                                        app:drawableWidth="6dp"
+                                        app:position="3"
+                                        />
+                                </LinearLayout>
+                                <GridLayout
+                                    android:id="@+id/hotpro_imgs"
+                                    android:paddingTop="10dp"
+                                    app:layout_constraintTop_toBottomOf="@id/hotpro_title"
+                                    android:layout_width="match_parent"
+                                    android:columnCount="4"
+                                    android:layout_height="wrap_content">
+
+                                </GridLayout>
+                                <com.youth.banner.Banner
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/mall_banner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintTop_toBottomOf="@id/hotpro_imgs"
+                                    android:layout_marginBottom="5dp"
+                                    android:descendantFocusability="blocksDescendants" />
+                                <LinearLayout
+                                    android:id="@+id/postll"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    app:layout_constraintTop_toBottomOf="@id/mall_banner"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:id="@+id/postimage"
+                                        android:paddingTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/post_insert_expoet"
+                                        android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/video_recycle_bg"
+                                android:layout_width="match_parent"
+                                android:visibility="gone"
+                                android:background="@drawable/shape_online_video_bgg"
+                                android:layout_height="wrap_content">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/video_recycle"
+                                    android:paddingBottom="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+
+
+<!--                                <include layout="@layout/faq_onlinevedio"></include>-->
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/reward_con"
+                                android:layout_width="match_parent"
+                                android:paddingTop="15dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/hotpro_con">
+                                <LinearLayout
+                                    android:id="@+id/reward_title"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:text="悬赏问答"
+                                        android:textStyle="bold"
+                                        android:textColor="#ff354056"
+                                        android:textSize="16sp"
+                                        />
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="更多"
+                                        android:drawablePadding="5dp"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        android:textColor="#ff83899a"
+                                        app:drawable="@drawable/ic_more"
+                                        android:textSize="13sp"
+                                        app:drawableHeight="12dp"
+                                        app:drawableWidth="6dp"
+                                        app:position="3"
+                                        />
+                                </LinearLayout>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/reward_recycle"
+                                    android:paddingTop="15dp"
+                                    app:layout_constraintTop_toBottomOf="@id/reward_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:background="#FFF"
+                        android:paddingLeft="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/st"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            app:tl_indicator_corner_radius="1.5dp"
+                            app:tl_indicator_height="4dp"
+                            app:tl_textsize="16sp"
+                            app:tl_tab_padding="6dp"
+                            app:tl_indicator_color="#78B8FF"
+                            app:tl_textSelectColor="#222222"
+                            app:tl_textUnselectColor="#9596A4"
+                            app:tl_textBold="SELECT"
+                            app:tl_indicator_margin_top="10dp"
+                            app:tl_indicator_width="30dp"/>
+                        <TextView
+                            android:id="@+id/moreHot"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="更多问答"
+                            android:paddingRight="15dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:textColor="#ff83899a"
+                            android:padding="12dp"
+                            android:drawableRight="@drawable/ic_more"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:textSize="13sp"/>
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/tv_area"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:textColor="#ff9596a4"
+                            android:text="保健专家"
+                            android:drawablePadding="5dp"
+                            android:textSize="12sp"
+                            app:drawable="@drawable/ic_solid_triangle_down_gray"
+                            app:drawableHeight="8dp"
+                            app:drawableWidth="8dp"
+                            app:position="3" />
+                    </RelativeLayout>
+                    <View
+                        android:id="@+id/divider_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vp"
+                        android:background="#FFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+<!--                <android.support.v4.widget.NestedScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fillViewport="true">-->
+
+<!--                </android.support.v4.widget.NestedScrollView>-->
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/adapter_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

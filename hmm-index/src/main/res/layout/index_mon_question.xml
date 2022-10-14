@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/question_content">
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        app:shape_radius="6dp"
+        app:shape_solidColor="#F7F7FA"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvQuestions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="宝宝鼻塞不会自己擦鼻涕" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/img_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestions" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/ivHeader"
+            app:layout_constraintTop_toTopOf="@id/ivHeader"
+            tools:text="杨晓琳" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_666666"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivName"
+            app:layout_constraintLeft_toRightOf="@+id/ivName"
+            app:layout_constraintTop_toTopOf="@id/ivName"
+            tools:text="7年高级育婴师" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_faq_left_tip"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="本地专家"
+            android:textColor="#ff815c35"
+            android:textSize="10sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/ivYear"
+            app:layout_constraintLeft_toRightOf="@+id/ivYear"
+            app:layout_constraintTop_toTopOf="@id/ivYear" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ivSee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/index_news_browse_num"
+            android:drawablePadding="4dp"
+            android:textColor="#ff444444"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivYear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivYear"
+            tools:text="6052" />
+
+        <View
+            android:id="@+id/reply_view"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/icon_index_question_reply"
+            app:layout_constraintLeft_toLeftOf="@id/ivName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivName" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/reply_view"
+            app:layout_constraintLeft_toLeftOf="@id/reply_view"
+            app:layout_constraintRight_toRightOf="@id/reply_view"
+            app:layout_constraintTop_toTopOf="@id/reply_view">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/icon_message_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tvLookQuestion"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLookQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="查看问答详情"
+                android:textColor="@color/colorWhite"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

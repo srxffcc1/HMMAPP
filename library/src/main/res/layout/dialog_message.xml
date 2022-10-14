@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_message_dialog_bg"
+        android:padding="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconMessageDialog"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/dialog_message_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titleMessageDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="开启消息通知"
+            android:textStyle="bold"
+            android:textColor="#ff444444"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iconMessageDialog" />
+
+        <TextView
+            android:id="@+id/contentMessageDialog"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="开启通知后能第一时间获得最新资讯、精彩活动、站内消息"
+            android:textColor="#ff9596a4"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleMessageDialog" />
+
+        <TextView
+            android:id="@+id/buttonMessageDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_message_dialog_button"
+            android:paddingLeft="28dp"
+            android:paddingTop="7dp"
+            android:paddingRight="28dp"
+            android:paddingBottom="7dp"
+            android:text="立即开启"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contentMessageDialog" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintTop_toBottomOf="@id/dialog_bg"
+        app:layout_constraintRight_toRightOf="@id/dialog_bg"
+        app:layout_constraintLeft_toLeftOf="@id/dialog_bg"/>
+
+    <ImageView
+        android:id="@+id/closeMessageDialog"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/dis_dialog_close3"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintLeft_toLeftOf="@id/space"
+        app:layout_constraintRight_toRightOf="@id/space"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

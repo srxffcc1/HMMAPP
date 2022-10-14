@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="true"
+        app:is_show_submit="true"
+        app:submit="新增话题"
+        app:submit_color="#ffff6266"
+        app:back_img_src="@drawable/ic_back_close"
+        app:title="选择话题" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/img_back"
+        android:background="@drawable/shape_search_loc_country"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/serarchKeyWord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="搜索感兴趣的话题"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:drawablePadding="11dp"
+            android:paddingLeft="15dp"
+            android:drawableLeft="@drawable/mall_ic_search"
+            android:background="@null"
+            android:textColor="#9596A4"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="不参与任何话题"
+        android:textColor="#ff29bda9"
+        android:textSize="15sp"
+        />
+
+    <RelativeLayout
+        android:background="#FFF"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/st"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            app:tl_indicator_corner_radius="1.5dp"
+            app:tl_indicator_height="4dp"
+            app:tl_textsize="16sp"
+            app:tl_indicator_color="#22DDDD"
+            app:tl_textSelectColor="#222222"
+            app:tl_textUnselectColor="#9596A4"
+            app:tl_textBold="SELECT"
+            app:tl_indicator_margin_top="10dp"
+            app:tl_indicator_width="30dp"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:background="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_post_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:padding="12dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:background="@drawable/shape_chose">
+
+    <LinearLayout
+        android:id="@+id/city_item_fragment_follow_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/city_item_fragment_follow_post" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/heightView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F7F7FA"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+</LinearLayout>

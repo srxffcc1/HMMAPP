@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/serviceListLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_mall_goods_ol_vid_float">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/goodsListStoreLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/goodsListStoreName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp"
+            android:text="婷美摩力21产后恢复金山店"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:drawable="@drawable/goodsorderstore"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/service_type_no_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp"
+            android:text="待使用"
+            android:textColor="#fff02846"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/goodsListStoreName"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/service_type_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp"
+            android:text="已完成"
+            android:textColor="#ff868799"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/goodsListStoreName"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/order_goods_listLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/goodsListStoreLL">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/goodsImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/img_1_1_default"
+                app:corner_radius="3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="12dp"
+                android:text="Babycare 吸管杯学饮杯宝宝水杯重吸管杯学饮杯宝宝水杯…"
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/goodsImg"
+                app:layout_constraintRight_toLeftOf="@id/goodsMoney"
+                app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+            <TextView
+                android:id="@+id/goodsMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥152.69"
+                android:textColor="#ff222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+            <TextView
+                android:id="@+id/goodsSpace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text=""
+                android:textColor="#ff868799"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+                app:layout_constraintTop_toBottomOf="@id/goodsTitle" />
+
+            <TextView
+                android:id="@+id/goodsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x 1"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodsMoney" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/service_back_btn"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_order_list_grey_button"
+                android:gravity="center"
+                android:text="申请售后"
+                android:visibility="gone"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/service_grey_btn" />
+
+            <TextView
+                android:id="@+id/service_grey_btn"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_order_list_grey_button"
+                android:gravity="center"
+                android:text="查看核销码"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/service_red_btn"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_order_list_red_button"
+                android:gravity="center"
+                android:text="去支付"
+                android:textColor="#fff02846"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D8D8D8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/order_goods_listLL">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="94dp"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_marketingPendant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:alpha="0.9"
+            android:id="@+id/iv_marketing_pendant_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hmm_marketing_pendant_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_marketingPendantLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/icon_hmm_marketing_pendant_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_customize_marketingPendant"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="28dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/iv_marketingPendantLogo"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.lib_ShapeView.view.ShapeView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:id="@+id/shapeView"
+        android:layout_width="33dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:shape_bottomLeftRadius="100dp"
+        app:shape_shadowOffsetY="-6dp"
+        app:shape_shadowOffsetX="0dp"
+        app:shape_shadowColor="#BBA9A9"
+        app:shape_angle="90"
+        app:shape_endColor="#FFECF0"
+        app:shape_startColor="#FFF5F5"
+        app:shape_topLeftRadius="100dp" />
+
+    <ImageView
+        android:id="@+id/iv_marketingPendantSwitch"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+        android:src="@drawable/icon_hmm_marketing_pendant_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

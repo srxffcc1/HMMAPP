@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:status_init="content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F9"
+        android:orientation="vertical"
+        tools:ignore="Orientation">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            app:layout_constraintTop_toTopOf="parent">
+
+             <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                 android:id="@+id/layout_refresh"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:descendantFocusability="afterDescendants">
+
+                 <com.scwang.smart.refresh.header.ClassicsHeader
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="afterDescendants">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        </FrameLayout>
+
+        <!-- Long 2021-04-24 修改UI样式调整间距 -->
+        <ImageView
+            android:id="@+id/scrollUp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="90dp"
+            android:src="@drawable/appointment_detial_up"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_shader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bottom_ty"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/goodsUnder"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/servesUnder"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_select_servive_btn"
+                android:gravity="center"
+                android:text="立即预约"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingTop="@dimen/status_2020"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/img_back"
+                style="@style/RippleClick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/index_ic_back_b"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/topTab"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_back"
+                app:layout_constraintRight_toLeftOf="@+id/img_share"
+                app:layout_constraintTop_toTopOf="parent"
+                tl:tl_iconVisible="false"
+                tl:tl_indicator_color="#F93F60"
+                tl:tl_indicator_corner_radius="2dp"
+                tl:tl_indicator_height="4dp"
+                tl:tl_indicator_width="20dp"
+                tl:tl_tab_space_equal="false"
+                tl:tl_textBold="SELECT"
+                tl:tl_textSelectColor="#333333"
+                tl:tl_textUnselectColor="#666666"
+                tl:tl_textsize="16sp" />
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/img_share"
+                style="@style/RippleClick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/index_ic_share_b"
+                android:textColor="#ffff6266"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/iv_top_shader"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.healthy.library.widget.StatusLayout>
+

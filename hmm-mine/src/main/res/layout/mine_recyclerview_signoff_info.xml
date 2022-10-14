@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.widget.NewInputView
+        android:paddingHorizontal="12dp"
+        android:id="@+id/niv_mine_sign_off_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:newInput_isEdit="false"
+        app:newInput_isNot_bg="true"
+        app:newInput_right_color="@color/color_333333"
+        app:newInput_title_color="@color/color_cccccc"
+        app:newInput_bgColor="@color/colorWhite"
+        app:newInput_height="60dp"
+        tools:newInput_right="撒决定"
+        tools:newInput_title="  姓名" />
+
+    <com.example.lib_ShapeView.view.ShapeView
+        android:visibility="gone"
+        android:id="@+id/sv_mine_sign_off_info_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/niv_mine_sign_off_info"
+        app:shape_bottomLeftRadius="6dp"
+        app:shape_bottomRightRadius="6dp"
+        app:shape_solidColor="@color/colorWhite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

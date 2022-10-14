@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.health.mall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+
+    <application
+        android:name="com.healthy.library.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/LibAppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.PeopleListActivity"></activity>
+        <activity android:name=".activity.NewStoreDetailActivity" />
+        <activity android:name=".activity.ServiceIndexActivity" />
+        <activity
+            android:name=".activity.ClassificationActivity"
+            android:theme="@style/MallAppTheme" />
+        <activity android:name=".activity.PayResultActivity" />
+        <activity
+            android:name=".activity.BranchShopListActivity"
+            android:theme="@style/MallAppTheme" />
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ProvinceCityActivity" />
+        <activity android:name=".activity.GoodsListActivity" />
+        <activity android:name=".activity.StoreListActivity" />
+        <activity
+            android:name=".activity.StoreDetailActivity"
+            android:theme="@style/Translucent" />
+        <activity android:name=".activity.GoodsDetailActivity" />
+        <activity
+            android:name=".activity.OrderPinActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activity.InputAddressActivity" />
+        <activity
+            android:name=".activity.ChooseMapAddressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activity.CheckoutCounterActivity" />
+        <activity android:name=".activity.CommentsActivity" />
+        <activity android:name=".activity.StoreGoodsActivity" />
+    </application>
+
+</manifest>

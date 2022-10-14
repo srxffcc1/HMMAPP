@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="6dp"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_recommend"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_1_1_default2"
+        app:corner_radius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorMajorText"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/iv_recommend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="针对不同体质的孩子，平时饮食应该注意什么？适合吃些什么？"/>
+
+    <TextView
+        android:id="@+id/tv_read_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/index_news_browse_num"
+        android:drawablePadding="6dp"
+        android:gravity="center_vertical"
+        android:textColor="#ff9596a4"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="875"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

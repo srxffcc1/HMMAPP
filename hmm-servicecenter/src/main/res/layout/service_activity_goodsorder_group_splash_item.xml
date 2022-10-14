@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:orientation="vertical">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/pointLable"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_order_list_point_lable"
+        android:gravity="center"
+        android:text="积分兑换"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+        app:layout_constraintRight_toRightOf="@+id/goodsImg" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/actFlag"
+        android:layout_width="36dp"
+        android:layout_height="16dp"
+        android:src="@drawable/act_pin"
+        app:layout_constraintTop_toTopOf="@id/goodsImg"
+        app:layout_constraintLeft_toLeftOf="@id/goodsImg"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

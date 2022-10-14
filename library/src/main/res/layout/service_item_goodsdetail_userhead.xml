@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_mall_goods_ol_vid_float_yellow"
+    tools:ignore="Orientation">
+
+    <LinearLayout
+        android:id="@+id/bottomLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/shape_mall_goods_ol_vid_float_yellowd"
+        android:layout_margin="10dp"
+        android:padding="18dp"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/goodsBuyMan"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:drawable="@drawable/head_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:drawablePadding="6dp"
+                app:drawableHeight="20dp"
+                app:drawableWidth="14dp"
+                android:text="已有2096人购买成功"
+                android:textColor="#ff761828"
+                android:textSize="14sp"
+                />
+            <com.gongwen.marqueen.MarqueeView
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/marqueeView"
+                android:layout_width="150dp"
+                android:layout_height="28dp"
+                android:flipInterval="2500"
+                android:background="@drawable/shape_group_top_hint2"
+                android:inAnimation="@anim/in_bottom"
+                android:outAnimation="@anim/out_top"
+                app:marqueeAnimDuration="2000"></com.gongwen.marqueen.MarqueeView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.healthy.library.widget.AutoPollRecyclerView
+            android:id="@+id/autoPollRecyclerView"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

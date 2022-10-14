@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/shape_desposit_ll_bg2"
+    android:paddingTop="12dp"
+    android:paddingBottom="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardMsTopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cardLeftImg"
+            android:layout_width="81dp"
+            android:layout_height="59dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_card_left"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardName" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardLeftLL"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardLeftImg"
+            app:layout_constraintLeft_toLeftOf="@id/cardLeftImg"
+            app:layout_constraintRight_toRightOf="@id/cardLeftImg"
+            app:layout_constraintTop_toTopOf="@id/cardLeftImg">
+
+            <LinearLayout
+                android:id="@+id/cardTopMoneyLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="￥"
+                    android:textColor="#ffffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textColor="#ffffffff"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满150可用"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardTopMoneyLL" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cardName"
+            app:layout_constraintRight_toLeftOf="@id/cardTT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="【憨妈妈】新人大礼包"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/cardLeftLL"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/cardTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已经过期"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginRight="14dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:background="@drawable/shape_desposit_ll_bgtg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardName"
+            app:layout_constraintBottom_toBottomOf="@id/cardName"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/cardTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="5dp"
+            android:text="2020-08-19 至 2020-10-19"
+            android:textColor="#ff9a9a9a"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/cardName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardName" />
+
+        <TextView
+            android:id="@+id/cardTip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="限合生元品牌的商品可用"
+            android:textColor="#ff9a9a9a"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/cardTime"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardTime" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/vipDiv"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="3dp"
+        android:background="#E5E5E5"
+        app:layout_constraintTop_toBottomOf="@+id/cardMsTopLL" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/canUseCardStoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:drawablePadding="6dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="可用门店"
+        android:textColor="#ff9a9a9a"
+        android:textSize="12sp"
+        app:drawable="@drawable/consume_down"
+        app:drawableHeight="4dp"
+        app:drawableWidth="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vipDiv"
+        app:position="3" />
+
+    <LinearLayout
+        android:id="@+id/canUseCardStoreScP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_desposit_ll_bg"
+        android:padding="11dp"
+        app:layout_constraintTop_toBottomOf="@+id/canUseCardStoreButton">
+
+        <ScrollView
+            android:id="@+id/canUseCardStoreSc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/canUseCardStoreScLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/mine_item_vip_card_store" />
+
+                <include layout="@layout/mine_item_vip_card_store" />
+
+                <include layout="@layout/mine_item_vip_card_store" />
+
+                <include layout="@layout/mine_item_vip_card_store" />
+
+                <include layout="@layout/mine_item_vip_card_store" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

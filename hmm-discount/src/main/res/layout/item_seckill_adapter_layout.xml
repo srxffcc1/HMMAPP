@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F9">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/goodsCard"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/goodsImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/img_1_1_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/goodsImg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodsImg"
+                tools:text="安可新酒精棉片酒精消毒片呵护健康独立包装应急处理酒精…" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/progressLL"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/btnConstraintLayout"
+                app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodsTitle">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/shape_mall_index_seckill_full_progress"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/progressT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_mall_index_seckill_full_progress_red"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="10%"
+                        android:textColor="#ffffffff"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/progressTZ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_mall_index_seckill_full_progress_red"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="10%"
+                        android:textColor="#ffffffff"
+                        android:textSize="9sp"
+                        android:alpha="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/numTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="18dp"
+                    android:textColor="#ff666666"
+                    android:textSize="10sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="已抢168件" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnConstraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+                app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <View
+                    android:id="@+id/yellowView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="70dp"
+                    android:background="@drawable/seckill_list_btn_yellow_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="2dp"
+                        android:textColor="#fff02846"
+                        android:textSize="19sp"
+                        tools:text="12.8" />
+
+                    <TextView
+                        android:id="@+id/pricePre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="秒杀价"
+                        android:textColor="#fff02846"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linePriceView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/seckill_list_btn_price_bg"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toLeftOf="@+id/redView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="原价 "
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <TextView
+                        android:id="@+id/linePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:text="¥49.9" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/robBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/seckill_list_btn_icon"
+                    android:drawablePadding="3dp"
+                    android:elevation="2dp"
+                    android:paddingLeft="12dp"
+                    android:text="抢购"
+                    android:gravity="center"
+                    android:textColor="#ffffefc2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/redView"
+                    app:layout_constraintRight_toRightOf="@+id/redView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/redView"
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/seckill_list_btn_red_bg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/goodsShareCoupon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintLeft_toLeftOf="@id/goodsImg"
+                app:layout_constraintTop_toTopOf="@id/goodsImg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/goods_share_coupon"
+                android:visibility="invisible"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

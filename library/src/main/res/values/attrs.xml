@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 堆标签 -->
+    <declare-styleable name="StackLabel">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="paddingVertical" format="dimension" />
+        <attr name="paddingHorizontal" format="dimension" />
+        <attr name="itemMargin" format="dimension" />
+        <attr name="itemMarginVertical" format="dimension" />
+        <attr name="itemMarginHorizontal" format="dimension" />
+        <attr name="deleteButton" format="boolean" />
+        <attr name="isBold" format="boolean" />
+
+        <attr name="deleteButtonImage" format="reference" />
+        <attr name="labelBackground" format="reference" />
+
+        <attr name="selectMode" format="boolean" />
+        <attr name="selectBackground" format="reference" />
+        <attr name="selectTextColor" format="color" />
+        <attr name="maxSelectNum" format="integer" />
+        <attr name="minSelectNum" format="integer" />
+        <attr name="maxLines" format="integer" />
+
+        <attr name="labels" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="com_DashLine">
+        <attr name="com_strokeWidth" format="dimension" />
+        <attr name="com_dashGap" format="dimension" />
+        <attr name="com_dashWidth" format="dimension" />
+        <attr name="com_vertical" format="boolean" />
+        <attr name="com_color" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="StatusLayout">
+        <attr name="empty_txt" format="string" />
+        <attr name="empty_drawable" format="reference" />
+        <attr name="net_err_txt" format="string" />
+        <attr name="net_err_drawable" format="reference" />
+        <attr name="data_err_drawable" format="reference" />
+        <attr name="txt_drawable_padding" format="dimension" />
+        <attr name="status_margin_bottom" format="dimension" />
+        <attr name="status_init" format="enum">
+            <enum name="content" value="0" />
+            <enum name="loading" value="1" />
+        </attr>
+        <attr name="empty_bias" format="float" />
+        <attr name="err_bias" format="float" />
+        <attr name="loading_bias" format="float" />
+        <attr name="data_err_bias" format="float" />
+        <attr name="txt_color" format="color" />
+        <attr name="retry_txt_color" format="color" />
+        <attr name="retry_txt_bg" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="AutoFitCheckBox">
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FlashTextView">
+        <attr name="flash_duration" format="integer" />
+        <attr name="flash_gap" format="integer" />
+        <attr name="flash_start_color" format="color" />
+        <attr name="flash_end_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollBlockView">
+        <attr name="scroll_color" format="color" />
+        <attr name="scroll_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CornerImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="is_circle" format="boolean" />
+        <!--图片边框宽度、颜色、是否覆盖、填充色-->
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+        <attr name="scaleAble" format="boolean" />
+        <attr name="fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <attr name="title" format="string" />
+    <attr name="submit" format="string" />
+    <attr name="show_moss" format="boolean" />
+    <attr name="bg_color" format="color" />
+    <attr name="submit_color" format="color" />
+    <attr name="back_img_src" format="reference" />
+    <attr name="submit_img_src" format="reference" />
+
+
+    <attr name="txt_content_hint" format="string" />
+    <attr name="et_content_hint" format="string" />
+    <attr name="section_mode" format="enum">
+        <enum name="txt" value="1" />
+        <enum name="et" value="2" />
+        <enum name="none" value="3" />
+    </attr>
+
+    <declare-styleable name="ImageTextView">
+        <attr name="drawable" format="reference" />
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+        <attr name="position" format="integer" />
+    </declare-styleable>
+
+    <attr name="txt_content_drawable_right" format="reference" />
+    <attr name="et_content_drawable_right" format="reference" />
+    <attr name="title_drawable_start" format="reference" />
+    <attr name="show_divider" format="boolean" />
+    <attr name="title_drawable_padding" format="dimension" />
+    <attr name="content_drawable_padding" format="dimension" />
+    <attr name="title_size" format="dimension" />
+    <attr name="title_color" format="color" />
+    <attr name="txt_content_color" format="color" />
+    <attr name="txt_content_size" format="dimension" />
+    <attr name="et_content_color" format="color" />
+    <attr name="et_content_size" format="color" />
+    <attr name="txt_content" format="string" />
+    <attr name="et_content" format="string" />
+    <declare-styleable name="CommonSection">
+        <attr name="title" />
+        <attr name="txt_content_hint" />
+        <attr name="et_content_hint" />
+        <attr name="section_mode" />
+        <attr name="txt_content_drawable_right" />
+        <attr name="et_content_drawable_right" />
+        <attr name="show_divider" />
+        <attr name="title_drawable_start" />
+
+        <attr name="title_drawable_padding" />
+        <attr name="content_drawable_padding" />
+        <attr name="title_size" />
+        <attr name="title_color" />
+        <attr name="txt_content_color" />
+        <attr name="txt_content_size" />
+        <attr name="et_content_color" />
+        <attr name="et_content_size" />
+        <attr name="txt_content" />
+        <attr name="et_content" />
+    </declare-styleable>
+    <declare-styleable name="CommonInsertSection">
+        <attr name="title" />
+        <attr name="right_end" format="reference" />
+        <attr name="right_end2" format="reference" />
+        <attr name="right_end_bg" format="reference" />
+        <attr name="txt_content_hint" />
+        <attr name="et_content_hint" />
+        <attr name="section_mode" />
+        <attr name="txt_content_drawable_right" />
+        <attr name="et_content_drawable_right" />
+        <attr name="show_divider" />
+        <attr name="section_divider_full_width" />
+
+        <attr name="title_drawable_start" />
+
+        <attr name="title_drawable_padding" />
+        <attr name="content_drawable_padding" />
+        <attr name="title_size" />
+        <attr name="title_color" />
+        <attr name="txt_content_color" />
+        <attr name="txt_content_size" />
+        <attr name="et_content_color" />
+        <attr name="et_content_size" />
+        <attr name="txt_content" />
+        <attr name="et_content" />
+    </declare-styleable>
+
+    <declare-styleable name="RatingView">
+        <attr name="is_indicator" format="boolean" />
+        <attr name="rating_res" format="reference" />
+        <attr name="rating_num" format="integer" />
+        <attr name="rating" format="float" />
+        <attr name="steps" format="float" />
+        <attr name="rating_radius" format="dimension" />
+        <attr name="rating_padding" format="dimension" />
+        <attr name="rating_inner_padding" format="dimension" />
+        <attr name="rating_min" format="integer" />
+        <attr name="rating_max" format="integer" />
+    </declare-styleable>
+
+
+    <attr name="halfVisibleItemCount" format="integer" />
+    <attr name="itemTextSize" format="dimension" />
+    <attr name="itemMaximumWidthText" format="string" />
+    <attr name="itemTextColor" format="color" />
+    <attr name="textGradual" format="boolean" />
+    <attr name="selectedTextColor" format="color" />
+    <attr name="selectedTextSize" format="dimension" />
+    <attr name="currentItemPosition" format="integer" />
+    <attr name="itemWidthSpace" format="dimension" />
+    <attr name="itemHeightSpace" format="dimension" />
+    <attr name="zoomInSelectedItem" format="boolean" />
+    <attr name="wheelCyclic" format="boolean" />
+    <attr name="wheelCurtain" format="boolean" />
+    <attr name="wheelCurtainColor" format="color" />
+    <attr name="wheelCurtainBorder" format="boolean" />
+    <attr name="wheelCurtainBorderColor" format="color" />
+    <attr name="indicatorText" format="string" />
+    <attr name="indicatorTextSize" format="dimension" />
+    <attr name="indicatorTextColor" format="color" />
+    <declare-styleable name="WheelPicker">
+        <attr name="halfVisibleItemCount" />
+        <attr name="itemTextSize" />
+        <attr name="itemMaximumWidthText" />
+        <attr name="itemTextColor" />
+        <attr name="textGradual" />
+        <attr name="selectedTextColor" />
+        <attr name="selectedTextSize" />
+        <attr name="currentItemPosition" />
+        <attr name="itemWidthSpace" />
+        <attr name="itemHeightSpace" />
+        <attr name="zoomInSelectedItem" />
+        <attr name="wheelCyclic" />
+        <attr name="wheelCurtain" />
+        <attr name="wheelCurtainColor" />
+        <attr name="wheelCurtainBorder" />
+        <attr name="wheelCurtainBorderColor" />
+        <attr name="indicatorText" />
+        <attr name="indicatorTextSize" />
+        <attr name="indicatorTextColor" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawable_size" format="dimension" />
+        <attr name="drawable_width" format="dimension" />
+        <attr name="drawable_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SectionView">
+        <attr name="section_start_src" format="reference" />
+        <attr name="section_start_size" format="dimension" />
+        <attr name="section_start_width" format="dimension" />
+        <attr name="section_start_height" format="dimension" />
+        <attr name="section_start_margin_start" format="dimension" />
+
+
+        <attr name="section_end_src" format="reference" />
+        <attr name="section_end_size" format="dimension" />
+        <attr name="section_end_width" format="dimension" />
+        <attr name="section_end_height" format="dimension" />
+        <attr name="section_end_margin_end" format="dimension" />
+
+        <attr name="section_title" format="string" />
+        <attr name="section_title_size" format="dimension" />
+        <attr name="section_title_color" format="color" />
+        <attr name="section_title_hint" format="string" />
+        <attr name="section_title_margin_start" format="dimension" />
+
+        <attr name="section_des" format="string" />
+        <attr name="section_des_size" format="dimension" />
+        <attr name="section_des_color" format="color" />
+        <attr name="section_des_hint" format="string" />
+        <attr name="section_des_margin_end" format="dimension" />
+        <attr name="section_des_margin_start" format="dimension" />
+
+        <attr name="section_show_divider" format="boolean" />
+        <attr name="section_divider_full_width" format="boolean" />
+        <attr name="section_divider_color" format="color" />
+        <attr name="section_divider_height" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="NewInputView">
+
+        <attr name="newInput_height" format="dimension"/>
+        <attr name="newInput_title" format="string" />
+        <attr name="newInput_title_color" format="color" />
+
+        <attr name="newInput_right" format="string" />
+        <attr name="newInput_right_color" format="color" />
+        <attr name="newInput_right_hint" format="string" />
+        <attr name="newInput_right_edit" format="string" />
+
+        <attr name="newInput_right_src" format="reference" />
+        <!-- 是否显示背景 无背景显示下划线 -->
+        <attr name="newInput_isNot_bg" format="boolean" />
+        <!-- 无背景设置背景色 -->
+        <attr name="newInput_bgColor" format="color"/>
+        <!-- 是否是输入框模式 -->
+        <attr name="newInput_isEdit" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DotView">
+        <attr name="dot_start_color" format="color" />
+        <attr name="dot_end_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="DashView">
+        <attr name="dash_direction" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+        <attr name="dash_color" format="color" />
+    </declare-styleable>
+    <!--SuperButton-->
+    <declare-styleable name="SuperButton">
+        <attr name="sGravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="top" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+
+        <attr name="sShapeType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="line" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+
+        <attr name="sSolidColor" format="color" />
+
+        <attr name="sSelectorPressedColor" format="color" />
+        <attr name="sSelectorDisableColor" format="color" />
+        <attr name="sSelectorNormalColor" format="color" />
+
+        <attr name="sCornersRadius" format="dimension" />
+
+        <attr name="sCornersTopLeftRadius" format="dimension" />
+        <attr name="sCornersTopRightRadius" format="dimension" />
+        <attr name="sCornersBottomLeftRadius" format="dimension" />
+        <attr name="sCornersBottomRightRadius" format="dimension" />
+
+        <attr name="sStrokeWidth" format="dimension" />
+        <attr name="sStrokeDashWidth" format="dimension" />
+        <attr name="sStrokeDashGap" format="dimension" />
+        <attr name="sStrokeColor" format="color" />
+
+        <attr name="sSizeWidth" format="dimension" />
+        <attr name="sSizeHeight" format="dimension" />
+
+        <attr name="sGradientAngle" format="float" />
+        <attr name="sGradientCenterX" format="dimension" />
+        <attr name="sGradientCenterY" format="dimension" />
+        <attr name="sGradientGradientRadius" format="dimension" />
+        <attr name="sGradientStartColor" format="color" />
+        <attr name="sGradientCenterColor" format="color" />
+        <attr name="sGradientEndColor" format="color" />
+        <attr name="sGradientUseLevel" format="boolean" />
+
+        <attr name="sUseSelector" format="boolean" />
+
+        <attr name="sGradientType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+
+    </declare-styleable>
+    <attr name="mwhWaves" format="string|enum">
+        <enum name="MultiWave" value="-1" />
+        <enum name="PairWave" value="-2" />
+    </attr>
+    <declare-styleable name="MultiWaveHeader">
+        <attr name="mwhWaveHeight" format="dimension" />
+        <attr name="mwhStartColor" format="color" />
+        <attr name="mwhCloseColor" format="color" />
+        <attr name="mwhIsRunning" format="boolean" />
+        <attr name="mwhColorAlpha" format="fraction|float" />
+        <attr name="mwhProgress" format="fraction|float" />
+        <attr name="mwhVelocity" format="fraction|float" />
+        <attr name="mwhGradientAngle" format="integer" />
+        <attr name="mwhWaves" />
+    </declare-styleable>
+    <declare-styleable name="FoldTextView">
+        <attr name="showMaxLine" format="integer" />
+        <attr name="tipGravity" format="integer" />
+        <attr name="tipColor" format="reference|color" />
+        <attr name="tipClickable" format="boolean" />
+        <attr name="foldText" format="string" />
+        <attr name="expandText" format="string" />
+        <attr name="showTipAfterExpand" format="boolean" />
+        <attr name="isSetParentClick" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CollapsedTextView">
+        <attr name="collapsedLines" format="integer" />
+        <attr name="expandedText" format="string" />
+        <attr name="collapsedText" format="string" />
+        <attr name="expandedDrawable" format="reference" />
+        <attr name="collapsedDrawable" format="reference" />
+        <attr name="tipsGravity">
+            <flag name="end" value="0" />
+            <flag name="bottom" value="1" />
+        </attr>
+        <attr name="tipsColor" format="reference|color" />
+        <attr name="tipsUnderline" format="boolean" />
+        <attr name="tipsClickable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="WarpLinearLayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="horizontal_Space" format="dimension" />
+        <attr name="vertical_Space" format="dimension" />
+        <attr name="isFull" format="boolean" />
+    </declare-styleable>
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="vericationCodeView">
+        <!--输入框的数量-->
+        <attr name="vcv_et_number" format="integer" />
+        <!--输入类型-->
+        <attr name="vcv_et_inputType">
+            <enum name="number" value="0" />
+            <enum name="numberPassword" value="1" />
+            <enum name="text" value="2" />
+            <enum name="textPassword" value="3" />
+        </attr>
+        <!--输入框的宽度-->
+        <attr name="vcv_et_width" format="dimension|reference" />
+        <!--输入框文字颜色-->
+        <attr name="vcv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="vcv_et_text_size" format="dimension|reference" />
+        <!--输入框背景-->
+        <attr name="vcv_et_bg" format="reference" />
+        <!--光标样式-->
+        <attr name="vcv_et_cursor" format="reference" />
+        <!--是否隐藏光标-->
+        <attr name="vcv_et_cursor_visible" format="boolean" />
+        <!--输入框间距，不输入则代表平分-->
+        <attr name="vcv_et_spacing" format="dimension|reference" />
+
+    </declare-styleable>
+</resources>

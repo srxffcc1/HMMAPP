@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+
+    >
+
+    <com.lihang.ShadowLayout
+        android:id="@+id/mShadowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="14dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="#0F000000"
+        app:hl_shadowLimit="8dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+
+                    android:id="@+id/see_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="和婆婆一起学做饭"
+                    android:drawableLeft="@drawable/ic_post_red"
+                    android:drawablePadding="8dp"
+                    android:paddingBottom="9dp"
+                    android:paddingTop="9dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@drawable/shape_index_chat_title_red"
+                    android:textColor="#ffe26376"
+                    android:textSize="16sp"
+                    />
+                <GridLayout
+                    android:id="@+id/see_imgs"
+                    android:paddingTop="14dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/see_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </GridLayout>
+                <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/see_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    app:layout_constraintTop_toBottomOf="@id/see_imgs"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="起床陪婆婆"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    />
+                <LinearLayout
+                    android:id="@+id/canlikediscuss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="15dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/see_content"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <RelativeLayout
+                        android:id="@+id/canjoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/canlikediscuss"
+                        app:layout_constraintTop_toBottomOf="@id/see_content">
+                        <com.healthy.library.widget.CornerImageView
+                            android:id="@+id/head_icon4"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:elevation="1dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerVertical="true"
+                            app:is_circle="true"
+                            android:src="@drawable/mall_ic_ali_pay"
+                            />
+                        <com.healthy.library.widget.CornerImageView
+                            android:id="@+id/head_icon3"
+                            android:layout_width="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="-4dp"
+                            android:elevation="1dp"
+                            app:is_circle="true"
+                            android:scaleType="centerCrop"
+                            android:layout_toRightOf="@id/head_icon4"
+                            android:src="@drawable/mall_ic_wx_pay"
+                            />
+                        <com.healthy.library.widget.CornerImageView
+                            android:id="@+id/head_icon2"
+                            android:layout_width="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="-4dp"
+                            android:elevation="1dp"
+                            app:is_circle="true"
+                            android:scaleType="centerCrop"
+                            android:layout_toRightOf="@id/head_icon3"
+                            android:src="@drawable/mall_ic_ali_pay"
+                            />
+                        <com.healthy.library.widget.CornerImageView
+                            android:id="@+id/head_icon1"
+                            android:layout_width="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="-4dp"
+                            android:elevation="1dp"
+                            app:is_circle="true"
+                            android:scaleType="centerCrop"
+                            android:layout_toRightOf="@id/head_icon2"
+                            android:src="@drawable/mall_ic_wx_pay"
+                            />
+                        <TextView
+                            android:id="@+id/likecount"
+                            android:gravity="center"
+                            android:drawablePadding="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2056人正在参与"
+                            android:layout_toRightOf="@id/head_icon1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="#ff666666"
+                            android:textSize="10sp"
+                            />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/discuss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_discuss"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="16dp"
+                        android:text="0"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_like"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.lihang.ShadowLayout>
+
+
+
+</LinearLayout>

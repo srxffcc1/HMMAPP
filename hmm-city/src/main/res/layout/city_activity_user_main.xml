@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f6f7f9"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_city_appbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/status_2020"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed|exitUntilCollapsed">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:alpha="1"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/followTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="关注"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <TextView
+                            android:id="@+id/followCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+                            app:layout_constraintLeft_toRightOf="@id/followTitle"
+                            app:layout_constraintTop_toTopOf="@id/followTitle" />
+
+                        <TextView
+                            android:id="@+id/fansTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:text="粉丝"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+                            app:layout_constraintLeft_toRightOf="@id/followCount"
+                            app:layout_constraintTop_toTopOf="@id/followTitle" />
+
+                        <TextView
+                            android:id="@+id/fansCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="0"
+                            android:textColor="#ffffffff"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+                            app:layout_constraintLeft_toRightOf="@id/fansTitle"
+                            app:layout_constraintTop_toTopOf="@id/followTitle" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/img_back"
+                        style="@style/RippleClick"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:contentDescription="@string/app_name"
+                        android:elevation="1dp"
+                        android:paddingStart="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="6dp"
+                        android:src="@drawable/ic_back"
+                        app:layout_collapseMode="pin" />
+
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/tool_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:layout_collapseMode="parallax">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="20dp">
+
+                            <com.healthy.library.widget.CornerImageView
+                                android:id="@+id/ivHeader"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_avatar_default"
+                                app:is_circle="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/name"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/iv_user_badge"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/icon_user_official_certification"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+                                app:layout_constraintRight_toRightOf="@id/ivHeader" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="11dp"
+                                android:singleLine="true"
+                                android:textColor="#ffffffff"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toRightOf="@id/ivHeader"
+                                app:layout_constraintRight_toLeftOf="@+id/toFollow"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="快乐柠檬草" />
+
+                            <com.example.lib_ShapeView.view.ShapeTextView
+                                android:id="@+id/stv_user_badgeName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:paddingHorizontal="4dp"
+                                android:paddingVertical="1dp"
+                                android:text="官方认证"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="9dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+                                app:layout_constraintLeft_toLeftOf="@id/name"
+                                app:shape_bottomRightRadius="8dp"
+                                app:shape_solidColor="#3889FD"
+                                app:shape_topLeftRadius="8dp"
+                                app:shape_topRightRadius="8dp" />
+
+                            <TextView
+                                android:id="@+id/status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="5dp"
+                                android:textColor="#ff666666"
+                                android:textSize="9sp"
+                                app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+                                app:layout_constraintLeft_toRightOf="@id/stv_user_badgeName"
+                                tools:text="备孕中" />
+
+                            <TextView
+                                android:id="@+id/toFollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_city_white"
+                                android:drawableLeft="@drawable/ic_star_tofollow"
+                                android:drawablePadding="7dp"
+                                android:paddingLeft="14dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="14dp"
+                                android:paddingBottom="5dp"
+                                android:text="关注"
+                                android:textColor="#ff444444"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/ivHeader" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <com.healthy.library.widget.StatusLayout
+                android:id="@+id/layout_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.healthy.library.widget.StatusLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/need_s"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/passToSendPost"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_send_post"
+            app:layout_constraintBottom_toTopOf="@id/passToTop"
+            app:layout_constraintLeft_toLeftOf="@id/passTmp"
+            app:layout_constraintRight_toRightOf="@id/passTmp" />
+
+        <ImageView
+            android:id="@+id/passToTop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="22dp"
+            android:src="@drawable/city_ic_to_top"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/passTmp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/passTmp"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

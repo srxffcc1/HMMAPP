@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--
+         inputType设置隐藏密码明文
+         textSize设置大一点，否则“点”太小了，不美观
+    -->
+    <LinearLayout
+        android:id="@+id/ll_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass1"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass2"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass3"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass4"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass5"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+
+        <com.healthy.library.widget.SuperButton
+            android:id="@+id/tv_pass6"
+            style="@style/password"
+            app:sCornersRadius="6dp"
+            app:sShapeType="rectangle"
+            app:sSolidColor="@color/colorWhite"
+            app:sStrokeColor="@color/color_7a7b8b"
+            app:sStrokeWidth="@dimen/dp_1"
+            tools:text="8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_pass"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="@dimen/dp_20"
+        android:text="忘记密码？"
+        android:textColor="@color/color_ff6266"
+        android:visibility="gone"
+
+        />
+    <!-- 输入键盘 -->
+    <LinearLayout
+        android:id="@+id/ll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ccced3"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/vw1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#11000000" />
+
+        <GridView
+            android:id="@+id/gv_keybord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:horizontalSpacing="0.5dp"
+            android:numColumns="3"
+            android:verticalSpacing="0.5dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

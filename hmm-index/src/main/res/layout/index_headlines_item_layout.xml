@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_city_white"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/index_headlines_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:text="憨妈头条"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/cl_headlines_one"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="5dp"
+        android:padding="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintRight_toLeftOf="@+id/cl_headlines_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:shape_radius="6dp"
+        app:shape_solidColor="#F9F5FF">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_headlines_one_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="补充体力，迎接分娩" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_headlines_one_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_headlines_one_title"
+            tools:text="这段时间孕妈妈胃部的不适感会逐渐降低" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/stv_headlines_one_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="1dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_endColor="#FF426C"
+            app:shape_radius="11dp"
+            app:shape_startColor="#FF6060"
+            tools:text="孕期食谱" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/cl_headlines_two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/cl_headlines_one"
+        app:layout_constraintLeft_toRightOf="@id/cl_headlines_one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_headlines_one"
+        app:shape_radius="6dp"
+        app:shape_solidColor="#F9F5FF">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_headlines_two_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="怀孕期间脾气暴躁怎么办?" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_headlines_two_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_headlines_two_title"
+            tools:text="这段时间孕妈妈胃部的不适感会逐渐降低…" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/stv_headlines_two_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="1dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_radius="11dp"
+            app:shape_solidColor="#4E8FFF"
+            tools:text="知识推荐" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/eatParent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/cl_headlines_one"
+        app:layout_constraintRight_toRightOf="@id/cl_headlines_two"
+        app:layout_constraintTop_toBottomOf="@id/cl_headlines_one"
+        app:shape_radius="6dp"
+        app:shape_solidColor="#FFF5F5">
+
+        <com.example.lib_ShapeView.view.ShapeView
+            android:layout_width="86dp"
+            android:layout_height="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_bottomLeftRadius="8dp"
+            app:shape_endColor="#00FF4B4B"
+            app:shape_startColor="#33FF6159"
+            app:shape_topLeftRadius="8dp" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/tipTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="不能吃"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_textEndColor="#FF426C"
+            app:shape_textStartColor="#FF6060" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_canNotEat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tipTitle"
+            app:layout_constraintLeft_toRightOf="@id/tipTitle"
+            app:layout_constraintTop_toTopOf="@id/tipTitle"
+            tools:text="皮蛋瘦肉粥" />
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/nocanunder_flag"
+            app:layout_constraintLeft_toLeftOf="@id/tipTitle"
+            app:layout_constraintRight_toRightOf="@id/tipTitle"
+            app:layout_constraintTop_toBottomOf="@id/tipTitle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/tv_canNotEat"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_canNotEat">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/toolEatTip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="孕妇"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:drawable="@drawable/tools_eat_tip1"
+                    app:drawableHeight="14dp"
+                    app:drawableWidth="14dp"
+                    app:position="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/toolEatTip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="坐月子"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:drawable="@drawable/tools_eat_tip1"
+                    app:drawableHeight="14dp"
+                    app:drawableWidth="14dp"
+                    app:position="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/toolEatTip3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="哺乳"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:drawable="@drawable/tools_eat_tip1"
+                    app:drawableHeight="14dp"
+                    app:drawableWidth="14dp"
+                    app:position="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/toolEatTip4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="婴幼儿"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:drawable="@drawable/tools_eat_tip1"
+                    app:drawableHeight="14dp"
+                    app:drawableWidth="14dp"
+                    app:position="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

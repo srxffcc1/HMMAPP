@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:status_init="content">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
+                android:id="@+id/scrollerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_index"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_isSticky="true"
+                    tools:ignore="MissingDefaultResource">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/st"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabBackground="@color/transparent"
+                        app:tabIndicatorHeight="0dp"
+                        app:tabMode="fixed"
+                        app:tabRippleColor="@color/transparent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/st" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.donkingliang.consecutivescroller.ConsecutiveViewPager
+                    android:id="@+id/viewPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>
+
+            <View
+                android:id="@+id/topSpace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/topTitle"
+                android:layout_alignParentTop="true"
+                android:alpha="0"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                tools:alpha="1"
+                tools:background="#000" />
+
+            <RelativeLayout
+                android:id="@+id/topTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="8dp">
+
+                <View
+                    android:id="@+id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp" />
+
+
+                <com.liys.view.WaterWaveProView
+                    android:id="@+id/passPrograss"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:progress_color="#2B8EFF"
+                    android:layout_marginTop="6dp"
+                    android:visibility="gone"
+                    app:progress_max="1000"
+                    app:progress_value="500" />
+
+                <FrameLayout
+                    android:id="@+id/hmmIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/passPrograss"
+                    android:layout_marginTop="6dp">
+
+                    <ImageView
+                        android:id="@+id/foldHmmIp"
+                        android:layout_width="27dp"
+                        android:layout_height="34dp"
+                        android:layout_below="@+id/tabs"
+                        android:alpha="0"
+                        android:src="@drawable/icon_fold_hmm_ip" />
+
+                    <ImageView
+                        android:id="@+id/iv_hmmIp"
+                        android:layout_width="76dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/icon_home_hmm_ip" />
+
+                </FrameLayout>
+
+                <!-- 用户阶段信息 -->
+                <LinearLayout
+                    android:id="@+id/tv_areall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/hmmIp"
+                    android:layout_alignBottom="@id/hmmIp"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/selectClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="小豆宝" />
+
+                    <ImageView
+                        android:id="@+id/selectDown"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_triangle_down_white" />
+                </LinearLayout>
+
+
+
+                <ImageView
+                    android:id="@+id/passMessage"
+                    android:layout_width="24dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/hmmIp"
+                    android:layout_alignBottom="@id/hmmIp"
+                    android:layout_toLeftOf="@+id/messageTag"
+                    android:layout_marginRight="-9dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_message_white" />
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:id="@+id/messageTag"
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/passMessage"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/din_bold"
+                    android:text="99"
+                    android:textSize="9dp"
+                    android:gravity="center"
+                    app:shape_radius="5dp"
+                    app:shape_solidColor="#FFFFFF"
+                    app:shape_textEndColor="#FF426C"
+                    app:shape_textStartColor="#FF6060" />
+
+                <ImageView
+                    android:id="@+id/pointsSignIn"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:layout_alignTop="@id/hmmIp"
+                    android:layout_alignBottom="@id/hmmIp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@id/passMessage"
+                    android:src="@drawable/icon_home_points_signin"
+                    android:visibility="invisible" />
+
+                <com.example.lib_ShapeView.layout.ShapeRelativeLayout
+                    android:id="@+id/srl_searchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tabs"
+                    android:layout_marginTop="36dp"
+                    app:shape_radius="18dp"
+                    app:shape_solidColor="@color/colorWhite">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_loc_bg1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:alpha="100"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="50dp"
+                        android:layout_toRightOf="@+id/tv_loc"
+                        android:text="智慧孕育·憨妈妈"
+                        android:textColor="@color/color_999999"
+                        android:textSize="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_loc_bg2"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="智慧孕育·憨妈妈"
+                        android:textColor="@color/color_999999"
+                        android:textSize="12dp" />
+
+                    <com.healthy.library.widget.ImageTextView
+                        android:id="@+id/tv_loc"
+                        android:layout_width="wrap_content"
+                        android:minWidth="60dp"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="3dp"
+                        android:fontFamily="@font/din_medium"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        tools:text="苏州"
+                        android:textColor="@color/color_666666"
+                        android:textSize="12dp"
+                        app:drawable="@drawable/pack_down"
+                        app:drawableHeight="8dp"
+                        app:drawableWidth="8dp"
+                        app:position="3" />
+
+                </com.example.lib_ShapeView.layout.ShapeRelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlTextNothing="我是有底线的 ~" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</com.healthy.library.widget.StatusLayout>

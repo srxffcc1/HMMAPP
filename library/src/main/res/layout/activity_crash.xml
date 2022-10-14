@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/carsh_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/app_ic_launcher" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="#575757"
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="程序发生未知错误，我们已记录该错误并会在第一时间修复。对您造成的不便敬请谅解！"
+        android:textAlignment="center"
+        android:textColor="#797979"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cash_exit"
+            style="@style/dialog_blue_button"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/gray_button_background"
+            android:text="退出" />
+
+        <Button
+            android:id="@+id/cash_restart"
+            style="@style/dialog_blue_button"
+            android:text="尝试修复" />
+    </LinearLayout>
+
+</LinearLayout>

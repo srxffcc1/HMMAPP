@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="10dp"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:id="@+id/fl_post_content"
+    tools:background="@drawable/shape_chose"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/grass_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/ivHeader"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/img_avatar_default"
+                    app:is_circle="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_user_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_user_official_certification"
+                    app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+                    app:layout_constraintRight_toRightOf="@id/ivHeader" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:maxEms="10"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivHeader"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="快乐柠檬草" />
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:id="@+id/stv_user_badgeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="官方认证"
+                    app:layout_constraintTop_toTopOf="@id/name"
+                    app:layout_constraintLeft_toRightOf="@id/name"
+                    app:layout_constraintBottom_toBottomOf="@id/name"
+                    android:textSize="9dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="6dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="1dp"
+                    app:shape_topLeftRadius="8dp"
+                    app:shape_bottomRightRadius="8dp"
+                    app:shape_topRightRadius="8dp"
+                    app:shape_solidColor="#3889FD"/>
+
+                <TextView
+                    android:id="@+id/days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@id/name"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    tools:text="4小时前" />
+
+                <ImageView
+                    android:id="@+id/submit"
+                    style="@style/RippleClick"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="8dp"
+
+                    android:src="@drawable/ic_tip_more"
+                    android:textColor="#ffff6266"
+                    android:textSize="16sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mark"
+                    android:layout_width="32dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/shape_ad_tips_item"
+                    android:gravity="center"
+                    android:text="广告"
+                    android:textColor="#ff999999"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/days"
+                    app:layout_constraintLeft_toRightOf="@+id/days" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/follow_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/grass_head">
+
+            <include layout="@layout/city_item_fragment_ad_child" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/heightView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#F7F7FA"
+        android:visibility="gone" />
+</LinearLayout>

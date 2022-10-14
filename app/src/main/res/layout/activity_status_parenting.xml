@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_status"
+    app:status_init="content"
+    tools:context=".activity.StatusPregnancyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/BackIvStyle"
+            android:onClick="back"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/finishname"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完成"
+            android:visibility="gone"
+            android:textColor="#ffff6266"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/tv_title_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_birth_date_title"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+
+        <com.healthy.library.watcher.AlphaTextView
+            android:id="@+id/tv_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_sans_serif"
+            android:text="@string/app_birth_date"
+            android:textSize="21dp"
+            android:layout_marginTop="45dp"
+            android:onClick="chooseBornDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_1"
+            tools:ignore="SpUsage"/>
+
+        <TextView
+            android:id="@+id/tv_title_step_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_birth_type_title"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+
+        <com.healthy.library.watcher.AlphaTextView
+            android:id="@+id/tv_step_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_sans_serif"
+            android:text="@string/app_birth_type"
+            android:textSize="21dp"
+            android:layout_marginTop="45dp"
+            android:onClick="chooseBornType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_2"
+            tools:ignore="SpUsage"/>
+
+        <TextView
+            android:id="@+id/tv_title_step_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_baby_sex_title"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+        <TextView
+            android:id="@+id/tv_title_step_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入宝宝的昵称"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+
+        <EditText
+            android:id="@+id/et_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@null"
+            android:maxLength="8"
+            android:gravity="center"
+            android:fontFamily="@font/din_medium"
+            android:hint="请输入"
+            android:inputType="text"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_4"
+            tools:ignore="TextFields"/>
+
+        <View
+            android:id="@+id/divider_et"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorDividerDark"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_Name"/>
+
+        <ImageView
+            android:id="@+id/iv_boy"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/app_status_boy"
+            android:layout_marginTop="50dp"
+            android:onClick="chooseSex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_3"/>
+
+        <ImageView
+            android:id="@+id/iv_girl"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/app_status_girl"
+            android:layout_marginTop="30dp"
+            android:onClick="chooseSex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_boy"/>
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_title_step_1,tv_step_1"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_title_step_2,tv_step_2"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_3"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_title_step_3,iv_boy,iv_girl"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_4"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_title_step_4,et_Name,divider_et"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/app_bg_bind_phone"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="750:388"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.healthy.library.widget.StatusLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_banner_head_bg"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/second_top_bg"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.2"
+        android:background="#000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_banner_head_bg"
+        app:layout_constraintLeft_toLeftOf="@id/iv_banner_head_bg"
+        app:layout_constraintRight_toRightOf="@id/iv_banner_head_bg"
+        app:layout_constraintTop_toTopOf="@id/iv_banner_head_bg"></View>
+
+    <ImageView
+        android:id="@+id/iv_banner_head_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_banner_head_bg_svg"
+        android:tint="#F6F7F9"
+        android:tintMode="src_in"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_banner_head_bg"
+        tools:ignore="UseAppTint" />
+
+    <Space
+        android:id="@+id/disSpace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_banner_head_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/functionLL">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.healthy.library.widget.ImageTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="本地品牌老店"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                app:drawable="@drawable/second_small_left"
+                app:drawableHeight="12dp"
+                app:drawableWidth="12dp"
+                app:position="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.healthy.library.widget.ImageTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="专业母婴顾问"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                app:drawable="@drawable/second_small_center"
+                app:drawableHeight="12dp"
+                app:drawableWidth="12dp"
+                app:position="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.healthy.library.widget.ImageTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="服务预约到家"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                app:drawable="@drawable/second_small_right"
+                app:drawableHeight="12dp"
+                app:drawableWidth="12dp"
+                app:position="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/functionLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_index_top_grid_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@id/disSpace">
+
+        <GridLayout
+            android:id="@+id/functionGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:columnCount="5"
+            android:minHeight="80dp">
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+            <!--            <include-->
+            <!--                layout="@layout/item_second_function_menu"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_columnWeight="1" />-->
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

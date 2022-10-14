@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.RoundedImageView
+        android:id="@+id/img"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        app:is_circle="false"
+        android:src="@drawable/img_690_260_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/hanmom_videolist_video_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img">
+
+        <ImageView
+            android:id="@+id/videoTips"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/hanmom_videolist_tips_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="宝宝养成记"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/videoContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="高级月嫂课程养成中～"
+        android:textColor="#ff666666"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@+id/titleLayout"
+        app:layout_constraintRight_toRightOf="@+id/titleLayout"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+    <TextView
+        android:id="@+id/videoLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="免费"
+        android:textColor="#ffff3d92"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/img"
+        app:layout_constraintLeft_toLeftOf="@id/videoContent" />
+
+    <TextView
+        android:id="@+id/videoLableLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text=""
+        android:textColor="#333333"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/videoLable"
+        app:layout_constraintLeft_toRightOf="@+id/videoLable" />
+
+    <TextView
+        android:id="@+id/seeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0人已看"
+        android:textColor="#ff999999"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/videoLable"
+        app:layout_constraintRight_toRightOf="@id/videoContent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/seeNum" />
+</androidx.constraintlayout.widget.ConstraintLayout>

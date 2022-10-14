@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_back"
+                android:background="@drawable/shape_search_loc_country"
+                app:layout_constraintRight_toRightOf="parent">
+                <EditText
+                    android:id="@+id/serarchKeyWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="搜一搜"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:drawablePadding="11dp"
+                    android:paddingLeft="15dp"
+                    android:drawableLeft="@drawable/mall_ic_search"
+                    android:background="@null"
+                    android:textColor="#ff9596a4"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_back"
+                style="@style/RippleClick"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/app_name"
+                android:paddingStart="12dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="#FFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/st"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    app:tl_textsize="15sp"
+                    app:tl_indicator_corner_radius="1.5dp"
+                    app:tl_indicator_height="3dp"
+                    app:tl_indicator_color="#4EB67D"
+                    app:tl_textSelectColor="#323232"
+                    app:tl_textUnselectColor="#656565"
+                    app:tl_textBold="SELECT"
+                    app:tl_indicator_margin_top="8dp"
+                    app:tl_indicator_width="30dp"/>
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:padding="12dp"
+                    android:text="保健专家"
+                    android:textSize="12sp"
+                    app:drawable="@drawable/ic_solid_triangle_down_gray"
+                    app:drawableHeight="8dp"
+                    app:drawableWidth="8dp"
+                    app:position="3" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/ic_header_shadow"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp"
+                android:background="#FFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/need_s"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/adapter_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom" />
+    </RelativeLayout>
+
+</FrameLayout>

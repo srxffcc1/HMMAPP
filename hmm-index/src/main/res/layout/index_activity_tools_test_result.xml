@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:title="预测结果" />
+
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tools_text_pink_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/shape_test_bg_pinkblack"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:background="@drawable/shape_test_bg_white"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginTop="20dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="预测结果"
+                                    android:textStyle="bold"
+                                    android:textColor="#fff97a87"
+                                    android:textSize="20sp"
+                                    />
+                                <ImageView
+                                    android:id="@+id/sexImg"
+                                    android:layout_marginTop="35dp"
+                                    android:src="@drawable/tools_result_male"
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"/>
+                                <TextView
+                                    android:id="@+id/sexTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="快来接男宝一枚，宝宝活泼可爱，将来肯定是一个风度翩翩的少年！"
+                                    android:textColor="#ff763749"
+                                    android:textSize="15sp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+                    </androidx.core.widget.NestedScrollView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/toolsButtonLeft"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.3"
+                                android:background="@drawable/shape_test_button_flame"
+                                android:paddingTop="13dp"
+                                android:paddingBottom="20dp"
+                                android:text=""
+                                android:textColor="#fff97a87"
+                                android:textSize="17sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_test_button"
+                                android:paddingLeft="28dp"
+                                android:onClick="tryAgain"
+                                android:paddingTop="13dp"
+                                android:paddingRight="28dp"
+                                android:paddingBottom="13dp"
+                                android:text="再测一次"
+                                android:textColor="#ffffffff"
+                                android:textSize="17sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"/>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:id="@+id/toolsButtonRight"
+                            android:clickable="true"
+                            android:onClick="chooseButtonRight"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.3"
+                                android:background="@drawable/shape_test_button_flame"
+                                android:paddingTop="13dp"
+                                android:paddingBottom="20dp"
+                                android:text=""
+                                android:textColor="#fff97a87"
+                                android:textSize="17sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_test_button"
+                                android:paddingLeft="28dp"
+                                android:onClick="shareOut"
+                                android:paddingTop="13dp"
+                                android:paddingRight="28dp"
+                                android:paddingBottom="13dp"
+                                android:text="分享给好友"
+                                android:textColor="#ffffffff"
+                                android:textSize="17sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/tools_text_title_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/textTitle"
+                    app:layout_constraintLeft_toLeftOf="@id/textTitle"
+                    app:layout_constraintRight_toRightOf="@id/textTitle"
+                    app:layout_constraintTop_toTopOf="@id/textTitle" />
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="54dp"
+                    android:paddingTop="11dp"
+                    android:paddingRight="54dp"
+                    android:paddingBottom="21dp"
+                    android:text="算胎动测男女"
+                    android:textStyle="bold"
+                    android:textColor="#ff763749"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/shape_new_order_bg"
+    android:paddingBottom="13dp">
+
+    <com.healthy.library.widget.RoundedImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="8dp"
+        app:riv_corner_radius_top_right="8dp" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:layout_width="59dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="宝宝教育"
+        android:id="@+id/categoryName"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radius="10dp"
+        app:shape_solidColor="#47000000" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="13dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff000000"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        tools:text="针对不同体质的孩子，平时饮食应该注意什么？" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/ic_eye"
+        android:drawablePadding="4dp"
+        android:textColor="#ff666666"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        tools:text="1256人正在看" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:drawablePadding="2dp"
+        android:id="@+id/collectionNum"
+        android:gravity="center"
+        android:text="546"
+        android:textColor="@color/color_666666"
+        android:textSize="10dp"
+        app:drawable="@drawable/cityrightlike"
+        app:drawableHeight="15dp"
+        app:drawableWidth="15dp"
+        app:layout_constraintRight_toRightOf="@id/content"
+        app:layout_constraintTop_toTopOf="@id/count"
+        app:position="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

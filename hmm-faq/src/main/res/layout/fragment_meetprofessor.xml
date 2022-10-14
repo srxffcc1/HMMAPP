@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar"
+                    app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp">
+
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsingToolbarLayout"
+                        android:layout_width="match_parent"
+                        android:minHeight="100dp"
+                        android:layout_height="match_parent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_collapseMode="parallax">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/bg_tmp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/faq_top_scroll"
+                                    app:layout_constraintDimensionRatio="1080:576"
+                                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                                <android.widget.Space
+                                    android:id="@+id/space"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="70dp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/bg_tmp" />
+
+                                <com.lihang.ShadowLayout
+                                    android:id="@+id/mShadowLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    app:hl_cornerRadius="10dp"
+                                    app:hl_dx="0dp"
+                                    app:hl_dy="0dp"
+                                    app:hl_shadowColor="#0F000000"
+                                    app:hl_shadowLimit="8dp"
+                                    app:layout_constraintBottom_toBottomOf="@id/space">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:paddingBottom="20dp"
+                                        android:paddingTop="20dp"
+                                        android:layout_height="wrap_content">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/top_ic1LL"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/top_ic1"
+                                                android:layout_width="47dp"
+                                                android:layout_height="47dp"
+                                                android:src="@drawable/faq_ic_1"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+                                            <ImageView
+                                                android:id="@+id/top_ic1_img"
+                                                android:layout_width="45dp"
+                                                android:layout_height="20dp"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:src="@drawable/faq_tip_bg">
+
+                                            </ImageView>
+                                            <TextView
+                                                app:layout_constraintLeft_toLeftOf="@+id/top_ic1_img"
+                                                app:layout_constraintRight_toRightOf="@+id/top_ic1_img"
+                                                app:layout_constraintBottom_toBottomOf="@+id/top_ic1_img"
+                                                app:layout_constraintTop_toTopOf="@+id/top_ic1_img"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginBottom="4dp"
+                                                android:gravity="center"
+                                                android:textColor="#FFFFFF"
+                                                android:layout_height="wrap_content"
+                                                android:text="3分钟接诊"
+                                                android:textSize="8sp"/>
+                                                
+                                            <TextView
+                                                android:id="@+id/top_ic1_1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="极速问诊"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@id/top_ic1" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="0dp"
+                                            android:id="@+id/top_ic3LL"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/top_ic3"
+                                                android:layout_width="47dp"
+                                                android:layout_height="47dp"
+                                                android:src="@drawable/faq_ic_3"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"></ImageView>
+                                            <ImageView
+                                                android:id="@+id/top_ic3_img"
+                                                android:layout_width="45dp"
+                                                android:layout_height="20dp"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:src="@drawable/faq_tip_bg">
+
+                                            </ImageView>
+                                            <TextView
+                                                app:layout_constraintLeft_toLeftOf="@+id/top_ic3_img"
+                                                app:layout_constraintRight_toRightOf="@+id/top_ic3_img"
+                                                app:layout_constraintBottom_toBottomOf="@+id/top_ic3_img"
+                                                app:layout_constraintTop_toTopOf="@+id/top_ic3_img"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginBottom="4dp"
+                                                android:gravity="center"
+                                                android:textColor="#FFFFFF"
+                                                android:layout_height="wrap_content"
+                                                android:text="2万+名医"
+                                                android:textSize="8sp"/>
+                                            <TextView
+                                                android:id="@+id/top_ic3_1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="名医在线"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@id/top_ic3" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="0dp"
+                                            android:id="@+id/top_ic2LL"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/top_ic2"
+                                                android:layout_width="47dp"
+                                                android:layout_height="47dp"
+                                                android:src="@drawable/faq_ic_2"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+                                            <ImageView
+                                                android:visibility="invisible"
+                                                android:id="@+id/top_ic2_img"
+                                                android:layout_width="45dp"
+                                                android:layout_height="20dp"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:src="@drawable/faq_tip_bg">
+
+                                            </ImageView>
+                                            <TextView
+                                                android:visibility="invisible"
+                                                app:layout_constraintLeft_toLeftOf="@+id/top_ic2_img"
+                                                app:layout_constraintRight_toRightOf="@+id/top_ic2_img"
+                                                app:layout_constraintBottom_toBottomOf="@+id/top_ic2_img"
+                                                app:layout_constraintTop_toTopOf="@+id/top_ic2_img"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginBottom="4dp"
+                                                android:gravity="center"
+                                                android:textColor="#FFFFFF"
+                                                android:layout_height="wrap_content"
+                                                android:text="3分钟接诊"
+                                                android:textSize="8sp"/>
+
+
+                                            <TextView
+                                                android:id="@+id/top_ic2_1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="中医保健"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@id/top_ic2" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="0dp"
+                                            android:id="@+id/top_ic4LL"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/top_ic4"
+                                                android:layout_width="47dp"
+                                                android:layout_height="47dp"
+                                                android:src="@drawable/faq_ic_4"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"></ImageView>
+                                            <ImageView
+                                                android:visibility="invisible"
+                                                android:id="@+id/top_ic4_img"
+                                                android:layout_width="45dp"
+                                                android:layout_height="20dp"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                android:src="@drawable/faq_tip_bg">
+
+                                            </ImageView>
+                                            <TextView
+                                                android:visibility="invisible"
+                                                app:layout_constraintLeft_toLeftOf="@+id/top_ic4_img"
+                                                app:layout_constraintRight_toRightOf="@+id/top_ic4_img"
+                                                app:layout_constraintBottom_toBottomOf="@+id/top_ic4_img"
+                                                app:layout_constraintTop_toTopOf="@+id/top_ic4_img"
+                                                android:layout_width="wrap_content"
+                                                android:layout_marginBottom="4dp"
+                                                android:gravity="center"
+                                                android:textColor="#FFFFFF"
+                                                android:layout_height="wrap_content"
+                                                android:text="3分钟接诊"
+                                                android:textSize="8sp"/>
+                                            <TextView
+                                                android:id="@+id/top_ic4_1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="心理咨询"
+                                                android:textColor="#ff333333"
+                                                android:textSize="14sp"
+                                                app:layout_constraintLeft_toLeftOf="parent"
+                                                app:layout_constraintRight_toRightOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@id/top_ic4" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </LinearLayout>
+
+                                </com.lihang.ShadowLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/video_recycle_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/video_recycle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="10dp"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:padding="15dp"
+                                    android:id="@+id/hotCellTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    android:text="热门科室"
+                                    android:textStyle="bold"
+                                    android:textColor="#ff222222"
+                                    android:textSize="17sp"
+                                    />
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    app:layout_constraintTop_toBottomOf="@+id/hotCellTitle"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/faq_cell1"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="小儿推拿"
+                                        android:textStyle="bold"
+                                        android:paddingTop="19dp"
+                                        android:paddingBottom="19dp"
+                                        android:paddingRight="11dp"
+                                        android:paddingLeft="11dp"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toLeftOf="@id/faq_cell2"
+                                        android:background="@drawable/shape_faq_hotcell_1"
+                                        android:textColor="#ff576380"
+                                        android:textSize="15sp"
+                                        />
+                                    <TextView
+                                        android:id="@+id/faq_cell2"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@id/faq_cell1"
+                                        app:layout_constraintRight_toLeftOf="@id/faq_cell3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="产后恢复"
+                                        android:textStyle="bold"
+                                        android:paddingTop="19dp"
+                                        android:paddingBottom="19dp"
+                                        android:paddingRight="11dp"
+                                        android:paddingLeft="11dp"
+                                        android:background="@drawable/shape_faq_hotcell_2"
+                                        android:textColor="#ff865959"
+                                        android:textSize="15sp"
+                                        />
+                                    <TextView
+                                        android:id="@+id/faq_cell3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@id/faq_cell2"
+                                        app:layout_constraintRight_toLeftOf="@id/faq_cell4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="母婴护理"
+                                        android:textStyle="bold"
+                                        android:paddingTop="19dp"
+                                        android:paddingBottom="19dp"
+                                        android:paddingRight="11dp"
+                                        android:paddingLeft="11dp"
+                                        android:background="@drawable/shape_faq_hotcell_3"
+                                        android:textColor="#ff887340"
+                                        android:textSize="15sp"
+                                        />
+                                    <TextView
+                                        android:id="@+id/faq_cell4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@id/faq_cell3"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="健康养生"
+                                        android:textStyle="bold"
+                                        android:paddingTop="19dp"
+                                        android:paddingBottom="19dp"
+                                        android:paddingRight="11dp"
+                                        android:paddingLeft="11dp"
+                                        android:background="@drawable/shape_faq_hotcell_4"
+                                        android:textColor="#ff3e7e59"
+                                        android:textSize="15sp"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                        
+                        
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/faq_top_showLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:visibility="gone"
+                            app:layout_collapseMode="pin"
+                            android:orientation="horizontal"
+                            android:background="@drawable/faq_top_scroll_show">
+                            <TextView
+
+                                android:layout_marginBottom="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:id="@+id/faq_cell_show1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="极速问诊"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/faq_cell_show3"
+                                android:padding="13dp"
+                                android:background="@drawable/shape_faq_hotcell_0"
+                                android:textColor="#ff457b5c"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/shape_faq_hotcell_0_1"
+                                app:layout_constraintLeft_toLeftOf="@id/faq_cell_show1"
+                                app:layout_constraintRight_toRightOf="@id/faq_cell_show1"
+                                app:layout_constraintBottom_toBottomOf="@id/faq_cell_show1"/>
+                            <TextView
+                                android:layout_marginBottom="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:id="@+id/faq_cell_show2"
+                                app:layout_constraintLeft_toRightOf="@id/faq_cell_show3"
+                                app:layout_constraintRight_toLeftOf="@id/faq_cell_show4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="中医保健"
+                                android:textStyle="bold"
+                                android:padding="13dp"
+                                android:background="@drawable/shape_faq_hotcell_0"
+                                android:textColor="#ff457b5c"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/shape_faq_hotcell_0_2"
+                                app:layout_constraintLeft_toLeftOf="@id/faq_cell_show2"
+                                app:layout_constraintRight_toRightOf="@id/faq_cell_show2"
+                                app:layout_constraintBottom_toBottomOf="@id/faq_cell_show2"/>
+                            <TextView
+                                android:layout_marginBottom="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:id="@+id/faq_cell_show3"
+                                app:layout_constraintLeft_toRightOf="@id/faq_cell_show1"
+                                app:layout_constraintRight_toLeftOf="@id/faq_cell_show2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="名医在线"
+                                android:textStyle="bold"
+                                android:padding="13dp"
+                                android:background="@drawable/shape_faq_hotcell_0"
+                                android:textColor="#ff457b5c"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/shape_faq_hotcell_0_3"
+                                app:layout_constraintLeft_toLeftOf="@id/faq_cell_show3"
+                                app:layout_constraintRight_toRightOf="@id/faq_cell_show3"
+                                app:layout_constraintBottom_toBottomOf="@id/faq_cell_show3"/>
+                            <TextView
+                                android:layout_marginBottom="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:id="@+id/faq_cell_show4"
+                                app:layout_constraintLeft_toRightOf="@id/faq_cell_show2"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="心理咨询"
+                                android:textStyle="bold"
+                                android:padding="13dp"
+                                android:background="@drawable/shape_faq_hotcell_0"
+                                android:textColor="#ff457b5c"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:layout_width="36dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/shape_faq_hotcell_0_4"
+                                app:layout_constraintLeft_toLeftOf="@id/faq_cell_show4"
+                                app:layout_constraintRight_toRightOf="@id/faq_cell_show4"
+                                app:layout_constraintBottom_toBottomOf="@id/faq_cell_show4"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="4dp">
+
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/st"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            app:tl_indicator_color="#4EB67D"
+                            app:tl_indicator_corner_radius="1.5dp"
+                            app:tl_indicator_height="4dp"
+                            app:tl_indicator_margin_top="10dp"
+                            app:tl_indicator_width="30dp"
+                            app:tl_tab_padding="6dp"
+                            app:tl_textBold="SELECT"
+                            app:tl_textSelectColor="#222222"
+                            app:tl_textUnselectColor="#9596A4"
+                            app:tl_textsize="16sp" />
+
+                        <TextView
+                            android:id="@+id/moreHot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:drawableRight="@drawable/ic_more"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:paddingRight="15dp"
+                            android:text="更多问答"
+                            android:textColor="#ff83899a"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/tv_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="5dp"
+                            android:visibility="gone"
+                            android:padding="12dp"
+                            android:text="保健专家"
+                            android:textColor="#ff9596a4"
+                            android:textSize="12sp"
+                            app:drawable="@drawable/ic_solid_triangle_down_gray"
+                            app:drawableHeight="8dp"
+                            app:drawableWidth="8dp"
+                            app:position="3" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <!--                <android.support.v4.widget.NestedScrollView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:fillViewport="true">-->
+
+                <!--                </android.support.v4.widget.NestedScrollView>-->
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <com.healthy.library.widget.TopBar
+            android:id="@+id/top_bar"
+            android:layout_marginTop="@dimen/status_2020"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:back_img_src="@drawable/ic_back_white"
+            app:bg_color="#00000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:show_moss="false"
+            app:title="" />
+
+        <RelativeLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <include
+                layout="@layout/adapter_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

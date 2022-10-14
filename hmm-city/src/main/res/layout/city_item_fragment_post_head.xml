@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/nameandstatus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_user_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/icon_user_official_certification"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+            app:layout_constraintRight_toRightOf="@id/ivHeader" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nameandstatus"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/ivHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="快乐柠檬草"
+                    android:textColor="#ff222222"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:id="@+id/stv_user_badgeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="官方认证"
+                    app:layout_constraintTop_toTopOf="@id/name"
+                    app:layout_constraintLeft_toRightOf="@id/name"
+                    app:layout_constraintBottom_toBottomOf="@id/name"
+                    android:textSize="9dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="6dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="1dp"
+                    app:shape_topLeftRadius="8dp"
+                    app:shape_bottomRightRadius="8dp"
+                    app:shape_topRightRadius="8dp"
+                    app:shape_solidColor="#3889FD"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingRight="5dp"
+                    android:text="备孕中"
+                    android:textColor="#ff666666"
+                    android:textSize="11sp"
+                    app:layout_constraintLeft_toLeftOf="@id/name"
+                    app:layout_constraintTop_toBottomOf="@id/name"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/toFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_star_tofollow"
+            android:drawablePadding="9dp"
+            android:text="关注"
+            android:textColor="#ff444444"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

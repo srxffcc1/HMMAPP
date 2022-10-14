@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/seachTopBgLL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="#FFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/seachTopBgNoLL"
+        app:layout_constraintTop_toTopOf="@id/seachTopBgNoLL"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seachTopBgNoLL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_index_top_grid_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/distanceTopLL"
+        app:layout_constraintLeft_toLeftOf="@id/distanceTopLL"
+        app:layout_constraintRight_toRightOf="@id/distanceTopLL"
+        app:layout_constraintTop_toTopOf="@id/distanceTopLL"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/distanceTopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/st"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tl_indicator_color="#8E5FF7"
+            app:tl_indicator_corner_radius="1.5dp"
+            app:tl_indicator_height="4dp"
+            app:tl_indicator_margin_bottom="5dp"
+            app:tl_indicator_margin_top="10dp"
+            app:tl_indicator_width="10dp"
+            app:tl_tab_padding="10dp"
+            app:tl_tab_space_equal="false"
+            app:tl_textBold="SELECT"
+            app:tl_textSelectColor="#333333"
+            app:tl_textUnselectColor="#666666"
+            app:tl_textsize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/shopTabLL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/areaParent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="4dp"
+                    android:text="全城"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/areaAr"
+                    android:layout_width="6dp"
+                    android:layout_height="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_solid_triangle_down_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/distanceLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/distanceTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离"
+                    android:textColor="#444444"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp">
+
+                    <ImageView
+                        android:id="@+id/distance_up_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:rotation="180"
+                        android:src="@mipmap/service_price_sort_red" />
+
+
+                    <ImageView
+                        android:id="@+id/distance_down_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@mipmap/service_price_sort_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/goodsTabLL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/saleLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/saleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="销量"
+                    android:textColor="#444444"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp">
+
+                    <ImageView
+                        android:id="@+id/sale_up_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:rotation="180"
+                        android:src="@mipmap/service_price_sort_black" />
+
+
+                    <ImageView
+                        android:id="@+id/sale_down_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@mipmap/service_price_sort_red" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/priceLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="11dp">
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="价格"
+                    android:textColor="#444444"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp">
+
+                    <ImageView
+                        android:id="@+id/price_up_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:rotation="180"
+                        android:src="@mipmap/service_price_sort_black" />
+
+
+                    <ImageView
+                        android:id="@+id/price_down_img"
+                        android:layout_width="7dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@mipmap/service_price_sort_black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_goods_url"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        app:corner_radius="3dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_goods_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mall_shape_available_discount"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="2dp"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_goods_url"
+        app:layout_constraintEnd_toEndOf="@id/iv_goods_url"
+        tools:ignore="SmallSp"
+        tools:text="6.9折"/>
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="end"
+        android:maxEms="15"
+        android:lines="1"
+        android:text="辩证发汗套组"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_goods_url"
+        app:layout_constraintTop_toTopOf="@id/iv_goods_url"/>
+
+
+    <TextView
+        android:id="@+id/tag_Coupon"
+        android:background="@drawable/shape_mall_coupon_tip_mall"
+        app:layout_constraintLeft_toRightOf="@+id/tv_goods_name"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="满减"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:textColor="#ffff544f"
+        android:textSize="10sp"
+        />
+    <TextView
+        android:id="@+id/couponTip"
+        app:layout_constraintLeft_toRightOf="@id/tv_goods_name"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_name"
+        android:background="@drawable/shape_mall_coupon_tip"
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="满减"
+        android:textColor="#ffff544f"
+        android:textSize="10sp"
+        />
+    <TextView
+        android:id="@+id/tv_goods_effect"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="祛除寒气 温暖整个冬天"
+        android:textColor="#ff9596a4"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_goods_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_name"/>
+
+    <TextView
+        android:id="@+id/tv_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥278"
+        android:textColor="#ffff6266"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_goods_url"
+        app:layout_constraintStart_toStartOf="@id/tv_goods_name"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

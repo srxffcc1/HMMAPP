@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="2dp"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hasContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/helpTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-12-18 17:06:32"
+            android:textColor="#ff9596a4"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:id="@+id/helpIcon"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/message_type4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helpTime" />
+
+
+        <ImageView
+            android:id="@+id/helpIconLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_triangle_single_left"
+            app:layout_constraintBottom_toBottomOf="@id/helpIcon"
+            app:layout_constraintLeft_toRightOf="@id/helpIcon"
+            app:layout_constraintTop_toBottomOf="@id/helpTime"
+            app:layout_constraintTop_toTopOf="@id/helpIcon">
+
+        </ImageView>
+
+        <FrameLayout
+            app:layout_constraintTop_toTopOf="@id/helpIcon"
+            app:layout_constraintLeft_toRightOf="@+id/helpIconLeft"
+            app:layout_constraintBottom_toBottomOf="@id/helpIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <!--
+                android:background="@drawable/shape_message_tip"-->
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/helpIconContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:paddingLeft="11dp"
+                android:paddingTop="9dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="9dp"
+                android:text="最近有1个人关注了你最"
+                app:shape_radius="4dp"
+                app:shape_solidColor="@color/colorWhite"
+                android:textColor="#ff444444"
+                android:textSize="15sp"/>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

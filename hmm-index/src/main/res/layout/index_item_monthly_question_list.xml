@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical"
+    android:padding="14dp"
+    app:shape_radius="6dp"
+    app:shape_solidColor="#F7F7FA"
+    tools:ignore="SpUsage">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_expert_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="您好医生，我在哺乳期患上了感冒咳嗽，请您好医生，我在哺乳期患上了感冒咳嗽，请"
+        android:textColor="#ff333333"
+        android:textSize="14sp" />
+
+    <com.healthy.library.widget.CollapsedTextView
+        android:id="@+id/tipContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="宋金元时期，药浴的应用转为普及了金元时期，药浴的应用转为普及了金元时期，药浴的应用转为普及了金元时期，药浴的应用转为普及了金元时期，药浴的应用转为普及了"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        app:collapsedDrawable="@null"
+        app:collapsedLines="2"
+        app:collapsedText="收起"
+        app:expandedDrawable="@null"
+        app:expandedText="展开"
+        app:tipsClickable="true"
+        app:tipsColor="#4369D3"
+        app:tipsGravity="end"
+        app:tipsUnderline="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/userImg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/img_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="肖群英"
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/userImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=" 擅长慢性阻塞性肺疾病诊治"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/userName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.example.lib_ShapeView.layout.ShapeLinearLayout>

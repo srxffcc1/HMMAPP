@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    tools:background="#000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/cityGoodsImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cityGoodsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="60dp"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_act_c_l"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            tools:text="爱宝贝摄影"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/cityGoodsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="2dp"
+        android:maxLines="2"
+        android:text="0-3岁宝宝摄影写真含全…"
+        android:textColor="#ff333333"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="#fff00028"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cityPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="39.9"
+            android:textColor="#fff00028"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cityOldPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:text="¥79"
+        android:textColor="#ff868799"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/cityLiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_act_r_under"
+        android:orientation="horizontal"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+
+    </LinearLayout>
+</LinearLayout>

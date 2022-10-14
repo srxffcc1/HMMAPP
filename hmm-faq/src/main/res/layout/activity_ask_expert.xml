@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AskExpertActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:submit_img_src="@drawable/tools_misc"
+        app:is_show_submit_image="true"
+        app:show_moss="false"
+        app:title="问专家"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/img_avatar_default"
+                    app:is_circle="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_badge"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_expert_hz"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintCircle="@id/iv_avatar"
+                    app:layout_constraintCircleAngle="135"
+                    app:layout_constraintCircleRadius="25dp"
+                    app:layout_constraintEnd_toEndOf="@id/iv_avatar"/>
+
+                <TextView
+                    android:id="@+id/tv_real_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tv_good_at"
+                    app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="刘美丽"/>
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_avatar"/>
+
+                <TextView
+                    android:id="@+id/tv_good_at"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="#ff444444"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                    app:layout_constraintEnd_toStartOf="@id/iv_more"
+                    app:layout_constraintStart_toStartOf="@id/tv_real_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_real_name"
+                    tools:text="12年高级育婴师"/>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ic_header_shadow"
+                    app:layout_constraintTop_toBottomOf="@id/iv_avatar"/>
+
+                <View
+                    android:id="@+id/view_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/divider"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/et_content_title"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/divider"
+                    android:layout_height="wrap_content"
+                    android:text="问题描述"
+                    android:textColor="#ff222222"
+                    android:textSize="17sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_lable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="(提问不能少于5个字)"
+                    android:paddingLeft="5dp"
+                    android:textColor="#ff9596a4"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toRightOf="@id/et_content_title"
+                    app:layout_constraintBottom_toBottomOf="@id/et_content_title"/>
+                
+                <ImageView
+                    android:id="@+id/more_url"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintRight_toRightOf="@id/iv_more"
+                    app:layout_constraintTop_toTopOf="@id/et_content_title"
+                    app:layout_constraintBottom_toBottomOf="@id/et_content_title"
+                    android:src="@drawable/url_misc"/>
+
+
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint="@string/faq_hint_ask_expert"
+                    android:lineSpacingMultiplier="1.2"
+                    android:textColorHint="#ff9596a4"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/et_content_title"
+                    tools:ignore="Autofill,TextFields"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_pictures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:divider="@drawable/shape_divider_question_picture"
+                    android:orientation="horizontal"
+                    android:showDividers="middle"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@id/et_content"/>
+
+                <CheckBox
+                    android:id="@+id/cb_anonymous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="22dp"
+                    android:button="@drawable/selector_anonymous"
+                    android:gravity="center"
+                    android:text="@string/faq_release_anonymous"
+                    android:textColor="#ff444444"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_pictures"/>
+
+                <TextView
+                    android:id="@+id/tv_ask"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/selector_release"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/cb_anonymous"
+                    tools:text="立即提问 (¥ 9.9)"/>
+
+                <TextView
+                    android:id="@+id/tv_statement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/faq_expert_statement"
+                    android:textColor="#ff9596a4"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_ask"
+                    app:layout_constraintStart_toStartOf="@id/tv_ask"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ask"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

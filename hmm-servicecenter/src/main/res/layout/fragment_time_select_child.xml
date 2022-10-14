@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/checkA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableRight="@drawable/selector_tools_anonymous"
+            android:drawablePadding="8dp"
+            android:text="上午"
+            android:textColor="#ff222222"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/checkB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableRight="@drawable/selector_tools_anonymous"
+            android:drawablePadding="8dp"
+            android:text="下午"
+            android:textColor="#ff222222"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="请关注门店的营业时间，以免耽误您提货"
+        android:textColor="#fff02846"
+        android:textSize="11sp" />
+</LinearLayout>

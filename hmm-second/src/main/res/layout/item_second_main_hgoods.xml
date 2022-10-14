@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    tools:background="#000"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:paddingBottom="4dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:corner_radius="10dp"
+        android:src="@drawable/img_1_1_default" />
+
+    <HorizontalScrollView
+        android:id="@+id/goodsCouponPLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/goodsCouponLL"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/item_mall_goods_coupon" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        tools:text="易贝乐宝宝摇铃益智环保"
+        android:textColor="#ff222222"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#fff00028"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/goodsMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="39.9"
+                android:textColor="#fff00028"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.healthy.library.widget.AutoClickImageView
+            android:id="@+id/passbasket"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/basket_red"
+            android:visibility="gone" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/pinOldPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¥79"
+        android:textColor="#ff868799"
+        android:textSize="12sp" />
+</LinearLayout>

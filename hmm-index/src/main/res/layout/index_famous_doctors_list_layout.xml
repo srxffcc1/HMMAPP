@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingBottom="12dp"
+    app:shape_bottomLeftRadius="16dp"
+    app:shape_bottomRightRadius="16dp"
+    android:layout_marginBottom="12dp"
+    app:shape_solidColor="@color/colorWhite">
+
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="11dp"
+        app:shape_endColor="#1A72B5FF"
+        app:shape_radius="8dp"
+        app:shape_startColor="#1A3E7EFF">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名医榜单"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="儿科"
+            android:fontFamily="@font/din_medium"
+            android:textStyle="bold"
+            android:textColor="#337DFF"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_index_pediatrics"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="11dp"
+        app:shape_endColor="#1AFF7272"
+        app:shape_radius="8dp"
+        app:shape_startColor="#1AFF3E80">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名医榜单"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="妇科"
+            android:fontFamily="@font/din_medium"
+            android:textStyle="bold"
+            android:textColor="#FF4A7B"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_index_gynecology"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="11dp"
+        app:shape_endColor="#1AB172FF"
+        app:shape_radius="8dp"
+        app:shape_startColor="#1AB03EFF">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名医榜单"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="全科"
+            android:fontFamily="@font/din_medium"
+            android:textStyle="bold"
+            android:textColor="#9E58FF"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_index_all"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</com.example.lib_ShapeView.layout.ShapeLinearLayout>

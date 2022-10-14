@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context=".activity.TipsActivity">
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/typeTxt"
+        android:layout_width="0dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        tools:background="@drawable/shape_tools_med_normal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        tools:text="水果"
+        android:singleLine="true"
+        android:gravity="center"
+        app:drawableHeight="18dp"
+        app:drawableWidth="18dp"
+        android:textColor="#444444"
+        android:textSize="13sp"
+        tools:drawable="@drawable/guozhi"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

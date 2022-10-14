@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BabyMomChangeActivity"
+    tools:ignore="SpUsage">
+
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_baby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/index_change_baby"
+                android:textSize="16dp"
+                android:textColor="#222222"
+                android:onClick="showBabyChange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_mom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_mom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/index_change_mom"
+                android:textSize="16dp"
+                android:textColor="#222222"
+                android:onClick="showMomChange"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_baby"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_baby"/>
+
+            <View
+                android:id="@+id/bottom_mom"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/index_shape_package_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_mom"
+                app:layout_constraintStart_toStartOf="@id/tv_mom"/>
+
+            <View
+                android:id="@+id/bottom_baby"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/index_shape_package_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_baby"
+                app:layout_constraintStart_toStartOf="@id/tv_baby"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.TopBar>
+
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

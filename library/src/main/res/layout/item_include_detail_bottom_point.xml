@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/pointLL"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="250"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <com.healthy.library.widget.ImageTextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分"
+                app:drawable="@drawable/icon_point_left"
+                app:drawableWidth="20dp"
+                app:drawableHeight="20dp"
+                android:drawablePadding="6dp"
+                android:id="@+id/pointName"
+                android:textColor="#ff444444"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/pointValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="732"
+                android:textColor="#ff222222"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/goOrder"
+            android:background="@drawable/shape_mall_goods_ol_vid_btn_go_order"
+            android:layout_width="0dp"
+            android:layout_weight="200"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="9dp"
+            android:textStyle="bold"
+            android:paddingRight="24dp"
+            android:paddingBottom="9dp"
+            android:textColor="#ffffffff"
+            android:onClick="order"
+            android:paddingStart="39dp"
+            android:paddingEnd="39dp"
+            android:text="立即兑换"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

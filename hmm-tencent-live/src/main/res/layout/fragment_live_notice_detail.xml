@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/noMsgCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="219dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/video_live_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="当前还没有直播，请稍后再来观看"
+            android:textColor="#ff868799"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_mall_goods_ol_vid_basket_empty_btn"
+            android:paddingLeft="26dp"
+            android:paddingTop="9dp"
+            android:paddingRight="26dp"
+            android:paddingBottom="9dp"
+            android:text="返回首页"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/noticeImg"
+                android:layout_width="343dp"
+                android:layout_height="343dp"
+                android:src="@drawable/img_1_1_default"
+                app:corner_radius="12dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/liveTimeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="距离开播"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/noticeTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="00 天 06 时 16 分 23 秒"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_live_start_time_bg"
+                        android:drawableLeft="@drawable/shape_live_start_time_icon"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="18dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="18dp"
+                        android:paddingBottom="5dp"
+                        android:text="0000年00月00日 00:00 开播"
+                        android:textColor="#fffa3c5a"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/live_notice_share_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/live_notice_share_icon"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pastHostLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="5dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主题介绍"
+                    android:textColor="#ff2a2a2a"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看往期直播"
+                    android:textColor="#ff2a2a2a"
+                    android:textSize="13sp"
+                    app:drawable="@drawable/ic_more_pin"
+                    app:drawableHeight="12dp"
+                    app:drawableWidth="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:position="3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/noticeIntroduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="#ff333333"
+                android:textSize="13sp"
+                tools:text="产妇生产后，一定要养成定时量体温的好习惯。若是出现产后
+发热，千万不要以为只是头痛脑热。此时发热最常见的原因是
+产褥感染，引起感染的原因很多。" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pastHostMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="5dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主播介绍"
+                    android:textColor="#ff2a2a2a"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看主播主页"
+                    android:textColor="#ff2a2a2a"
+                    android:textSize="13sp"
+                    app:drawable="@drawable/ic_more_pin"
+                    app:drawableHeight="12dp"
+                    app:drawableWidth="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:position="3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="22dp">
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/hostIcon"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:src="@drawable/img_avatar_default"
+                    app:is_circle="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hostName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/hostIcon"
+                    app:layout_constraintTop_toTopOf="@id/hostIcon"
+                    tools:text="赵宁琳" />
+
+                <TextView
+                    android:id="@+id/hostDes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#ff666666"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="@id/hostName"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hostName"
+                    tools:text="知名90后人气主播，从事直播行业8年，专注母
+婴知识传授个人经验！" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/pointLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="130"
+            android:gravity="center_vertical">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/pointName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="预约"
+                android:textColor="#ff444444"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/goOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="240"
+            android:background="@drawable/shape_mall_goods_ol_vid_btn_go_order22"
+            android:gravity="center"
+            android:paddingStart="39dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="39dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="9dp"
+            android:text="预约"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="12dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/shopImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shopImg"
+        app:layout_constraintLeft_toRightOf="@+id/shopImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shopImg">
+
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            app:layout_constraintRight_toLeftOf="@+id/distanceTxt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="臻幼堂小儿推拿（狮山店）臻幼堂小儿推拿（狮山店）" />
+
+        <TextView
+            android:id="@+id/distanceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/shopName"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="500m" />
+
+        <TextView
+            android:id="@+id/shopAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/shopName"
+            app:layout_constraintTop_toBottomOf="@id/shopName"
+            tools:text="高新区狮山区75号中信银行后门峰汇大厦10楼" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="生男生女" />
+
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tools_text_pink_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/shape_test_bg_pinkblack"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbars="none"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_test_bg_white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/toolsQlist"
+                                android:orientation="vertical"
+                                android:gravity="center_horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+<!--                                <include layout="@layout/index_activity_tools_test_item"></include>-->
+<!--                                <include layout="@layout/index_activity_tools_test_item"></include>-->
+<!--                                <include layout="@layout/index_activity_tools_test_item"></include>-->
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/tooos_UseCount"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="50dp"
+                                android:layout_height="wrap_content"
+                                android:text="您是第位参与预测的孕妈"
+                                android:textColor="#ff763749"
+                                android:textSize="14sp"
+                                />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:onClick="chooseButtonOK"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.3"
+                                    android:background="@drawable/shape_test_button_flame"
+                                    android:paddingTop="13dp"
+                                    android:paddingBottom="20dp"
+                                    android:text=""
+                                    android:textColor="#fff97a87"
+                                    android:textSize="17sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_test_button"
+                                    android:paddingLeft="56dp"
+                                    android:paddingTop="13dp"
+                                    android:paddingRight="56dp"
+                                    android:paddingBottom="13dp"
+                                    android:text="开始预测"
+                                    android:textColor="#ffffffff"
+                                    android:textSize="17sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/tools_text_title_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/textTitle"
+                    app:layout_constraintLeft_toLeftOf="@id/textTitle"
+                    app:layout_constraintRight_toRightOf="@id/textTitle"
+                    app:layout_constraintTop_toTopOf="@id/textTitle" />
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="54dp"
+                    android:paddingTop="11dp"
+                    android:paddingRight="54dp"
+                    android:paddingBottom="21dp"
+                    android:text="算胎动测男女"
+                    android:textStyle="bold"
+                    android:textColor="#ff763749"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        app:shape_endColor="#0E70BC"
+        app:shape_radius="8dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="30dp"
+        app:shape_startColor="#00599D">
+
+        <ImageView
+            android:id="@+id/cardIcon"
+            android:layout_width="33dp"
+            android:visibility="gone"
+            android:layout_height="33dp"
+            android:src="@drawable/img_avatar_default"
+            app:layout_constraintBottom_toBottomOf="@+id/cardType"
+            app:layout_constraintTop_toTopOf="@+id/cardName" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="中国建设银行"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/cardIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="3dp"
+            android:text="借记卡"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@+id/cardIcon"
+            app:layout_constraintTop_toBottomOf="@+id/cardName" />
+
+        <TextView
+            android:id="@+id/changeBankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_more_point"
+            android:drawablePadding="5dp"
+            android:text="更换银行卡"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+        android:id="@+id/addBankcard"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:shape_radius="8dp"
+        app:shape_solidColor="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:text="+"
+            android:textColor="#ff333333"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:text="添加银行卡"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+</LinearLayout>

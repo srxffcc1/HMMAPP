@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="已提交退款申请至xxx"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_store_name">
+
+            <TextView
+                android:id="@+id/tv_creat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                tools:text="2020-06-03 12:45:36"
+                android:textColor="#ff666666"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                tools:text="2020-06-03 12:45:36"
+                android:textColor="#ff666666"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_finish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="2020-06-03 12:45:36"
+                android:textColor="#ff666666"
+                android:textSize="9sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_creat_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交申请"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_creat_time"
+                app:layout_constraintLeft_toLeftOf="@id/tv_creat_time"
+                app:layout_constraintRight_toRightOf="@id/tv_creat_time" />
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_order_back_detial_rectangle_green"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#ffffffff"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_creat_txt"
+                app:layout_constraintLeft_toLeftOf="@id/tv_creat_txt"
+                app:layout_constraintRight_toRightOf="@id/tv_creat_txt" />
+
+            <View
+                android:id="@+id/view_grey"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_vertical"
+                android:background="#ff29bda9"
+                app:layout_constraintBottom_toBottomOf="@id/tv_one"
+                app:layout_constraintEnd_toStartOf="@id/tv_two"
+                app:layout_constraintStart_toEndOf="@id/tv_one"
+                app:layout_constraintTop_toTopOf="@id/tv_one"></View>
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_order_back_detial_rectangle_green"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#ffffffff"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_creat_txt2"
+                app:layout_constraintLeft_toLeftOf="@id/tv_creat_txt2"
+                app:layout_constraintRight_toRightOf="@id/tv_creat_txt2" />
+
+            <View
+                android:id="@+id/view_green_half"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_vertical"
+                android:background="#ff29bda9"
+                app:layout_constraintBottom_toBottomOf="@id/tv_one"
+                app:layout_constraintLeft_toRightOf="@id/tv_two"
+                app:layout_constraintTop_toTopOf="@id/tv_one"></View>
+
+            <View
+                android:id="@+id/view_grey_half"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_vertical"
+                android:background="#ffaeb3bf"
+                app:layout_constraintBottom_toBottomOf="@id/tv_one"
+                app:layout_constraintLeft_toRightOf="@id/view_green_half"
+                app:layout_constraintTop_toTopOf="@id/tv_one"></View>
+
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/shape_order_back_detial_rectangle_grey"
+                android:gravity="center"
+                android:text="3"
+
+                android:textColor="#ffffffff"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_creat_txt3"
+                app:layout_constraintLeft_toLeftOf="@id/tv_creat_txt3"
+                app:layout_constraintRight_toRightOf="@id/tv_creat_txt3" />
+
+
+            <TextView
+                android:id="@+id/tv_creat_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商家已处理"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_creat_txt"
+                app:layout_constraintBottom_toTopOf="@id/tv_start_time"
+                app:layout_constraintLeft_toLeftOf="@id/tv_start_time"
+                app:layout_constraintRight_toRightOf="@id/tv_start_time" />
+
+            <TextView
+                android:id="@+id/tv_creat_txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款中"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_creat_txt"
+                app:layout_constraintBottom_toTopOf="@id/tv_finish_time"
+                app:layout_constraintLeft_toLeftOf="@id/tv_finish_time"
+                app:layout_constraintRight_toRightOf="@id/tv_finish_time" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/start_constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+            <ImageView
+                android:id="@+id/start_img"
+                android:layout_width="10dp"
+                android:layout_height="14dp"
+                android:background="@mipmap/shape_triangle_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/start_start_content"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_order_black_detial_rectangle"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                tools:text="商家同意退款，系统将在1-2日提交至xxx处理"
+                android:textColor="#ff222222"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_img" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

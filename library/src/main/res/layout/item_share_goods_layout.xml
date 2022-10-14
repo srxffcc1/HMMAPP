@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/share_content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/share_goods_bg"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/share_header_view"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:background="@drawable/share_header_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/shareShopLogoImg"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_this_logo_default"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/shareThisLogo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/shareThisLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/share_this_logo_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/shareShopLogoImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/item_share_goods_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_act_k_w_12"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_header_view">
+
+        <TextView
+            android:id="@+id/goodsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shape_live_start_time_bg"
+            android:drawableLeft="@drawable/shape_live_start_time_icon"
+            android:drawablePadding="6dp"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="2dp"
+            android:textColor="#fff02846"
+            android:textSize="10dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2020年08月20日 23:59活动结束" />
+
+        <!-- 活动投票/拉票分享显示 -->
+        <TextView
+            android:id="@+id/voteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_333333"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="我是“某某”，我正在参与“某某某 某”活动，请给我投上宝贵的一票吧！" />
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/goodsImg"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:src="@drawable/img_1_1_default2"
+            app:corner_radius="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goodsDate" />
+
+        <TextView
+            android:id="@+id/goodsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ff222222"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            tools:text="产后古方药浴调理套组" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/goodsPrice_layout"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toLeftOf="@id/appletsImg"
+                 app:layout_constraintTop_toTopOf="parent">-->
+
+            <TextView
+                android:id="@+id/goodsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="160dp"
+                android:textColor="#FA3C5A"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="¥109.9" />
+
+            <TextView
+                android:id="@+id/pinMoneySingle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/color_999999"
+                android:textSize="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/goodsPrice"
+                app:layout_constraintLeft_toRightOf="@id/goodsPrice"
+                app:layout_constraintTop_toTopOf="@id/goodsPrice"
+                tools:text="1000" />
+
+            <!-- 待定删除 -->
+            <!-- <ImageView
+                 android:visibility="gone"
+                 android:id="@+id/seckillIcon"
+                 android:layout_width="0dp"
+                 android:layout_height="0dp"
+                 android:scaleType="fitXY"
+                 android:src="@drawable/seckill_poster_seckill_bg"
+                 app:layout_constraintBottom_toBottomOf="@id/seckillText"
+                 app:layout_constraintLeft_toLeftOf="@id/seckillText"
+                 app:layout_constraintRight_toRightOf="@id/seckillText"
+                 app:layout_constraintTop_toTopOf="@id/seckillText" />-->
+            <!-- </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <TextView
+                android:id="@+id/seckillText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/shape_share_activity_radius4"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:textColor="#FFF"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/pinMoneySingle"
+                app:layout_constraintLeft_toRightOf="@id/pinMoneySingle"
+                app:layout_constraintTop_toTopOf="@id/pinMoneySingle"
+                tools:text="限时秒杀" />
+
+            <TextView
+                android:id="@+id/saveMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_share_color_ffeaea_radius4"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/color_f02846"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/seckillText"
+                app:layout_constraintLeft_toRightOf="@id/seckillText"
+                app:layout_constraintTop_toTopOf="@id/seckillText"
+                tools:text="立减18元" />
+
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/tv_bottom_shape"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="2dp"
+                app:shape_textColor="@color/color_333333"
+                app:shape_radius="12dp"
+                app:shape_solidColor="#fff6f7f9"
+                app:layout_constraintTop_toBottomOf="@id/goodsPrice"
+                app:layout_constraintLeft_toLeftOf="@id/goodsPrice"
+                tools:text="服务时长 60分钟"/>
+
+            <!-- 堆标签存放 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/share_stack_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodsPrice">
+
+                <ImageView
+                    android:id="@+id/share_more_surprise_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:src="@drawable/share_more_surprise_tip_img"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 预备好多标签情况 -->
+                <com.healthy.library.widget.StackLabel
+                    android:id="@+id/stackLabelView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:itemMargin="2dp"
+                    app:labelBackground="@drawable/shape_label_radius8_solid_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:maxLines="1"
+                    app:paddingHorizontal="6dp"
+                    app:paddingVertical="2dp"
+                    app:isBold="true"
+                    app:textColor="@color/color_f02846"
+                    app:textSize="10dp"
+                    tools:labels="满300减30,特价源头好货" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/cl_enlist_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_enlist_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2021.06.02-2021.06.05" />
+
+                <View
+                    android:id="@+id/item_enlist_time_view"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:background="@drawable/shape_mall_goods_ol_vid_basket_order"
+                    app:layout_constraintBottom_toBottomOf="@id/item_enlist_Time"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item_enlist_Time" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_enlist_Address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_666666"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="@id/item_enlist_Time"
+                    app:layout_constraintTop_toBottomOf="@id/item_enlist_Time"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="苏州市高新区运河路乐嘉汇苏州市高新区运河路乐嘉汇苏州市高新区运河路乐嘉汇苏州市高新区运河路乐嘉汇苏州市高新区运河路乐嘉汇" />
+
+                <View
+                    android:id="@+id/item_enlist_address_view"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/shape_mall_goods_ol_vid_basket_order"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item_enlist_Address" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 推荐人信息及二维码 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:paddingBottom="64dp">
+
+            <ImageView
+                android:id="@+id/appletsImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_1_1_default"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/longClickText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="长按立即查看"
+                android:textColor="#ff444444"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@id/appletsImg"
+                app:layout_constraintRight_toRightOf="@id/appletsImg"
+                app:layout_constraintTop_toBottomOf="@id/appletsImg" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/user_recommend_Layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_share_user_bg"
+                android:paddingVertical="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/appletsImg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/appletsImg"
+                app:layout_constraintTop_toTopOf="@+id/appletsImg">
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/img_1_1_default2"
+                    app:is_circle="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/userNickName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingHorizontal="4dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/userImg"
+                    app:layout_constraintLeft_toRightOf="@id/userImg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/userImg"
+                    tools:text="来自“爱睡觉的考拉”的推荐" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

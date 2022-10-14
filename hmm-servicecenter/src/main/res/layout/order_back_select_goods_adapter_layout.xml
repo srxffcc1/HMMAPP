@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/selectImg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_anonymous_unselected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/goodsImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/selectImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pointLable"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_order_list_point_lable"
+            android:gravity="center"
+            android:text="积分兑换"
+            android:textColor="#ffffffff"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+            app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+            app:layout_constraintRight_toRightOf="@+id/goodsImg" />
+
+        <ImageView
+            android:id="@+id/actFlag"
+            android:layout_width="36dp"
+            android:layout_height="16dp"
+            android:src="@drawable/act_pin"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@id/goodsImg"
+            app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+        <TextView
+            android:id="@+id/goodsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/goodsImg"
+            app:layout_constraintRight_toLeftOf="@id/goodsMoney"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            tools:text="Babycare 吸管杯学饮杯宝宝水杯重吸管杯学饮杯宝宝水杯…" />
+
+        <TextView
+            android:id="@+id/goodsMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            tools:text="1288积分\n+¥152.69" />
+
+        <TextView
+            android:id="@+id/goodsSpec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textColor="#ff868799"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+            app:layout_constraintTop_toBottomOf="@id/goodsTitle"
+            tools:text="规格 900g" />
+
+        <TextView
+            android:id="@+id/goodsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x 1"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goodsMoney" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

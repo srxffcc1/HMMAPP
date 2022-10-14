@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="270dp"
+        android:id="@+id/dialog_bg"
+        android:layout_centerInParent="true"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/index_no_fuc2"
+            android:layout_height="match_parent">
+
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/dialog_close_button_tmp"
+        android:layout_below="@id/dialog_bg"
+        android:layout_width="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="30dp"></ImageView>
+    <ImageView
+        android:id="@+id/dialog_close_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/dialog_close_button_tmp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dis_dialog_close3"/>
+</RelativeLayout>

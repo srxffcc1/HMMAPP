@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/reviewEt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:minHeight="50dp"
+            android:gravity="left"
+            android:hint="回复："
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:id="@+id/scaleImg"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_city_scale"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/submit"
+            style="@style/RippleClick"
+            android:gravity="right"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textColor="#ff9596a4"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

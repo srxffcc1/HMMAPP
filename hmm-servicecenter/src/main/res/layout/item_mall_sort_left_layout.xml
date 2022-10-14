@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_centerVertical="true"
+    tools:ignore="ResourceName,SpUsage">
+
+
+    <View
+        android:id="@+id/view_selected"
+        android:layout_width="3dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/mall_shape_province" />
+
+    <TextView
+        android:id="@+id/tv_province"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_sans_serif"
+        android:lines="1"
+        android:maxLines="2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="13dp"
+        tools:text="" />
+</RelativeLayout>

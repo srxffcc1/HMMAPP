@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mine_cl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_new_order_bg"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mine_cl_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mine_tv_ActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/color_222222"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="安乐宝奶粉幸运大抽奖" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/mine_tv_activityType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="1dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="1dp"
+            android:text="抽奖活动"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toRightOf="@id/mine_tv_ActivityTitle"
+            app:layout_constraintTop_toTopOf="@id/mine_tv_ActivityTitle"
+            app:shape_bottomRightRadius="8dp"
+            app:shape_endColor="#FF256C"
+            app:shape_startColor="#FF6060"
+            app:shape_topLeftRadius="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/mine_tv_awardTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/mine_cl_top"
+        app:layout_constraintTop_toBottomOf="@id/mine_cl_top"
+        tools:text="中奖时间：2021/02/07 12:23" />
+
+    <!--<androidx.cardview.widget.CardView
+        android:id="@+id/mShadowLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorWhite"
+        app:cardBackgroundColor="#bbbbbb"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintLeft_toLeftOf="@id/mine_cl_top"
+        app:layout_constraintTop_toBottomOf="@id/mine_tv_awardTime">-->
+
+    <com.lihang.ShadowLayout
+        android:layout_marginTop="6dp"
+        app:hl_cornerRadius="12dp"
+        app:hl_dx="0dp"
+        app:hl_dy="2dp"
+        app:hl_shadowColor="#80bbbbbb"
+        app:hl_shadowLimit="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/mine_cl_top"
+        app:layout_constraintTop_toBottomOf="@id/mine_tv_awardTime"
+        android:id="@+id/mShadowLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/mine_iv_goodsImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:corner_radius="12dp"
+            tools:src="@drawable/tx01" />
+
+    </com.lihang.ShadowLayout>
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_action_enabled"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:enabled="false"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mShadowLayout"
+        tools:text="去领奖" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mine_tv_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_222222"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@id/mShadowLayout"
+        app:layout_constraintRight_toLeftOf="@id/tv_action"
+        app:layout_constraintTop_toTopOf="@id/mShadowLayout"
+        tools:text="三等奖" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mine_tv_prizeDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_666666"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/mine_tv_level"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mine_tv_level"
+        tools:text="小米充电宝20000毫安大容量便携超薄小米移动电源3" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/mine_tv_prizeDesc"
+        app:layout_constraintTop_toBottomOf="@id/mine_tv_prizeDesc">
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/mine_tv_awardOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/color_f02846"
+            android:textSize="12dp"
+            app:shape_radius="10dp"
+            app:shape_solidColor="#ffffebeb"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="领奖单号：9092021030456" />
+
+    </FrameLayout>
+
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/mine_tv_prizeEndTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="4dp"
+        android:paddingLeft="12dp"
+        android:textColor="@color/color_333333"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/mShadowLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mShadowLayout"
+        app:shape_radius="4dp"
+        app:shape_solidColor="@color/color_f9f9f9"
+        tools:text="领奖截止时间：2021/06/08 11:20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

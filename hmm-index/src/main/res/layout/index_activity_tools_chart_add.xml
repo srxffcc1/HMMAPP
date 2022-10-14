@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_marginTop="@dimen/status_2020"
+        app:bg_color="@color/colorTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="false"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="新增记录" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/choseTimeLL"
+    app:layout_constraintTop_toBottomOf="@id/top_bar"
+    android:layout_width="match_parent"
+    android:background="#FFE9C5"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/timeChoseTime"
+        app:drawable="@drawable/tools_time_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toLeftOf="@id/timeBabyDate"
+        android:layout_height="wrap_content"
+        app:drawableWidth="19dp"
+        app:drawableHeight="15dp"
+        android:drawablePadding="10dp"
+        android:text="今天"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/timeBabyDate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2个月28天"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/choseTimeLL"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.healthy.library.widget.CommonInsertSection
+            android:id="@+id/shengaoLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_tools_snsnbg_yellow"
+            app:right_end2="@layout/index_activity_tools_test_right_pink2"
+            app:right_end_bg="@drawable/shape_tools_snsnbg_right_yellow"
+            app:section_divider_full_width="false"
+            app:section_mode="txt"
+            app:show_divider="false"
+            app:title="身高(cm)"
+            app:title_color="#444444"
+            app:title_drawable_padding="0dp" />
+        <com.healthy.library.widget.CommonInsertSection
+            android:id="@+id/tizhongLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_tools_snsnbg_yellow"
+            app:right_end2="@layout/index_activity_tools_test_right_pink2"
+            app:right_end_bg="@drawable/shape_tools_snsnbg_right_yellow"
+            app:section_divider_full_width="false"
+            app:section_mode="txt"
+            app:show_divider="false"
+            app:title="体重(kg)"
+            app:title_color="#444444"
+            app:title_drawable_padding="0dp" />
+        <TextView
+            android:onClick="chooseButtonOK"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_test_button_yellow"
+            android:paddingLeft="56dp"
+            android:paddingTop="13dp"
+            android:paddingRight="56dp"
+            android:paddingBottom="13dp"
+            android:text="完成"
+            android:textColor="#ffffffff"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+ext {
+    compileSdkVersion = 30
+    minSdkVersion = 22
+    targetSdkVersion = 28
+
+    versionCode = 3296//打包时候手动改
+    versionName = '3.2.9.6'//打包时候手动改
+    versionLib='32'//打包时候手动改 32位 64位
+
+    isIndexModule = false
+    isFaqModule = false
+    isMallModule = false
+    isMineModule = false
+    isCityModule = false
+	isServiceModule = false
+    isDiscountModule = false
+    isSecondModule = false
+//    isSoundModule = false
+    isServiceCenterModule = false
+    isTencentLiveModule = false
+
+}
+

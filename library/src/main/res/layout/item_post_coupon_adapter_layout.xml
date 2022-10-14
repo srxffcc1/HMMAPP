@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/bgLiner"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_weight="1"
+        android:background="@drawable/post_coupon_dialog_item"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.76"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/couponMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/din_medium"
+                android:textColor="#fff08957"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="100 元" />
+
+            <TextView
+                android:id="@+id/couponType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:textColor="#ffee9551"
+                android:textSize="12sp"
+                tools:text="店铺通用券" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.24">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/couponContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#fff08957"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="满1000元可用" />
+
+                <TextView
+                    android:id="@+id/couponTime"
+                    android:layout_width="167dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#ffee9551"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/couponContent"
+                    app:layout_constraintTop_toBottomOf="@+id/couponContent"
+                    tools:text="有效期至:2021年4月21日 21:59" />
+
+                <TextView
+                    android:id="@+id/receive"
+                    android:layout_width="56dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_post_coupon_item_select"
+                    android:gravity="center"
+                    android:text="领取"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

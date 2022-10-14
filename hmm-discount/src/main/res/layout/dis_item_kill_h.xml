@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginRight="10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/shape_disact_list_bg"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_disact_list_bg_pink"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:paddingTop="4dp"
+            android:paddingLeft="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/pinHeadIconLL"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+<!--                                                                <include layout="@layout/dis_item_head_h"/>-->
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/mall_goods_sales"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="608人已抢"
+            android:textColor="#ff222222"
+            android:textSize="9sp"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/goodsImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_1_1_default"/>
+        <com.healthy.library.widget.AutoClickImageView
+            android:id="@+id/goodsShareCoupon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintLeft_toLeftOf="@id/goodsImg"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/goods_share_coupon"
+            android:visibility="invisible"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥"
+        android:textColor="#fff00028"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/killPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="198"
+        android:textColor="#fff00028"
+        android:textSize="14sp"
+        />
+</LinearLayout>
+    <TextView
+        android:id="@+id/killOldPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥299"
+        android:textColor="#ff868799"
+        android:textSize="12sp"
+        />
+</LinearLayout>

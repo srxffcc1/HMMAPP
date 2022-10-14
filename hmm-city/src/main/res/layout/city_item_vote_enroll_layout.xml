@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginHorizontal="14dp">
+
+    <com.healthy.library.widget.NewInputView
+        android:id="@+id/vote_enroll_inputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:newInput_isEdit="true"
+        app:newInput_isNot_bg="true"
+        app:newInput_right_hint="请输入"
+        app:newInput_title="姓名" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/vote_enroll_inputView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="参赛口号" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_appointment_edit_bg"
+        android:hint="请输入"
+        android:minHeight="60dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_slogan"
+        app:layout_constraintTop_toBottomOf="@id/tv_slogan" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/submit_layout"
+        android:background="@drawable/service_order_detial_card_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="134dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_select_servive_btn"
+            android:gravity="center"
+            android:text="确认报名"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

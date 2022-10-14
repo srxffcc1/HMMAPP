@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">憨妈妈</string>
+    <string name="app_protocol_pre">登录代表你已同意</string>
+    <string name="app_protocol_detail">《憨妈妈用户协议》</string>
+    <string name="app_protocol_detail2">《憨妈妈隐私协议》</string>
+    <string name="app_input_phone_hint">请输入手机号</string>
+    <string name="app_get_code">获取验证码</string>
+    <string name="app_input_code_hint">请输入验证码</string>
+    <string name="app_login_remind">首次登录的用户将自动注册帐号</string>
+    <string name="app_login">登录</string>
+
+    <string name="app_men_recent_title">请选择最近月经开始时间</string>
+    <string name="app_men_recent">点此选择时间</string>
+    <string name="app_men_cycle_duration_title">请选择月经周期和经期时长</string>
+    <string name="app_men_cycle_duration">点此选择月经周期和持续时长</string>
+    <string name="app_men_last_title">请选择末次月经初潮日期</string>
+    <string name="app_men_last">点此选择时间</string>
+    <string name="app_birth_date_title">请选择您的生产日期</string>
+    <string name="app_birth_date">点此选择生产日期</string>
+    <string name="app_birth_type_title">请选择生产方式</string>
+    <string name="app_birth_type">点此选择方式</string>
+    <string name="app_baby_sex_title">请选择宝宝性别</string>
+
+    <string name="app_skip_guide">跳过</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

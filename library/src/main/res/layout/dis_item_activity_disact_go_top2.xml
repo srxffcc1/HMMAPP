@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kickLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_disact_card_big"
+        android:paddingLeft="10dp"
+        android:paddingTop="35dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="快乐柠檬草"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/alreadyMoneyPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName">
+
+            <ImageView
+                android:id="@+id/double_marks_left"
+                android:layout_width="14dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:src="@drawable/double_marks_left"
+                app:layout_constraintBottom_toBottomOf="@id/alreadyMoney"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/alreadyMoney" />
+
+            <TextView
+                android:id="@+id/alreadyMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="我发现一件好货，快来帮我砍一刀"
+                android:textColor="#ff222222"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/double_marks_left"
+                app:layout_constraintRight_toLeftOf="@id/double_marks_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/double_marks_right"
+                android:layout_width="14dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:src="@drawable/double_marks_right"
+                app:layout_constraintBottom_toBottomOf="@id/alreadyMoney"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/alreadyMoney" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/goodsTimeLL"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alreadyMoneyPre">
+
+            <TextView
+                android:id="@+id/kickFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距结束"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kickHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_disact_gray_small"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="23"
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#444444"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kickMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/shape_disact_gray_small"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="23"
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#444444"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kickSec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/shape_disact_gray_small"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="23"
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goodsLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/shape_kick_yellow_bg"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/goodsTimeLL">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/goodsIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img_1_1_default"
+                app:corner_radius="3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/goodsName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="婴儿纯棉纱布浴巾宝宝盖毯儿童全棉洗澡巾新生儿毛毯"
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/goodsIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodsIcon" />
+
+            <TextView
+                android:id="@+id/goodsPriceLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="原价"
+                android:textColor="#ff666666"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@id/goodsName"
+                app:layout_constraintTop_toBottomOf="@id/goodsName" />
+
+            <TextView
+
+                android:id="@+id/goodsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥99"
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/goodsPriceLeft"
+                app:layout_constraintLeft_toRightOf="@id/goodsPriceLeft"
+                app:layout_constraintTop_toTopOf="@id/goodsPriceLeft" />
+
+            <TextView
+                android:id="@+id/limitMoneyLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可砍至￥"
+                android:textColor="#fff02846"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/goodsIcon"
+                app:layout_constraintLeft_toLeftOf="@id/goodsName" />
+
+            <TextView
+                android:id="@+id/limitMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18.8"
+                android:textColor="#fff02846"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/limitMoneyLeft"
+                app:layout_constraintLeft_toRightOf="@id/limitMoneyLeft"
+                app:layout_constraintTop_toTopOf="@id/limitMoneyLeft" />
+
+            <TextView
+                android:id="@+id/goodsJoinNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仅剩12件"
+                android:textColor="#fff02846"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/limitMoneyLeft"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/limitMoneyLeft" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/kickLetLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goodsLL">
+
+            <LinearLayout
+                android:id="@+id/goodsProLetL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="300"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/dis_item_activity_disact_let_l" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goodsProLetR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="500"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/dis_item_activity_disact_let_r" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/goodsProFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kickLetLL">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ProgressBar
+                    android:id="@+id/goodsPro"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_weight="1"
+                    android:max="1000"
+                    android:progress="500"
+                    android:progressDrawable="@drawable/progressz_bar_help_2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@drawable/goodsprored"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/goodsProFFLU"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="300"></TextView>
+
+                    <TextView
+                        android:id="@+id/goodsProFFRU"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="500"
+                        android:background="@drawable/goodsprogray"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/goodsProFFL"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="300">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/progress_imagc" />
+
+                <TextView
+                    android:id="@+id/goodsProFFR"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0"></TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/shareText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已砍       元，还差       元"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goodsProFF" />
+
+        <TextView
+            android:id="@+id/buttomYellow"
+            android:layout_width="0dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/kick_button_bg"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="喊好友继续砍 越砍价越低"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shareText"></TextView>
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/buttomRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:text="以当前价购买"
+            android:textColor="#ff84521e"
+            android:textSize="14sp"
+            app:drawable="@drawable/discountpass_gray"
+            app:drawableHeight="14dp"
+            app:drawableWidth="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttomYellow"
+            app:position="3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.healthy.library.widget.CornerImageView
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:src="@drawable/img_1_1_default3"
+        app:is_circle="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/userIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/img_avatar_default"
+        app:is_circle="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/manLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_disact_card_big2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/kickLL">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_disact_card_big_l"></ImageView>
+
+        <TextView
+            android:id="@+id/helpNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好友助力榜"
+            android:textColor="#ffbc8383"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_disact_card_big_r"></ImageView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

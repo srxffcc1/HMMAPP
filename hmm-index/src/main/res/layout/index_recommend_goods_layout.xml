@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:layout_width="wrap_content">
+
+    <com.healthy.library.widget.CornerImageView
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/iv_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/tx06"
+        app:corner_radius="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="奶粉纸尿裤"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_goods_label"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="团购热卖中"
+        android:singleLine="true"
+        android:textColor="#FF5100"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

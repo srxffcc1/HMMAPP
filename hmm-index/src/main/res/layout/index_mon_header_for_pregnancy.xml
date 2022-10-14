@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_status_bg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/index_probability_render_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 备孕中女布局信息 START -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/probability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:layout_width="132dp"
+            android:layout_height="110dp"
+            android:src="@drawable/index_probability_render_circle_bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_probability_render_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="12月4日"
+            android:textColor="@color/color_333333"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_probability_render"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_probability_render"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/din_medium"
+                android:text="0"
+                android:textColor="@color/color_333333"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="%"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="19dp"
+            android:text="怀孕几率"
+            android:textColor="@color/color_333333"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/iv_day_decrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/index_ic_day_decrease"
+        app:layout_constraintBottom_toBottomOf="@id/probability"
+        app:layout_constraintRight_toLeftOf="@id/probability"
+        app:layout_constraintTop_toTopOf="@id/probability" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/iv_day_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/index_ic_day_increase"
+        app:layout_constraintLeft_toRightOf="@id/probability"
+        app:layout_constraintTop_toTopOf="@id/iv_day_decrease" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pregnancy_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_pregnancy"
+        android:ellipsize="end"
+        android:fontFamily="@font/din_medium"
+        android:maxLines="2"
+        android:minLines="2"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/probability"
+        tools:text="卵泡期啦，你可以开始每天坚持记录自体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记体温了。每天早晨在没起床的前记己的基础体温了。每天早晨在没起床的前记录体温，升高说明要排卵了。" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="probability,tv_pregnancy_content" />
+
+    <!-- 备孕中女布局信息 END -->
+
+    <!-- 育儿/怀孕中 布局信息 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ParentingOrPregnant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="32周05天" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_numberValue_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="9.5"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tv_day"
+            app:layout_constraintTop_toBottomOf="@id/tv_day" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_numberValue_one_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="体重(kg)"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_numberValue_one"
+            app:layout_constraintTop_toBottomOf="@id/tv_numberValue_one" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_numberValue_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="9.5"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/tv_numberValue_one"
+            app:layout_constraintTop_toTopOf="@id/tv_numberValue_one" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_numberValue_two_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="身高(cm)"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_numberValue_two"
+            app:layout_constraintTop_toBottomOf="@id/tv_numberValue_two" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_status_picture"
+            android:layout_width="68dp"
+            android:layout_height="89dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="52dp"
+            tools:src="@drawable/index_status_parenting"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            app:layout_constraintTop_toBottomOf="@id/tv_numberValue_two_Title"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:id="@+id/line"/>
+
+        <com.healthy.library.banner.ViewPager2Banner
+            android:id="@+id/recycler_pregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

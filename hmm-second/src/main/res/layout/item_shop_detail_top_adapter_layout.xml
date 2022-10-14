@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:shape_bottomLeftRadius="12dp"
+    app:shape_bottomRightRadius="12dp"
+    app:shape_solidColor="@color/colorWhite"
+    app:shape_topLeftRadius="0dp"
+    app:shape_topRightRadius="0dp">
+
+    <TextView
+        android:id="@+id/shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="12dp"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="婷美摩力21产后恢复金山店" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        app:layout_constraintTop_toBottomOf="@+id/shopName">
+
+        <com.healthy.library.banner.ViewPager2Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/shopTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="16dp"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/shopName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerLayout"
+        tools:text="周一至周日 09:00-18:00" />
+
+    <TextView
+        android:id="@+id/shopAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/shopTime"
+        app:layout_constraintRight_toLeftOf="@+id/itv_StoreDetailNavigation"
+        app:layout_constraintTop_toBottomOf="@+id/shopTime"
+        tools:text="高新区金山东路3号爱拍大厦301憨妈妈网络科技" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/itv_StoreDetailPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:text="电话"
+        android:textColor="@color/color_999999"
+        android:textSize="10dp"
+        app:drawable="@drawable/icon_second_storedetail_phone"
+        app:drawableHeight="20dp"
+        app:drawableWidth="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shopAddress"
+        app:position="2" />
+
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/itv_StoreDetailNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:text="导航"
+        android:textColor="@color/color_999999"
+        android:textSize="10dp"
+        app:drawable="@drawable/icon_second_storedetail_navigation"
+        app:drawableHeight="20dp"
+        app:drawableWidth="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/itv_StoreDetailPhone"
+        app:layout_constraintRight_toLeftOf="@id/itv_StoreDetailPhone"
+        app:layout_constraintTop_toTopOf="@id/itv_StoreDetailPhone"
+        app:position="2" />
+
+    <TextView
+        android:id="@+id/shopDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/shopAddress"
+        app:layout_constraintTop_toBottomOf="@+id/shopAddress"
+        tools:text="500m" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/shopDistance" />
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

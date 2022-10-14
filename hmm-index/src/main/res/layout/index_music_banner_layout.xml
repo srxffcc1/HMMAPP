@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:src="@drawable/tx09"
+        app:corner_radius="6dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="1dp"
+        app:layout_constraintRight_toRightOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        app:shape_radius="7dp"
+        app:shape_solidColor="#47000000">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/tv_musicplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:text="1221"
+            android:textColor="@color/colorWhite"
+            android:textSize="9dp"
+            app:drawable="@drawable/icon_index_music_look_num"
+            app:drawableHeight="8dp"
+            app:drawableWidth="8dp" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/shape_index_video_play_icon_bg"
+        android:padding="5dp"
+        android:src="@drawable/index_video_play_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@+id/iv_avatar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="莫扎特胎教音乐"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_333333"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

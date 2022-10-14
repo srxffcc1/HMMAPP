@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_marginTop="@dimen/status_2020"
+        app:bg_color="@color/colorTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="true"
+        app:title="食谱" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.healthy.library.widget.StatusLayout
+                android:id="@+id/layout_status"
+                app:status_init="content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.healthy.library.widget.StatusLayout>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/passToSendPost"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_send_post"
+                app:layout_constraintBottom_toTopOf="@id/passToTop"
+                app:layout_constraintLeft_toLeftOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="@id/passTmp" />
+
+            <ImageView
+                android:id="@+id/passToTop"
+                android:visibility="gone"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="22dp"
+                android:src="@drawable/ic_to_top"
+                app:layout_constraintBottom_toTopOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="parent" />
+            <TextView
+                android:id="@+id/passTmp"
+                android:layout_width="45dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+    <View
+        android:id="@+id/dividerb"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffc4c4c4"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/canSend"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/like"
+            android:padding="6dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tools_food_like_normal"
+            />
+        <ImageView
+            android:id="@+id/collect"
+            android:padding="6dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/like"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/index_ic_collection"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/shape_toolfood_bottom"
+            app:layout_constraintLeft_toRightOf="@id/collect"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingLeft="20dp"
+
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/toolLeftTip"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/tools_food_bottom_left"
+                />
+            <HorizontalScrollView
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="25dp"
+                android:scrollbars="none"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/toolLeftTip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:id="@+id/reViewText"
+                    android:layout_width="match_parent"
+                    android:minWidth="300dp"
+                    android:imeOptions="actionSend"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    android:textColorHint="#ff999999"
+                    android:hint="点这里说两句..."
+                    android:text=""
+                    android:layout_height="wrap_content">
+
+                </EditText>
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

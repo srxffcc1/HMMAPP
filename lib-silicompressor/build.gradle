@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+group = 'com.iceteck.silicompressorr'
+version = '2.2.2'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 7
+        versionName "2.2.2"
+    }
+    buildTypes {
+        release {
+        }
+        product{
+        }
+        debug {
+        }
+        check{
+
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/passGoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/passGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:background="@drawable/shape_right_top"
+            android:text="查看咨询记录"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:layout_marginTop="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击此处查看名医专家的咨询记录"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_marginTop="13dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入此页面后，点击底部中间的“消息”，即可查看咨询记录"
+            android:textColor="#ff444444"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/right_img"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/question_right_bot"
+        app:layout_constraintTop_toBottomOf="@+id/passGoLL"
+        app:layout_constraintDimensionRatio="845:1440"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

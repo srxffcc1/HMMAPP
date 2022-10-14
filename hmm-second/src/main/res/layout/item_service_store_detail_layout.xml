@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/shape_pregnancy"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="适用门店"
+        android:textColor="@color/color_333333"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_lookAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_more_bold"
+        android:drawablePadding="4dp"
+        android:text="适用三家门店"
+        android:gravity="center"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <com.example.lib_ShapeView.view.ShapeView
+        android:id="@+id/sv_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:shape="line"
+        app:shape_dashGap="5dp"
+        app:shape_dashWidth="5dp"
+        app:shape_strokeColor="@color/color_f6f7f9"
+        app:shape_strokeWidth="1dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_shopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="婷美摩力21产后恢复金山店"
+        android:textColor="@color/color_333333"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sv_line" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_shop_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="婷美摩力21产后恢复金山店"
+        android:textColor="@color/color_666666"
+        android:textSize="11dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/itv_StoreDetailNavigation"
+        app:layout_constraintTop_toBottomOf="@id/tv_shopName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/color_666666"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_address"
+        tools:text="1.2km" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/itv_StoreDetailPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电话"
+        android:textColor="@color/color_999999"
+        android:textSize="10dp"
+        app:drawable="@drawable/icon_second_storedetail_phone"
+        app:drawableHeight="20dp"
+        app:drawableWidth="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_shop_address"
+        app:position="2" />
+
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/itv_StoreDetailNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:text="导航"
+        android:textColor="@color/color_999999"
+        android:textSize="10dp"
+        app:drawable="@drawable/icon_second_storedetail_navigation"
+        app:drawableHeight="20dp"
+        app:drawableWidth="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/itv_StoreDetailPhone"
+        app:layout_constraintRight_toLeftOf="@id/itv_StoreDetailPhone"
+        app:layout_constraintTop_toTopOf="@id/itv_StoreDetailPhone"
+        app:position="2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_2020"
+        app:back_img_src="@drawable/ic_back"
+        app:bg_color="@color/trans_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="我的直播间"
+        app:title_color="@color/colorBlack" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/hostIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/img_avatar_default"
+                app:is_circle="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hostName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hostIcon" />
+
+            <TextView
+                android:id="@+id/hostFansCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text=""
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hostName" />
+
+            <LinearLayout
+                android:id="@+id/hostLeftRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/hostFansCount">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hostLeftLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_video_hostroom"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="24dp">
+
+                    <TextView
+                        android:id="@+id/hostLeftTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的直播"
+                        android:textColor="#ff222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hostLeftTitleSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="My live broadcast"
+                        android:textColor="#ffdfdfed"
+                        android:textSize="9sp"
+                        app:layout_constraintLeft_toLeftOf="@id/hostLeftTitle"
+                        app:layout_constraintTop_toBottomOf="@id/hostLeftTitle" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/hostlefticon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/hostLeftTitle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hostRightLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_video_hostroom"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="24dp">
+
+                    <TextView
+                        android:id="@+id/hostRightTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的直播预告"
+                        android:textColor="#ff222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/hostRightTitleSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="My live announcement"
+                        android:textColor="#ffdfdfed"
+                        android:textSize="9sp"
+                        app:layout_constraintLeft_toLeftOf="@id/hostRightTitle"
+                        app:layout_constraintTop_toBottomOf="@id/hostRightTitle" />
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/hostrighticon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/hostRightTitle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupLiner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/hostLeftRight">
+
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/userMangerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_divider_full_width="false"
+                    app:section_end_size="10dp"
+                    app:section_end_src="@drawable/mine_ic_more"
+                    app:section_start_src="@drawable/host_line1_left"
+                    app:section_title="粉丝管理"
+                    app:section_title_margin_start="10dp" />
+
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/userDataLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_divider_full_width="false"
+                    app:section_end_size="10dp"
+                    app:section_end_src="@drawable/mine_ic_more"
+                    app:section_start_src="@drawable/host_line2_left"
+                    app:section_title="数据统计"
+                    app:section_title_margin_start="10dp" />
+
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/testLiveLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_divider_full_width="false"
+                    app:section_end_size="10dp"
+                    app:section_end_src="@drawable/mine_ic_more"
+                    app:section_start_src="@drawable/host_line3_left"
+                    app:section_title="直播调试"
+                    app:section_title_margin_start="10dp" />
+
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/netTestLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_divider_full_width="false"
+                    app:section_end_size="10dp"
+                    app:section_end_src="@drawable/mine_ic_more"
+                    app:section_start_src="@drawable/host_line4_left"
+                    app:section_title="网络测试"
+                    app:section_title_margin_start="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/createLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/groupLiner"
+                android:background="@drawable/shape_mall_goods_ol_vid_btn_go_order"
+                android:paddingLeft="60dp"
+                android:paddingTop="8dp"
+                android:paddingRight="60dp"
+                android:paddingBottom="8dp"
+                android:text="立即开播"
+                android:textColor="#ffffffff"
+                android:textSize="17sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/txt_service_name"
+        style="@style/H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/mall_ic_service_item"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_triangle"
+        android:layout_width="15dp"
+        android:layout_height="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_triangle"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/txt_service_name"
+        app:layout_constraintStart_toStartOf="@id/txt_service_name"/>
+
+    <TextView
+        android:id="@+id/txt_service_des"
+        style="@style/H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginStart="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_service_name"
+        app:layout_constraintStart_toEndOf="@id/txt_service_name"/>
+
+    <TextView
+        android:id="@+id/txt_service_detail_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_detail_expand"
+        android:textSize="12sp"
+        android:textColor="#FF6266"
+        android:drawableEnd="@drawable/selector_service_detail_expand_collapse"
+        android:drawablePadding="@dimen/dp_2"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_service_detail_switch"
+        android:paddingStart="@dimen/dp_7"
+        android:paddingEnd="@dimen/dp_7"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_service_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorDivider"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_service_name">
+
+
+        <LinearLayout
+            android:id="@+id/layout_suitable_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/shape_service_detail">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="适用人群"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableStart="@drawable/mall_ic_people"
+                android:textColor="#333333"/>
+
+            <com.healthy.library.widget.DashView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#333333"
+                android:lineSpacingMultiplier="1.2"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_suitable_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/shape_service_detail"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="适用症状"
+                android:drawableStart="@drawable/mall_ic_symptom"
+                android:textSize="@dimen/sp_14"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/dp_5"
+                android:textColor="#333333"/>
+
+            <com.healthy.library.widget.DashView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#333333"
+                android:lineSpacingMultiplier="1.2"
+                tools:text="白带多、痛经、月经不调、经期小腹坠胀、月经色深、有血块、乳房胀痛、下肢或周身浮肿、小腹凉、喜温敷、腰膝酸冷、四肢不温、面色黯黑或苍白、气短乏力、易出汗、常头晕、心慌、失眠、黄褐斑、黑眼圈严重、易流产、不孕、性冷淡、身体肥胖、舌质淡、苔白而腻"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="img_triangle,layout_detail"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

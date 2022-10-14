@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#FFFFFF" />
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="8dp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+    <item
+        android:left="75dp"
+        android:right="75dp">
+        <shape>
+            <!--    边框颜色 -->
+            <solid android:color="#F93F60" />
+        </shape>
+    </item>
+
+    <!-- 给View的上 左  右设置8dp的边框 -->
+    <item android:bottom="3dp">
+        <shape>
+            <!--     View填充颜色 -->
+            <solid android:color="#FFFFFF" />
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                android:topLeftRadius="8dp"
+                android:topRightRadius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>
+
+

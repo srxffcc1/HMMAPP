@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SoundRecordingActivity">
+
+    <com.healthy.library.widget.MultiWaveHeader
+        android:id="@+id/multiWaveHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mwhCloseColor="@color/color_22dddd"
+        app:mwhProgress="0.6"
+        app:mwhStartColor="@color/color_4de4b6">
+
+    </com.healthy.library.widget.MultiWaveHeader>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/dp_20"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_sound_close" />
+
+        <TextView
+            android:id="@+id/tv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_close"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="00:00"
+            android:textColor="@color/colorWhite"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="120dp">
+
+        <TextView
+            android:id="@+id/tv_restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_70"
+            android:textSize="@dimen/sp_13"
+            android:layout_toLeftOf="@+id/iv_sound"
+            android:drawableTop="@drawable/ic_ok_restart"
+            android:text="重录"
+            android:textColor="@color/color_666666"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_sound_start" />
+        <TextView
+            android:id="@+id/tv_starttxt"
+            android:layout_below="@id/iv_sound"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始录音"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_70"
+            android:layout_toRightOf="@+id/iv_sound"
+            android:drawableTop="@drawable/ic_sound_ok"
+            android:textSize="@dimen/sp_13"
+            android:text="完成"
+            android:textColor="@color/color_666666"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+</FrameLayout>

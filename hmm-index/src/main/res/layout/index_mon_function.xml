@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="10dp"
+    tools:background="#000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_category"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/stv_function_Subscript"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/iv_category"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="1dp"
+        android:singleLine="true"
+        android:text="测一测"
+        android:textColor="@color/colorWhite"
+        android:textSize="9sp"
+        android:visibility="invisible"
+        app:shape_bottomRightRadius="8dp"
+        app:shape_endColor="#FF426C"
+        app:shape_startColor="#FF6060"
+        app:shape_strokeColor="@color/colorWhite"
+        app:shape_strokeWidth="1px"
+        app:shape_topLeftRadius="8dp"
+        app:shape_topRightRadius="8dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_category"
+        android:layout_alignLeft="@id/iv_category"
+        android:layout_alignRight="@id/iv_category"
+        android:gravity="center"
+        android:textColor="@color/color_333333"
+        android:textSize="11dp"
+        tools:text="亲子摄影" />
+</RelativeLayout>

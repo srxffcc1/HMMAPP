@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F9"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/index_ic_b_header"
+        app:layout_constraintDimensionRatio="375:160"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:back_img_src="@drawable/ic_back_white"
+        app:bg_color="@color/colorTransparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="B超解读"
+        app:title_color="@color/colorWhite"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

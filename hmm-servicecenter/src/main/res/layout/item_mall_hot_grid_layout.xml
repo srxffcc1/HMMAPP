@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_category"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_category"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:src="@mipmap/ic_launcher"
+        app:corner_radius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.health.servicecenter.widget.SDAdaptiveTextView
+        android:id="@+id/tv_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:lines="2"
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        app:layout_constraintTop_toBottomOf="@id/iv_category"
+        tools:text="孕婴奶粉" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18.8"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/tv_sales"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sales"
+        app:layout_constraintLeft_toRightOf="@+id/tv_doller" />
+
+    <TextView
+        android:id="@+id/tv_doller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"/>
+
+    <com.healthy.library.widget.AutoClickImageView
+        android:id="@+id/tv_sales"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/basket_red"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        app:layout_constraintTop_toBottomOf="@id/tv_category" />
+</androidx.constraintlayout.widget.ConstraintLayout>

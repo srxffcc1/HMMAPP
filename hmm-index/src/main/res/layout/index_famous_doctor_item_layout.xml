@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="12dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="7dp"
+    android:paddingTop="12dp"
+    app:shape_radius="12dp"
+    app:shape_solidColor="#F7F6FF">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/tx09"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="郭萍"
+        android:textColor="@color/color_333333"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="1dp"
+        android:text="三甲"
+        android:textColor="@color/colorWhite"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_doctor_name"
+        app:layout_constraintLeft_toRightOf="@id/tv_doctor_name"
+        app:layout_constraintTop_toTopOf="@id/tv_doctor_name"
+        app:shape_radius="2dp"
+        app:shape_solidColor="#3E7EFF" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/tv_rankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="1dp"
+        android:text="资深"
+        android:textColor="@color/colorWhite"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_level"
+        app:layout_constraintLeft_toRightOf="@id/tv_level"
+        app:layout_constraintTop_toTopOf="@id/tv_level"
+        app:shape_radius="2dp"
+        app:shape_solidColor="#FF586D" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="儿保科 ｜ 副主任医师"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_doctor_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_doctor_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="已回复：46235"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_category"
+        app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_favorableComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:text="好评率：99.8%"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_reply"
+        app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

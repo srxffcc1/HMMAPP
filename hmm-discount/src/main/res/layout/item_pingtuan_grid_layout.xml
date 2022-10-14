@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_category"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_launcher"
+        app:is_circle="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Space
+        android:id="@+id/groupSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"
+        app:layout_constraintRight_toRightOf="@id/iv_category" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_group_icon_hint"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="团长"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        app:layout_constraintTop_toBottomOf="@id/groupSpace" />
+</androidx.constraintlayout.widget.ConstraintLayout>

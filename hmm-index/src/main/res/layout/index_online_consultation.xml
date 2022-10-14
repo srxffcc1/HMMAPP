@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_index_online_consultation_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tabs"
+        android:layout_width="62dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.healthy.library.widget.NoSpaceTextView
+        android:id="@+id/tv_onlineNum"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="9872"
+        android:textColor="@color/color_333333"
+        android:textSize="28dp"
+        app:layout_constraintLeft_toRightOf="@+id/tabs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:text="人"
+        android:visibility="gone"
+        android:textColor="@color/color_333333"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_onlineNum"
+        app:layout_constraintLeft_toRightOf="@id/tv_onlineNum" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预计3分钟接通专家，仅需9.9元"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_onlineNum" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:text="立即提问"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_endColor="#FF426C"
+        app:shape_radius="17dp"
+        app:shape_startColor="#FF6060" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

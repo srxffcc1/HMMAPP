@@ -1,0 +1,9 @@
+https://sls.console.aliyun.com/lognext/project/hmmlog/logsearch/hmm_cserver_api
+进入之后选择账号登录 右下角的RAM登录
+用户:hmmlog@1610157996856082.onaliyun.com
+密码:Hmm_678#@*.com
+
+1.首先获得手机号
+2.直接输入手机号 查看到memberId 
+3.输入具体的接口关键词 选择具体时间范围 
+4.查看到具体的报错信息 打开上下文

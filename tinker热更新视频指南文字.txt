@@ -1,0 +1,14 @@
+首先需要基础包
+每次打渠道包的时候可以留一下基础包 基础包的路径大概是这个位置
+或者从git上找到上次发版的日期 打一个基础包也行 然后解压 然后直接打渠道包
+不好意思要运行一下 开始打渠道包 
+打完了 
+D:\APP-HMM-Error-Base\HMM-C-Android\mod-app\build\bakApk\mod-app-0529-09-45-23 这个路径
+放到修改后的那个工程 或者 你也可以在这个工程直接修改代码 
+开始准备打补丁包 
+先删除这些 开始打补丁
+打的有点满 看起来要oom 不管了 就当打完了 
+然后开始上传补丁 
+这是补丁位置 
+D:\APP-HMM-ReBuild\HMM-C-Android\mod-app\build\outputs\patch\release
+然后点全量 点下发就行了 我就不发了 结束

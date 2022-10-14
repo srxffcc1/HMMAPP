@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <FrameLayout
+        android:id="@+id/city_item_fragment_follow_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            layout="@layout/city_item_fragment_activity_head" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/city_item_fragment_follow_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/city_item_fragment_follow_head">
+
+        <include
+            layout="@layout/city_item_fragment_activity_child" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

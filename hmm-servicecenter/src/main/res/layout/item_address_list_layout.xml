@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/address_liner"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/default_address"
+            android:layout_width="32dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_item_default_address"
+            android:gravity="center"
+            android:text="默认"
+            android:textColor="#ff815c35"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/default_address"
+
+            android:paddingLeft="3dp"
+            android:text=""
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/user_name"
+            android:text=""
+            android:textColor="#ff222222"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/user_address"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:text=""
+            android:textColor="#ff222222"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/address_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_edit_tip">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffd5dbe4"></View>
+</LinearLayout>

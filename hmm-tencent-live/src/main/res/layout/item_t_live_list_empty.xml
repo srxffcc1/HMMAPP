@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="219dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/video_live_empty"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="当前还没有直播，请稍后再来观看"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="#ff868799"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:id="@+id/passToMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回首页"
+            android:layout_marginTop="14dp"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            android:paddingRight="26dp"
+            android:paddingLeft="26dp"
+            android:background="@drawable/shape_mall_goods_ol_vid_basket_empty_btn"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

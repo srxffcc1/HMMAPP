@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_invite_bg"
+    app:status_init="content">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:paddingTop="@dimen/status_2020"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false"
+        app:title_color="@color/colorBlack"
+        app:back_img_src="@drawable/ic_back"
+        app:bg_color="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="接受邀请" />
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePreviewInEditMode="false">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+
+
+    </com.healthy.library.widget.StatusLayout>
+    <com.gongwen.marqueen.MarqueeView
+        android:id="@+id/inviteJoinMan"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="10dp"
+        android:paddingTop="12dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="12dp"
+        android:paddingVertical="7dp"
+        android:textColor="#ffffff"
+        android:flipInterval="3500"
+        android:autoStart="true"
+        android:visibility="gone"
+        android:inAnimation="@anim/in_bottom"
+        android:outAnimation="@anim/out_top"
+        app:marqueeAnimDuration="500"
+        android:background="@drawable/shape_invite_top_top"
+        android:textSize="14sp"
+        >
+    </com.gongwen.marqueen.MarqueeView>
+
+    <com.healthy.library.widget.DragLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/goInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="60dp"
+            android:src="@drawable/go_invite" />
+
+
+
+    </com.healthy.library.widget.DragLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

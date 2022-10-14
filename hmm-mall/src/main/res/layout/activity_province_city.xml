@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProvinceCityActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false"
+        app:title="选择城市"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_location_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/location_pre"
+                android:paddingStart="15dp"
+                android:paddingEnd="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorMinorText"
+                app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_location"
+                android:textSize="15sp"
+                android:drawableStart="@drawable/mall_ic_location"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/dp_5"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_location_pre"
+                app:layout_constraintStart_toEndOf="@id/txt_location_pre"/>
+
+            <TextView
+                android:id="@+id/tv_relocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/relocation"
+                android:onClick="reLocation"
+                android:layout_marginEnd="15dp"
+                android:textSize="13sp"
+                android:drawableStart="@drawable/mall_ic_relocation"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/dp_5"
+                android:textColor="@color/colorMinorText"
+                app:layout_constraintBaseline_toBaselineOf="@id/txt_location_pre"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <View
+                android:id="@+id/divider_loc"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintTop_toBottomOf="@id/txt_location_pre"/>
+
+
+            <LinearLayout
+                android:id="@+id/locLL"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/divider_loc"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/choseProvince"
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择省"
+                    android:textStyle="bold"
+                    android:textColor="#ff444444"
+                    android:textSize="16sp"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:src="@drawable/mine_ic_more"/>
+                <TextView
+                    android:id="@+id/choseCity"
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择市"
+                    android:textStyle="bold"
+                    android:textColor="#ff444444"
+                    android:textSize="16sp"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:src="@drawable/mine_ic_more"/>
+                <TextView
+                    android:id="@+id/choseStreet"
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择地区"
+                    android:textStyle="bold"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintTop_toBottomOf="@id/locLL"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_province"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_bottom" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+</LinearLayout>

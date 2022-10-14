@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChooseMapAddressActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/choose_map_title"/>
+
+    <TextView
+        android:id="@+id/txt_city"
+        style="@style/H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:drawablePadding="@dimen/dp_5"
+        android:padding="@dimen/normalPadding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"/>
+
+    <TextView
+        android:id="@+id/txt_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/choose_map_cancel"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:textSize="@dimen/sp_14"
+        android:textColor="#9596A4"
+        app:layout_constraintBottom_toBottomOf="@id/txt_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_city"/>
+
+    <EditText
+        android:id="@+id/et_keyword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:hint="@string/choose_map_input_hint"
+        android:paddingStart="20dp"
+        android:paddingEnd="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_5"
+        android:drawableStart="@drawable/mall_ic_search"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:background="@drawable/shape_search_bg"
+        android:lines="1"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/txt_city"
+        app:layout_constraintEnd_toStartOf="@id/txt_cancel"
+        app:layout_constraintStart_toEndOf="@id/txt_city"
+        app:layout_goneMarginEnd="@dimen/normalMargin"/>
+
+    <ImageView
+        android:id="@+id/img_clear"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/mall_ic_clear_keyword"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/et_keyword"
+        app:layout_constraintEnd_toEndOf="@id/et_keyword"
+
+        app:layout_constraintTop_toTopOf="@id/et_keyword"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="txt_city,et_keyword"/>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="375:212"
+        app:layout_constraintTop_toBottomOf="@id/barrier"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mall_ic_my_location"
+        android:layout_margin="@dimen/normalMargin"
+        android:onClick="resetLocation"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/map"
+        app:layout_constraintEnd_toEndOf="@id/map"/>
+
+    <ImageView
+        android:id="@+id/img_map_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mall_ic_map_location"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/map"
+        app:layout_constraintEnd_toEndOf="@id/map"
+        app:layout_constraintStart_toStartOf="@id/map"
+        app:layout_constraintTop_toTopOf="@id/map"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_surrounding"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/map"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_keyword"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

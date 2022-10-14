@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_height="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_mall_goods_ol_vid_counter_type_top"
+    tools:ignore="MissingDefaultResource,Orientation">
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@drawable/shape_code_normal"
+    android:text="获取验证码"
+    android:paddingTop="4dp"
+    android:textSize="12sp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:textColor="#FF6266"
+    android:layout_height="wrap_content"
+    tools:context=".activity.PersonalInfoDetailActivity">
+
+</TextView>

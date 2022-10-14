@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.health.client">
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.huawei.systemmanager.permission.ACCESS_INTERFACE" />
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 连接网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于管理监听网络状态的变化 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于管理监听网络状态的变化 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于管理监听网络状态的变化 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 获取电话的状态,在打电话的时候暂停播放 -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> &lt;!&ndash; target >=28 需要设置此权限 &ndash;&gt; -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 写入SD卡 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 闪验需要的权限 6.0以下 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 直播需要权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+    <application
+        android:name=".ClientApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/app_ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/LibAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name,android:theme">
+        <meta-data
+            android:name="LogcatWindowEntrance"
+            android:value="true" />
+
+        <!-- 通知栏入口 -->
+        <meta-data
+            android:name="LogcatNotifyEntrance"
+            android:value="true" />
+        <activity
+            android:name=".activity.UpdatePhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ZxingLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UpdatePassWordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GetCodeActivity"
+            android:screenOrientation="portrait" />
+        <!-- <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/> -->
+        <!-- <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/> -->
+
+        <meta-data android:name="sigmob_app_id" android:value="000" tools:replace="android:value"/>
+
+        <meta-data android:name="sigmob_app_key" android:value="aaa" tools:replace="android:value"/>
+
+        <meta-data android:name="sigmob_reward_placement_id" android:value="aaa" tools:replace="android:value"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b649ee80f723247903a4fcd3d3587b35" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="750" />
+        <meta-data
+            android:name="com.sharetrace.APP_KEY"
+            android:value="e36347193465829a" />
+        <service
+            android:name="com.health.client.HDaemonService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":hmmdamservice" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/com_splashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.health.client"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name=".HMMPlayerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.app.test.android.Action_Close" />
+                <action android:name="com.app.test.android.Action_PAUSE_START" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.health.client"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101561118" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:configChanges" />
+        <activity
+            android:name=".activity.ChooseStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StatusPregnancyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StatusMenstruationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StatusParentingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activity.ChooseSexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageHelperActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageTipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageLikeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageDisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MessageHelper2Activity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.health.client.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public"
+                tools:replace="android:resource" />
+        </provider>
+        <provider
+            android:name=".utils.UmFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_um" />
+        </provider>
+        <provider
+            android:name=".utils.BuglyFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/providerbugly_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <service
+            android:name=".JCopyService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!-- 该Service仅在TBS内核首次Dex加载时触发并执行dex2oat任务，任务完成后自动结束。 -->
+        <service
+            android:name="com.tencent.smtt.export.external.DexClassLoaderProviderService"
+            android:label="dexopt"
+            android:process=":dexopt">
+
+        </service>
+
+        <receiver
+            android:name=".JCopyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver> <!-- *****************************闪验SDK必须配置的activity*********************** -->
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.CmccLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity-alias
+            android:name="com.cmic.sso.sdk.activity.LoginAuthActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:targetActivity="com.chuanglan.shanyan_sdk.view.CmccLoginActivity" /> <!-- **********************电信授权页activity************************** -->
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.ShanYanOneKeyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- **********************协议页activity************************** -->
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.CTCCPrivacyProtocolActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginTransferActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.health.client.activity.MainActivity"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/bargaining"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/liveVideo"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/assembleing"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/appointment"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/corresponding"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/babyTool"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/foodType"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/topicMange"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/babyWeight"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/babyTest"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/babyName"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/babyName"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="hmm"
+                    android:path="/growth"
+                    android:scheme="hmmm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivityTest" />
+    </application>
+
+</manifest>

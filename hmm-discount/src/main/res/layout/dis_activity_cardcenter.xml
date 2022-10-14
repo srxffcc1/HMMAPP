@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#000"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/card_center_top_bg"
+        app:layout_constraintBottom_toBottomOf="@id/top_bar"
+        app:layout_constraintLeft_toLeftOf="@id/top_bar"
+        app:layout_constraintRight_toRightOf="@id/top_bar"
+        app:layout_constraintTop_toTopOf="@id/top_bar" />
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/status_2020"
+        app:back_img_src="@drawable/ic_back_white"
+        app:bg_color="@color/trans_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="领券中心"
+        app:title_color="@color/white" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:status_init="content">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trans_parent"
+                    android:elevation="0dp"
+                    app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsingToolbarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentScrim="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:statusBarScrim="@android:color/transparent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/bannerHLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_center_top_banner_bg"
+                            tools:ignore="MissingDefaultResource">
+
+                            <com.youth.banner.Banner
+                                android:id="@+id/act_top_banner"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="20dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:id="@+id/underLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/tabLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.flyco.tablayout.SlidingTabLayout
+                                android:id="@+id/st"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                app:tl_indicator_color="#FA3C5A"
+                                app:tl_indicator_corner_radius="1.5dp"
+                                app:tl_indicator_height="4dp"
+                                app:tl_indicator_margin_top="10dp"
+                                app:tl_indicator_width="30dp"
+                                app:tl_tab_padding="10dp"
+                                app:tl_tab_space_equal="false"
+                                app:tl_textBold="SELECT"
+                                app:tl_textSelectColor="#222222"
+                                app:tl_textUnselectColor="#9596A4"
+                                app:tl_textsize="14sp" />
+                        </RelativeLayout>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F5F5F9" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </com.healthy.library.widget.StatusLayout>
+
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <com.healthy.library.widget.DragLayout
+        android:id="@+id/dargF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mall_scrollUp"
+            android:layout_width="145dp"
+            android:layout_height="73dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/go_my_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.healthy.library.widget.DragLayout>
+
+    <com.healthy.library.widget.DragLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/share_buddy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="96dp"
+            android:src="@drawable/share_activity_coupon_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </com.healthy.library.widget.DragLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

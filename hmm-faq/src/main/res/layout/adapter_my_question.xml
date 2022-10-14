@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingLeft="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_10"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/color_222222"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/sp_16"
+        tools:text="doishdoisahdonsjdklasjd" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/color_ff6266"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question"
+        tools:text="￥9.9" />
+
+    <TextView
+        android:id="@+id/sb_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:background="@drawable/bg_xsqz"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingRight="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_2"
+        android:shadowRadius="4"
+        tools:text="悬赏求助"
+        android:textColor="@color/color_39e0c8"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+        app:layout_constraintLeft_toRightOf="@+id/tv_money"
+        app:layout_constraintTop_toTopOf="@+id/tv_money" />
+
+    <TextView
+        android:id="@+id/tv_answer_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/color_222222"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+        app:layout_constraintLeft_toRightOf="@+id/sb_type"
+        app:layout_constraintTop_toTopOf="@+id/tv_money"
+        tools:text="2561回答" />
+
+    <TextView
+        android:id="@+id/tv_answer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/color_666666"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_money"
+        tools:text="5-12 19:55" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FeedbackActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="意见反馈"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:lines="10"
+                android:background="@drawable/mine_shape_et_eva"
+                android:layout_marginTop="40dp"
+                android:hint="@string/mine_feedback_hint"
+                android:gravity="top|start"
+                android:textColor="#9596A4"
+                android:textSize="13dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="LabelFor,SpUsage,TextFields"/>
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#ff9596a4"
+                android:textSize="11dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_feedback"
+                app:layout_constraintEnd_toEndOf="@id/et_feedback"
+                tools:ignore="SpUsage"
+                tools:text="0/300"/>
+
+            <TextView
+                style="@style/BtnStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/mine_feedback_commit"
+                android:layout_marginTop="25dp"
+                android:onClick="commit"
+                app:layout_constraintEnd_toEndOf="@id/et_feedback"
+                app:layout_constraintStart_toStartOf="@id/et_feedback"
+                app:layout_constraintTop_toBottomOf="@id/et_feedback"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

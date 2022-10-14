@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f9f9f9">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/status_2020"
+        android:background="@color/colorWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        app:show_moss="false"
+        app:submit_img_src="@drawable/index_ic_share2"
+        tools:title="待核销" />
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_f9f9f9"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_line">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:status_init="content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:transcriptMode="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_mine_bottom_action"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_mine_bottom_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@drawable/ic_header_shadow"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.lib_ShapeView.view.ShapeTextView
+                        android:id="@+id/tv_clear_action"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_confirm_action"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shape_bottomLeftRadius="22dp"
+                        app:shape_topLeftRadius="22dp"
+                        app:shape_textColor="@color/color_333333"
+                        app:shape_textPressedColor="#4A91EF"
+                        app:shape_solidColor="#ffd9d9d9"
+                        app:shape_solidPressedColor="#fff0f6ff"
+                        app:shape_strokeWidth="1dp"
+                        app:shape_startColor="@color/colorTransparent"
+                        app:shape_strokePressedColor="#ff4a91ef" />
+
+                    <com.example.lib_ShapeView.view.ShapeTextView
+                        android:id="@+id/tv_confirm_action"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:shadowColor="#730a5cc6"
+                        android:shadowDx="0"
+                        android:shadowDy="2"
+                        android:shadowRadius="3.0"
+                        android:text="查看核销码"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_clear_action"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shape_bottomRightRadius="22dp"
+                        app:shape_endColor="#7BB7F7"
+                        app:shape_gradientType="linear"
+                        app:shape_startColor="#4A91EF"
+                        app:shape_topRightRadius="22dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.healthy.library.widget.StatusLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    <TextView
+        android:id="@+id/tmpBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

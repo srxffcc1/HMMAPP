@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_2020"
+        android:elevation="0dp"
+        app:back_img_src="@drawable/ic_back"
+        app:is_show_submit_image="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:title="宝宝爱听"
+        app:title_color="#FFF" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:elevation="0dp">
+
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <include layout="@layout/sound_item_edition_head"/>
+                    </LinearLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:id="@+id/editionLeftTitleLL"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/soundEditionPlayAgain"
+                        android:layout_height="wrap_content">
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/editionLeftTitle"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="目录"
+                            android:fontFamily="@font/din_medium"
+                            app:drawable="@drawable/ic_sound_detail_ed"
+                            app:position="3"
+                            android:drawablePadding="17dp"
+                            app:drawableHeight="20dp"
+                            app:drawableWidth="20dp"
+                            android:textColor="#ff222222"
+                            android:textSize="15sp"
+                            />
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/editionSumCount"
+                            android:gravity="center"
+                            android:layout_marginLeft="3dp"
+                            app:layout_constraintLeft_toRightOf="@id/editionLeftTitle"
+                            app:layout_constraintTop_toTopOf="@id/editionLeftTitle"
+                            app:layout_constraintBottom_toBottomOf="@id/editionLeftTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:drawable="@drawable/ic_sound_up"
+                            android:drawablePadding="4dp"
+                            android:text="共90集"
+                            app:position="3"
+                            app:drawableHeight="15dp"
+                            app:drawableWidth="15dp"
+                            android:textColor="#ff666666"
+                            android:textSize="12sp"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/soundEditionPlayAgain"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:background="@drawable/shape_sound_again_play"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="11dp"
+                        android:paddingLeft="11dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/soundEditionPlayAgainImg"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/ic_sound_again_p"/>
+                        <TextView
+                            android:id="@+id/soundEditionPlayAgainText"
+                            android:layout_marginLeft="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全部播放"
+                            android:textColor="#ff555555"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/divider_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_question"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--        </com.scwang.smart.refresh.layout.SmartRefreshLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

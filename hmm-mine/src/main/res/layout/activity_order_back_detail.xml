@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="退款详情" />
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        tools:status_init="content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/top_tip"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:background="#FFF"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/backStatus"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:background="@drawable/shape_back_top"
+                        tools:text="退款成功后，购买获得的积分将被扣除"
+                        android:textColor="#ffff6266"
+                        android:textSize="14sp"
+                        />
+                    <com.healthy.library.widget.CommonInsertSection
+                        android:id="@+id/backMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#FFF"
+                        tools:txt_content="¥578"
+                        app:txt_content_color="#FF6266"
+                        app:section_divider_full_width="false"
+                        app:section_mode="txt"
+                        app:show_divider="false"
+                        app:title="退款金额" />
+                    <com.healthy.library.widget.CommonInsertSection
+                        android:id="@+id/backCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#FFF"
+                        tools:txt_content="¥578"
+                        app:section_divider_full_width="false"
+                        app:section_mode="txt"
+                        app:show_divider="false"
+                        app:title="退款账户" />
+                    <com.healthy.library.widget.CommonInsertSection
+                        android:id="@+id/backTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#FFF"
+                        tools:txt_content="¥578"
+                        app:section_divider_full_width="false"
+                        app:section_mode="txt"
+                        app:show_divider="false"
+                        app:title="到账时间" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/divider_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorDivider"
+                    app:layout_constraintTop_toBottomOf="@id/top_tip" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_top"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite">
+
+                    <com.healthy.library.widget.SectionView
+                        android:id="@+id/priceBackCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sectionHeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:section_des_color="#FF6266"
+                        app:section_des_size="18dp"
+                        app:section_title="退款进度"
+                        app:show_divider="false" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/priceBackWhyRecycler"
+                        app:layout_constraintTop_toBottomOf="@id/priceBackCount"
+                        android:layout_width="match_parent"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="20dp"
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

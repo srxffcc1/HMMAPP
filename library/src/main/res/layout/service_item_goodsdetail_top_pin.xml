@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/goodsTopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/img_banner"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/vp_banner_dot_bg"
+            app:layout_constraintBottom_toBottomOf="@id/dotLL"
+            app:layout_constraintLeft_toLeftOf="@id/dotLL"
+            app:layout_constraintRight_toRightOf="@id/dotLL"
+            app:layout_constraintTop_toTopOf="@id/dotLL">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/fpLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_mall_goods_ol_vid_top_play"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="6dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintBottom_toTopOf="@id/dotLL"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/play_first" />
+
+            <TextView
+                android:id="@+id/fpTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:textColor="#ffffffff"
+                android:textSize="12sp"
+                tools:text="0′18″" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dotLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/img_banner"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/nowPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="1"
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="#ffffffff"
+                android:textSize="6sp" />
+
+            <TextView
+                android:id="@+id/allPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="8"
+                android:textColor="#ffffffff"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/personFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_group_top_hint"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/personIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/img_avatar_default"
+                app:is_circle="true" />
+
+            <TextView
+                android:id="@+id/personNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:maxEms="4"
+                android:singleLine="true"
+                android:text="爱睡觉的…"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/personText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拼团成功！"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pinStoreTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/img_banner">
+            <include layout="@layout/item_include_pin_top" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/titleLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_mall_goods_ol_vid_float_under"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/pinStoreTop">
+
+            <TextView
+                android:id="@+id/goodMoneyFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="¥"
+                android:textColor="#fff02846"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/goodMoneyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#fff02846"
+                android:textSize="27sp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@id/goodMoneyFlag"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="39.8" />
+
+            <TextView
+                android:id="@+id/goodMoneyValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#ff666666"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintLeft_toRightOf="@id/goodMoneyValue"
+                app:layout_constraintTop_toTopOf="@id/goodMoneyValue"
+                tools:text="¥208" />
+
+            <TextView
+                android:id="@+id/goodssalecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff666666"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/goodMoneyValue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goodMoneyValue"
+                tools:text="已售1087件" />
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#ff222222"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodMoneyValue"
+                tools:text="Babycare吸管杯学饮杯宝宝水杯重力球鸭嘴杯防漏水儿童婴儿食品级硅胶吸管婴儿鸭嘴型210ml带重力球测试" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/goodsTipsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goodsTitle">
+
+                <!--                <TextView-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginRight="5dp"-->
+                <!--                    android:background="@drawable/shape_mall_goods_ol_vid_yellow"-->
+                <!--                    android:paddingLeft="4dp"-->
+                <!--                    android:paddingTop="1dp"-->
+                <!--                    android:paddingRight="4dp"-->
+                <!--                    android:paddingBottom="1dp"-->
+                <!--                    android:text="满50元免运费"-->
+                <!--                    android:textColor="#ff815c35"-->
+                <!--                    android:textSize="11sp" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginRight="5dp"-->
+                <!--                    android:background="@drawable/shape_mall_goods_ol_vid_yellow"-->
+                <!--                    android:paddingLeft="4dp"-->
+                <!--                    android:paddingTop="1dp"-->
+                <!--                    android:paddingRight="4dp"-->
+                <!--                    android:paddingBottom="1dp"-->
+                <!--                    android:text="配送到家"-->
+                <!--                    android:textColor="#ff815c35"-->
+                <!--                    android:textSize="11sp" />-->
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/goodsTopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/item_include_pin_bottom"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

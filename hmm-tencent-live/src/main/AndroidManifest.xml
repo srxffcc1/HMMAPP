@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.health.tencentlive">
+
+    <application
+        android:name="com.healthy.library.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/LibAppTheme">
+        <activity
+            android:name=".activity.LiverRosterListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.BaseLiveActivity"
+            android:exported="true" />
+        <activity android:name=".activity.TestChartActivity" />
+        <activity android:name=".activity.SpeedTestActivity" />
+        <activity android:name=".activity.LiveDetailActivity" />
+        <activity android:name=".activity.LiveDataChartActivity" />
+        <activity android:name=".activity.CreateLiveActivity" />
+        <activity android:name=".activity.LookLiveActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="10dp"
+    android:background="@drawable/shape_pregnancy"
+    tools:ignore="MissingDefaultResource,SpUsage">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pregnancy_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_666666"
+        android:textSize="13dp"
+        android:layout_marginBottom="2dp"
+        tools:text="我看上去胖乎乎、粉粉嫩嫩的，我看上去胖乎乎、粉粉嫩嫩的，妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥我看上去胖乎乎、粉粉嫩嫩的，妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥我看上去胖乎乎、粉粉嫩嫩的，妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥我看上去胖乎乎、粉粉嫩嫩的，妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥我看上去胖乎乎、粉粉嫩嫩的，妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥妈妈千万别嘲笑我胖哦，这可是正常的婴儿肥，这样的我看上去多可爱呀！" />
+
+</FrameLayout>

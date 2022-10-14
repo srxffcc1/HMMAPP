@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.healthy.library.widget.StatusLayout
+                android:id="@+id/layout_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants"
+                        android:overScrollMode="never" />
+
+                </RelativeLayout>
+            </com.healthy.library.widget.StatusLayout>
+
+
+            <RelativeLayout
+                tools:background="#000"
+                android:minHeight="@dimen/status_2021"
+                android:id="@+id/seachTopLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/seachTopBgLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:alpha="0"
+                    android:layout_alignTop="@+id/seachTop"
+                    android:layout_alignBottom="@id/seachTop"
+                    android:background="@drawable/shape_public_coupon_top_bg"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/seachTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/status_2020">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="6dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:id="@+id/superShopName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#ffffffff"
+                            android:textSize="15sp"
+                            tools:text="憨妈妈云商城·六安" />
+
+                        <ImageView
+                            android:id="@+id/passMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/mine_right_message"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/dis_vip_card_top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="会员卡"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:drawable="@drawable/vip_main"
+                            app:drawableHeight="16dp"
+                            app:drawableWidth="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="4dp">
+
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/dis_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:maxEms="18"
+                            android:singleLine="true"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:drawable="@drawable/loc_store_select"
+                            app:drawableHeight="17dp"
+                            app:drawableWidth="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="爱婴金摇篮天街店" />
+
+                        <ImageView
+                            android:id="@+id/dis_loc_more"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/flash_buy_tab_down"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/dis_loc"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <LinearLayout
+                            android:id="@+id/serarchKeyWordLL"
+                            android:layout_width="0dp"
+                            android:layout_height="27dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/shape_search_loc_country"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/dis_loc_more"
+                            app:layout_constraintRight_toLeftOf="@id/dis_vip_card"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/service_ic_search" />
+
+                            <TextView
+                                android:id="@+id/serarchKeyWord"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="门店同售·支持配送"
+                                android:imeOptions="actionSearch"
+                                android:singleLine="true"
+                                android:textColor="#ff9596a4"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <com.healthy.library.widget.ImageTextView
+                            android:id="@+id/dis_vip_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="4dp"
+                            android:text="分类"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            app:drawable="@drawable/coupon_goods_list_portrait"
+                            app:drawableHeight="20dp"
+                            app:drawableWidth="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/noshopenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/goods_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="抱歉，该城市暂未入驻，敬请期待！"
+                    android:textColor="#ff9596a4"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toTopOf="@id/goods_tv_choose_city"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/goods_tv_choose_city"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/mall_choose_city"
+                    android:gravity="center"
+                    android:text="切换城市"
+                    android:textColor="#ffffffff"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/goods_tv_title"
+                    app:layout_constraintStart_toStartOf="@id/goods_tv_title"
+                    app:layout_constraintTop_toBottomOf="@id/goods_tv_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shop_cart_rel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/goSub"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sort_list_shopping_art"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shop_cart_num"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:layout_gravity="right"
+                android:layout_margin="4dp"
+                android:background="@mipmap/service_shopping_cart_msg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="9sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/mall_scrollUp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/sort_list_scrollup"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_cart_rel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iv_bottom_shader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_bottom_ty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

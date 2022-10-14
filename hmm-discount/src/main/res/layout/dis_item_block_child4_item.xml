@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F5F5F9"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/topImg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        tools:background="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/topImgTag"
+        android:singleLine="true"
+        android:maxWidth="280dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mall_index_nearby_shop_b"
+        tools:text="宝宝洗护专场"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/topImgTitle"
+        app:layout_constraintLeft_toLeftOf="@id/topImgSecondTitle"
+        />
+    <TextView
+        android:id="@+id/topImgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="低至7折"
+        android:layout_marginBottom="2dp"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="@id/topImgSecondTitle"
+        app:layout_constraintBottom_toTopOf="@id/topImgSecondTitle"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/topImgSecondTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="最后疯抢全场满200元减10元"
+        app:position="3"
+        android:singleLine="true"
+        android:maxWidth="160dp"
+        app:drawable="@drawable/ggg_more"
+        app:drawableWidth="10dp"
+        app:drawableHeight="10dp"
+        android:drawablePadding="4dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintLeft_toLeftOf="@id/topImg"
+        app:layout_constraintBottom_toBottomOf="@id/topImg"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        />
+        <android.widget.Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/topImg"/>
+        <HorizontalScrollView
+            app:layout_constraintTop_toBottomOf="@id/space"
+            android:background="@drawable/shape_act_k_w_12"
+            android:layout_width="0dp"
+            android:paddingTop="15dp"
+            android:scrollbars="none"
+            android:paddingBottom="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/goodsList"
+                android:minHeight="120dp"
+                android:orientation="horizontal">
+
+                <include layout="@layout/dis_item_block_child1_item"/>
+                <include layout="@layout/dis_item_block_child1_item"/>
+                <include layout="@layout/dis_item_block_child1_item"/>
+                <include layout="@layout/dis_item_block_child1_item"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/shape_desposit_ll_bg2"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/unitLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/unitGoodsLeft"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/consume_goods"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/unitGoods" />
+
+        <TextView
+            android:id="@+id/unitGoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="澳洲爱他美Aptamil金装版幼儿配方奶粉3段(12-24个月)900g"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/unitGoodsLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/unitSKU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SKU 6970114941169"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@+id/unitGoods"
+            app:layout_constraintTop_toBottomOf="@+id/unitGoods" />
+
+        <TextView
+            android:id="@+id/unitLess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x 10"
+            android:textColor="#ff333333"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/unitSKU"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/unitSKU" />
+
+        <TextView
+            android:id="@+id/unitAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共存12听"
+            android:textColor="#ff999999"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/unitLess" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/canUseCardStoreButtonLeft"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:src="@drawable/mall_left_vip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/canUseCardStoreButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/canUseCardStoreButton" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/canUseCardStoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:drawablePadding="6dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="可取货门店"
+        android:textColor="#ff9a9a9a"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:drawable="@drawable/consume_down"
+        app:drawableHeight="4dp"
+        app:drawableWidth="7dp"
+        app:layout_constraintLeft_toRightOf="@id/canUseCardStoreButtonLeft"
+        app:layout_constraintTop_toBottomOf="@id/unitLL"
+        app:position="3" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shopLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_desposit_shop_bg"
+        app:layout_constraintTop_toBottomOf="@+id/unitLL">
+
+        <TextView
+            android:id="@+id/lasterShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="最后服务门店 爱婴金摇篮苏州站"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/detial"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:drawableRight="@drawable/order_detial_more_icon"
+            android:drawablePadding="4dp"
+            android:text="存取明细"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lasterShop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lasterShop" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/canUseCardStoreScP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_desposit_ll_bg"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="11dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/canUseCardStoreButton">
+
+        <com.healthy.library.widget.ExpandTextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="100"
+            android:text="婷美摩力21金山路店、臻幼堂小儿推拿、婷美摩力21金山
+路店、臻幼堂小儿推拿、婷美摩力21金山路店、臻幼堂小儿
+推拿、婷美摩力21金山路店、臻幼堂小儿推拿、婷美摩力21
+金山路店、臻幼堂小儿推拿、婷美摩力21金山路店......"
+            android:textColor="#ff9a9a9a"
+            android:textSize="12sp" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/recoverpagecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="查看更多"
+            android:textColor="#ff222222"
+            android:textSize="10sp"
+            app:drawableHeight="4dp"
+            app:drawableWidth="7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_review"
+            app:position="3" />
+
+        <ScrollView
+            android:id="@+id/canUseCardStoreSc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scrollbars="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/canUseCardStoreScLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

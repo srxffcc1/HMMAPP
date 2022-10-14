@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    app:shape_radius="6dp"
+    app:shape_solidColor="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="6dp"
+        android:text="报名信息"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_info_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="姓\u3000\u3000名:"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:id="@+id/tv_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_info_name_title"
+        app:layout_constraintTop_toTopOf="@id/tv_info_name_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_name_title"
+        tools:text="某某某"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_info_sex_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="性\u3000\u3000别:"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/tv_info_name_title"
+        app:layout_constraintLeft_toLeftOf="@id/tv_info_name_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_name_title" />
+
+    <TextView
+        android:id="@+id/tv_info_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_info_name"
+        app:layout_constraintTop_toTopOf="@id/tv_info_sex_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_sex_title"
+        tools:text="男"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_info_phone_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="联系方式:"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/tv_info_sex_title"
+        app:layout_constraintLeft_toLeftOf="@id/tv_info_sex_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_sex_title" />
+
+    <TextView
+        android:id="@+id/tv_info_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_info_sex"
+        app:layout_constraintTop_toTopOf="@id/tv_info_phone_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_phone_title"
+        tools:text="157***6666"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"/>
+
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

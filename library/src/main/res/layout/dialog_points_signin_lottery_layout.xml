@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_dialog_points__signin_lottery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dialog_points_signin_lottery_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="122dp"
+        android:text="您已连续签到x天"
+        android:textColor="#FFF5E3"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_dialog_points__signin_lottery"
+        app:layout_constraintRight_toRightOf="@id/iv_dialog_points__signin_lottery"
+        app:layout_constraintTop_toTopOf="@id/iv_dialog_points__signin_lottery" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜您获得幸运抽奖机会"
+        android:textColor="#FFF5E3"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_lottery_confirm"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/dialog_points_signin_lottery_btn_bg"
+        app:layout_constraintBottom_toBottomOf="@id/iv_dialog_points__signin_lottery"
+        app:layout_constraintLeft_toLeftOf="@id/iv_dialog_points__signin_lottery"
+        app:layout_constraintRight_toRightOf="@id/iv_dialog_points__signin_lottery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_appointment_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:text="- - 服务商品详情 - -"
+        android:textColor="@color/color_999999"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_new_order_bg"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="14dp">
+
+        <!--<TextView
+            android:id="@+id/tv_item_appointment_detail_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="详情富文本"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp" />-->
+
+        <!--<com.healthy.library.widget.X5WebView
+            android:scrollbars="none"
+            android:id="@+id/wv_item_appointment_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />-->
+
+    </FrameLayout>
+
+</LinearLayout>

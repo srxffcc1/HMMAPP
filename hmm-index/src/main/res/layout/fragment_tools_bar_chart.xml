@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity"
+    tools:ignore="ResourceName">
+
+
+    <TextView
+        android:id="@+id/chartYUnit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    <com.health.index.fragment.ScBarChart
+        android:id="@+id/chart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/chartXUnit"
+        app:layout_constraintTop_toBottomOf="@id/chartYUnit"
+        app:layout_constraintBottom_toTopOf="@id/chartDes"
+        android:layout_marginBottom="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+    <TextView
+        android:id="@+id/chartXUnit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chartDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/chartDes"
+        android:text="睡觉/小时"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:textColor="#ff444444"
+        android:textSize="12sp"
+        app:drawable="@drawable/tools_sum_down"
+        app:drawableWidth="16dp"
+        app:drawableHeight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </com.healthy.library.widget.ImageTextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

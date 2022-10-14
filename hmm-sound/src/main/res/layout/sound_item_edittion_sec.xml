@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_category"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_category"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        app:corner_radius="8dp"
+        android:src="@drawable/ic_questioner_default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/sound_text_flame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/iv_category"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        android:src="@drawable/sound_text_flame"></ImageView>
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/iv_category_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawable="@drawable/ic_sound_grid_play"
+        android:text="510.2万"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        app:layout_constraintLeft_toLeftOf="@id/iv_category"
+        app:drawableWidth="7dp"
+        app:drawableHeight="9dp"
+        android:layout_marginLeft="6dp"
+        android:drawablePadding="2dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:fontFamily="@font/din_medium"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_category"
+        android:text="宝宝儿歌原创" />
+</androidx.constraintlayout.widget.ConstraintLayout>

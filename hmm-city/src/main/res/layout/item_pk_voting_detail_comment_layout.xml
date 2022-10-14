@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="SpUsage">
+
+    <!-- 评论信息 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hasContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/iv_customer_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/img_avatar_default"
+                app:is_circle="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_user_badge"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/icon_user_official_certification" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_top_userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/rl_user"
+            app:layout_constraintRight_toLeftOf="@+id/like"
+            app:layout_constraintTop_toTopOf="@id/rl_user">
+
+            <TextView
+                android:id="@+id/tv_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:maxWidth="240dp"
+                android:textColor="#ff333333"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="快乐柠檬草快乐" />
+
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/stv_user_badgeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="1dp"
+                android:text="官方认证"
+                android:textColor="@color/colorWhite"
+                android:textSize="9dp"
+                app:layout_constraintLeft_toRightOf="@id/tv_customer_name"
+                app:layout_constraintTop_toTopOf="@id/tv_customer_name"
+                app:shape_bottomRightRadius="8dp"
+                app:shape_solidColor="#3889FD"
+                app:shape_topLeftRadius="8dp"
+                app:shape_topRightRadius="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:minEms="1"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="11sp"
+            app:drawable="@drawable/cityrightlike"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ll_top_userName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ll_top_userName" />
+
+        <com.healthy.library.widget.RatingView
+            android:id="@+id/rating_customer_score"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/ll_top_userName"
+            app:layout_constraintTop_toBottomOf="@id/ll_top_userName"
+            app:rating="3.5"
+            app:rating_max="5" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:fontFamily="@string/font_sans_serif_medium"
+            android:textSize="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rating_customer_score"
+            app:layout_constraintStart_toEndOf="@id/rating_customer_score"
+            app:layout_constraintTop_toTopOf="@id/rating_customer_score"
+            tools:text="3.5" />
+
+        <com.healthy.library.widget.CollapsedTextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="天呐，我好羡慕楼主，接好孕！"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            app:collapsedLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ll_top_userName"
+            app:layout_constraintTop_toBottomOf="@id/rating_customer_score" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_support"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_comment_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_comment_content"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/icon_SupportArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_user_comment_red"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/UserSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                tools:text="TA支持  在了解安全性之后选择在了解安全性之后选择"
+                android:textColor="#FA3C5A"
+                android:textSize="10dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_SupportArrow"
+                app:shape_radius="9dp"
+                app:shape_solidColor="#FFF4F4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_comment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="05-12 09:36"
+            android:textColor="@color/color_666666"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_comment_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_support" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_review"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_comment_date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_comment_date">
+
+            <LinearLayout
+                android:id="@+id/ll_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/look_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_review">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recoverpage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="条回复"
+                    android:textColor="#CD9643"
+                    android:textSize="11dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_pk_voting_arrow"
+                    android:layout_width="10dp"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="3dp"
+                    android:rotation="0"
+                    android:src="@drawable/icon_pk_voting_arrow_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/recoverpage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 空布局 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noMsgCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="50dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/noMsg"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/status_empty_comment"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/noBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="暂无评论，快去发表第一条评论吧～"
+            android:textColor="#9596A4"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noMsg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 底部圆角 -->
+    <com.example.lib_ShapeView.view.ShapeView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/noMsgCon"
+        app:shape_bottomLeftRadius="12dp"
+        app:shape_bottomRightRadius="12dp"
+        app:shape_solidColor="@color/colorWhite" />
+
+    <View
+        android:id="@+id/mBottomView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        app:layout_constraintTop_toBottomOf="@id/line"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

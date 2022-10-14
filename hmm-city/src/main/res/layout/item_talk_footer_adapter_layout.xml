@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:id="@+id/talkLiner"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_talk_list_item_top_bg"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <View
+        android:id="@+id/heightView"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="30dp"
+        tools:ignore="MissingDefaultResource">
+
+        <ImageView
+            android:id="@+id/moreImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/item_talk_ranking_more_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/rank" />
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textColor="#ff9596a4"
+            android:textSize="16sp"
+            android:fontFamily="@font/din_bold"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/talkTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="年轻人带娃新招式"
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/rank"
+            app:layout_constraintRight_toLeftOf="@+id/moreImg"
+            app:layout_constraintTop_toTopOf="@id/rank" />
+
+        <TextView
+            android:id="@+id/talkNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="10896篇帖子"
+            android:textColor="#ff999999"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/talkTitle"
+            app:layout_constraintTop_toBottomOf="@+id/talkTitle" />
+
+        <TextView
+            android:id="@+id/talkHot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="29083人参与"
+            android:textColor="#ff999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/talkNum"
+            app:layout_constraintLeft_toRightOf="@+id/talkNum" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

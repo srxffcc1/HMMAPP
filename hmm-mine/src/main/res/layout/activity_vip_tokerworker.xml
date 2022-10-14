@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_2020"
+        app:show_moss="false"
+        app:title="我的母婴顾问" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F7F9"
+        android:scrollbars="none">
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            app:status_init="content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+                    android:id="@+id/topLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shape_radius="12dp"
+                    app:shape_solidColor="#FFF">
+
+                    <com.healthy.library.widget.CornerImageView
+                        android:id="@+id/tokerImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        tools:src="@drawable/ic_questioner_default_avatar"
+                        app:corner_radius="12dp"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/tokerMerchantBg"
+                        android:layout_width="180dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/toker_top_img"
+                        app:layout_constraintTop_toTopOf="@id/tokerImg"
+                        app:layout_constraintDimensionRatio="360:112" />
+                    <TextView
+                        android:id="@+id/tokerMerchant"
+                        android:layout_marginTop="7dp"
+                        android:autoSizeMaxTextSize="14sp"
+                        android:autoSizeMinTextSize="1sp"
+                        android:autoSizeTextType="uniform"
+                        app:layout_constraintTop_toTopOf="@id/tokerImg"
+                        app:layout_constraintLeft_toLeftOf="@id/tokerMerchantBg"
+                        app:layout_constraintRight_toRightOf="@id/tokerMerchantBg"
+                        android:layout_width="110dp"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        tools:text="安徽·六安"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/toker_under_img"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="686:90" />
+
+                    <TextView
+                        android:id="@+id/tokerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="24dp"
+                        tools:text="陈老师"
+                        android:textColor="#ff333333"
+                        android:textSize="24sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tokerImg" />
+
+                    <TextView
+                        android:id="@+id/tokerNum"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="20061010"
+                        android:textColor="#fffa3c5a"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@id/tokerName"
+                        app:layout_constraintLeft_toRightOf="@id/tokerName"
+                        app:layout_constraintTop_toTopOf="@id/tokerName" />
+
+                    <TextView
+                        android:id="@+id/tokerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        tools:text="18316382674"
+                        android:textColor="#ff666666"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tokerName"
+                        app:layout_constraintTop_toBottomOf="@id/tokerName" />
+
+                    <TextView
+                        android:id="@+id/tokerShop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        tools:text="爱婴金摇篮阳光保利店"
+                        android:textColor="#ff666666"
+                        android:textSize="16sp"
+                        app:layout_constraintRight_toLeftOf="@id/tokerZxing"
+                        app:layout_constraintLeft_toLeftOf="@id/tokerName"
+                        app:layout_constraintTop_toBottomOf="@id/tokerPhone" />
+
+
+
+                    <ImageView
+                        android:id="@+id/tokerZxing"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="16dp"
+                        android:visibility="gone"
+                        tools:src="@drawable/zxing_default"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tokerImg" />
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/tokerZxingUnderBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="tokerZxing,tokerShop"/>
+                    <TextView
+                        android:id="@+id/tokerZxingUnder"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/tokerZxingUnderBar"
+                        android:layout_width="match_parent"
+                        android:textSize="12sp"
+                        android:layout_height="wrap_content"
+                        android:text="为提供更优质的服务，扫码二维码添加母婴顾问企业微信或点击二维码跳转后识别添加"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        app:layout_constraintTop_toBottomOf="@id/tokerZxingUnder" />
+                </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:onClick="viewSaveToImage"
+                    android:paddingVertical="12dp"
+                    android:text="下载TA的海报"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topLL"
+                    app:shape_radius="25dp"
+                    app:shape_solidColor="#FA3C5A" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.healthy.library.widget.StatusLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="MineServiceDetailTheme" parent="LibAppTheme">
+        <item name="android:windowBackground">@drawable/mine_shape_service_detail</item>
+    </style>
+    <!--设置Tablayout字体加粗-->
+    <style name="mine_TabLayoutTextStyle">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:lines="1"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:textColor="#ff222222"
+    android:textSize="13dp"
+    android:background="@drawable/index_shape_analyze"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    tools:ignore="SpUsage">
+</TextView>

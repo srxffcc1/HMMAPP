@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_nearby_store_navigation_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/baiduMapTxt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+
+            android:gravity="center"
+            android:text="百度地图"
+            android:textColor="#ff222222"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd8d8d8"></View>
+
+        <TextView
+            android:id="@+id/gaodeMapTxt"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+
+            android:gravity="center"
+            android:text="高德地图"
+            android:textColor="#ff222222"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancelTxt"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_nearby_store_navigation_dialog"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#ff444444"
+        android:textSize="17sp" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/markingName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/selector_deposit_tab"
+        android:gravity="center"
+        android:text="会员卡1"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+</LinearLayout>

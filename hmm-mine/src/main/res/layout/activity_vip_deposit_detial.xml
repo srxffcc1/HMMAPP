@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5f5f9"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="服务明细" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_mall_goods_ol_vid_float_under"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/depositTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        tools:text="臻幼堂小儿推拿护理调节免疫"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/depositNum"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/depositNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="x 10"
+                        android:textColor="#ff333333"
+                        android:textSize="22sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/depositTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/depositTitle" />
+
+                    <TextView
+                        android:id="@+id/depositSKU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        tools:text="SKU 6970114941169"
+                        android:textColor="#ff666666"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/depositTitle" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#F6F7F9"
+                        app:layout_constraintTop_toBottomOf="@id/depositSKU" />
+                    <TextView
+                        android:id="@+id/serviceDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:text="有效期"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/line" />
+                    <TextView
+                        android:id="@+id/depositShops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:text="适用门店  婷美摩力21金山路店、臻幼堂小儿推拿、婷美摩力21金山路店、臻幼堂小儿推拿、"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/serviceDate" />
+                    <TextView
+                        android:id="@+id/depositService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:text="服务说明  婷美摩力21金山路店、臻幼堂小儿推拿、婷美摩力21金山路店、臻幼堂小儿推拿、"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/depositShops" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/shape_mall_goods_ol_vid_counter_type_top"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/depositType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="服务明细"
+                        android:textColor="#ff999999"
+                        android:textSize="14sp" />
+
+                    <com.healthy.library.widget.StatusLayout
+                        android:id="@+id/layout_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/depositList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </com.healthy.library.widget.StatusLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

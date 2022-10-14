@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ivStart" type="id"/>
+    <item name="ivEnd" type="id"/>
+    <item name="tvTitle" type="id"/>
+    <item name="tvDes" type="id"/>
+    <item name="divider" type="id"/>
+
+    <item name="netErrImg" type="id"/>
+    <item name="netErrTxt" type="id"/>
+    <item name="netErrRetryTxt" type="id"/>
+    <item name="dataErrImg" type="id"/>
+    <item name="dataErrTxt" type="id"/>
+    <item name="dataErrRetryTxt" type="id"/>
+    <item name="emptyImg" type="id"/>
+    <item name="emptyTxt" type="id"/>
+    <item name="emptyBottomTxt" type="id"/>
+    <item name="loading" type="id"/>
+    <item name="anim_icon" type="id"/>
+    <item name="layout_status" type="id"/>
+    <item name="top_bar" type="id"/>
+
+</resources>

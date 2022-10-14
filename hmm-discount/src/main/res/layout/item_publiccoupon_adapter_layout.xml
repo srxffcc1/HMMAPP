@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#FFF"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="7dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/mall_service_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mall_service_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:text="辩证发汗调理养护"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/mall_service_img"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mall_service_img" />
+
+        <TextView
+            android:id="@+id/mall_service_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="10dp"
+            android:textColor="#ff868799"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/mall_service_title"
+            app:layout_constraintTop_toBottomOf="@+id/mall_service_title"
+            tools:text=" " />
+
+        <ImageView
+            android:id="@+id/spinnerImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/goods_arrow_s_down"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/mall_service_space"
+            app:layout_constraintLeft_toRightOf="@id/mall_service_space"
+            app:layout_constraintTop_toTopOf="@id/mall_service_space" />
+
+        <HorizontalScrollView
+            android:id="@+id/couponListLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="34dp"
+            android:scrollbars="none"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@id/mall_service_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_service_title">
+
+            <LinearLayout
+                android:id="@+id/couponList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <include layout="@layout/item_mall_goods_coupon" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/mall_service_money_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="¥"
+            android:textColor="#FA3C5A"
+            android:textSize="13sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/passbasket"
+            app:layout_constraintLeft_toLeftOf="@id/mall_service_title"
+            app:layout_constraintTop_toTopOf="@id/passbasket" />
+
+        <TextView
+            android:id="@+id/mall_service_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="0"
+            android:textColor="#FA3C5A"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/passbasket"
+            app:layout_constraintLeft_toRightOf="@id/mall_service_money_left"
+            app:layout_constraintTop_toTopOf="@id/passbasket" />
+
+        <TextView
+            android:id="@+id/mall_service_money_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="¥0"
+            android:textColor="#ff868799"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/passbasket"
+            app:layout_constraintLeft_toRightOf="@id/mall_service_money"
+            app:layout_constraintTop_toTopOf="@id/passbasket" />
+        <com.healthy.library.widget.AutoClickImageView
+            android:id="@+id/passbasket"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/basket_red"
+            app:layout_constraintBottom_toBottomOf="@id/mall_service_img"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

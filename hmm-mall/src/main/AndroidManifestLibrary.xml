@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.mall">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+
+    <application>
+
+        <activity android:name=".activity.ProvinceCityActivity" android:screenOrientation="portrait">
+        </activity>
+
+
+
+        <activity
+            android:name=".activity.ChooseMapAddressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".activity.ManDetailActivity"  android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.ProvinceCityMoreActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.NewStoreDetailActivity" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".activity.PeopleListActivity" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+
+        <service android:name="com.amap.api.location.APSService" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_branch_shop_dial"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/mall_ic_branch_shop_dial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/iv_branch_shop_dial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="婷美摩力21产后恢复（狮山店）"/>
+
+    <TextView
+        android:id="@+id/tv_shop_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxEms="20"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="#ff9596a4"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+        tools:text="高新区狮山区75号中信银行后门峰汇大厦10…"/>
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/mall_ic_shop_address"
+        app:layout_constraintStart_toStartOf="@id/tv_shop_address"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_address"/>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_address"
+        app:layout_constraintStart_toEndOf="@id/iv_address"
+        app:layout_constraintTop_toTopOf="@id/iv_address"
+        tools:text="1.2km"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

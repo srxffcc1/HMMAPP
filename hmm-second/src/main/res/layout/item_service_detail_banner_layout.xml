@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.banner.ViewPager2Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="374dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="22dp"
+        android:paddingVertical="3dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/banner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:shape_radius="12dp"
+        app:shape_solidColor="#4d000000">
+
+        <com.healthy.library.widget.NoSpaceTextView
+            android:id="@+id/currentPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.NoSpaceTextView
+            android:id="@+id/countPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/5"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/currentPage"
+            app:layout_constraintLeft_toRightOf="@id/currentPage" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

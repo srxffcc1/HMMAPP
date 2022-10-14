@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_sans_serif_medium"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="帖子详情"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            style="@style/RippleClick"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/app_name"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/submit"
+            style="@style/RippleClick"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="11dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_tip_more"
+            android:textColor="#ffff6266"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_header_shadow"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.healthy.library.widget.StatusLayout
+                android:id="@+id/layout_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.healthy.library.widget.StatusLayout>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/passToSendPost"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_send_post"
+                app:layout_constraintBottom_toTopOf="@id/passToTop"
+                app:layout_constraintLeft_toLeftOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="@id/passTmp" />
+
+            <ImageView
+                android:id="@+id/passToTop"
+                android:visibility="gone"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="22dp"
+                android:src="@drawable/city_ic_to_top"
+                app:layout_constraintBottom_toTopOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="parent" />
+            <TextView
+                android:id="@+id/passTmp"
+                android:layout_width="45dp"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+    <View
+        android:id="@+id/dividerb"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffc4c4c4"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/canSend"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/toShare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <com.healthy.library.widget.ImageTextView
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:drawable="@drawable/cityleftloc2"
+                android:text="分享"
+                app:position="1"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp"
+                android:gravity="center"
+                android:textColor="#ff444444"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toDiscuss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <com.healthy.library.widget.ImageTextView
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:drawable="@drawable/cityrightdiscuss"
+                android:text="评论"
+                app:position="1"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp"
+                android:gravity="center"
+                android:textColor="#ff444444"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toLike"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/likeimg"
+                android:drawablePadding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:drawable="@drawable/cityrightlike"
+                android:text="点赞"
+                app:position="1"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp"
+                android:gravity="center"
+                android:textColor="#ff444444"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

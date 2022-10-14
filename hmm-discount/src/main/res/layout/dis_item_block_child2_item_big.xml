@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/goodsImgLL"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <com.healthy.library.widget.CornerImageView
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:id="@+id/goodsImg"
+                app:corner_radius="5dp"
+                android:src="@drawable/img_1_1_default" />
+
+            <HorizontalScrollView
+                android:id="@+id/goodsCouponPLL"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/goodsCouponLL"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/item_mall_goods_coupon" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/goodsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                tools:text="易贝乐宝宝摇铃益智环保"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="#ff222222"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="#fff00028"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="39.9"
+                        android:id="@+id/goodsMoney"
+                        android:textColor="#fff00028"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.healthy.library.widget.AutoClickImageView
+                    android:id="@+id/passbasket"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/basket_red" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/pinOldPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¥79"
+                android:textColor="#ff868799"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tagText"
+            android:visibility="gone"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_mall_goods_ol_tagbgbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="新品"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/goodsImgLL"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

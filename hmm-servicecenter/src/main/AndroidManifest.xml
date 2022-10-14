@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.health.servicecenter">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.healthy.library.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/LibAppTheme">
+        <activity android:name=".activity.OrderBackSelectGoods"></activity>
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.MallActivity" />
+        <activity android:name=".activity.OrderZxing" />
+        <activity android:name=".activity.HotGoods" />
+        <activity android:name=".activity.ServiceSortGoods" />
+        <activity android:name=".activity.SubmitBack" />
+        <activity android:name=".activity.OrderBackDetial" />
+        <activity android:name=".activity.OrderBack" />
+        <activity android:name=".activity.OrderDetialActivity" />
+        <activity android:name=".activity.OrderList" />
+        <activity android:name=".activity.MessageCenterActivity" />
+        <activity android:name=".activity.AddressSearchList" />
+        <activity android:name=".activity.AddressList" />
+        <activity android:name=".activity.AddressSearch" />
+        <activity android:name=".activity.AddReceivingAddress" />
+        <activity android:name=".activity.ProvinceCity" />
+        <activity android:name=".activity.NearbyStores" />
+    </application>
+
+</manifest>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back_img_src="@drawable/ic_back"
+        app:is_show_submit="true"
+        app:show_moss="true"
+        app:submit="发表"
+        app:submit_color="#ffff6266"
+        app:title="发帖" />
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:status_init="content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/warmTipLL"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="#FFE4E8"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="为保护个人隐私，根据国家相关法律法规的规定，请不要上传包含身体私密部位的图片或视频哦"
+                        android:textColor="#ffff7a8b"
+                        android:textSize="12sp"
+                        />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="1px"
+                        android:layout_marginEnd="1px"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_city_close_q" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/et_titleall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/warmTipLL">
+
+                    <EditText
+                        android:id="@+id/et_et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="请在此输入标题"
+                        android:paddingStart="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textStyle="bold"
+                        android:textColorHint="#999999"
+                        android:textColor="#222222"
+                        android:textSize="15sp"
+                        tools:ignore="LabelFor,TextFields" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/et_evall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:minHeight="120dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_titleall">
+
+                    <EditText
+                        android:id="@+id/et_eva"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="100dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="来都来了，不说点啥吗？万一红了呢..."
+                        android:paddingStart="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColorHint="#9596A4"
+                        android:textColor="#222222"
+                        android:textSize="15sp"
+                        tools:ignore="LabelFor,TextFields" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/other_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:flexWrap="wrap"
+                    app:layout_constraintTop_toBottomOf="@+id/et_evall">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_imgs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@id/other_tip"
+                    app:layout_constraintStart_toStartOf="@id/other_tip"
+                    app:layout_constraintTop_toBottomOf="@id/other_tip" />
+
+
+
+                <com.healthy.library.widget.DrawableTextView
+                    android:id="@+id/tipAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:drawable_size="16dp"
+                    android:gravity="center_vertical"
+                    android:drawableStart="@drawable/city_loc_left"
+                    android:drawablePadding="5dp"
+                    android:padding="15dp"
+                    android:textStyle="bold"
+                    android:text="选择位置"
+                    android:textColor="#31BFAC"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/recycler_imgs" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nillcheck"
+                    app:layout_constraintTop_toBottomOf="@id/tipAddress">
+
+                    <com.healthy.library.widget.AutoFitCheckBox
+                        android:id="@+id/nonamecheck"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="13dp"
+                        android:src="@drawable/selector_anonymous"
+                        app:layout_constraintTop_toTopOf="@+id/nonamechecktext"
+                        app:layout_constraintBottom_toBottomOf="@id/nonamechecktext"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/nonamechecktext" />
+
+                    <TextView
+                        android:id="@+id/nonamechecktext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="匿名发表"
+                        android:textColor="#ff444444"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/nonamecheckvalue"
+                        app:layout_constraintLeft_toRightOf="@id/nonamecheck" />
+
+                    <TextView
+                        android:id="@+id/nonamecheckvalue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:text="选择匿名发表后，你的帖子将不再对粉丝展示。"
+                        android:textColor="#ff9596a4"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/nonamechecktext" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.healthy.library.widget.StatusLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+
+    </LinearLayout>
+</LinearLayout>

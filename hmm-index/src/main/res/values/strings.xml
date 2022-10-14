@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Index</string>
+    <string name="index_more">更多</string>
+
+
+    <string name="index_share_wx">1</string>
+    <string name="index_share_circle">2</string>
+    <string name="index_share_qq">3</string>
+    <string name="index_share_qzone">4</string>
+
+    <string name="index_function_parenting_1">能不能吃</string>
+    <string name="index_function_parenting_2">月子餐</string>
+    <string name="index_function_parenting_3">疫苗助手</string>
+    <string name="index_function_parenting_4">辅食大全</string>
+
+    <string name="index_function_pregnancy_1">能不能吃</string>
+    <string name="index_function_pregnancy_2">产检表</string>
+    <string name="index_function_pregnancy_3">待产包</string>
+    <string name="index_function_pregnancy_4">B超解读</string>
+    <string name="index_vaccine_reason">必打原因：</string>
+    <string name="index_birth_check_keys">重点：</string>
+    <string name="index_package_mom">妈妈用品</string>
+    <string name="index_package_baby">宝宝用品</string>
+    <string name="index_b_projects_title">常见B超项目</string>
+    <string name="index_analysis_suffix">周</string>
+    <string name="index_analysis_prefix">孕</string>
+    <string name="index_change_baby">宝宝变化</string>
+    <string name="index_change_mom">妈妈变化</string>
+    <string name="index_share_sheet_title">分享给更多的人</string>
+    <string name="index_share_sheet_wx">微信</string>
+    <string name="index_share_sheet_timeline">朋友圈</string>
+    <string name="index_share_sheet_qq">QQ</string>
+    <string name="index_share_sheet_qzone">QQ空间</string>
+    <string name="index_calendar_title1">实际经期</string>
+    <string name="index_calendar_title2">预测经期</string>
+    <string name="index_calendar_title3">安全期</string>
+    <string name="index_calendar_title4">易孕期</string>
+    <string name="index_calendar_title5">排卵日</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

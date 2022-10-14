@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.healthy.library.widget.DrawableTextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:drawableStart="@drawable/mine_ic_store"
+            android:drawablePadding="7dp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="#ff222222"
+            android:textSize="14dp"
+            app:drawable_size="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="婷美摩力21产后修复金山店"/>
+
+        <ImageView
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/mine_service_divider"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_name"/>
+
+        <LinearLayout
+            android:id="@+id/layout_service_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/mine_shape_service_unit"
+            android:layerType="software"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:layout_constraintEnd_toEndOf="@id/tv_shop_name"
+            app:layout_constraintStart_toStartOf="@id/tv_shop_name"
+            app:layout_constraintTop_toBottomOf="@id/view_divider"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

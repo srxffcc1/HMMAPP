@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_activity_price"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_activity_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/service_seckill_top_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/numTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:text="28476人已抢"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/goodsSpecMoneyLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可砍至 "
+            android:textSize="12dp"
+            android:textColor="@color/colorWhite"
+            android:paddingBottom="2dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/numTxt"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_price_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/goodsSpecMoneyLeft"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="189.9"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/activity_price_left"
+            app:layout_constraintLeft_toRightOf="@id/activity_price_left" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_pinMoneySingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingTop="6dp"
+            android:text="¥1989"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/activity_price"
+            app:layout_constraintLeft_toRightOf="@id/activity_price"
+            app:layout_constraintTop_toTopOf="@id/activity_price" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/pinPeopleNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/activity_price"
+            app:layout_constraintBottom_toBottomOf="@id/activity_price"
+            app:layout_constraintLeft_toRightOf="@id/activity_pinMoneySingle"
+            android:text="三人团"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp"
+            android:layout_marginLeft="12dp"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="1dp"
+            app:shape_radius="9dp"
+            app:shape_solidColor="#14FFFFFF"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="34dp"
+            android:text="活动剩余时间"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/numTxt" />
+
+        <!-- 剩余时间 -->
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingRight="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/activity_pinMoneySingle"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/txtDay"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_order_tipbg"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#5730D2"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="14dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="天"
+                android:textColor="@color/colorWhite"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtHour"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_order_tipbg"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#5730D2"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorWhite"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtMin"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_order_tipbg"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#5730D2"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorWhite"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/txtSec"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_order_tipbg"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#5730D2"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/scl_goodsPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_activity_price"
+        app:shape_bottomLeftRadius="8dp"
+        app:shape_bottomRightRadius="8dp"
+        app:shape_solidColor="@color/colorWhite">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/goodsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="骨盆聚合调理体验卡3次"
+            android:textColor="@color/color_333333"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="@color/color_fa3c5a"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/goodsTitle"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_goodsPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="189.9"
+            android:textColor="@color/color_fa3c5a"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_price_left"
+            app:layout_constraintLeft_toRightOf="@id/tv_price_left" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pinMoneySingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingTop="3dp"
+            android:text="¥1989"
+            android:textColor="@color/color_999999"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_goodsPrice"
+            app:layout_constraintLeft_toRightOf="@id/tv_goodsPrice"
+            app:layout_constraintTop_toTopOf="@id/tv_goodsPrice" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="已售10"
+            android:textColor="@color/color_333330"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

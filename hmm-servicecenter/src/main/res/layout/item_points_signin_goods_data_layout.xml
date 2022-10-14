@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <!-- 2021-06-04 禁止拉伸 优化积分兑换图片样式 -->
+    <com.healthy.library.widget.RoundedImageView
+        android:id="@+id/item_iv_goods_data"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp" />
+
+    <ImageView
+        android:id="@+id/blockGoodsEmpty"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/point_soldout_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/item_iv_goods_data"
+        app:layout_constraintLeft_toLeftOf="@id/item_iv_goods_data"
+        app:layout_constraintRight_toRightOf="@id/item_iv_goods_data"
+        app:layout_constraintTop_toTopOf="@id/item_iv_goods_data" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_signin_goods_title"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/color_222222"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/item_iv_goods_data"
+        app:layout_constraintRight_toRightOf="@id/item_iv_goods_data"
+        app:layout_constraintTop_toBottomOf="@id/item_iv_goods_data"
+        tools:text="新西兰爱他美白金" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_PointsRealPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_goods_radius10_color_fcf0f1"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingTop="2dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="2dp"
+        android:textColor="#f6839d"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@id/item_signin_goods_title"
+        app:layout_constraintRight_toRightOf="@id/item_signin_goods_title"
+        app:layout_constraintTop_toBottomOf="@id/item_signin_goods_title"
+        tools:text="8000积分+¥29" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

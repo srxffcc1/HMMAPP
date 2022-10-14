@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="10dp"
+    android:paddingHorizontal="6dp"
+    app:shape_radius="16dp"
+    app:shape_solidColor="@color/colorWhite"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="120dp"
+        android:layout_height="68dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_222222"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        tools:text="坐月子期间可以出门吗？" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="@id/title">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/seeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:text="0"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:drawable="@drawable/index_search_see"
+            app:drawableHeight="15dp"
+            app:drawableWidth="15dp" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/collectionNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:drawablePadding="2dp"
+            android:text="0"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:drawable="@drawable/index_search_star"
+            app:drawableHeight="15dp"
+            app:drawableWidth="15dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#F7F7FA"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

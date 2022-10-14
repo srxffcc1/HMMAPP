@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="106dp"
+    android:layout_height="180dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/shape_faq_rewradtd">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="3dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="5dp"
+        app:is_circle="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:id="@+id/goodsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:paddingLeft="3dp"
+        android:lines="2"
+        android:paddingRight="3dp"
+        tools:text="米小芽宝宝辅食添幼儿食用拌饭料米小芽宝宝辅食添幼儿食用拌sss饭料"
+        android:textColor="#ff222222"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+        app:layout_constraintRight_toRightOf="@+id/goodsImg"
+        app:layout_constraintTop_toBottomOf="@+id/goodsImg" />
+
+    <TextView
+        android:id="@+id/goodsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="3dp"
+        android:text="¥198"
+        android:textColor="#fffa3c5a"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsTitle"
+        app:layout_constraintRight_toRightOf="@+id/goodsTitle" />
+
+    <TextView
+        android:id="@+id/redBtn"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_live_shopping_goods_list_red"
+        android:gravity="center"
+        android:text="马上抢"
+        android:textColor="#ffffffff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/goodsLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_live_look_goods_list_lable"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:text="15"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/greedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_live_shopping_goods_list_green"
+        android:gravity="center"
+        android:text="已抢光"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/speakLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/shape_live_shopping_goods_list_black"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/animImg"
+            android:layout_width="10dp"
+            android:layout_height="9dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/live_goods_speak_anim" />
+
+        <TextView
+            android:id="@+id/speakTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:text="正在讲解"
+            android:textColor="#FA3C5A"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.healthy.library.widget.AutoClickImageView
+        android:id="@+id/goodsShareCoupon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="@id/goodsImg"
+        app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/goods_share_coupon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

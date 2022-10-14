@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_mall_goods_ol_vid_counter_type"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    tools:ignore="MissingDefaultResource,Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/storeTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:paddingBottom="7dp">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/passStoreName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:drawable="@drawable/discount_ic_store"
+            app:drawableHeight="18dp"
+            app:drawableWidth="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/passCoupon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="爱婴金摇篮（木渎金山店）" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/passCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领券"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/groupLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/storeTop">
+
+        <include layout="@layout/service_item_goodsbasket_group" />
+
+        <include layout="@layout/service_item_goodsbasket_group" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/discountUnder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/groupLL">
+
+        <com.healthy.library.widget.ImageTextView
+            android:layout_width="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:text="查看优惠方式"
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            app:drawable="@drawable/ic_more_pin_black"
+            app:drawableHeight="18dp"
+            app:drawableWidth="9dp"
+            app:position="3" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PersonalInfoDetailActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit="true"
+        app:show_moss="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:submit="提交"
+        app:title="个人信息" />
+
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:layout_weight="1"
+        app:status_init="content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:status_init="loading">
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="@color/colorDivider" />
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/jobTitleId"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_start_src="@drawable/icon_must_left"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_title_margin_start="5dp"
+                    app:section_show_divider="false"
+                    app:section_title="身份信息"/>
+
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:et_content_hint="请输入真实姓名"
+                    app:section_divider_full_width="false"
+                    app:section_mode="et"
+                    app:show_divider="true"
+                    app:title="姓名" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:et_content_hint="请输入手机号"
+                    app:section_divider_full_width="false"
+                    app:right_end="@layout/mine_button_code"
+                    app:section_mode="et"
+                    app:show_divider="true"
+                    app:title="手机号" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:et_content_hint="请输入短信验证码"
+                    app:section_divider_full_width="false"
+                    app:section_mode="et"
+                    app:show_divider="true"
+                    app:title="验证码" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobId"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:et_content_hint="请输入"
+                    app:section_divider_full_width="false"
+                    app:section_mode="et"
+                    app:show_divider="true"
+                    app:title="身份证" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_hint="__"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="年龄" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobSex"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_hint="__"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="性别" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_hint="选择省/市/区县"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="籍贯" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobNowLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_hint="选择省/市/区县"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="现居地" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobWantLoc"
+                    android:paddingTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="false"
+                    app:title="意向就业地" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="#FFF"
+                    app:flexWrap="wrap"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/jobRecyclerWantLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorDivider" />
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/jobTitleGood"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_start_src="@drawable/icon_must_left"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_title_margin_start="5dp"
+                    app:section_show_divider="false"
+                    app:section_title="专业技能"/>
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_hint="请选择"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="从业年限" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_drawable_right="@drawable/ic_more"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="从业经历" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobTeachHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_drawable_right="@drawable/ic_more"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="培训经历" />
+                <com.healthy.library.widget.CommonInsertSection
+                    android:id="@+id/jobGoodAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sectionHeight"
+                    android:background="#FFF"
+                    app:txt_content_drawable_right="@drawable/ic_more"
+                    app:section_divider_full_width="false"
+                    app:section_mode="txt"
+                    app:show_divider="true"
+                    app:title="个人专长" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorDivider" />
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/jobTitlePaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:section_start_src="@drawable/icon_must_left"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_title_margin_start="5dp"
+                    app:section_show_divider="false"
+                    app:section_title="资质证书"/>
+                <com.healthy.library.widget.SectionView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_show_divider="false"
+                    app:section_title="资质证书"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="#FFF"
+                    android:id="@+id/jobRecyclerCertPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/colorDivider" />
+                <com.healthy.library.widget.SectionView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_show_divider="false"
+                    app:section_title="健康证"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:background="#FFF"
+                    android:id="@+id/jobRecyclerHealthPager"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorDivider" />
+                <com.healthy.library.widget.SectionView
+                    android:id="@+id/jobTitleOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorWhite"
+                    app:section_start_height="7dp"
+                    app:section_start_width="8dp"
+                    app:section_des_margin_end="10dp"
+                    app:section_divider_full_width="false"
+                    app:section_title_size="16sp"
+                    app:section_title_margin_start="5dp"
+                    app:section_show_divider="false"
+                    app:section_title="备注"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="12dp"
+                    android:background="@drawable/shape_job_et"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/jobOtherEt"
+                            android:minHeight="130dp"
+                            android:gravity="left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="此处填写…"
+                            />
+                    </ScrollView>
+
+                    <TextView
+                        android:id="@+id/jobOtherEtCount"
+                        android:textColor="#9596A4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="0/300字" />
+                </LinearLayout>
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#F5F5F9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="隐私说明"
+                    android:textColor="#ff666666"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:id="@+id/jobHide"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F9"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="本次收集的信息仅用于憨妈妈平台及其合作商家的技师团队招募，憨妈妈平台将严格遵守个人信息隐私保护法律法规。"
+                    android:textColor="#ff9596a4"
+                    android:paddingBottom="14dp"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.healthy.library.widget.StatusLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/ic_header_shadow"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"/>
+    <include
+        layout="@layout/layout_keyboardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

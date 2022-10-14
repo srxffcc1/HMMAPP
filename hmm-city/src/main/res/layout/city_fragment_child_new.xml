@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srlEnablePreviewInEditMode="false">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topView">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:orientation="vertical">
+
+                <!-- app:contentScrim="@android:color/transparent"
+                    app:statusBarScrim="@android:color/transparent"-->
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsingToolbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="5dp"
+                        app:shape_angle="320"
+                        app:shape_endColor="#00FFFFFF"
+                        app:shape_gradientType="linear"
+                        app:shape_startColor="@color/colorWhite">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/mall_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:descendantFocusability="blocksDescendants"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_marginTop="6dp"
+                            android:id="@+id/hotTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.healthy.library.widget.ImageTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:paddingRight="15dp"
+                                android:text="全部话题榜"
+                                android:textColor="#ff9596a4"
+                                android:textSize="13sp"
+                                app:drawable="@drawable/ic_more"
+                                app:drawableHeight="12dp"
+                                app:drawableWidth="6dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/hottipTitle"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/hottipTitle"
+                                app:position="3" />
+
+                            <TextView
+                                android:id="@+id/hottipTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_hottip_left_icon"
+                                android:gravity="left|center_vertical"
+                                android:text="正在热议"
+                                android:textColor="#ff222222"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/tip_grid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@id/hottipTitle" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/recommandQWX"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+<!--                                <include layout="@layout/item_qwx_recommand_layout"/>-->
+<!--                                <include layout="@layout/item_qwx_recommand_layout"/>-->
+<!--                                <include layout="@layout/item_qwx_recommand_layout"/>-->
+<!--                                <include layout="@layout/item_qwx_recommand_layout"/>-->
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+
+                    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <!--<View
+                    android:visibility="gone"
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/ic_header_shadow"
+                    app:layout_constraintBottom_toBottomOf="parent" />-->
+
+                <LinearLayout
+                    android:id="@+id/sll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider" />
+
+                    <com.flyco.tablayout.SlidingTabLayout
+                        android:layout_marginHorizontal="12dp"
+                        android:id="@+id/st"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:tl_indicator_color="#FF6060"
+                        app:tl_indicator_corner_radius="1.5dp"
+                        app:tl_indicator_height="0dp"
+                        app:tl_indicator_margin_top="10dp"
+                        app:tl_indicator_width="30dp"
+                        app:tl_tab_padding="6dp"
+                        app:tl_textBold="SELECT"
+                        app:tl_textSelectColor="#444444"
+                        app:tl_textUnselectColor="#9596A4"
+                        app:tl_textsize="16sp" />
+
+                    <View
+                        android:id="@+id/divider_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider" />
+                </LinearLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <ImageView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/city_post_top_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/passToSendPost"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_send_post"
+        app:layout_constraintBottom_toTopOf="@+id/passToTop"
+        app:layout_constraintLeft_toLeftOf="@+id/passTmp"
+        app:layout_constraintRight_toRightOf="@+id/passTmp" />
+
+    <ImageView
+        android:id="@+id/passToTop"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/city_ic_to_top"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/passTmp"
+        app:layout_constraintLeft_toLeftOf="@+id/passTmp"
+        app:layout_constraintRight_toRightOf="@+id/passTmp" />
+
+    <TextView
+        android:id="@+id/passTmp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

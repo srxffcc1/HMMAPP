@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="10dp"
+    android:paddingHorizontal="6dp"
+    app:shape_radius="16dp"
+    app:shape_solidColor="@color/colorWhite"
+    tools:ignore="ResourceName">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tx06"
+        app:corner_radius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/shopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        tools:text="坐月子期间可以出门吗？"
+        android:textColor="@color/color_222222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/iv_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="14dp"
+        android:drawableLeft="@drawable/service_order_detial_address_icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:drawablePadding="3dp"
+        android:textColor="#ff666666"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+        app:layout_constraintRight_toLeftOf="@+id/distance"
+        tools:text="苏州市高新区滨河路299号乐嘉汇11111111111…" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.2km"
+        android:textColor="#ff666666"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/address"
+        app:layout_constraintRight_toRightOf="@+id/shopName" />
+
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

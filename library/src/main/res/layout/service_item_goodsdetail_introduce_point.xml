@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <LinearLayout
+        android:id="@+id/imgLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF6E9"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/pointTitle"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="积分兑换说明"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/pointTxtValue"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="1、积分兑换时间：2020年10月1日-2020年10月31日；\n2、兑换礼品领取时间：2020年10月1日-2020年10月31日；\n3、请在领取有效期内进行兑换，过期视为放弃该礼品且积分不予退还\n4、若礼品有质量问题，可在兑换门店进行换货（不接受无理由退换货）\n5、同款礼品不挑色、不挑款；数量有限，兑完即止。\n"
+            android:textColor="#ff222222"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

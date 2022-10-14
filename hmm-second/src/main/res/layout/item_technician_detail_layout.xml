@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/userImg"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/img_1_1_default"
+                app:corner_radius="12dp"
+                app:is_circle="false"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="王利飞"
+                android:textColor="#ff333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/userImg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="@+id/userName"
+                app:layout_constraintTop_toBottomOf="@+id/userName"
+                app:shape_endColor="#E4B890"
+                app:shape_radius="2dp"
+                app:shape_startColor="#F2D3AF">
+
+                <ImageView
+                    android:id="@+id/technician_icon"
+                    android:layout_width="21dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/technician_icon"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:id="@+id/peopleTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="5dp"
+                    android:text="10年调理师"
+                    android:textColor="#ff000000"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/technician_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/userTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="2dp"
+                android:text="产康顾问"
+                android:textColor="#3F2C21"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tagLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tagLayout"
+                app:shape_radius="2dp"
+                app:shape_solidColor="#FFF3EC" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_pregnancy"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/topView"
+            app:shape_radius="12dp">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/goodWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp"
+                        android:text="擅长"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/goodWorkContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="产后女性健康监测评估，各种产后问题分析对症调理，心理疏导，临床解决各种产后月子问题"
+                        android:textColor="#ff666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/userInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="12dp"
+                        android:text="个人介绍"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/userInfoContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="毕业于吉林大学白求恩医学部，从事各种皮肤病、性病当面的临床诊疗及患者教育工作。欢迎关注微信公众号：皮肤科周医生"
+                        android:textColor="#ff666666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/healthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="12dp"
+                        android:text="健康证展示"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/healthImg"
+                        android:layout_width="104dp"
+                        android:layout_height="71dp"
+                        android:src="@drawable/img_1_1_default" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

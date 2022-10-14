@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/goodsImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/pointLable"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_order_list_point_lable"
+            android:gravity="center"
+            android:text="积分兑换"
+            android:textColor="#ffffffff"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+            app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+            app:layout_constraintRight_toRightOf="@+id/goodsImg" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/actFlag"
+            android:layout_width="36dp"
+            android:layout_height="16dp"
+            android:src="@drawable/act_pin"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            app:layout_constraintLeft_toLeftOf="@id/goodsImg"/>
+        <TextView
+            android:id="@+id/goodsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/goodsImg"
+            app:layout_constraintRight_toLeftOf="@id/goodsMoney"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            tools:text="Babycare 吸管杯学饮杯宝宝水杯重吸管杯学饮杯宝宝水杯…" />
+
+        <TextView
+            android:id="@+id/goodsMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/goodsImg"
+            tools:text="1288积分\n+¥152.69" />
+
+        <TextView
+            android:id="@+id/goodsSpec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textColor="#ff868799"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+            app:layout_constraintTop_toBottomOf="@id/goodsTitle"
+            tools:text="规格 900g" />
+
+        <TextView
+            android:id="@+id/goodsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x 1"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goodsMoney" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/goods_finish_btn_constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <TextView
+            android:id="@+id/btn_commitBack"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_order_list_grey_button"
+            android:gravity="center"
+            android:text="申请售后"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_assess" />
+
+        <TextView
+            android:id="@+id/btn_assess"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_order_list_red_button"
+            android:gravity="center"
+            android:text="评价晒单"
+            android:textColor="#fff02846"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

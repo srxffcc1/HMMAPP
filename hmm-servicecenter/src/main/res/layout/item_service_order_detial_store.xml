@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="ResourceName">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/storePre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务商户"
+                android:textColor="#ff222222"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/storeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_more_bold"
+                android:drawablePadding="5dp"
+                android:textColor="#ff666666"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/storePre"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="3家门店适用" />
+
+            <TextView
+                android:id="@+id/storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/service_order_detial_store_icon"
+                android:drawablePadding="5dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:maxEms="15"
+                android:textColor="#ff222222"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storePre"
+                tools:text="苏州婷美摩力21产后恢复" />
+
+            <TextView
+                android:id="@+id/storeAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/service_order_detial_address_icon"
+                android:drawableRight="@drawable/ic_more_bold"
+                android:drawablePadding="5dp"
+                android:textColor="#ff666666"
+                android:maxEms="18"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storeName"
+                tools:text="苏州市高新区河滨路299号乐嘉汇大厦" />
+
+            <ImageView
+                android:id="@+id/storePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/nearby_store_phone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/storeName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

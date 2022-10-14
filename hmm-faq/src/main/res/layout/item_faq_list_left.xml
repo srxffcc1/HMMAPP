@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    tools:ignore="MissingConstraints">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:is_circle="true"
+        android:src="@drawable/img_avatar_default" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_expert_hz"
+        app:layout_constraintCircle="@id/ivHeader"
+        app:layout_constraintCircleAngle="140"
+        app:layout_constraintCircleRadius="30dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:padding="@dimen/dp_2"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/ivHeader"
+        android:text="张美丽" />
+
+    <TextView
+        android:id="@+id/ivTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本地专家"
+        android:layout_marginLeft="5dp"
+        android:textColor="#ff815c35"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:background="@drawable/shape_faq_left_tip"
+        app:layout_constraintLeft_toRightOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        app:layout_constraintBottom_toBottomOf="@id/tvName"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_2"
+        android:textColor="@color/color_444444"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tools:text="12年金牌育婴师" />
+
+    <TextView
+        android:id="@+id/ivAsk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="咨询"
+        android:textSize="12sp"
+        android:textColor="#ffffffff"
+        android:background="@drawable/shape_faq_left_seek2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvBeGoodAt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_2"
+        android:paddingRight="@dimen/dp_2"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+        app:layout_constraintRight_toRightOf="@id/ivAsk"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="ahfkahflkadfclkjadlkfccjasklcjna;lksc;lajmc;lasmcc;lasalkcnakjdsj" />
+
+    <TextView
+        android:id="@+id/tvAskCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_2"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeGoodAt"
+        android:text="120个回答" />
+
+    <TextView
+        android:id="@+id/tvAskMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/color_ff6266"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintLeft_toRightOf="@id/tvAskCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeGoodAt"
+        android:text="￥13.6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

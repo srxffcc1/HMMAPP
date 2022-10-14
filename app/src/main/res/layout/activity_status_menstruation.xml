@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_status"
+    app:status_init="content"
+    tools:context=".activity.StatusPregnancyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/BackIvStyle"
+            android:onClick="back"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/tv_title_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_men_recent_title"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+
+        <com.healthy.library.watcher.AlphaTextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_sans_serif"
+            android:text="@string/app_men_recent"
+            android:textSize="21sp"
+            android:layout_marginTop="45dp"
+            android:onClick="chooseRecentDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_1"/>
+
+        <TextView
+            android:id="@+id/tv_title_step_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_men_cycle_duration_title"
+            android:textSize="16dp"
+            android:textColor="@color/colorMediumText"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:ignore="SpUsage"/>
+
+        <com.healthy.library.watcher.AlphaTextView
+            android:id="@+id/tv_cycle_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_men_cycle_duration"
+            android:textSize="21sp"
+            android:layout_marginTop="45dp"
+            android:textStyle="bold"
+            android:onClick="chooseCycleDuration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_step_2"/>
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_title_step_1,tv_date"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_step_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tv_title_step_2,tv_cycle_duration"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/app_bg_bind_phone"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="750:388"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.healthy.library.widget.StatusLayout>

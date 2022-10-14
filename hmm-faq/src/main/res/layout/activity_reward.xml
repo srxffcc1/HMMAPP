@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RewardActivity"
+    tools:ignore="Autofill,TextFields">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:submit_img_src="@drawable/url_misc"
+        app:is_show_submit_image="true"
+        app:title="@string/faq_reward_title"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="@string/faq_remind_submit_reward"
+                android:textColor="#ff9596a4"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_release"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/selector_release"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/faq_submit_reward"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_remind"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/tv_release"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/et_question_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@null"
+                        android:hint="@string/faq_hint_reward_question_title"
+                        android:textColor="#000000"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="#D8D8D8"
+                        app:layout_constraintTop_toBottomOf="@id/et_question_title"/>
+
+                    <EditText
+                        android:id="@+id/et_question_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@null"
+                        android:hint="@string/faq_hint_question_content"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_pictures"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:divider="@drawable/shape_divider_question_picture"
+                        android:orientation="horizontal"
+                        android:showDividers="middle"
+                        android:weightSum="3"
+                        app:layout_constraintTop_toBottomOf="@id/et_question_content"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_anonymous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="22dp"
+                        android:button="@drawable/selector_anonymous"
+                        android:gravity="center"
+                        android:text="@string/faq_release_anonymous"
+                        android:textColor="#ff444444"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layout_pictures"/>
+
+                    <TextView
+                        android:id="@+id/tv_reward_prefix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/faq_prefix_reward_money"
+                        android:textColor="#ff222222"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@id/cb_anonymous"
+                        app:layout_constraintTop_toBottomOf="@id/cb_anonymous"/>
+
+                    <TextView
+                        android:id="@+id/tv_reward_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq_reward_cover_cost"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp"
+                        android:visibility="invisible"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tv_reward_prefix"
+                        app:layout_constraintStart_toEndOf="@id/tv_reward_prefix"/>
+
+                    <TextView
+                        android:id="@+id/tv_price_prefix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/faq_money_char"
+                        android:textColor="#ff222222"
+                        android:textSize="30sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_reward_prefix"
+                        app:layout_constraintTop_toBottomOf="@id/tv_reward_prefix"/>
+
+                    <TextView
+                        android:id="@+id/tv_price_hint"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/faq_hint_input_reward"
+                        android:textColor="#ff9a9ba8"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_price_prefix"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_price_prefix"
+                        app:layout_constraintTop_toTopOf="@id/tv_price_prefix"/>
+
+                    <EditText
+                        android:id="@+id/et_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="#ff000000"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_price_prefix"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_price_prefix"
+                        app:layout_constraintTop_toTopOf="@id/tv_price_prefix"
+                        tools:ignore="LabelFor"/>
+
+                    <View
+                        android:id="@+id/divider_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="18dp"
+                        android:background="#D8D8D8"
+                        app:layout_constraintTop_toBottomOf="@id/et_price"
+                        app:layout_goneMarginEnd="20dp"
+                        app:layout_goneMarginStart="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

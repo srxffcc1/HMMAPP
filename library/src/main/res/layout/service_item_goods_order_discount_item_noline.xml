@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal"
+    tools:ignore="Orientation">
+    <TextView
+        android:id="@+id/enoughTitle"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_mall_goods_ol_vid_red"
+        tools:text="满返"
+        android:textColor="#fff02846"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@id/quanTitle"
+        app:layout_constraintTop_toBottomOf="@id/quanTitle" />
+
+    <TextView
+        android:id="@+id/enoughContext"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:singleLine="true"
+        tools:text="满50元，即可获得5元优惠券，或满100元，即可…"
+        android:textColor="#ff222222"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/enoughTitle"
+        app:layout_constraintLeft_toRightOf="@id/enoughTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enoughTitle" />
+
+
+</LinearLayout>

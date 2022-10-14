@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    tools:ignore="MissingDefaultResource,ResourceName">
+
+    <View
+        android:id="@+id/indicator"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:background="@drawable/shape_circular_red"
+        app:layout_constraintBottom_toBottomOf="@+id/contentType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contentType" />
+
+    <TextView
+        android:id="@+id/contentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="15dp"
+        android:text="线下门店消费"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/indicator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/payType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/shape_tools_datepick_w"
+        android:paddingLeft="8dp"
+        android:paddingTop="2dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="2dp"
+        android:text=""
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contentType"
+        app:layout_constraintLeft_toRightOf="@+id/contentType"
+        app:layout_constraintTop_toTopOf="@+id/contentType" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-188"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/contentType"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/createTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020/08/13"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/address"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="婷美摩力21产后修复金山路店旗舰店"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/contentType"
+        app:layout_constraintRight_toLeftOf="@id/createTime"
+        app:layout_constraintTop_toBottomOf="@+id/contentType" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="6dp"
+        android:paddingTop="2dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="2dp"
+        android:textColor="#ff666666"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:shape_radius="4dp"
+        app:shape_solidColor="#F6F7F9"
+        tools:text="充值满500减50" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="#ffe5e5e5"
+        app:layout_constraintTop_toBottomOf="@+id/mark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="135%"
+            android:pivotY="15%">
+            <shape android:shape="rectangle">
+                <size
+                    android:width="16dp"
+                    android:height="16dp"/>
+                <solid android:color="#F93F60"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate //正三角形
+            android:fromDegrees="45"
+            android:pivotX="-40%"
+            android:pivotY="80%">
+            <shape android:shape="rectangle">
+                <size
+                    android:width="16dp"
+                    android:height="16dp"/>
+                <solid android:color="#fff5f5f9"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
+-->

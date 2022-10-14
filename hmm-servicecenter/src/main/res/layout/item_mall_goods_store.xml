@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_mall_goods_pink"
+        android:padding="10dp">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/mall_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="4dp"
+            android:text="优惠商家"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:drawable="@mipmap/mall_store_left"
+            app:drawableHeight="20dp"
+            app:drawableWidth="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/mall_goods_img"
+            android:layout_width="157dp"
+            android:layout_height="117dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_service">
+
+        </com.healthy.library.widget.CornerImageView>
+
+        <TextView
+            android:id="@+id/numberTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/mall_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textStyle="bold"
+            android:text="臻幼堂小儿推拿金山店"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_img" />
+
+        <TextView
+            android:id="@+id/mall_goods_lable"
+            android:layout_width="50dp"
+            android:layout_height="16dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_mall_goods_store_lable"
+            android:gravity="center"
+            android:text="产后恢复"
+            android:textColor="#ff29bda9"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_name" />
+
+        <com.healthy.library.widget.RatingView
+            android:id="@+id/rating_customer_score"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_lable"
+            app:rating="4.9"
+            app:rating_max="5" />
+
+        <TextView
+            android:id="@+id/mall_goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_6"
+            android:layout_marginLeft="3dp"
+            android:text="4.9"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@id/rating_customer_score"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_lable" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/mall_goods_address"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:drawablePadding="2dp"
+            android:ellipsize="end"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:text="狮山路98号乐嘉…"
+            android:textColor="#ff868799"
+            android:textSize="12sp"
+            app:drawable="@mipmap/servicecenter_nearby_address"
+            app:drawableHeight="16dp"
+            app:drawableWidth="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_num" />
+
+        <TextView
+            android:id="@+id/mall_goods_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="3.6km"
+            android:textColor="#ff868799"
+            android:textSize="11sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_num" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mall_goods_address" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

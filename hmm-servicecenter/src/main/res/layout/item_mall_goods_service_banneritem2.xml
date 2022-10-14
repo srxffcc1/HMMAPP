@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/mall_service_img"
+        android:layout_width="74dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="55dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="@id/discountTip"
+        app:layout_constraintBottom_toBottomOf="@id/discountTip"
+        app:layout_constraintLeft_toLeftOf="@id/discountTip"
+        app:layout_constraintRight_toRightOf="@id/discountTip"
+        android:src="@drawable/discountbg2"
+        android:layout_height="0dp">
+
+    </ImageView>
+    <TextView
+        android:id="@+id/discountTip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6.8折"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="9sp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/mall_service_img"
+        app:layout_constraintLeft_toLeftOf="@id/mall_service_img"
+        />
+
+
+    <TextView
+        android:id="@+id/mall_service_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="辩证发汗调理养护套组eeeeeeeeeeeeeeeee"
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/mall_service_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mall_service_img" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/mall_service_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18.8"
+        android:textColor="#fff02846"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/mall_service_title"
+        app:layout_constraintLeft_toLeftOf="@id/mall_service_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

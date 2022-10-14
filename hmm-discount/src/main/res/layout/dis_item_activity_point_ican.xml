@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="7dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="7dp"
+    android:background="@drawable/shape_city_fans"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/goodsIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/goodsSoldOutIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/point_soldout_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsIcon"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsIcon"
+        app:layout_constraintRight_toRightOf="@+id/goodsIcon"
+        app:layout_constraintTop_toTopOf="@+id/goodsIcon" />
+
+    <TextView
+        android:id="@+id/goodsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxLines="2"
+        android:text="合生元派星较大婴儿配方奶粉营养配方2段400g"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/goodsIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodsIcon" />
+
+    <TextView
+        android:id="@+id/goodsPriceOrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="#ff868799"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+        app:layout_constraintTop_toBottomOf="@id/goodsTitle"
+        tools:text="¥49.9" />
+
+    <TextView
+        android:id="@+id/goodsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="2650积分+¥15"
+        android:textColor="#fff02846"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+        app:layout_constraintTop_toBottomOf="@id/goodsPriceOrg" />
+
+    <TextView
+        android:id="@+id/passOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dis_point_btn"
+        android:paddingLeft="18dp"
+        android:paddingTop="2dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="2dp"
+        android:text="兑换"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

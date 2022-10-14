@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.GoodsDetailActivity"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false"
+        app:is_show_submit_image="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:back_img_src="@drawable/ic_back_close"
+        app:title="人员姓名" />
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:status_init="loading"
+        tools:status_init="content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingBottom="10dp"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/con_head_start"
+                        android:background="#FF8C88"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:padding="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent">
+
+                        <com.healthy.library.widget.CornerImageView
+                            android:id="@+id/head_icon"
+                            android:layout_width="80dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_back_close"
+                            app:is_circle="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            app:layout_constraintLeft_toRightOf="@id/head_icon"
+                            app:layout_constraintTop_toTopOf="@id/head_icon"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/head_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="张秋月"
+                                android:textColor="#ffffffff"
+                                android:layout_marginLeft="12dp"
+                                android:textSize="17sp"
+                                android:layout_marginTop="3dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/head_dust"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="店长"
+                                android:textColor="#ffffffff"
+                                android:layout_marginLeft="7dp"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/head_name"
+                                app:layout_constraintTop_toTopOf="@id/head_name"
+                                app:layout_constraintBottom_toBottomOf="@id/head_name" />
+
+                            <TextView
+                                android:id="@+id/head_tip"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="高级育婴师、小儿推拿师"
+                                android:textColor="#ffffffff"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toLeftOf="@id/head_name"
+                                app:layout_constraintTop_toBottomOf="@id/head_name" />
+
+                            <TextView
+                                android:id="@+id/head_year"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="从业8年"
+                                android:visibility="gone"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:textColor="#ffffffff"
+                                android:layout_marginTop="3dp"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="@id/head_name"
+                                app:layout_constraintTop_toBottomOf="@id/head_tip" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <View
+                        android:id="@+id/con_head_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/con_head_start"
+                        android:background="@color/colorDivider" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/con_content_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/con_head_end">
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/content_donors_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="擅长"
+                            android:textColor="#ff222222"
+                            android:textSize="15sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/content_donors_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="病理性黄疸、婴幼儿腹泻、小儿感冒咳嗽、病毒性心肌炎、哮喘、不孕不育、病理性黄疸"
+                            android:textColor="#ff444444"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintLeft_toLeftOf="@id/content_donors_title"
+                            app:layout_constraintTop_toBottomOf="@id/content_donors_title"
+                            />
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/content_intro_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="简介"
+                            android:textColor="#ff222222"
+                            android:textSize="15sp"
+                            android:layout_marginTop="9dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/content_donors_content"
+                            />
+                        <TextView
+                            android:id="@+id/content_intro_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="专业从事育儿工作20余年，专注为婴幼儿提供生活照料、保健、护理、教育指导与培训，能为婴幼儿和母亲提供专业化护理新型人才"
+                            android:textColor="#ff444444"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintLeft_toLeftOf="@id/content_donors_title"
+                            app:layout_constraintTop_toBottomOf="@id/content_intro_title"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/con_content_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/con_content_start"
+                        android:background="@color/colorDivider" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/con_cert_start"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/con_content_end">
+                        <TextView
+                            android:id="@+id/cert_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="岗位能力证书"
+                            android:textColor="#ff222222"
+                            android:textSize="15sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                        <GridLayout
+                            android:id="@+id/cert_imgs"
+                            android:columnCount="3"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cert_title"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/con_cert_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/con_cert_start"
+                        android:background="@color/colorDivider" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/con_health_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/con_cert_end">
+                        <TextView
+                            android:id="@+id/health_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="健康证展示"
+                            android:textColor="#ff222222"
+                            android:textSize="15sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                        <GridLayout
+                            android:id="@+id/health_imgs"
+                            android:columnCount="3"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/health_title"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/con_health_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        app:layout_constraintTop_toBottomOf="@id/con_health_start"
+                        android:background="@color/colorDivider" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/couponBottom"
+            android:background="#FFF"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                style="@style/BtnStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:text="立即预约"
+                android:onClick="toSub"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </LinearLayout>
+        </LinearLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+
+
+</LinearLayout>

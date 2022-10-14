@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/discountLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_mall_goods_ol_vid_float"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/discountLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优惠"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/discountMore"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_more_pin"
+            app:layout_constraintBottom_toBottomOf="@id/discountLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/discountLeft" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/discountLeft"
+            app:layout_constraintRight_toLeftOf="@id/discountMore"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/quanP"
+                android:visibility="gone"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/quanTitle"
+
+                    android:paddingBottom="1dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_mall_goods_ol_vid_red"
+                    android:text="领券"
+                    android:textColor="#fff02846"
+                    android:textSize="11sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/couponLLS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:scrollbars="none"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/couponLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+<!--                        <include layout="@layout/item_mall_goods_coupon"></include>-->
+
+<!--                        <include layout="@layout/item_mall_goods_coupon"></include>-->
+
+<!--                        <include layout="@layout/item_mall_goods_coupon"></include>-->
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:id="@+id/space_block"/>
+
+            <LinearLayout
+                android:id="@+id/actLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <include layout="@layout/service_item_goodsdetail_discount_item_noline" />-->
+
+<!--                <include layout="@layout/service_item_goodsdetail_discount_item_noline" />-->
+
+<!--                <include layout="@layout/service_item_goodsdetail_discount_item_noline" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

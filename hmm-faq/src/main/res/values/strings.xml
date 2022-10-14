@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Faq</string>
+    <string name="faq_remind_submit_reward">提示：48小时未回答，将按支付账户原路退回</string>
+    <string name="faq_submit_reward">立即提问并支付</string>
+    <string name="faq_hint_reward_question_title">请填写问题简介，5-40个字</string>
+    <string name="faq_hint_question_content">请填写问题详情，越详细越能得到有效的解答哦~</string>
+    <string name="faq_release_anonymous">&#160;匿名发布问题</string>
+    <string name="faq_release_reply_anonymous">&#160;匿名发布回答</string>
+    <string name="faq_route_voice">点击录音回答</string>
+    <string name="faq_prefix_reward_money">悬赏金额</string>
+    <string name="faq_reward_cover_cost">（3个旁听可收回成本）</string>
+    <string name="faq_money_char">¥</string>
+    <string name="faq_hint_input_reward">请输入悬赏金额</string>
+    <string name="faq_reward_title">悬赏求助</string>
+    <string name="faq_prefix_paid">待支付金额</string>
+    <string name="faq_pay_way">支付方式</string>
+    <string name="faq_pay_in_wx">微信支付</string>
+    <string name="faq_pay_in_zfb">支付宝支付</string>
+    <string name="faq_pay_now">立即支付</string>
+    <string name="faq_module_title">悬赏求助</string>
+    <string name="faq_prefix_ask">我要提问</string>
+    <string name="faq_ask_expert">问专家</string>
+    <string name="faq_reward">悬赏求助</string>
+    <string name="faq_sofa_reply">还没有人回答，快来抢个沙发吧！</string>
+    <string name="faq_reply_me">我来回答</string>
+    <string name="faq_improve_reward_remind">还没有人回答，提高赏金试试？</string>
+    <string name="faq_improve_reward">提高赏金</string>
+    <string name="faq_adopt">采纳</string>
+    <string name="faq_no_reply">没有人回答</string>
+    <string name="faq_improve_reward_title">追加金额</string>
+    <string name="faq_tv_pay_immediately">立即支付</string>
+    <string name="faq_question_sup_title">求助详情</string>
+    <string name="faq_hint_reply">&#160;&#160;输入您的回答，5-500个字</string>
+    <string name="faq_release_reply">发布</string>
+    <plurals name="error_over_count">
+        <item quantity="one">You can only select one media file</item>
+        <item quantity="many">You can only select up to %1$d media files</item>
+    </plurals>
+    <string name="hdd_sm_title">收益与憨豆豆余额规则说明</string>
+    <string name="hdd_sm">1.会员可以消耗憨豆豆用以兑换憨豆豆的相关商品;\n2.会员可以消耗憨豆豆用以参与举办的活动;\n3.会员可以消耗憨豆豆用以在购买商品时抵扣货款;\n4.会员可以消耗憨豆豆用以参加需要消耗作为活动准入及报名门槛。参见活动当时的正式规则。</string>
+    <string name="loading">正在加载中</string>
+    <string name="loadfinish">没有更多数据了</string>
+    <string name="faq_hint_ask_expert">输入描述（性别、年龄、症状及就诊经历）等待专家回复；超过24小时无人回答，将按支付路径全额退款。</string>
+    <string name="faq_expert_statement">专家回答仅为建议，具体的诊疗请前往医院进行，感谢您的支持和理解，谢谢！</string>
+    <string name="faq_remind_expert_no_reply">暂未回复，请耐心等待</string>
+    <string name="faq_ask_homepage_expert">立即提问</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.index">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <application>
+        <activity android:name=".activity.CalendarActivity" android:screenOrientation="portrait" >
+        </activity>
+
+        <activity android:name=".activity.BabyMomChangeActivity" android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activity.WebViewActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VaccineListActivity" android:screenOrientation="portrait"
+            android:theme="@style/IndexVaccineTheme">
+        </activity>
+        <activity android:name=".activity.BirthPackageActivity" android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.BirthCheckListActivity" android:screenOrientation="portrait"
+            android:theme="@style/IndexVaccineTheme">
+        </activity>
+        <activity
+            android:name=".activity.AnalyzeActivity"
+            android:theme="@style/TranslucentLight" android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activity.ToolsActivity" android:screenOrientation="portrait"
+            android:windowSoftInputMode = "stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".activity.NewsMainPassActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolTypeActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsTestSexActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsGrowChartActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyWActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyDiary"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabySumDiary"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyDiaryFeed"  android:windowSoftInputMode="adjustResize|stateHidden" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsTestSexMainActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsTestSexExlActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsTestSexResultActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsGrowChartAddActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyDiaryOut" android:windowSoftInputMode="adjustResize|stateHidden" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyDiarySleep" android:windowSoftInputMode="adjustResize|stateHidden" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsBabyDiarySumChart"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsNameActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.WebViewActivityAll"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsCanEatMainActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsCanEatTypeActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsFoodMainActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsFoodDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsDivCheckActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsDivCheckTipActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsVaccCheckActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ToolsVaccCheckTipActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.HanMomVideoActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.HanmomTeachingDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.HanMomVideoPlayerActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.HanMomVideoDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.IndexBabyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.IndexToolsMainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.WebViewActivitySingle" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".activity.IndexSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".activity.IndexSearchResultActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".activity.WebViewActivityArticle" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:name=".activity.HealthTestMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.HealthTestOptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.HealthTestResultActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MonthlyActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

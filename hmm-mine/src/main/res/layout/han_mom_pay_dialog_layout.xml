@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ResourceName">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_bg"
+        android:layout_width="320dp"
+        android:layout_height="270dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_chose">
+
+        <ImageView
+            android:id="@+id/dialog_close_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/dialog_close"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_close_button">
+
+            <TextView
+                android:id="@+id/payTitle"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="请选择支付方式"
+                android:textColor="#ff000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.healthy.library.widget.DeepRadioGroup
+                android:id="@+id/checkGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_mall_goods_ol_vid_counter_type">
+
+                    <com.healthy.library.widget.ImageTextView
+                        android:id="@+id/weixinTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="微信支付"
+                        android:textColor="#ff222222"
+                        android:textSize="15sp"
+                        app:drawable="@drawable/weixinz"
+                        app:drawableHeight="25dp"
+                        app:drawableWidth="25dp"
+                        app:layout_constraintBottom_toTopOf="@id/centerDiv"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/weixinCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:button="@drawable/selector_tools_anonymous"
+                        app:layout_constraintBottom_toBottomOf="@id/weixinTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/weixinTitle">
+
+                    </CheckBox>
+
+                    <TextView
+                        android:id="@+id/centerDiv"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:visibility="gone"
+                        android:background="#D8D8D8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.healthy.library.widget.ImageTextView
+                        android:id="@+id/alpayTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="支付宝支付"
+                        android:textColor="#ff222222"
+                        android:textSize="15sp"
+                        app:drawable="@drawable/alpayz"
+                        app:drawableHeight="25dp"
+                        app:drawableWidth="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/centerDiv" />
+
+                    <CheckBox
+                        android:id="@+id/alpayCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:button="@drawable/selector_tools_anonymous"
+                        app:layout_constraintBottom_toBottomOf="@id/alpayTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/alpayTitle">
+
+                    </CheckBox>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.healthy.library.widget.DeepRadioGroup>
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/han_mom_pay_btn"
+                android:gravity="center"
+                tools:text="¥30.00 立即开通"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/checkGroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

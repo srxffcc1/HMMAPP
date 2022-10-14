@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorSelected">#FF4C5D</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorBlack">#ff000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTranslucent">#55000000</color>
+    <color name="colorRed">#ffff0000</color>
+    <color name="colorGreen">#ff00ff00</color>
+    <color name="colorBlue">#ff0000ff</color>
+    <color name="c_d1d8e2">#D1D8E2</color>
+
+    <color name="colorDivider">#F5F5F9</color>
+    <color name="colorDividerDark">#E4E8EE</color>
+
+    <color name="colorMajorText">#222222</color>
+    <color name="colorMediumText">#333333</color>
+    <color name="colorMinorText">#666666</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorRemember">#9596A4</color>
+
+    <color name="scan_corner_color">#F93F60</color>
+    <!--服务地址类型 选中和未选中时的文字颜色-->
+    <color name="colorAddressTextSelected">#FF6266</color>
+    <color name="colorAddressTextUnSelected">#666666</color>
+    <!--服务地址类型 选中和未选中时的背景颜色-->
+    <color name="colorAddressSelected">#FF6266</color>
+    <color name="colorAddressUnSelected">#B8B9C7</color>
+
+    <color name="colorDash">#D1D8E2</color>
+
+
+    <!--时间选择器-->
+    <color name="date_picker_bg">#FFFFFF</color>
+    <color name="date_picker_divider">#11112233</color>
+
+
+    <color name="color_fff7f8">#FFF7F8</color>
+    <color name="color_ff6266">#FF6266</color>
+    <color name="color_7a7b8b">#7A7B8B</color>
+    <color name="color_444444">#444444</color>
+    <color name="color_ccced3">#CCCED3</color>
+    <color name="color_f5f5f9">#F5F5F9</color>
+    <color name="color_f5f5f5">#F5F5F5</color>
+    <color name="color_f9f9f9">#F9F9F9</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_39e0c8">#39E0C8</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_ffab2d">#FFAB2D</color>
+    <color name="color_ff8181">#FF8181</color>
+    <color name="color_4de4b6">#4DE4B6</color>
+    <color name="color_22dddd">#22DDDD</color>
+    <color name="color_9596a4">#9596A4</color>
+    <color name="color_e4e8ee">#E4E8EE</color>
+    <color name="color_fa3c5a">#FA3C5A</color>
+    <color name="color_d3d4d8">#D3D4D8</color>
+    <color name="color_f7914b">#F7914B</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_333330">#333330</color>
+    <color name="color_d8d8d8">#D8D8D8</color>
+    <color name="color_f02846">#fff02846</color>
+    <color name="color_b3b3b3">#B3B3B3</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_fa405c">#fa405c</color>
+    <color name="color_da1818">#DA1818</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_4e4846">#4E4846</color>
+    <color name="color_b31724">#B31724</color>
+    <color name="color_8e754f">#8E754F</color>
+    <color name="color_946d4b">#946D4B</color>
+    <color name="color_CC3815">#CC3815</color>
+    <color name="color_936b49">#936B49</color>
+    <color name="color_FFEFD9">#FFEFD9</color>
+    <color name="color_EF3D35">#EF3D35</color>
+    <color name="color_FBFF0C">#FBFF0C</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_f6f7f9">#F6F7F9</color>
+    <color name="color_f7f7fa">#F7F7FA</color>
+
+    <color name="colorMallTitle">#39E0C8</color>
+
+
+    <color name="c_ff5353">#ff5353</color>
+
+    <color name="ad_splash_button">#5e6b7f</color>
+    <color name="trans_parent">#00000000</color>
+
+</resources>

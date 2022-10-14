@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_avatar_default"
+        app:is_circle="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_user_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_user_official_certification"
+        app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+        app:layout_constraintRight_toRightOf="@id/ivHeader" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxEms="10"
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/ivHeader"
+        app:layout_constraintLeft_toRightOf="@id/ivHeader"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="4dp"
+        tools:text="快乐柠檬草" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/stv_user_badgeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官方认证"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        android:textSize="9dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="6dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="1dp"
+        app:shape_topLeftRadius="8dp"
+        app:shape_bottomRightRadius="8dp"
+        app:shape_topRightRadius="8dp"
+        app:shape_solidColor="#3889FD"/>
+
+    <TextView
+        android:id="@+id/days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        tools:text="2天前"
+        android:textColor="#ff666666"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/ivHeader"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_category"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_category"
+        android:layout_width="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="44dp"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <android.widget.Space
+        android:id="@+id/space"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <TextView
+        android:id="@+id/hotTip"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/space"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        android:background="@drawable/shape_radio_tools_type_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hot"
+        android:textSize="8sp"
+        android:textColor="#FFF"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#222222"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_category"
+        android:text="缺省" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EssencesActivity">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/status_2020"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.TopBar
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:is_show_submit_image="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topView"
+            app:show_moss="false"
+            app:submit_img_src="@drawable/ic_tip_more"
+            app:title="精华帖" />
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f6f7f9" />
+
+        </com.healthy.library.widget.StatusLayout>
+
+        <ImageView
+            android:id="@+id/passToSendPost"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_send_post"
+            app:layout_constraintBottom_toTopOf="@+id/passToTop"
+            app:layout_constraintLeft_toLeftOf="@+id/passTmp"
+            app:layout_constraintRight_toRightOf="@+id/passTmp" />
+
+        <ImageView
+            android:id="@+id/passToTop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/city_ic_to_top"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/passTmp"
+            app:layout_constraintLeft_toLeftOf="@+id/passTmp"
+            app:layout_constraintRight_toRightOf="@+id/passTmp" />
+
+        <TextView
+            android:id="@+id/passTmp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smart.refresh.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>

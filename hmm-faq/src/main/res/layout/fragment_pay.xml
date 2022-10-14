@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_moss="false"
+        app:title="设置支付密码"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        app:cardBackgroundColor="@color/color_fff7f8"
+        app:cardCornerRadius="@dimen/dp_6"
+        app:cardElevation="0dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:textColor="@color/colorMajorText"
+                android:textSize="@dimen/sp_14"
+                tools:text="当前账号已与185****9496绑定" />
+
+            <com.healthy.library.widget.SuperButton
+                android:id="@+id/sb_get_code"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="18dp"
+                android:text="获取验证码"
+                android:textColor="@color/color_ff6266"
+                app:sCornersRadius="6dp"
+                app:sShapeType="rectangle"
+                app:sSolidColor="@color/color_fff7f8"
+                app:sStrokeColor="@color/color_ff6266"
+                app:sStrokeWidth="@dimen/dp_1" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_type_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_20"
+        android:text="请输入验证码"
+        android:textColor="@color/color_444444"
+        android:textSize="@dimen/sp_15" />
+
+
+    <com.healthy.library.widget.PasswordView
+        android:id="@+id/pv_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.healthy.library.widget.PasswordView>
+
+</LinearLayout>

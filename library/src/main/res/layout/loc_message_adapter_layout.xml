@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backGG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_loc_change_item"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/currentShopTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前门店"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/locRefreshTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/loc_refresh"
+            android:drawablePadding="5dp"
+            android:text="刷新定位"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/locShopName"
+            android:layout_width="0dp"
+            android:layout_marginRight="3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:drawable="@drawable/loc_new_store"
+            app:drawableWidth="18dp"
+            app:drawableHeight="18dp"
+            android:drawablePadding="6dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="14"
+            android:maxLines="1"
+            android:text="爱婴金摇篮天街店"
+            android:textColor="#ff222222"
+            android:textSize="15sp"
+            app:layout_constraintRight_toLeftOf="@id/locDistance"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentShopTxt" />
+
+        <TextView
+            android:id="@+id/locDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距您1.2km"
+            android:textColor="#ff666666"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/locShopName"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/locShopAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="江苏省苏州市高新区狮山街道288号龙湖天街3楼"
+            android:textColor="#ff868799"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locShopName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

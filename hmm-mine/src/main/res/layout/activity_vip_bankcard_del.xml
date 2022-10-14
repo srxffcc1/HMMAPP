@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F9"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_header_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/status_2020"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/view_header_bg">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/app_name"
+                android:padding="5dp"
+                android:src="@drawable/index_ic_back_c"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/topBar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="银行卡管理"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:status_init="content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="162dp"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="12dp"
+                    app:shape_endColor="#0E70BC"
+                    app:shape_radius="8dp"
+                    app:shape_startColor="#00599D">
+
+                    <ImageView
+                        android:id="@+id/cardIcon"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:visibility="gone"
+                        android:src="@drawable/img_avatar_default"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardType"
+                        app:layout_constraintTop_toTopOf="@+id/cardName" />
+
+                    <TextView
+                        android:id="@+id/cardName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="中国建设银行"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toRightOf="@+id/cardIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cardType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="3dp"
+                        android:text="借记卡"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toRightOf="@+id/cardIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/cardName" />
+
+                    <TextView
+                        android:id="@+id/cardNumTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:text=""
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="解除绑定"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp"
+                    android:alpha="0.5"
+                    android:enabled="false"
+                    app:shape_endColor="#FF256C"
+                    app:shape_radius="22dp"
+                    app:shape_startColor="#FF6060" />
+            </LinearLayout>
+
+
+        </com.healthy.library.widget.StatusLayout>
+    </LinearLayout>
+
+</LinearLayout>

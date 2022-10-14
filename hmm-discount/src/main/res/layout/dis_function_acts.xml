@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/parent_category"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_category"
+        android:layout_width="95dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="95dp"
+        app:corner_radius="5dp"
+        android:src="@drawable/img_1_1_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <android.widget.Space
+        android:id="@+id/space"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <TextView
+        android:id="@+id/hotTip"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/space"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        android:background="@drawable/shape_radio_tools_type_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hot"
+        android:textSize="8sp"
+        android:textColor="#FFF"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#fff02846"
+        android:textSize="12sp"
+        android:background="@drawable/shape_act_bg_pink"
+        app:layout_constraintTop_toBottomOf="@id/iv_category"
+        android:text="￥18.8" />
+</androidx.constraintlayout.widget.ConstraintLayout>

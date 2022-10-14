@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/selectServerItem"
+    android:layout_width="match_parent"
+    android:layout_height="55dp">
+
+    <RelativeLayout
+        android:id="@+id/selectServerItemRel"
+        android:layout_width="335dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_sub_order_server_unchecked"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/selectServerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:hint=""
+            android:textColor="#444444"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/selectServerImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_anonymous_unselected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectServerItemRemark"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_sub_order_time_ll"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="非以上服务项目，可在此处填写"
+            android:textColorHint="#9596A4"
+            android:background="@null"
+            android:textSize="12sp"
+            android:maxLength="50"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/ic_edit_tip"
+            android:layout_marginLeft="27dp">
+
+        </EditText>
+    </RelativeLayout>
+</RelativeLayout>

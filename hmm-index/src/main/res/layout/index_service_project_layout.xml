@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_city_white"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="服务体验"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:drawableLeft="@drawable/icon_index_service_label"
+        android:drawablePadding="2dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="1.5dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="1.5dp"
+        android:text="畅享品质生活"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        app:shape_endColor="#FF744D"
+        app:shape_radius="8dp"
+        app:shape_startColor="#FF9437"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <LinearLayout
+        android:id="@+id/serviceList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <!--        <include layout="@layout/index_recommend_goods_layout"/>-->
+        <!--        <include layout="@layout/index_recommend_goods_layout"/>-->
+        <!--        <include layout="@layout/index_recommend_goods_layout"/>-->
+        <!--        <include layout="@layout/index_recommend_goods_layout"/>-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

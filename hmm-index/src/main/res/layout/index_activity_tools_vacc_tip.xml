@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_marginTop="@dimen/status_2020"
+        app:bg_color="@color/colorTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit="true"
+        app:submit="保存"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="疫苗提醒" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f9"
+        android:orientation="vertical"
+        >
+        <com.healthy.library.widget.CommonInsertSection
+            android:layout_width="match_parent"
+            android:id="@+id/tipCheckLL"
+            android:background="#FFF"
+            android:layout_marginTop="15dp"
+            android:layout_height="@dimen/sectionHeight"
+            app:right_end2="@layout/index_activity_tools_acc_right"
+            app:section_divider_full_width="false"
+            app:section_mode="txt"
+            app:show_divider="false"
+            app:title="开启提醒"
+            app:title_color="#ff444444"
+            app:title_drawable_padding="0dp" />
+        <com.healthy.library.widget.SectionView
+            android:id="@+id/section_tip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorWhite"
+            app:section_divider_full_width="false"
+            app:section_show_divider="false"
+            app:section_title="提醒时间"
+            app:section_des="不提醒"/>
+    </LinearLayout>
+
+
+</LinearLayout>

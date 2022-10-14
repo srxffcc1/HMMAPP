@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="question_title_min_length">5</integer>
+    <integer name="question_title_max_length">40</integer>
+    <integer name="question_content_min_length">5</integer>
+    <integer name="question_content_max_length">500</integer>
+    <integer name="reply_min_length">5</integer>
+    <integer name="reply_max_length">500</integer>
+</resources>

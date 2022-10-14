@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    tools:ignore="ResourceName">
+
+    <View
+        android:id="@+id/indicator"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:background="@drawable/shape_circular_red"
+        app:layout_constraintBottom_toBottomOf="@+id/depositName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/depositName" />
+
+    <TextView
+        android:id="@+id/depositName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="服务"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/indicator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/depositNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-2"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/depositName"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/depositShop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:text="爱婴金摇篮金山店"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/depositName"
+        app:layout_constraintRight_toLeftOf="@+id/depositTime"
+        app:layout_constraintTop_toBottomOf="@id/depositName" />
+
+    <TextView
+        android:id="@+id/depositTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020/12/05 12:23:45"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/depositShop"
+        app:layout_constraintLeft_toRightOf="@+id/depositShop"
+        app:layout_constraintRight_toRightOf="@+id/depositNum" />
+</androidx.constraintlayout.widget.ConstraintLayout>

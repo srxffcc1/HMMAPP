@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/shape_mall_goods_bg"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/mall_goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="169dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_1_1_default2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tagText"
+            android:visibility="gone"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_mall_goods_ol_tagbgbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="新品"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/timeLL"
+            android:visibility="gone"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/act_city_bar"
+            app:layout_constraintTop_toBottomOf="@+id/mall_goods_img"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_height="0dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/act_city_kan"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:paddingLeft="6dp"
+                android:paddingRight="5dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <LinearLayout
+                    android:id="@+id/goodsTimeLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/kickHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_disact_white_small"
+                        tools:text="23"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#9C5B17"
+                        android:textSize="11sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"/>
+                    <TextView
+                        android:id="@+id/kickMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/shape_disact_white_small"
+                        tools:text="23"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#9C5B17"
+                        android:textSize="11sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="#FFFFFF"/>
+                    <TextView
+                        android:id="@+id/kickSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:background="@drawable/shape_disact_white_small"
+                        tools:text="23"
+                        android:textColor="#9C5B17"
+                        android:textSize="11sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mall_goods_img_under"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/timeLL">
+
+            <TextView
+                android:id="@+id/mall_goods_context"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="婴儿纯棉纱布浴巾宝宝盖毯儿童全棉洗澡巾新生儿抱毯毛巾"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:paddingRight="5dp"
+                android:id="@+id/mall_goods_kick_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可砍至"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toLeftOf="@id/mall_goods_context"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                android:textColor="#ffff1919"
+                android:textSize="10sp"
+                />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/mall_goods_moneyflag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#FA3C5A"
+                android:fontFamily="@font/din_bold"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="@+id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_kick_flag"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"/>
+
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="18.8"
+                android:fontFamily="@font/din_bold"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:textColor="#FA3C5A"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_context"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_moneyflag" />
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue_org"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:fontFamily="@font/din_bold"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toRightOf="@+id/mall_goods_moneyvalue"
+                tools:text="¥208"
+                android:textColor="#ff868799"
+                android:textSize="12sp"
+                />
+            <com.example.lib_ShapeView.view.ShapeView
+                android:id="@+id/sv_line"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:shape="line"
+                app:shape_dashGap="5dp"
+                app:shape_dashWidth="5dp"
+                app:shape_strokeColor="#F6F7F9"
+                app:shape_strokeWidth="1dp" />
+            <TextView
+                android:id="@+id/mall_goods_store"
+                android:layout_width="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toLeftOf="@id/passbasket"
+                android:layout_marginRight="5dp"
+                app:layout_constraintTop_toBottomOf="@id/sv_line"
+                android:layout_marginTop="7dp"
+                android:text="臻幼堂小儿推拿"
+                android:textColor="#ffa27e62"
+                android:textSize="12sp"
+                />
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/passbasket"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="gone"
+                android:src="@drawable/basket_red"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_store"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_store"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

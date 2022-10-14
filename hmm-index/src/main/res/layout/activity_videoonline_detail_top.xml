@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="ResourceName">
+
+    <LinearLayout
+        android:id="@+id/topVideoLL"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+                        <include layout="@layout/index_mon_onlinevideo_item_no_no"></include>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/topVideoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:textStyle="bold"
+        android:text="懂点心理学孩子更听话"
+        android:textColor="#ff222222"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/topVideoSecTitle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:text="资深职业规划师、志愿心理规划师、中科院心理所心理学硕士、国家二级心理咨询师"
+        android:textColor="#ff666666"
+        android:textSize="13sp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:layout_marginTop="13dp"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/videoMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="¥29.9"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:id="@+id/videoMoneyTip"
+            app:layout_constraintLeft_toRightOf="@id/videoMoney"
+            app:layout_constraintTop_toTopOf="@id/videoMoney"
+            app:layout_constraintBottom_toBottomOf="@id/videoMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="限时免费"
+            android:layout_marginLeft="7dp"
+            android:textStyle="bold"
+            android:textColor="#ff44d7b6"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:id="@+id/topvideoSee"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/videoMoney"
+            app:layout_constraintBottom_toBottomOf="@id/videoMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6703人已看"
+            android:textColor="#ff444444"
+            android:textSize="10sp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F5F5F9"/>
+    <TextView
+        android:padding="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="介绍"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        />
+    <WebView
+        android:id="@+id/videoCotent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout">
+
+    </WebView>
+
+</LinearLayout>
+

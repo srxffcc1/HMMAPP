@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ServiceRecordActivity"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="调理记录"/>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/iv_record_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/mine_bg_service_record"
+                app:layout_constraintDimensionRatio="662:230"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="@id/iv_record_bg"
+                app:layout_constraintEnd_toEndOf="@id/iv_record_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_record_bg"
+                tools:src="@drawable/mine_logo_tm"/>
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#ffffffff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@id/view_divider"
+                app:layout_constraintEnd_toStartOf="@id/iv_logo"
+                app:layout_constraintStart_toStartOf="@id/iv_record_bg"
+                app:layout_constraintTop_toTopOf="@id/iv_record_bg"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="祛妊娠纹 美肤紧肤"/>
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="28dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toTopOf="@id/tv_count"
+                app:layout_constraintStart_toStartOf="@id/tv_service_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_name"/>
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_record_bg"
+                app:layout_constraintStart_toStartOf="@id/tv_service_name"
+                app:layout_constraintTop_toBottomOf="@id/view_divider"
+                tools:text="共12次"/>
+
+            <TextView
+                android:id="@+id/tv_no_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="@string/mine_no_service_record"
+                android:textColor="#ff9596a4"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_record_bg"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_record"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_record_bg"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

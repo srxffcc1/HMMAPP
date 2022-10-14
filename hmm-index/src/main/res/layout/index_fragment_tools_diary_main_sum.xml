@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity">
+    <LinearLayout
+        android:id="@+id/topLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="13dp"
+        android:background="#FFF5F5"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radio1"
+                android:textSize="12sp"
+                android:checked="true"
+                android:fontFamily="@font/din_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_tools_radio_backg"
+                android:button="@null"
+                android:textColor="@drawable/selector_tools_radio_textcolor"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:layout_margin="5dp"
+                android:paddingBottom="5dp"
+                android:text="今天"
+                />
+            <RadioButton
+                android:id="@+id/radio2"
+                android:textSize="12sp"
+                android:fontFamily="@font/din_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_tools_radio_backg"
+                android:button="@null"
+                android:textColor="@drawable/selector_tools_radio_textcolor"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:layout_margin="5dp"
+                android:paddingBottom="5dp"
+                android:text="昨天"
+                />
+            <RadioButton
+                android:id="@+id/radio3"
+                android:textSize="12sp"
+                android:fontFamily="@font/din_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_tools_radio_backg"
+                android:button="@null"
+                android:textColor="@drawable/selector_tools_radio_textcolor"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:layout_margin="5dp"
+                android:paddingBottom="5dp"
+                android:text="近7天"
+                />
+            <RadioButton
+                android:id="@+id/radio4"
+                android:textSize="12sp"
+                android:fontFamily="@font/din_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_tools_radio_backg"
+                android:button="@null"
+                android:textColor="@drawable/selector_tools_radio_textcolor"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:layout_margin="5dp"
+                android:paddingBottom="5dp"
+                android:text="全部"
+                />
+            <RadioButton
+                android:id="@+id/radio5"
+                android:textSize="12sp"
+                android:fontFamily="@font/din_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_tools_radio_backg"
+                android:button="@null"
+                android:textColor="@drawable/selector_tools_radio_textcolor"
+                android:gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="5dp"
+                android:layout_margin="5dp"
+                android:paddingBottom="5dp"
+                android:text="选择日期"
+                />
+        </RadioGroup>
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/selectHandTime"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="2020/02/28-2020/03/31"
+            android:textColor="#ff222222"
+            android:textSize="14sp"
+            app:drawable="@drawable/tools_time_pink"
+            android:drawablePadding="6dp"
+            app:drawableWidth="19dp"
+            app:drawableHeight="15dp"
+            />
+    </LinearLayout>
+
+
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLL"
+        app:status_init="content">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </com.healthy.library.widget.StatusLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

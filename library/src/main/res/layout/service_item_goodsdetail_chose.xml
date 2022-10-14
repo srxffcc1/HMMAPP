@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_mall_goods_ol_vid_float"
+    tools:ignore="Orientation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recommandLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recommandLLTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/basketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:text="精选服务"
+                android:textColor="#ff222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:drawable="@drawable/goodsorderstoren"
+                app:drawableHeight="20dp"
+                app:drawableWidth="20dp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dp"
+                android:text="更多"
+                android:textColor="#ff868799"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/basketTitle"
+                app:layout_constraintRight_toLeftOf="@id/basketMore"
+                app:layout_constraintTop_toTopOf="@id/basketTitle" />
+
+            <ImageView
+                android:id="@+id/basketMore"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_more_pin"
+                app:layout_constraintBottom_toBottomOf="@id/basketTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/basketTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/recommandLLTop">
+
+            <com.healthy.library.widget.ObservableScrollView
+                android:id="@+id/recycler_fun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/functionGrid"
+                    android:paddingLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+            </com.healthy.library.widget.ObservableScrollView>
+
+            <ImageView
+                android:id="@+id/recycler_scroller"
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/main_scroller_l"></ImageView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

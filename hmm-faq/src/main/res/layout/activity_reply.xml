@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReplyActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="我来回答">
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"
+            android:text="@string/faq_release_reply"
+            android:textColor="#ffff6266"
+            android:textSize="16sp"/>
+    </com.healthy.library.widget.TopBar>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:status_init="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_question_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="#ff000000"
+                android:textSize="17sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="孩子六岁了，感冒发烧咳嗽老不好，是肺热还是肺寒？雾化治疗有用吗？"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="27dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintTop_toBottomOf="@id/tv_question_title"/>
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/img_avatar_default"
+                app:is_circle="true"
+                app:layout_constraintStart_toStartOf="@id/tv_question_title"
+                app:layout_constraintTop_toBottomOf="@id/divider"/>
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:textColor="#ff222222"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                app:layout_constraintTop_toTopOf="@id/iv_avatar"
+                tools:text="喵大脸猫"/>
+
+            <ImageView
+                android:id="@+id/iv_reply_type"
+                android:layout_width="75dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_reply_type"
+                app:layout_constraintBottom_toBottomOf="@id/tv_nickname"
+                app:layout_constraintDimensionRatio="144:67"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_nickname"/>
+
+            <EditText
+                android:id="@+id/et_reply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="@string/faq_hint_reply"
+                android:lines="5"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_reply_type"
+                app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/tv_nickname"
+                tools:ignore="Autofill,TextFields"/>
+
+            <com.health.faq.widget.VoiceLayout
+                android:id="@+id/voice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/iv_reply_type"
+                app:layout_constraintStart_toStartOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar"/>
+
+            <com.healthy.library.widget.DrawableTextView
+                android:id="@+id/tv_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:drawableTop="@drawable/faq_ic_route_recording"
+                android:drawablePadding="10dp"
+                android:text="@string/faq_route_voice"
+                android:textColor="#ff666666"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:drawable_size="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+                tools:visibility="visible"/>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="et_reply,voice"/>
+
+            <CheckBox
+                android:id="@+id/cb_anonymous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:button="@drawable/selector_anonymous"
+                android:gravity="center"
+                android:text="@string/faq_release_reply_anonymous"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                app:layout_goneMarginTop="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

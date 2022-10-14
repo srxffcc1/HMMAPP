@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+        }
+        product{
+        }
+        debug {
+        }
+        check{
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    // noinspection GradleCompatible
+    compile 'com.google.android.material:material:1.0.0'
+    compile 'com.github.getActivity:XToast:8.5'
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'androidx.legacy:legacy-support-v4:1.0.0'
+    testCompile 'junit:junit:4.12'
+}

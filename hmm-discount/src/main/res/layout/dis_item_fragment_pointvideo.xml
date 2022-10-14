@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="#000"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:id="@+id/ponit2videoPLL"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/shape_act_k_w_12"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/pointPLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:background="@drawable/shape_act_s_l"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="积分兑换"
+                    android:textStyle="bold"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/pointTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/shape_act_o_r"
+                    android:drawablePadding="2dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="2dp"
+                    android:text="积分免费换"
+
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp"
+                    app:drawable="@drawable/icon_point_left"
+                    app:drawableHeight="14dp"
+                    app:drawableWidth="14dp" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/pointGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <!--                                                                                            <include layout="@layout/dis_item_other_h" android:layout_columnWeight="1"-->
+                <!--                                                                                                tools:ignore="IncludeLayoutParam" />-->
+                <!--                                                                                            <include layout="@layout/dis_item_other_h" android:layout_columnWeight="1"-->
+                <!--                                                                                                tools:ignore="IncludeLayoutParam" />-->
+
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/pointHeadIconLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--                                                <include layout="@layout/dis_item_head_h"/>-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pointMenber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff222222"
+                    android:textSize="10sp"
+                    tools:text="275人已兑换" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:id="@+id/videoPLL"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_act_s_r"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="憨妈直播"
+                    android:textStyle="bold"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/videoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/shape_act_o_l"
+                    android:drawablePadding="2dp"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="2dp"
+                    android:text="直击底价"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp"
+                    app:drawable="@drawable/icon_video_right"
+                    app:drawableHeight="8dp"
+                    app:drawableWidth="8dp" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/videoGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <!--                                                                                                <include layout="@layout/dis_item_other_h" android:layout_columnWeight="1"-->
+                <!--                                                                                                    tools:ignore="IncludeLayoutParam" />-->
+                <!--                                            <include layout="@layout/dis_item_other_h" android:layout_columnWeight="1"-->
+                <!--                                                tools:ignore="IncludeLayoutParam" />-->
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/videoHeadIconLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--                                                <include layout="@layout/dis_item_head_h"/>-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/videoMenber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff222222"
+                    android:textSize="10sp"
+                    tools:text="2865人已预约" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

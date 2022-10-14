@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_couponuse_list"
+    tools:context=".activity.BranchShopListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:tabTextAppearance="@style/mall_TabLayoutTextStyle"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="#222222"
+            app:tabIndicatorColor="#FF6177"
+            app:tabTextColor="#666666"/>
+        <ImageView
+            android:id="@+id/img_back"
+            style="@style/RippleClick"
+            android:layout_marginLeft="15dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_close"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagers"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fff5f5f9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="#F5F5F9"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/submitLL"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/selector_btn"
+            android:layout_height="50dp"
+            android:text="确定"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

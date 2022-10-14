@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDivider"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <View
+        android:id="@+id/view_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_2020"
+        android:background="#FF334B"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/seachTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FF334B"
+        app:layout_constraintTop_toBottomOf="@id/view_header_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            style="@style/RippleClick"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:padding="9dp"
+            android:src="@mipmap/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/topBar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的核销码"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:status_init="content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F9"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/order_goods_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:orientation="vertical">
+
+                            <com.healthy.library.widget.CornerImageView
+                                android:id="@+id/goodsImg"
+                                android:layout_width="70dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_1_1_default"
+                                app:corner_radius="3dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/goodsTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7dp"
+                                android:layout_marginRight="12dp"
+                                android:text="Babycare 吸管杯学饮杯宝宝水杯重吸管杯学饮杯宝宝水杯…"
+                                android:textColor="#ff222222"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toRightOf="@id/goodsImg"
+                                app:layout_constraintRight_toLeftOf="@id/goodsMoney"
+                                app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+                            <TextView
+                                android:id="@+id/goodsMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="¥152.69"
+                                android:textColor="#ff222222"
+                                android:textSize="14sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+                            <TextView
+                                android:id="@+id/goodsSpace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="17dp"
+                                android:text=""
+                                android:textColor="#ff868799"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+                                app:layout_constraintTop_toBottomOf="@id/goodsTitle" />
+
+                            <TextView
+                                android:id="@+id/goodsCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x 1"
+                                android:textColor="#ff222222"
+                                android:textSize="12sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/goodsMoney" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@null">
+
+                    </View>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/order_zxing_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#FFFFFF"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/relativeLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/zxing_title"
+                                    android:layout_width="55dp"
+                                    android:layout_height="22dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="bottom"
+                                    android:background="@drawable/shape_zxing_title"
+                                    android:gravity="center"
+                                    android:text="核销码"
+                                    android:textColor="#ffffffff"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/zxing_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="bottom"
+                                    android:layout_toRightOf="@id/zxing_title"
+                                    android:paddingLeft="5dp"
+                                    android:text="2134 4516"
+                                    android:textColor="#ffff6266"
+                                    android:textSize="23sp" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_zxingImg"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_marginTop="15dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="182dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="15dp"
+                                android:text="向商家出示以上核销码即可消费"
+                                android:textColor="#ff666666"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/iv_zxingImg" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </com.healthy.library.widget.StatusLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

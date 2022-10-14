@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item
+        android:gravity="center" android:height="118dp" android:width="244dp">
+        <bitmap
+            android:src="@drawable/app_ic_welcome_text" />
+    </item>
+
+
+</layer-list>

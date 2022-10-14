@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_new_order_bg">
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/tv_item_bottom_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="我要报名"
+            android:textColor="@color/colorWhite"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_endColor="#FF7676"
+            app:shape_startColor="#FA3C5A"
+            app:shape_topLeftRadius="6dp"
+            app:shape_topRightRadius="6dp" />
+
+        <com.healthy.library.widget.NewInputView
+            android:id="@+id/mine_enlist_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_bottom_title"
+            app:newInput_isEdit="true"
+            app:newInput_isNot_bg="true"
+            app:newInput_right_hint="请输入姓名"
+            app:newInput_title="  姓名" />
+
+        <TextView
+            android:id="@+id/mine_enlist_select_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="  性别"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/mine_enlist_edit_name"
+            app:layout_constraintTop_toBottomOf="@id/mine_enlist_edit_name" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/mine_enlist_select_sex"
+            app:layout_constraintLeft_toRightOf="@id/mine_enlist_select_sex"
+            app:layout_constraintTop_toTopOf="@id/mine_enlist_select_sex">
+
+            <RadioButton
+                android:id="@+id/sex_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_checkbox_checke"
+                android:checked="true"
+                android:paddingLeft="8dp"
+                android:text="男"
+                android:textColor="@color/mine_selector_checkbox_text_color" />
+
+            <RadioButton
+                android:id="@+id/sex_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:button="@drawable/selector_checkbox_checke"
+                android:paddingLeft="8dp"
+                android:text="女"
+                android:textColor="@color/mine_selector_checkbox_text_color" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#F0F0F0"
+            app:layout_constraintLeft_toLeftOf="@id/mine_enlist_edit_name"
+            app:layout_constraintRight_toRightOf="@id/mine_enlist_edit_name"
+            app:layout_constraintTop_toBottomOf="@id/mine_enlist_select_sex" />
+
+
+        <com.healthy.library.widget.NewInputView
+            android:id="@+id/mine_enlist_edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            app:newInput_isEdit="true"
+            app:newInput_isNot_bg="true"
+            app:newInput_right_hint="请输入联系方式"
+            app:newInput_title="  联系方式" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_mine_enlist_ChooseStatus"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            app:layout_constraintLeft_toLeftOf="@id/mine_enlist_edit_phone"
+            app:layout_constraintRight_toRightOf="@id/mine_enlist_edit_phone"
+            app:layout_constraintTop_toBottomOf="@id/mine_enlist_edit_phone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mine_enlist_edit_ChooseStatus_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  所属阶段"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/chooseStatus_right"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/ic_solid_triangle_down_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/chooseStatus_right_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/mine_enlist_edit_ChooseStatus_title"
+                app:layout_constraintRight_toLeftOf="@id/chooseStatus_right"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@android:id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

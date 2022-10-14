@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f9">
+
+    <com.scwang.smart.refresh.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_public_coupon_top_bg">
+
+            <View
+                android:id="@+id/view_header_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/status_2020"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/view_header_bg">
+
+                <ImageView
+                    style="@style/RippleClick"
+                    android:id="@+id/img_back"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:padding="9dp"
+                    android:src="@mipmap/back" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layout_bottom"
+            android:layout_below="@id/topView"
+            app:status_init="content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@drawable/order_top_bg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/status_2020"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_appointment_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_appointment_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp" />
+
+                        <!-- 爱婴金药蓝天 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/shape_new_order_bg"
+                            android:padding="10dp">
+
+                            <com.healthy.library.widget.ImageTextView
+                                android:id="@+id/storeName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="6dp"
+                                android:gravity="center_vertical"
+                                android:textColor="#ff222222"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:drawable="@drawable/goodsorderstore"
+                                app:drawableHeight="21dp"
+                                app:drawableWidth="21dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="爱婴金摇篮天街店" />
+
+                            <TextView
+                                android:id="@+id/timeTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="预约时间"
+                                android:textColor="#ff666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="@id/storeName"
+                                app:layout_constraintTop_toBottomOf="@id/storeName" />
+
+                            <TextView
+                                android:id="@+id/selectTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:textColor="#ff333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@id/timeTitle"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="3月2日 17:00-19:00" />
+
+                            <TextView
+                                android:id="@+id/technicianTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="预约技师"
+                                android:textColor="#ff666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="@id/timeTitle"
+                                app:layout_constraintTop_toBottomOf="@id/timeTitle" />
+
+                            <TextView
+                                android:id="@+id/selectTechnician"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:textColor="#ff333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/technicianTitle"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="祈聪明" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                app:layout_constraintTop_toBottomOf="@+id/technicianTitle" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_new_order_bg"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/goodsImg"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/img_1_1_default"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/goodsTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="26dp"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:textColor="#ff222222"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toRightOf="@id/goodsImg"
+                                app:layout_constraintRight_toLeftOf="@id/goodsPrice"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="产后月子期月嫂住家全天陪护全程护理宝宝健康成长" />
+
+                            <TextView
+                                android:id="@+id/goodsPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_222222"
+                                android:textSize="14sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="¥39.8" />
+
+                            <TextView
+                                android:id="@+id/goodsSpace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="6dp"
+                                android:textColor="#ff868799"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+                                app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+                                tools:text="月卡" />
+
+                            <TextView
+                                android:id="@+id/goodsTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="时长60分钟"
+                                android:textColor="#ff868799"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!-- 预约人员信息 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_new_order_bg"
+                            android:padding="10dp">
+
+                            <com.healthy.library.widget.ImageTextView
+                                android:id="@+id/appointment"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="6dp"
+                                android:text="预约人信息"
+                                android:textColor="#ff222222"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:drawable="@drawable/appointment_icon"
+                                app:drawableHeight="21dp"
+                                app:drawableWidth="21dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/appointmentNameTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:text="姓名"
+                                android:textColor="#ff666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/appointment" />
+
+                            <TextView
+                                android:id="@+id/appointmentName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ff333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@id/appointmentNameTitle"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="丁聪聪" />
+
+                            <TextView
+                                android:id="@+id/appointmentPhoneTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="手机号"
+                                android:textColor="#ff666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/appointmentNameTitle" />
+
+                            <TextView
+                                android:id="@+id/appointmentPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ff333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/appointmentPhoneTitle"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="18951231243" />
+
+                            <!-- 预约人信息 备注内容 -->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/remarkView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/shape_appointment_edit_bg"
+                                android:paddingStart="8dp"
+                                android:paddingTop="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="14dp"
+                                app:layout_constraintTop_toBottomOf="@+id/appointmentPhoneTitle">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/remark"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingRight="5dp"
+                                        android:text="备注"
+                                        android:textColor="@color/color_666666"
+                                        android:textSize="12sp"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/remarkBody"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:textColor="@color/color_333333"
+                                        android:textSize="12sp"
+                                        app:layout_constraintLeft_toRightOf="@id/remark"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!-- 金额信息 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/result_payInfo_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_mall_goods_ol_vid_counter_type"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_allPrice_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="合计金额"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_allPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_222222"
+                                android:textSize="14sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="￥39.8" />
+
+                            <TextView
+                                android:id="@+id/tv_NetWork_PayType_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="支付方式"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_allPrice_title" />
+
+                            <TextView
+                                android:id="@+id/tv_NetWork_PayType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_222222"
+                                android:textSize="14sp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/tv_NetWork_PayType_title"
+                                tools:text="支付宝" />
+
+                            <TextView
+                                android:id="@+id/tv_PayType_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="支付方式"
+                                android:visibility="gone"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_NetWork_PayType_title" />
+
+                            <TextView
+                                android:id="@+id/tv_PayType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_222222"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/tv_PayType_title"
+                                tools:text="到店付款" />
+
+                            <TextView
+                                android:id="@+id/tv_pay_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/color_222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_PayType"
+                                tools:text="￥39.8" />
+
+                            <TextView
+                                android:id="@+id/tv_pay_price_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="实付款"
+                                android:textColor="@color/color_222222"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_pay_price"
+                                app:layout_constraintRight_toLeftOf="@id/tv_pay_price" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!-- 预约时间 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_new_order_bg"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_appointment_no_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="预约编号"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_appointmentNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_appointment_no_title"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="1103846551" />
+
+                            <TextView
+                                android:id="@+id/tv_appointment_SubmitTime_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="提交时间"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_appointment_no_title" />
+
+                            <TextView
+                                android:id="@+id/tv_appointment_SubmitTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tv_appointment_SubmitTime_title"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="18951231243" />
+
+                            <TextView
+                                android:id="@+id/tv_appointment_PayTime_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="付款时间"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_appointment_SubmitTime_title" />
+
+                            <TextView
+                                android:id="@+id/tv_appointment_PayTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/tv_appointment_PayTime_title"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:text="2021.09.17:54:09" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.healthy.library.widget.StatusLayout>
+
+        <!-- 底部按钮布局 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dialogutil_line_dd"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wheel_cancel_appointment"
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/index_shape_pregnancy_probability"
+                android:gravity="center"
+                android:text="取消预约"
+                android:textColor="@color/color_444444"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smart.refresh.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>

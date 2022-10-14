@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="#000"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/act_big_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_public_coupon_top_bg"
+        app:layout_constraintDimensionRatio="750:1100"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <Space
+        android:id="@+id/disSpace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/act_big_bg" />
+
+    <LinearLayout
+        android:id="@+id/dis_funLLT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/disSpace">
+
+        <com.youth.banner.Banner
+            android:id="@+id/act_banner_no"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_marginRight="7dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/dis_funLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/shape_chose"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            tools:minHeight="196dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/shape_dis_chose_top"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:text="正品保障 · 门店同售 · 支持配送 · 售后无忧"
+                android:textColor="#ff7b3a44"
+                android:textSize="10sp" />
+
+            <com.healthy.library.widget.ObservableScrollView
+                android:id="@+id/recycler_fun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <GridLayout
+                    android:id="@+id/functionGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2">
+                    <!--                                                <include layout="@layout/dis_function_menu" android:layout_columnWeight="1"-->
+                    <!--                                                    tools:ignore="IncludeLayoutParam" />-->
+                </GridLayout>
+            </com.healthy.library.widget.ObservableScrollView>
+
+            <ImageView
+                android:id="@+id/recycler_scroller"
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/main_scroller_l"></ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_2021"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/seachTipTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="猜你想搜"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/seachTipLL"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--                                                <include layout="@layout/dis_seach_tip" />-->
+
+                <!--                                                <include layout="@layout/dis_seach_tip" />-->
+
+                <!--                                                <include layout="@layout/dis_seach_tip" />-->
+
+                <!--                                                <include layout="@layout/dis_seach_tip" />-->
+
+                <!--                                                <include layout="@layout/dis_seach_tip" />-->
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/kk_ll"
+        android:background="@drawable/shape_disact_kk_white"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kk_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="40dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/kkMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="铁们~谢谢你帮我砍掉18.37元，你也可以参加哦~"
+            android:textColor="#ff444444"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/kkRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_disact_kk_red"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="我也要参加"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/kkYellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="10dp"
+
+            android:background="@drawable/shape_disact_kk_yellow"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="继续砍价"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/kk_icon"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:is_circle="true"
+        android:src="@drawable/img_avatar_default"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/kick_float_ok">
+
+    </ImageView>
+
+</RelativeLayout>

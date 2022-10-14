@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_mall_goods_ol_vid_counter_type"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginTop="10dp"
+    tools:ignore="MissingDefaultResource,Orientation">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/discountLineAllTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_marginLeft="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="促销列表"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:id="@+id/resetAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="默认最优折扣"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/discountLineAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/discountLineAllTop">
+<!--        <include layout="@layout/service_item_goodsbasket_discount_line"/>-->
+<!--        <include layout="@layout/service_item_goodsbasket_discount_line"/>-->
+<!--        <include layout="@layout/service_item_goodsbasket_discount_line"/>-->
+<!--        <include layout="@layout/service_item_goodsbasket_discount_line"/>-->
+<!--        <include layout="@layout/service_item_goodsbasket_discount_line"/>-->
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">商城</string>
+
+    <string name="default_location">定位中</string>
+    <string name="location_pre">当前定位城市：</string>
+    <string name="relocation">重新定位</string>
+
+    <string name="mall_more">更多</string>
+
+    <string name="service_detail_collapse">收起</string>
+    <string name="service_detail_expand">详细</string>
+
+    <!--高德和百度地图包名-->
+    <string name="package_name_gaodemap">com.autonavi.minimap</string>
+    <string name="package_name_baidumap">com.baidu.BaiduMap</string>
+
+    <!--收银台-->
+    <string name="checkout_title">收银台</string>
+    <string name="checkout_amounts_payable">应付总额</string>
+    <string name="checkout_pay_way">支付方式</string>
+    <string name="checkout_pay_in_balance">账户余额支付</string>
+    <string name="checkout_pay_in_wx">微信支付</string>
+    <string name="checkout_pay_in_zfb">支付宝</string>
+
+
+    <string name="mall_share_wx">1</string>
+    <string name="mall_share_circle">2</string>
+    <string name="mall_share_qq">3</string>
+    <string name="mall_share_qzone">4</string>
+
+
+    <!--通过地图选择地址-->
+    <string name="choose_map_title">选择地址</string>
+    <string name="choose_map_cancel">取消</string>
+    <string name="choose_map_input_hint">请输入您的地址</string>
+    <string name="mall_goods_detail_shop_pre">商家店铺</string>
+    <string name="mall_goods_detail_shop_see">进店看看</string>
+    <string name="mall_goods_detail_order">立即下单</string>
+    <string name="mall_goods_detail_origin">门市价</string>
+    <string name="mall_submit_order">确认预约</string>
+    <string name="mall_service_address_home">上门</string>
+    <string name="mall_service_address_shop">到店</string>
+    <string name="mall_comment">客户评价</string>
+    <string name="mall_all_comment">全部评价</string>
+    <string name="mall_server_detail">服务详情</string>
+    <string name="mall_store_comp_score">综合评分</string>
+    <string name="mall_store_business_time">营业时间</string>
+    <string name="mall_valuable_server">可约服务</string>
+    <string name="mall_store_comment">客户评价</string>
+    <string name="mall_store_all_comment">全部评价</string>
+    <string name="mall_comment_avg_score_title">综合评分</string>
+    <string name="mall_nonactivated">抱歉，该城市暂未入驻，敬请期待！</string>
+    <string name="mall_choose_city">切换城市</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.faq">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application>
+        <activity android:name=".activity.ExpertQuestionDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.AskExpertActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ExpertHomepageActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.RewardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.PayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.QuestionDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.QuestionsAndAnswersActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PayTranslucentActivity"
+            android:theme="@style/PayTranslucent" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ReplyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SoundRecordingActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.DetailedActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.FqaActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ExpertListActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AccountCenterActivity"
+            android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".activity.FaqIndexActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.FieldTypeListActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.FaqExportActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.MeetProfessorLeftActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.MeetProfessorRightActivity"  android:screenOrientation="portrait" />
+        <!--<activity android:name=".activity.MainActivity">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>

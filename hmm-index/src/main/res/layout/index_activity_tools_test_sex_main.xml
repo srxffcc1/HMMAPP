@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TipsActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit_image="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="生男生女" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/top_bar"
+            android:background="@drawable/tools_sex_main_bg"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:id="@+id/tools_bg_umg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/tools_sex_main_menu"
+                app:layout_constraintDimensionRatio="1080:2203"
+                app:layout_constraintRight_toRightOf="parent">
+
+            </ImageView>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/tools_bg_umg"
+                app:layout_constraintRight_toRightOf="@id/tools_bg_umg"
+                app:layout_constraintTop_toTopOf="@id/tools_bg_umg"
+                app:layout_constraintBottom_toBottomOf="@id/tools_bg_umg">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1130"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="912">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:id="@+id/qinggongsex"
+                            android:layout_width="0dp"
+                            android:onClick="passToQ"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:id="@+id/taidongsex"
+                            android:layout_width="0dp"
+                            android:onClick="passToT"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:id="@+id/duzisex"
+                            android:layout_width="0dp"
+                            android:onClick="passToD"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <LinearLayout
+                            android:id="@+id/bianhuasex"
+                            android:layout_width="0dp"
+                            android:onClick="passToB"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="161"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

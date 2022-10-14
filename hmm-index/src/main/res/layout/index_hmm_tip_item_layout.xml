@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/shape_chose"
+    android:elevation="2dp"
+    android:layout_marginVertical="4dp"
+    android:paddingBottom="16dp">
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:id="@+id/chat_bgz"
+        android:src="@drawable/chat_bg_zblue"/>
+
+    <ImageView
+        android:id="@+id/iv_discuss_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_index_hmm_tip_discuss"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        tools:text="孕期体重增长过快怎么办孕期体重增长过快怎么办"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_333333"
+        android:textSize="14dp"
+        app:layout_constraintRight_toLeftOf="@+id/iv_discuss_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.healthy.library.widget.ImageTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:drawablePadding="5dp"
+        android:text="去讨论"
+        android:textColor="@color/colorWhite"
+        android:textSize="12dp"
+        app:drawable="@drawable/icon_index_hmm_tip_arrow"
+        app:drawableHeight="16dp"
+        app:drawableWidth="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_discuss_bg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:position="3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_participateNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:alpha="0.6"
+        tools:text="178人参与"
+        android:textColor="@color/color_666666"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.example.lib_ShapeView.layout.ShapeFrameLayout
+        android:id="@+id/sfl_renew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_participateNum"
+        app:layout_constraintLeft_toRightOf="@id/tv_participateNum"
+        app:layout_constraintTop_toTopOf="@id/tv_participateNum"
+        app:shape_radius="8dp"
+        tools:shape_solidColor="#3374BCFF">
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/itv_renew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            tools:text="126条更新"
+            android:textColor="#1272FF"
+            android:textSize="10dp"
+            app:drawable="@drawable/icon_index_hmm_tip_renew"
+            app:drawableHeight="11dp"
+            app:drawableWidth="11dp" />
+
+    </com.example.lib_ShapeView.layout.ShapeFrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_posting_one_label"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_index_essences_posting"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_posting_one_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_posting_one_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iv_posting_one_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="11dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:text="很多人都知道，孕妇怀孕后，其体重会迅速增很多人都知道，孕妇怀孕后，其体重会迅速增"
+        android:textColor="@color/color_666666"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_posting_one_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_participateNum" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_posting_two_label"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_index_essences_posting"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_posting_two_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_posting_two_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iv_posting_two_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:text="很多人都知道，孕妇怀孕后，其体重会迅速增很多人都知道，孕妇怀孕后，其体重会迅速增"
+        android:textColor="@color/color_666666"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_posting_two_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_posting_one_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_posting_three_label"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_index_default_posting"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_posting_three_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_posting_three_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iv_posting_three_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        tools:text="很多人都知道，孕妇怀孕后，其体重会迅速增很多人都知道，孕妇怀孕后，其体重会迅速增"
+        android:textColor="@color/color_666666"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_posting_three_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_posting_two_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

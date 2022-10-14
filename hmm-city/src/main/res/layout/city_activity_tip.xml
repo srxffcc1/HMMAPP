@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back_img_src="@drawable/ic_back"
+        app:show_moss="false"
+        app:is_show_submit_image="true"
+        app:submit_img_src="@drawable/index_ic_share"
+        app:submit_color="#ffff6266"
+        tools:title="#宝宝成长" />
+
+    <LinearLayout
+        android:id="@+id/progressl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ProgressBar
+            android:id="@+id/progressz"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_weight="1"
+            android:max="1000"
+            android:progress="900"
+            android:progressDrawable="@drawable/progressz_bar" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="上传中"
+            android:textColor="#ff666666"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/app_bar"
+                    app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsingToolbarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:contentScrim="@android:color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:statusBarScrim="@android:color/transparent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <View
+                                android:id="@+id/divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:background="@drawable/ic_header_shadow"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:fontFamily="@font/din_medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:drawable="@drawable/ic_city_join"
+                                        android:drawablePadding="7dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:text="参与 "
+                                        app:drawableWidth="24dp"
+                                        app:drawableHeight="24dp"
+                                        android:textColor="#666666"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/joinCount"
+                                        android:fontFamily="@font/din_medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:text="3987"
+                                        android:textColor="#444444"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#D8D8D8"></TextView>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_height="match_parent">
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:fontFamily="@font/din_medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:drawable="@drawable/ic_city_join_post"
+                                        android:drawablePadding="7dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:text="帖子 "
+                                        app:drawableWidth="24dp"
+                                        app:drawableHeight="24dp"
+                                        android:textColor="#666666"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/joinPostCount"
+                                        android:fontFamily="@font/din_medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:textStyle="bold"
+                                        android:text="0"
+                                        android:textColor="#444444"
+                                        android:textSize="15sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:background="@color/colorDivider" />
+                            <LinearLayout
+                                android:id="@+id/tip_gridLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <GridLayout
+                                    android:id="@+id/tip_grid"
+                                    android:columnCount="1"
+                                    android:paddingTop="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"></GridLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:background="@color/colorDivider" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/st"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            app:tl_indicator_corner_radius="1.5dp"
+                            app:tl_indicator_height="4dp"
+                            app:tl_indicator_margin_top="10dp"
+                            app:tl_indicator_width="30dp"
+                            app:tl_indicator_color="#22DDDD"
+                            app:tl_textSelectColor="#222222"
+                            app:tl_textUnselectColor="#9596A4"
+                            app:tl_textBold="SELECT"
+                            app:tl_textsize="17sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                    <com.healthy.library.widget.StatusLayout
+                        android:id="@+id/layout_status"
+                        app:status_init="content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vp"
+                            android:background="#F6F7F9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </com.healthy.library.widget.StatusLayout>
+
+                </LinearLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/need_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/passToSendPost"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_send_post"
+                app:layout_constraintBottom_toTopOf="@id/passToTop"
+                app:layout_constraintLeft_toLeftOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="@id/passTmp" />
+
+            <ImageView
+                android:id="@+id/passToTop"
+                android:visibility="invisible"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="22dp"
+                android:src="@drawable/ic_to_top"
+                app:layout_constraintBottom_toTopOf="@id/passTmp"
+                app:layout_constraintRight_toRightOf="parent" />
+            <TextView
+                android:id="@+id/passTmp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.lib_ShapeView.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mine_scl_enlist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:shape_radius="6dp"
+    app:shape_solidColor="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/iv_enlist"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/img_1_1_default"
+            app:corner_radius="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_activity_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/color_222222"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            app:layout_constraintLeft_toRightOf="@id/iv_enlist"
+            app:layout_constraintTop_toTopOf="@id/iv_enlist"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="天使宝宝评选天使宝宝评选天使宝宝评选" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_enlist_Time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_enlist_time_view"
+            app:layout_constraintTop_toBottomOf="@id/item_activity_title"
+            tools:text="2021.06.02-2021.06.05" />
+
+        <View
+            android:id="@+id/item_enlist_time_view"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:background="@drawable/shape_mall_goods_ol_vid_basket_order"
+            app:layout_constraintLeft_toLeftOf="@id/item_activity_title"
+            app:layout_constraintTop_toTopOf="@id/item_enlist_Time"
+            app:layout_constraintBottom_toBottomOf="@id/item_enlist_Time"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_enlist_Address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@+id/item_enlist_address_view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_enlist_Time"
+            tools:text="苏州市高新区运河路乐嘉汇" />
+
+        <View
+            android:id="@+id/item_enlist_address_view"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:background="@drawable/shape_mall_goods_ol_vid_basket_order"
+            app:layout_constraintLeft_toLeftOf="@id/item_enlist_time_view"
+            app:layout_constraintTop_toTopOf="@id/item_enlist_Address"
+            app:layout_constraintBottom_toBottomOf="@id/item_enlist_Address"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_action"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="未支付"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_enlist"
+            app:layout_constraintLeft_toLeftOf="@id/item_enlist_address_view"
+            tools:background="@drawable/select_action_enabled" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="gone"
+            android:id="@+id/tv_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_fa3c5a"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_enlist"
+            app:layout_constraintLeft_toLeftOf="@id/item_enlist_address_view"
+            tools:text="￥66.66" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.example.lib_ShapeView.layout.ShapeConstraintLayout>

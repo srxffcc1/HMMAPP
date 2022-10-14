@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="ResourceName">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/live_my_prize_item_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.lib_ShapeView.view.ShapeView
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            app:shape_angle="180"
+            app:shape_bottomLeftRadius="0dp"
+            app:shape_bottomRightRadius="4dp"
+            app:shape_endColor="#FF6060"
+            app:shape_startColor="#FF3375"
+            app:shape_topLeftRadius="0dp"
+            app:shape_topRightRadius="4dp" />
+
+        <TextView
+            android:id="@+id/prizeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="一等奖"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/live_prize_icon" />
+
+        <TextView
+            android:id="@+id/prizeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="#fff44263"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/prizeContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:text="需助力50人，还差30人"
+            android:textColor="#ff323232"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prizeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/topView">
+
+        <!--        <include layout="@layout/item_live_prize_coupon_layout"></include>-->
+
+        <!--        <include layout="@layout/item_live_prize_goods_layout"></include>-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/prizeLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

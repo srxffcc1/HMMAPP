@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="32dp"
+    android:paddingBottom="35dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="#ff000000"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="孩子六岁了，每到秋季感冒咳嗽频发，能不能吃消炎药之类的抗生素？"/>
+
+    <TextView
+        android:id="@+id/tv_money_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/faq_prefix_paid"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/din_medium"
+        android:textColor="#ffff6266"
+        android:textSize="21sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_money_remind"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        tools:text="¥ 10"/>
+
+    <TextView
+        android:id="@+id/tv_pay_way_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/faq_pay_way"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_money_remind"/>
+
+    <View
+        android:id="@+id/divider_pay_way"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_way_remind"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_pay_wx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/faq_ic_pay_in_wx"
+        android:drawablePadding="14dp"
+        android:gravity="center"
+        android:text="@string/faq_pay_in_wx"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:drawable_size="25dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/divider_pay_way"/>
+
+    <View
+        android:id="@+id/divider_pay_wx"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_wx"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_pay_zfb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/faq_ic_pay_in_zfb"
+        android:drawablePadding="14dp"
+        android:gravity="center"
+        android:text="@string/faq_pay_in_zfb"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:drawable_size="25dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/divider_pay_wx"/>
+
+    <View
+        android:id="@+id/divider_pay_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_zfb"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="divider_pay_hdd,tv_pay_hdd,iv_hdd"/>
+
+    <ImageView
+        android:id="@+id/iv_wx"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/faq_selector_radio"
+        app:layout_constraintBottom_toBottomOf="@id/tv_pay_wx"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_pay_wx"/>
+
+    <ImageView
+        android:id="@+id/iv_zfb"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/faq_selector_radio"
+        app:layout_constraintBottom_toBottomOf="@id/tv_pay_zfb"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_pay_zfb"/>
+
+    <ImageView
+        android:id="@+id/iv_hdd"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/faq_selector_radio"
+        app:layout_constraintBottom_toBottomOf="@id/tv_pay_hdd"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_pay_hdd"/>
+
+
+    <TextView
+        android:id="@+id/tv_pay"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_release"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/faq_pay_now"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/divider_pay_hdd"/>
+
+    <View
+        android:id="@+id/divider_pay_hdd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorDividerDark"
+        app:layout_constraintTop_toBottomOf="@id/tv_pay_hdd"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_pay_hdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/faq_ic_pay_in_hdd"
+        android:drawablePadding="14dp"
+        android:gravity="center"
+        android:textColor="#ff444444"
+        android:textSize="15sp"
+        app:drawable_size="25dp"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/divider_pay_zfb"
+        tools:text="憨豆豆余额 21.18"/>
+
+    <View
+        android:id="@+id/view_wx_click"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/divider_pay_wx"
+        app:layout_constraintTop_toTopOf="@id/divider_pay_way"/>
+
+    <View
+        android:id="@+id/view_ali_click"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/divider_pay_zfb"
+        app:layout_constraintTop_toTopOf="@id/divider_pay_wx"/>
+
+    <View
+        android:id="@+id/view_hdd_click"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/divider_pay_hdd"
+        app:layout_constraintTop_toTopOf="@id/divider_pay_zfb"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

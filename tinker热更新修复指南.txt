@@ -1,0 +1,12 @@
+
+最好每次都把打补丁的缓存清了 生成补丁之后 解压生成的 mod-app-release-patch_signed_7zip 检查 YAPATCH 文件 和 assets下的 package_meta 文件里的版本号是不是一致
+
+先打基准包 修改 tinker-support.gradle里的 tinkerId 未基准包版本 例如 3.2.1.2-base
+然后输入gradlew assembleReleaseChannels 打渠道包
+实际上 就是打渠道包的时候 D:\APP-HMM-DEMO\HMM-C-Android\mod-app\build\bakApk\下生成一个基准包 
+然后下次需要对某次打出去的包进行补丁 修改 tinker-support.gradle 里的 baseApkDir 为需要作为基准包的那个文件夹 
+修改 tinkerId 例如 3.2.1.2-patch 
+然后输入 gradlew buildTinkerPatchRelease 
+就可以在 D:\APP-HMM-DEMO\HMM-C-Android\mod-app\build\outputs\patch\release 目录下见到补丁包了
+mod-app-release-patch_signed_7zip 用到的补丁包多半是这样子的 
+然后打开bugly 选择线上环境 热更新  上传这个包就行了 如果提示找不到匹配版本 可以选择先运行下 基准包（一般用户都会运行过了 此问题多见于测试热更新）

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="5dp"
+    tools:ignore="MissingDefaultResource">
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_category"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:corner_radius="6dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_tip"
+        app:layout_constraintBottom_toBottomOf="@id/iv_category"
+        app:layout_constraintRight_toRightOf="@id/iv_category"
+        android:background="@drawable/shape_tools_eat_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:text="本地特产"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        />
+
+    <com.healthy.library.widget.ImageTextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        app:position="3"
+        android:drawablePadding="5dp"
+        app:drawableHeight="14dp"
+        app:drawableWidth="14dp"
+        app:drawable="@drawable/tools_eat_tip1"
+        app:layout_constraintTop_toBottomOf="@id/iv_category"
+        tools:text="花菜" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

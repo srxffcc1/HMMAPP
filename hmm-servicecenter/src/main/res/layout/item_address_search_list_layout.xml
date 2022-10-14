@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/search_list_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="宜城小厨"
+            android:textColor="#ff222222"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/address_num"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="1.2km"
+            android:textColor="#ff222222"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/address_address"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/address_name"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="江苏省苏州市虎丘区高新区运河路77号乐嘉汇"
+            android:textColor="#ff868799"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

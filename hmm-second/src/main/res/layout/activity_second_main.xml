@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:status_init="content">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePreviewInEditMode="false">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F6F7F9"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:overScrollMode="never" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/seachTopLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:minHeight="@dimen/status_2022"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/seachTopBgLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_alignTop="@+id/seachTop"
+                            android:layout_alignBottom="@id/seachTop"
+                            android:alpha="0"
+                            android:background="#FFF"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/seachTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/status_2020">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="8dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="8dp">
+
+                                <com.healthy.library.widget.ImageTextView
+                                    android:id="@+id/dis_loc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="4dp"
+                                    android:maxEms="18"
+                                    android:singleLine="true"
+                                    android:text="同城母婴"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:drawable="@drawable/ic_back_withboder_white"
+                                    app:drawableHeight="22dp"
+                                    app:drawableWidth="22dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:id="@+id/serarchKeyWordLL"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_search_loc_country_grey"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="2dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingBottom="2dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toRightOf="@id/dis_loc"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/service_ic_search_vo" />
+
+                                    <TextView
+                                        android:id="@+id/serarchKeyWord"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_marginRight="7dp"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:gravity="center_vertical"
+                                        android:hint="搜索商家或服务"
+                                        android:imeOptions="actionSearch"
+                                        android:singleLine="true"
+                                        android:textColor="#ff9596a4"
+                                        android:textColorHint="#999999"
+                                        android:textSize="13sp" />
+                                    <ImageView
+                                        android:id="@+id/clearEdit"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:visibility="gone"
+                                        android:layout_marginRight="10dp"
+                                        android:src="@drawable/clear_edit" />
+
+                                    <TextView
+                                        android:id="@+id/seachButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/shape_search_loc_country_vo"
+                                        android:paddingLeft="8dp"
+                                        android:paddingTop="4dp"
+                                        android:paddingRight="8dp"
+                                        android:paddingBottom="4dp"
+                                        android:text="搜索"
+                                        android:textColor="#ffffffff"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <LinearLayout
+                                android:id="@+id/seachTopTmp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <com.flyco.tablayout.SlidingTabLayout
+                                    android:id="@+id/tabType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="44dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    app:tl_indicator_color="#7E59E0"
+                                    app:tl_indicator_margin_left="2dp"
+                                    app:tl_indicator_margin_right="2dp"
+                                    app:tl_indicator_style="BLOCK"
+                                    app:tl_textSelectColor="#FFFFFF"
+                                    app:tl_textUnselectColor="#666666"
+                                    app:tl_textsize="12sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="#F6F7F9" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+
+</RelativeLayout>

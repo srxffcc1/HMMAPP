@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp"
+    android:paddingEnd="20dp"
+    tools:ignore="SpUsage">
+
+
+    <com.healthy.library.widget.DashView
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:dash_direction="horizontal"
+        app:dash_color="#A6A7B6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/dot_week"
+        app:layout_constraintStart_toStartOf="@id/dot_week"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.healthy.library.widget.DotView
+        android:id="@+id/dot_week"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:dot_end_color="#FF8181"
+        app:dot_start_color="#FF6177"
+        app:is_circle="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        tools:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/tv_week"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/dot_week"
+        app:layout_constraintEnd_toEndOf="@id/dot_week"
+        app:layout_constraintTop_toTopOf="@id/dot_week"
+        app:layout_constraintBottom_toBottomOf="@id/dot_week"/>
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_baby"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        app:corner_radius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/dot_week"
+        app:layout_constraintStart_toEndOf="@id/dot_week"
+        app:layout_constraintTop_toTopOf="@id/dot_week"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="dot_week,iv_baby"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="dot_week,iv_baby"/>
+
+    <TextView
+        android:id="@+id/tv_baby_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintBottom_toBottomOf="@id/barrier_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_baby"
+        app:layout_constraintTop_toTopOf="@id/barrier_top"
+        app:layout_goneMarginStart="15dp"
+        tools:text="我的体内出现了一丛丛叫做“血岛”的东西，它们会形成我最初的血细胞。妈妈，我生命的另一大特征也出现啦。"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

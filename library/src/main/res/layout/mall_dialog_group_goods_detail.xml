@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/kk_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:layout_below="@id/closeMessageDialog"
+        android:background="@drawable/shape_disact_kk_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="30dp">
+        <TextView
+            android:id="@+id/pinWhoGroup"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="参与“爱睡觉的考拉”的拼团"
+            android:textColor="#ff222222"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:id="@+id/pinGroupNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="仅剩 个名额，23:43:45后结束"
+            android:textColor="#ff444444"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/manList1"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/manList2"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/groupButton"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/din_bold"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="一键参团"
+            android:background="@drawable/shape_goup_bgs2"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/closeMessageDialog"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/kk_ll"
+        android:layout_marginLeft="-15dp"
+
+        android:src="@drawable/mine_ic_del_img_big" />
+</RelativeLayout>

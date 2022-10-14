@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:status_init="content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F9"
+        android:orientation="vertical"
+        tools:ignore="Orientation">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/layout_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="afterDescendants">
+
+                <com.scwang.smart.refresh.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="afterDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <com.healthy.library.widget.DragLayout
+                        android:layout_width="match_parent"
+                        android:elevation="99dp"
+                        android:layout_height="match_parent">
+
+                        <com.healthy.library.widget.AutoClickImageView
+                            android:id="@+id/goodsShareCoupon"
+                            android:layout_width="54dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="320dp"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/goods_share_coupon"
+                            android:visibility="invisible" />
+
+                    </com.healthy.library.widget.DragLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:descendantFocusability="blocksDescendants"
+                        android:overScrollMode="never" />
+                </RelativeLayout>
+
+
+                <com.scwang.smart.refresh.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/scrollUp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="19dp"
+            android:src="@drawable/scrollup"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_shader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bottom_ty"
+            app:layout_constraintBottom_toTopOf="@id/goodsUnder"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/goodsUnder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <!--            <include layout="@layout/item_include_detail_bottom_pin"/>-->
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingTop="@dimen/status_2020"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/img_back"
+                style="@style/RippleClick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/index_ic_back_b"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/img_back2"
+                style="@style/RippleClick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/index_ic_back_b"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/topTab"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/img_back2"
+                app:layout_constraintRight_toLeftOf="@id/img_share"
+                app:layout_constraintTop_toTopOf="parent"
+                tl:tl_iconVisible="false"
+                tl:tl_indicator_color="#F93F60"
+                tl:tl_indicator_corner_radius="2dp"
+                tl:tl_indicator_height="4dp"
+                tl:tl_indicator_width="25dp"
+                tl:tl_textBold="SELECT"
+                tl:tl_textSelectColor="#222222"
+                tl:tl_textUnselectColor="#222222"
+                tl:tl_textsize="16sp">
+
+            </com.flyco.tablayout.CommonTabLayout>
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/img_share"
+                style="@style/RippleClick"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/index_ic_share_b"
+                android:textColor="#ffff6266"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/shop_cart_rel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/shop_cart_rel"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.healthy.library.widget.AutoClickImageView
+                    android:id="@+id/img_basket"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/index_ic_basket_b" />
+
+                <TextView
+                    android:id="@+id/shop_cart_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/service_shopping_cart_msg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#ffffffff"
+                    android:textSize="9sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.healthy.library.widget.DragLayout
+            android:id="@+id/dargF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dargM"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="210dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="210dp"
+                android:background="@drawable/shape_mall_goods_ol_vid_float_border"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.healthy.library.widget.CornerImageView
+                    android:id="@+id/vidoRightIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/video_right_c"
+                    app:is_circle="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/vidoRightIconS"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/video_left_bottom_c"
+                    app:layout_constraintBottom_toBottomOf="@+id/vidoRightIcon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/vidoRightIcon" />
+
+                <TextView
+                    android:id="@+id/videoRightTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="直播中"
+                    android:textColor="#ff222222"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vidoRightIcon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.healthy.library.widget.DragLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.healthy.library.widget.StatusLayout>
+

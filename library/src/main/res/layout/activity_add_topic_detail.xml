@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f9">
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:is_show_submit="true"
+        app:show_moss="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:submit=""
+        app:title="完善信息" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/shape_pack_left"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="#fffa3c5a"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cardMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="#fffa3c5a"
+                    android:textSize="34sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pack_split_center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/shape_pack_right"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cardName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="满99元使用"
+                    android:textColor="#ff222222"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="9dp"
+                    android:text="满99元使用"
+                    android:textColor="#ff222222"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/cardTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="9dp"
+                    android:text="2020.10.27-2020.11.30"
+                    android:textColor="#ff666666"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <com.healthy.library.widget.CommonInsertSection
+            android:layout_marginTop="10dp"
+            android:id="@+id/jobName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:background="#FFF"
+            app:et_content_hint="请输入领奖人名字"
+            app:section_divider_full_width="false"
+            app:section_mode="et"
+            app:show_divider="true"
+            app:title="领奖人" />
+
+        <com.healthy.library.widget.CommonInsertSection
+            android:id="@+id/jobPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:background="#FFF"
+            app:et_content_hint="请输入手机号"
+            app:section_divider_full_width="false"
+            app:section_mode="et"
+            app:show_divider="true"
+            app:title="手机号" />
+
+        <com.healthy.library.widget.CommonInsertSection
+            android:id="@+id/jobLoc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:background="#FFF"
+            app:section_divider_full_width="false"
+            app:section_mode="txt"
+            app:show_divider="true"
+            app:title="性别"
+            app:txt_content_hint="选择/男/女" />
+        <com.healthy.library.widget.CommonInsertSection
+            android:id="@+id/jobHistory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sectionHeight"
+            android:background="#FFF"
+            app:txt_content_hint="选择门店"
+            app:txt_content_drawable_right="@drawable/ic_more"
+            app:section_divider_full_width="false"
+            app:section_mode="txt"
+            app:show_divider="true"
+            app:title="领奖门店" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/submit_address_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_mall_goods_ol_vid_red_btn_big"
+        android:gravity="center"
+        android:text="提交信息"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"></TextView>
+
+</RelativeLayout>

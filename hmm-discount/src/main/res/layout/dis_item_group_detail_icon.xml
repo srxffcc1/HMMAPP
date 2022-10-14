@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    tools:ignore="MissingDefaultResource,SpUsage">
+
+    <com.healthy.library.widget.CornerImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/groupIconMaster"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:is_circle="true"
+        android:src="@drawable/img_avatar_default_man"
+        />
+    <android.widget.Space
+        android:id="@+id/groupSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/groupIconMaster"
+        app:layout_constraintLeft_toLeftOf="@id/groupIconMaster"
+        app:layout_constraintRight_toRightOf="@id/groupIconMaster"/>
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/groupTipMaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="团长"
+        app:layout_constraintTop_toBottomOf="@id/groupSpace"
+        app:layout_constraintLeft_toLeftOf="@id/groupIconMaster"
+        app:layout_constraintRight_toRightOf="@id/groupIconMaster"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="1dp"
+        android:background="@drawable/shape_group_icon_hint"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

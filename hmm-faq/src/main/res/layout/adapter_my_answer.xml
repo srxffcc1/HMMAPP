@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/dp_10"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:padding="@dimen/dp_2"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_16"
+        tools:text="1111" />
+
+
+    <TextView
+        android:id="@+id/sb_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11sp"
+        android:background="@drawable/bg_xsqz"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingRight="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_2"
+        android:textColor="@color/color_39e0c8"
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question"
+        tools:text="悬赏问答" />
+
+    <TextView
+        android:id="@+id/tv_answer_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:drawableLeft="@drawable/ic_ycn"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center"
+        android:textColor="@color/color_ffab2d"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_type"
+        app:layout_constraintLeft_toRightOf="@+id/sb_type"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question"
+        app:layout_constraintTop_toTopOf="@+id/sb_type"
+        android:text="已采纳" />
+
+    <TextView
+        android:id="@+id/tv_answer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/color_666666"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_type"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question"
+        app:layout_constraintTop_toTopOf="@+id/sb_type"
+
+        tools:text="5-12 19:55" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

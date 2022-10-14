@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.healthy.library">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application>
+        <activity android:name=".activity.VideoPlayerActivity"></activity>
+        <activity
+            android:name=".activity.PhotoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent" />
+        <activity android:name=".activity.LocChoseActivity" />
+        <activity android:name=".activity.EmptyActivity" />
+        <activity android:name=".activity.HmmSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".crash.CrashDialog"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/alert_dialog" />
+        <activity
+            android:name=".crash.BugActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".UploadCityService">
+            <intent-filter>
+                <action android:name="com.healthy.library.UploadCityService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".utils.DFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img_1_1_default2"
+        app:corner_radius="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/goodsSpecMoneyLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/goodsImg"
+        android:layout_alignTop="@id/goodsImg">
+
+        <TextView
+            android:id="@+id/goodsSpecMoneyLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingRight="5dp"
+            android:text="可砍至"
+            android:textColor="#fff02846"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/pointLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/goodsSpecMoneyLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/pointValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8096"
+                android:textColor="#fffa3c5a"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分"
+                android:textColor="#fff02846"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/pointValueAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="#fff02846"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/goodsSpecMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥39.8"
+            android:textColor="#fff02846"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/pointLL"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pinPeopleNum"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/shape_order_list_red_button"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#fff02846"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/goodsSpecMoney"
+            app:layout_constraintLeft_toRightOf="@id/goodsSpecMoney"
+            app:layout_constraintTop_toTopOf="@id/goodsSpecMoney"
+            tools:text="2人团" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/goodsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="库存258件"
+        android:textColor="#ff666666"
+        android:textSize="11sp"
+        android:visibility="invisible"
+        android:layout_alignLeft="@id/goodsSpecMoneyLL"
+        android:layout_toLeftOf="@id/close"
+        android:layout_below="@id/goodsSpecMoneyLL"
+        app:layout_constraintLeft_toLeftOf="@id/goodsSpecMoneyLL"
+        app:layout_constraintRight_toLeftOf="@id/close"
+        app:layout_constraintTop_toBottomOf="@id/goodsSpecMoneyLL" />
+
+    <TextView
+        android:id="@+id/goodsSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="已选 “210ml” “红色”"
+        android:textColor="#ff222222"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        android:layout_alignLeft="@id/goodsSpecMoneyLL"
+        android:layout_toLeftOf="@id/close"
+        android:layout_alignBottom="@id/goodsImg"
+        app:layout_constraintLeft_toLeftOf="@id/goodsSpecMoneyLL"
+        app:layout_constraintRight_toLeftOf="@id/close"
+        app:layout_constraintTop_toBottomOf="@id/goodsCount" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/dialog_close"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/goodsSpecMoneyLL"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodsSpecMoneyLL" />
+
+    <FrameLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_above="@+id/under"
+        android:layout_below="@id/goodsImg">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/specLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/goodCountTitle"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/goodCountTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="购买数量"
+                    android:textColor="#ff222222"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/specLL" />
+
+                <com.healthy.library.widget.IncreaseDecreaseView
+                    android:id="@+id/increase_decrease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/goodCountTitle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/goodCountTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:id="@+id/under"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        app:shape_shadowColor="#ff000000"
+        app:shape_shadowOffsetX="0dp"
+        app:shape_shadowOffsetY="-3dp">
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="确定"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_endColor="#705DFF"
+            app:shape_radius="25dp"
+            app:shape_startColor="#806FFF" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</RelativeLayout>

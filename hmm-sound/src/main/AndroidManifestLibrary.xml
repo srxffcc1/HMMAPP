@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.sound">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application>
+        <activity android:name=".activity.SoundMainActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SoundMainHistoryActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SoundDeatilActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SoundSeachActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SoundMoreTypeActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SoundMainMonActivity" android:screenOrientation="portrait" />
+
+        <service android:name="com.ximalaya.ting.android.opensdk.player.service.XmPlayerService"
+
+        android:process=":player"/>
+        <receiver
+            android:name="com.ximalaya.ting.android.opensdk.player.receive.PlayerReceiver" android:exported="false" android:process=":player">
+            <intent-filter>
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_START_PAUSE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_PLAY_PRE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_PLAY_NEXT" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CLOSE" />
+                <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_RELEASE_SERVICE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

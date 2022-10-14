@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/goodsDiscountValue"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:text="已砍          元，仅差"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/goodsImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+    <FrameLayout
+        android:id="@+id/goodsProFF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsDiscountValue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodsDiscountValue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                android:id="@+id/goodsJoinNum"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:max="1000"
+                android:progress="500"
+                android:progressDrawable="@drawable/progressz_bar_help_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/goodsprored"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/goodsProFFLU"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:layout_weight="500"></TextView>
+
+                <TextView
+                    android:id="@+id/goodsProFFRU"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:layout_weight="500"
+                    android:background="@drawable/goodspropink"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/goodsProFFL"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="500"></TextView>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/progress_imagb" />
+
+            <TextView
+                android:id="@+id/goodsProFFR"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="500"></TextView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/goodsTimeLL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsProFF"
+        app:layout_constraintTop_toBottomOf="@id/goodsProFF">
+
+        <TextView
+            android:id="@+id/kickHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kickMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="#444444"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kickSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/shape_disact_gray_small"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="23"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/kickFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="后砍价结束"
+            android:textColor="#ff222222"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/continueKick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/shape_kkdialog_btn_bg"
+        android:gravity="center"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:text="继续砍价"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsDiscountValue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodsTimeLL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

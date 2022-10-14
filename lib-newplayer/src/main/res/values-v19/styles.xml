@@ -1,0 +1,4 @@
+<resources>
+    <style name="NoTitleBar" parent="@style/AppTheme">
+    </style>
+</resources>

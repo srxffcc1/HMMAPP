@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#000"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        tools:ignore="MissingDefaultResource">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/img_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_user_badge"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            tools:src="@drawable/icon_user_official_certification"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+            app:layout_constraintRight_toRightOf="@id/ivHeader" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            tools:text="快乐柠檬草"
+            android:textStyle="bold"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/ivHeader"
+            app:layout_constraintRight_toLeftOf="@+id/toFollow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/stv_user_badgeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="官方认证"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="5dp"
+            android:textSize="9dp"
+            android:textColor="@color/colorWhite"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="1dp"
+            app:shape_topLeftRadius="8dp"
+            app:shape_bottomRightRadius="8dp"
+            app:shape_topRightRadius="8dp"
+            app:shape_solidColor="#3889FD"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            tools:text="备孕中"
+            android:textColor="#ff666666"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toRightOf="@id/stv_user_badgeName"
+            app:layout_constraintTop_toBottomOf="@id/name"/>
+
+        <TextView
+            android:id="@+id/toFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_city_white"
+            android:paddingLeft="14dp"
+            android:paddingTop="5dp"
+            android:drawableLeft="@drawable/ic_star_tofollow"
+            android:drawablePadding="7dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="5dp"
+            android:text="关注"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivHeader" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/ivHeader"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/followTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/followCount"
+            android:layout_marginLeft="6dp"
+            app:layout_constraintLeft_toRightOf="@id/followTitle"
+            app:layout_constraintTop_toTopOf="@id/followTitle"
+            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1072"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fansTitle"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toRightOf="@id/followCount"
+            app:layout_constraintTop_toTopOf="@id/followTitle"
+            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粉丝"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fansCount"
+            android:layout_marginLeft="6dp"
+            app:layout_constraintLeft_toRightOf="@id/fansTitle"
+            app:layout_constraintTop_toTopOf="@id/followTitle"
+            app:layout_constraintBottom_toBottomOf="@id/followTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19682"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:status_init="content">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePreviewInEditMode="false">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F93F60"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:overScrollMode="never" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/seachTopLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:background="#000"
+                        android:clickable="true"
+                        android:minHeight="@dimen/status_2022"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/seachTopBgLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_alignTop="@+id/seachTop"
+                            android:layout_alignBottom="@id/seachTop"
+                            android:alpha="0"
+                            android:background="@drawable/second_acts_top_pink_bg"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/seachTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="12dp"
+                            android:paddingTop="@dimen/status_2020">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp">
+
+                                <com.healthy.library.widget.AutoClickImageView
+                                    android:id="@+id/img_back"
+                                    style="@style/RippleClick"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:src="@drawable/ic_back_withboder_white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.flyco.tablayout.CommonTabLayout
+                                    android:id="@+id/topTab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintLeft_toRightOf="@id/img_back"
+                                    app:layout_constraintRight_toLeftOf="@id/img_share"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tl_iconVisible="false"
+                                    app:tl_textBold="SELECT"
+                                    app:tl_indicator_color="#FFFFFF"
+                                    app:tl_indicator_corner_radius="2dp"
+                                    app:tl_indicator_height="4dp"
+                                    app:tl_indicator_width="8dp"
+                                    app:tl_textSelectColor="#FFFFFF"
+                                    app:tl_textUnselectColor="#FFFFFF"
+                                    app:tl_textsize="16sp">
+
+                                </com.flyco.tablayout.CommonTabLayout>
+                                <com.healthy.library.widget.AutoClickImageView
+                                    android:id="@+id/img_share"
+                                    style="@style/RippleClick"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:src="@drawable/ic_share_withboder_white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/actAlreadyLL"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="50dp"
+                            android:background="@drawable/shape_decond_already_bg_black"
+                            android:gravity="center_vertical"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+                            <ImageView
+                                android:id="@+id/actAlreadyImg"
+                                android:layout_marginLeft="12dp"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/second_already_leftimg"/>
+                            <TextView
+                                android:id="@+id/actAlreadyText"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="您有正在进行的拼团"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="50dp"
+                                android:textColor="#ffffffff"
+                                android:textSize="14sp"
+                                />
+                            <TextView
+                                android:id="@+id/actAlreadyButton"
+                                android:background="@drawable/shape_decond_already_bg_white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="点击查看"
+                                android:textStyle="bold"
+                                android:paddingBottom="6dp"
+                                android:paddingRight="8dp"
+                                android:paddingTop="6dp"
+                                android:paddingLeft="8dp"
+                                android:layout_margin="4dp"
+                                android:textColor="#ffd8489c"
+                                android:textSize="14sp"
+                                />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </FrameLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </com.healthy.library.widget.StatusLayout>
+
+</RelativeLayout>

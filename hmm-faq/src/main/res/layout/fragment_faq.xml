@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_faq_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/faq_module_title"
+        android:textColor="#ff222222"
+        android:textSize="18sp"
+        tools:layout_constraintEnd_toEndOf="parent"
+        tools:layout_constraintStart_toStartOf="parent"
+        tools:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_toBottomOf="@id/tv_faq_title"
+        tools:tabIndicatorColor="#FF8181"
+        tools:tabIndicatorFullWidth="false"
+        tools:tabSelectedTextColor="#FF6266"
+        tools:tabTextColor="#444444" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_faq"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F5F5F9"
+        tools:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintTop_toBottomOf="@id/tab" />
+
+    <ImageView
+        android:id="@+id/ic_bottom_yy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/ic_bottom_ty"
+        tools:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

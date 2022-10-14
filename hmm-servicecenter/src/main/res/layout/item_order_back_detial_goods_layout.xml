@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/goodsImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_1_1_default"
+        app:corner_radius="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/actFlag"
+        android:layout_width="36dp"
+        android:layout_height="16dp"
+        android:src="@drawable/act_pin"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/goodsImg"
+        app:layout_constraintTop_toTopOf="@id/goodsImg" />
+
+    <TextView
+        android:id="@+id/pointLable"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_order_list_point_lable"
+        android:gravity="center"
+        android:text="积分兑换"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/goodsImg"
+        app:layout_constraintLeft_toLeftOf="@+id/goodsImg"
+        app:layout_constraintRight_toRightOf="@+id/goodsImg" />
+
+    <TextView
+        android:id="@+id/goodsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="12dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff222222"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/goodsImg"
+        app:layout_constraintRight_toLeftOf="@id/goodsMoney"
+        app:layout_constraintTop_toTopOf="@id/goodsImg"
+        tools:text="Babycare 吸管杯学饮杯宝宝水杯重吸管杯学饮杯宝宝水杯…" />
+
+    <TextView
+        android:id="@+id/goodsMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/goodsImg"
+        tools:text="¥152.69" />
+
+    <TextView
+        android:id="@+id/goodsSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff868799"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="@id/goodsTitle"
+        app:layout_constraintBottom_toBottomOf="@id/goodsImg"
+        tools:text="规格 900g" />
+
+    <TextView
+        android:id="@+id/goodsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodsMoney"
+        tools:text="x 1" />
+
+    <TextView
+        android:id="@+id/refundPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="￥256.00"
+        android:textColor="#222222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goodsSpace" />
+
+    <TextView
+        android:id="@+id/refund_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退款金额 "
+        android:visibility="gone"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/refundPrice"
+        app:layout_constraintRight_toLeftOf="@id/refundPrice" />
+
+
+    <TextView
+        android:id="@+id/refundNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="0"
+        android:textColor="#222222"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/refundPrice"
+        app:layout_constraintRight_toLeftOf="@+id/refund_price_title" />
+
+    <TextView
+        android:id="@+id/refund_total_num_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退订数量 "
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/refundPrice"
+        app:layout_constraintRight_toLeftOf="@+id/refundNum" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

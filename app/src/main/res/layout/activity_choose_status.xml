@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChooseSexActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/BackIvStyle"
+        android:contentDescription="@string/app_name"
+        android:onClick="back"/>
+
+    <TextView
+        android:id="@+id/tv_choose_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="请选择您当前的状态"
+        android:textColor="@color/colorMajorText"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_before_pregnancy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="35dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="statusMenstruation"
+        android:src="@drawable/app_status_before_pregnancy"
+        app:layout_constraintDimensionRatio="870:240"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_choose_status_title"/>
+
+    <ImageView
+        android:id="@+id/iv_pregnancy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="statusPregnancy"
+        android:src="@drawable/app_status_pregnancy"
+        app:layout_constraintDimensionRatio="870:420"
+        app:layout_constraintEnd_toEndOf="@id/iv_before_pregnancy"
+        app:layout_constraintStart_toStartOf="@id/iv_before_pregnancy"
+        app:layout_constraintTop_toBottomOf="@id/iv_before_pregnancy"/>
+
+    <ImageView
+        android:id="@+id/iv_after_pregnancy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="statusParenting"
+        android:src="@drawable/app_status_after_pregnancy"
+        app:layout_constraintDimensionRatio="870:302"
+        app:layout_constraintEnd_toEndOf="@id/iv_before_pregnancy"
+        app:layout_constraintStart_toStartOf="@id/iv_before_pregnancy"
+        app:layout_constraintTop_toBottomOf="@id/iv_pregnancy"/>
+    <LinearLayout
+        android:id="@+id/iv_other"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:onClick="statusOther"
+        app:layout_constraintTop_toBottomOf="@id/iv_after_pregnancy"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/ic_other_status"
+            android:text="以上都不是"
+            android:textColor="#ff9596a4"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/shape_mall_goods_bg"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.healthy.library.widget.RoundedImageView
+            android:id="@+id/mall_goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1_1_default2"
+            app:riv_corner_radius_top_left="8dp"
+            app:riv_corner_radius_top_right="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/tv_video_flag"
+            android:layout_margin="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/video_left_bottom"/>
+            <ImageView
+                android:id="@+id/tv_video_flag_c"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/video_left_bottom_c">
+            </ImageView>
+            <TextView
+                android:id="@+id/tv_video_flag_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_video_flag_c"
+                android:text="直播中"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tagText"
+            android:visibility="gone"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_mall_goods_ol_tagbgbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="新品"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            />
+        <TextView
+            android:id="@+id/numberTmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/mall_online_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_mall_goods_ol_bg"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:text="直播中"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:drawable="@drawable/mall_online_left_tip"
+            app:drawableHeight="8dp"
+            app:drawableWidth="8dp"
+            app:layout_constraintLeft_toLeftOf="@id/mall_goods_img"
+            app:layout_constraintTop_toTopOf="@id/mall_goods_img" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mall_goods_img_under"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mall_goods_img">
+
+            <TextView
+                android:id="@+id/mall_goods_context"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="婴儿纯棉纱布浴巾宝宝盖毯儿童全棉洗澡巾新生儿抱毯毛巾"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mall_goods_actvip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingBottom="1dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:textColor="#fff02846"
+                android:background="@drawable/shape_recommend_list_actvip_lable"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintLeft_toLeftOf="@+id/mall_goods_context"
+                app:layout_constraintRight_toRightOf="@+id/mall_goods_context"
+                app:layout_constraintTop_toBottomOf="@+id/mall_goods_context" />
+
+            <TextView
+                android:id="@+id/mall_goods_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粉色 100cm"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"
+                android:textColor="#ff868799"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@+id/mall_goods_context"
+                app:layout_constraintTop_toBottomOf="@+id/mall_goods_actvip" />
+            <ImageView
+                android:id="@+id/spinnerImg"
+                android:visibility="gone"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/goods_arrow_s_down"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_space"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_space"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_space"/>
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/mall_goods_moneyflag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="¥"
+                android:layout_marginBottom="2dp"
+
+                android:textColor="#FA3C5A"
+                android:textSize="13sp"
+                app:layout_constraintLeft_toLeftOf="@id/mall_goods_context"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"/>
+
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="18.8"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="#FA3C5A"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_space"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_moneyflag" />
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue_org"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toRightOf="@+id/mall_goods_moneyvalue"
+                tools:text="¥208"
+                android:textColor="#ff868799"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/mall_goods_moneyvalue_now_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:includeFontPadding="false"
+                android:background="@drawable/act_red_bg"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintLeft_toRightOf="@+id/mall_goods_moneyvalue"
+                android:text="特惠价"
+                android:textColor="#ffffffff"
+                android:textSize="10sp"
+                />
+            <TextView
+                android:id="@+id/mall_goods_sales"
+                android:layout_width="54dp"
+                android:layout_height="14dp"
+                android:text="3096人付款"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue" />
+
+            <com.healthy.library.widget.AutoClickImageView
+                android:id="@+id/passbasket"
+                android:visibility="invisible"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/basket_red"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_moneyvalue"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_moneyvalue"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/vipGoldP"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mall_goods_moneyvalue">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/vip_gold_left"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:background="@drawable/vip_gold_right"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="黑金卡"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="#ff303037"
+                        android:textSize="10sp"
+                        />
+                    <TextView
+                        android:id="@+id/plusMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="¥379"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="#ff303037"
+                        android:textSize="11sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/couponListLL"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:scrollbars="none"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/passbasket"
+                app:layout_constraintTop_toBottomOf="@id/vipGoldP">
+
+                <LinearLayout
+                    android:id="@+id/couponList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+<!--                    <include layout="@layout/item_mall_goods_coupon" />-->
+<!--                    <include layout="@layout/item_mall_goods_coupon" />-->
+<!--                    <include layout="@layout/item_mall_goods_coupon" />-->
+<!--                    <include layout="@layout/item_mall_goods_coupon" />-->
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/mall_goods_sales2"
+                android:layout_width="54dp"
+                android:layout_height="14dp"
+                android:text="3096人付款"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couponListLL" />
+
+            <TextView
+                android:id="@+id/mall_goods_sales2_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%好评"
+                android:textColor="#ff666666"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/mall_goods_sales2"
+                app:layout_constraintLeft_toRightOf="@id/mall_goods_sales2"
+                app:layout_constraintTop_toTopOf="@id/mall_goods_sales2" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/normalTypeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="mall_goods_sales" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/seachTypeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="mall_goods_sales2,mall_goods_sales2_dis" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

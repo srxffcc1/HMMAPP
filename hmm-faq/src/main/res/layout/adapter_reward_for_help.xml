@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRewardHelp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_15"
+    android:paddingRight="@dimen/dp_20"
+    android:paddingBottom="@dimen/dp_15"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:textColor="@color/color_444444"
+
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/ivHeader"
+        app:layout_constraintLeft_toRightOf="@+id/ivHeader"
+        app:layout_constraintTop_toTopOf="@+id/ivHeader"
+        tools:text="柠檬草" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:background="@drawable/shape_period_1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_4"
+        android:paddingTop="@dimen/dp_4"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@+id/ivHeader"
+        tools:text="产后2岁8个月" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:textColor="@color/color_ff6266"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivHeader"
+        tools:text="￥9.8" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textColor="@color/color_222222"
+        app:layout_constraintTop_toBottomOf="@+id/ivHeader"
+        tools:text="产后2岁8个月" />
+</androidx.constraintlayout.widget.ConstraintLayout>

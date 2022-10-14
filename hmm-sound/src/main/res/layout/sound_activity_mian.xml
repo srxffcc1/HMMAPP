@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+
+<!--        <com.scwang.smart.refresh.layout.SmartRefreshLayout-->
+<!--            android:id="@+id/layout_refresh"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <com.scwang.smart.refresh.header.ClassicsHeader-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/soundTopBg"
+                    android:layout_width="match_parent"
+                    android:paddingTop="130dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:background="#4DC9D8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/banner_head_bg" />
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:id="@+id/app_bar"
+                        app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:elevation="0dp">
+
+
+                        <com.google.android.material.appbar.CollapsingToolbarLayout
+                            android:id="@+id/collapsingToolbarLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:text=""
+                                android:gravity="center"
+                                android:elevation="0dp"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </com.google.android.material.appbar.CollapsingToolbarLayout>
+                    </com.google.android.material.appbar.AppBarLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        android:orientation="vertical">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.healthy.library.widget.TopBar
+                                android:id="@+id/top_bar"
+                                android:layout_marginTop="@dimen/status_2020"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="0dp"
+                                app:back_img_src="@drawable/ic_back_white"
+                                app:bg_color="#00000000"
+                                app:submit_img_src="@drawable/index_ic_share2"
+                                app:is_show_submit_image="true"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:show_moss="false"
+                                app:title_color="#FFF"
+                                app:title="宝宝爱听" />
+
+                            <ImageView
+                                android:id="@+id/seachTip"
+                                style="@style/RippleClick"
+                                android:scaleType="centerInside"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="9dp"
+                                android:layout_marginRight="60dp"
+                                android:src="@drawable/ic_seach_sound"
+                                android:textColor="#ffff6266"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="@id/top_bar"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/top_bar" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_collapseMode="parallax"
+                            app:layout_collapseParallaxMultiplier="0.9">
+
+                            <ImageView
+                                android:id="@+id/img_back_tmp"
+                                style="@style/RippleClick"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:contentDescription="@string/app_name"
+                                android:paddingStart="9dp"
+                                android:paddingEnd="9dp"
+                                android:src="@drawable/ic_back_white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+
+                            <com.flyco.tablayout.SlidingTabLayout
+                                android:id="@+id/st"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_height="44dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toRightOf="@+id/img_back_tmp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                app:tl_indicator_color="#FFE205"
+                                app:tl_indicator_corner_radius="1.5dp"
+                                app:tl_indicator_height="4dp"
+                                app:tl_indicator_margin_top="10dp"
+                                app:tl_indicator_width="30dp"
+                                app:tl_tab_padding="6dp"
+                                app:tl_textBold="SELECT"
+                                app:tl_textSelectColor="#FFE205"
+                                app:tl_textUnselectColor="#FFFFFF"
+                                app:tl_textsize="18sp" />
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintLeft_toLeftOf="@id/st"
+                                app:layout_constraintTop_toTopOf="@id/st"
+                                app:layout_constraintBottom_toBottomOf="@id/st"
+                                android:src="@drawable/monb_flame_left"/>
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintRight_toRightOf="@id/st"
+                                app:layout_constraintTop_toTopOf="@id/st"
+                                app:layout_constraintBottom_toBottomOf="@id/st"
+                                android:src="@drawable/monb_flame_right"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:visibility="gone"
+                            android:id="@+id/divider_store"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDivider" />
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/vp"
+                            android:nestedScrollingEnabled="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        </com.scwang.smart.refresh.layout.SmartRefreshLayout>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

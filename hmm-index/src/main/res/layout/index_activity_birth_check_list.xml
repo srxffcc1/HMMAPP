@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.VaccineListActivity">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:back_img_src="@drawable/ic_back_white"
+        app:bg_color="@color/colorTransparent"
+        app:show_moss="false"
+        app:title="产检表"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_color="@color/colorWhite"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <com.healthy.library.widget.StatusLayout
+            android:id="@+id/layout_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:retry_txt_bg="@drawable/selector_retry_light"
+            app:retry_txt_color="@color/colorWhite"
+            app:txt_color="@color/colorWhite"
+            app:empty_drawable="@drawable/status_empty_normal_light"
+            app:net_err_drawable="@drawable/status_net_err_light"
+            app:data_err_drawable="@drawable/status_data_err_light">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.healthy.library.widget.StatusLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

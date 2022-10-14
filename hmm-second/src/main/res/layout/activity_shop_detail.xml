@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthy.library.widget.StatusLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F9"
+    app:status_init="content">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:id="@+id/app_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/trans_parent"
+                        android:elevation="0dp"
+                        app:layout_behavior="com.healthy.library.utils.FixAppBarLayoutBehavior">
+
+                        <com.google.android.material.appbar.CollapsingToolbarLayout
+                            android:id="@+id/collapsingToolbarLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:contentScrim="@android:color/transparent"
+                            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                            app:statusBarScrim="@android:color/transparent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/topLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="340dp"
+                                android:background="#F5F5F9"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/headImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="204dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_1_1_default"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="236dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:background="@drawable/shape_pregnancy"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/shopName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="15dp"
+                                        android:paddingTop="12dp"
+                                        android:paddingBottom="12dp"
+                                        android:textColor="#ff333333"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="婷美摩力21产后恢复金山店" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/bannerLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="92dp"
+                                        app:layout_constraintTop_toBottomOf="@+id/shopName">
+
+                                        <com.healthy.library.banner.ViewPager2Banner
+                                            android:id="@+id/banner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <TextView
+                                        android:id="@+id/shopTime"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="15dp"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:paddingTop="16dp"
+                                        android:textColor="#ff333333"
+                                        android:textSize="12sp"
+                                        app:layout_constraintLeft_toLeftOf="@id/shopName"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/bannerLayout"
+                                        tools:text="周一至周日 09:00-18:00" />
+
+                                    <TextView
+                                        android:id="@+id/shopAddress"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginRight="10dp"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:paddingBottom="8dp"
+                                        android:textColor="#999999"
+                                        android:textSize="12sp"
+                                        app:layout_constraintLeft_toLeftOf="@+id/shopTime"
+                                        app:layout_constraintRight_toLeftOf="@+id/itv_StoreDetailNavigation"
+                                        app:layout_constraintTop_toBottomOf="@+id/shopTime"
+                                        tools:text="高新区金山东路3号爱拍大厦301憨妈妈网络科技" />
+
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:id="@+id/itv_StoreDetailPhone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="25dp"
+                                        android:text="电话"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="10dp"
+                                        app:drawable="@drawable/icon_second_storedetail_phone"
+                                        app:drawableHeight="20dp"
+                                        app:drawableWidth="20dp"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="@id/shopAddress"
+                                        app:position="2" />
+
+
+                                    <com.healthy.library.widget.ImageTextView
+                                        android:id="@+id/itv_StoreDetailNavigation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="24dp"
+                                        android:text="导航"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="10dp"
+                                        app:drawable="@drawable/icon_second_storedetail_navigation"
+                                        app:drawableHeight="20dp"
+                                        app:drawableWidth="20dp"
+                                        app:layout_constraintBottom_toBottomOf="@id/itv_StoreDetailPhone"
+                                        app:layout_constraintRight_toLeftOf="@id/itv_StoreDetailPhone"
+                                        app:layout_constraintTop_toTopOf="@id/itv_StoreDetailPhone"
+                                        app:position="2" />
+
+                                    <TextView
+                                        android:id="@+id/shopDistance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ff666666"
+                                        android:textSize="12sp"
+                                        app:layout_constraintLeft_toLeftOf="@+id/shopAddress"
+                                        app:layout_constraintTop_toBottomOf="@+id/shopAddress"
+                                        tools:text="500m" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="15dp"
+                                        app:layout_constraintTop_toBottomOf="@+id/shopDistance" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.appbar.CollapsingToolbarLayout>
+                    </com.google.android.material.appbar.AppBarLayout>
+
+                    <LinearLayout
+                        android:id="@+id/underLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/whiteTopBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorWhite"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/status_2020" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp">
+
+                                    <ImageView
+                                        android:id="@+id/storeBack"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginLeft="15dp"
+                                        android:padding="5dp"
+                                        android:src="@drawable/ic_back_withboder"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/storeName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="店铺详情"
+                                        android:textColor="#333333"
+                                        android:textSize="16sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@+id/storeBack"
+                                        app:layout_constraintRight_toLeftOf="@+id/storeShare"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/storeShare"
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:layout_marginRight="15dp"
+                                        android:src="@drawable/icon_second_bank_share"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tabLiner"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="48dp">
+
+                                <com.google.android.material.tabs.TabLayout
+                                    android:id="@+id/tab"
+                                    android:layout_width="250dp"
+                                    android:layout_height="44dp"
+                                    app:tabIndicator="@null"
+                                    app:tabIndicatorColor="@null"
+                                    app:tabIndicatorFullWidth="false"
+                                    app:tabIndicatorHeight="4dp"
+                                    app:tabMode="fixed"
+                                    app:tabPaddingEnd="@dimen/dp_0"
+                                    app:tabPaddingStart="@dimen/dp_0"
+                                    app:tabSelectedTextColor="#333333"
+                                    app:tabTextColor="#666666" />
+                            </LinearLayout>
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/translateTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/status_2020" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/storeBack2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="15dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_back_withboder_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/storeName2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/storeBack2"
+                        app:layout_constraintRight_toLeftOf="@+id/storeShare2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/storeShare2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_share_withboder_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</com.healthy.library.widget.StatusLayout>

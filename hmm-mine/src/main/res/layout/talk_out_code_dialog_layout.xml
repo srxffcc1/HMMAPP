@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ResourceName">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_bg"
+        android:layout_width="320dp"
+        android:layout_height="270dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_chose">
+
+        <ImageView
+            android:id="@+id/dialog_close_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:src="@drawable/black_colse_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_close_button">
+
+            <TextView
+                android:id="@+id/payTitle"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="手机交易码"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="已发送至尾号0000的手机"
+                android:textColor="#ff666666"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payTitle" />
+
+            <com.healthy.library.widget.vcview.VerificationCodeView
+                android:id="@+id/codeView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tipsTxt"
+                app:vcv_et_bg="@drawable/et_login_code"
+                app:vcv_et_cursor="@drawable/et_cursor"
+                app:vcv_et_cursor_visible="false"
+                app:vcv_et_inputType="number"
+                app:vcv_et_number="6"
+                app:vcv_et_text_color="#333333"
+                app:vcv_et_text_size="10sp" />
+
+            <TextView
+                android:id="@+id/codeQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="收不到短信？"
+                android:visibility="invisible"
+                android:textColor="#ff666666"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/codeView" />
+
+            <com.example.lib_ShapeView.view.ShapeTextView
+                android:id="@+id/receivedBtn"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="0秒后重发"
+                android:textColor="#979797"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/codeQuestion"
+                app:layout_constraintRight_toRightOf="parent"
+                app:shape_radius="8dp"
+                app:shape_strokeColor="#979797"
+                app:shape_strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AccountCenterActivity"
+    tools:ignore="MissingConstraints">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:title="账户中心"></com.healthy.library.widget.TopBar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_wdsy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_zhsy_bg"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+        <TextView
+            android:id="@+id/tv_wdsy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="我的收益"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSrmx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawableRight="@drawable/ic_next_white"
+            android:text="收入明细"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.RollNumberTextView
+            android:id="@+id/tv_syje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:padding="@dimen/dp_5"
+            android:text="0.00"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wdsy" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_syje"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/dp_15"-->
+        <!--android:layout_marginTop="18dp"-->
+        <!--android:layout_marginBottom="@dimen/dp_40"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--android:text="1820"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tv_wdsy" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="元"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_17"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_syje"
+            app:layout_constraintLeft_toRightOf="@id/tv_syje" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_hdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_hdd_ye"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_wdsy">
+
+        <TextView
+            android:id="@+id/tv_hdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="憨豆豆余额"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_17"
+            android:onClick="passHDDSZ"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/url_misc_w"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvXfjl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_15"
+            android:drawableRight="@drawable/ic_next_white"
+            android:text="消费记录"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.healthy.library.widget.RollNumberTextView
+            android:id="@+id/tv_hdd_ye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:padding="@dimen/dp_5"
+            android:text="0.00"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hdd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="@dimen/dp_20"
+            android:text="憨豆豆"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_17"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_hdd_ye"
+            app:layout_constraintLeft_toRightOf="@id/tv_hdd_ye" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvHddTitle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="20dp"
+        android:text="@string/hdd_sm_title"
+        android:textColor="@color/color_222222"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintTop_toBottomOf="@+id/cl_hdd" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:text="@string/hdd_sm"
+        android:textColor="@color/color_444444"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintTop_toBottomOf="@+id/tvHddTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

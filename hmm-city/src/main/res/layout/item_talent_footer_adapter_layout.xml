@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp"
+        android:paddingRight="24dp"
+        app:shape_bottomLeftRadius="0dp"
+        app:shape_bottomRightRadius="0dp"
+        app:shape_endColor="#FFF6E7"
+        app:shape_startColor="#FFFFFF"
+        app:shape_topLeftRadius="8dp"
+        app:shape_topRightRadius="8dp">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/userImg"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/img_avatar_default"
+            app:is_circle="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/nickLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/userImg"
+            app:layout_constraintRight_toLeftOf="@+id/fraction"
+            app:layout_constraintTop_toTopOf="@+id/userImg">
+
+            <TextView
+                android:id="@+id/userNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="快乐柠檬草"
+                android:maxEms="7"
+                android:textColor="#ff444444"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/userImg"
+                app:layout_constraintRight_toLeftOf="@+id/rank"
+                app:layout_constraintTop_toTopOf="@+id/userImg" />
+
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:fontFamily="@font/din_bold"
+                android:text="NO.1"
+                android:textColor="#A28F65"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/userNickName"
+                app:layout_constraintLeft_toRightOf="@+id/userNickName"
+                app:layout_constraintRight_toLeftOf="@+id/fraction"
+                app:layout_constraintTop_toTopOf="@+id/userNickName" />
+        </LinearLayout>
+
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:id="@+id/userStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingTop="1dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="1dp"
+            android:text="产后2个月"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@id/userImg"
+            app:layout_constraintLeft_toLeftOf="@+id/nickLayout"
+            app:shape_bottomLeftRadius="8dp"
+            app:shape_bottomRightRadius="12dp"
+            app:shape_endColor="#FF256C"
+            app:shape_startColor="#FF6060"
+            app:shape_topLeftRadius="0dp"
+            app:shape_topRightRadius="12dp" />
+
+        <TextView
+            android:id="@+id/fraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0"
+            android:textColor="#ffa28f65"
+            android:textSize="28sp"
+            android:fontFamily="@font/din_bold"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="达人值"
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="@+id/fraction"
+            app:layout_constraintTop_toBottomOf="@+id/fraction" />
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+    <com.example.lib_ShapeView.layout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        app:shape_bottomLeftRadius="8dp"
+        app:shape_bottomRightRadius="8dp"
+        app:shape_endColor="#FFF8EE"
+        app:shape_startColor="#FFFFFF"
+        app:shape_topLeftRadius="0dp"
+        app:shape_topRightRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/talentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#666666"
+                android:fontFamily="@font/din_bold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发帖数"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/likeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:fontFamily="@font/din_bold"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点赞数"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/din_bold"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评论数"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shareNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:fontFamily="@font/din_bold"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享数"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.example.lib_ShapeView.layout.ShapeLinearLayout>
+</LinearLayout>

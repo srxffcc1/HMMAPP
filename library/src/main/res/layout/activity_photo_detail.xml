@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBlack">
+
+
+
+    <com.healthy.library.widget.HackyViewPager
+        android:id="@+id/pager_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.healthy.library.widget.AutoClickImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:onClick="close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/update_close2">
+
+    </com.healthy.library.widget.AutoClickImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

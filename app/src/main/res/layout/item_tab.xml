@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/img_tab"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toTopOf="@id/txt_tab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/ic_tab_city" />
+
+    <com.example.lib_ShapeView.view.ShapeView
+        android:id="@+id/sv_Red_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintRight_toRightOf="@id/img_tab"
+        app:layout_constraintTop_toTopOf="@id/img_tab"
+        app:shape="oval"
+        app:shape_endColor="#FF256C"
+        app:shape_startColor="#FF6060"
+        app:shape_strokeColor="@color/colorWhite"
+        app:shape_strokeWidth="0.5dp" />
+
+    <TextView
+        android:id="@+id/txt_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@drawable/selector_tab_text_color"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_tab"
+        tools:text="热聊" />
+</androidx.constraintlayout.widget.ConstraintLayout>

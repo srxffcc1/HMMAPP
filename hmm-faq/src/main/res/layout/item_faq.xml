@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_item_faq"
+    android:padding="20dp">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_questioner_default_avatar"
+        app:is_circle="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:maxLength="10"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        tools:text="快乐柠檬草"/>
+
+    <TextView
+        android:id="@+id/tv_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:textColor="#ffffffff"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        tools:background="@color/colorRed"
+        tools:ignore="SmallSp"
+        tools:text="产后2个月"/>
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="2"
+        android:textColor="#ff222222"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+        tools:text="宝宝2个月大最近总揉眼睛眼屎非常的多，眼周围发红，是感染病毒了吗？"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="#ffff6266"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        tools:text="¥ 10"/>
+
+    <TextView
+        android:id="@+id/tv_answer_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#ff222222"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        app:layout_goneMarginStart="0dp"
+        tools:ignore="SmallSp"
+        tools:text="0 回答"/>
+
+    <TextView
+        android:id="@+id/tv_read_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#ff222222"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@id/tv_answer_num"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        app:layout_goneMarginStart="0dp"
+        tools:ignore="SmallSp"
+        tools:text="3691人查看"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/iv_empty_stock"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="30dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="1dp"
+        android:src="@drawable/city_ic_empty_stock"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/tipTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:flexWrap="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/candelete"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        <include layout="@layout/city_item_tip_single2"/>-->
+        <!--        <include layout="@layout/city_item_tip_single2"/>-->
+        <!--        <include layout="@layout/city_item_tip_single2"/>-->
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <ImageView
+        android:id="@+id/candelete"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/ic_city_delete"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/tipBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="candelete,tipTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/postingTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="14dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tipBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/color_333333"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <com.healthy.library.widget.CollapsedTextView
+        android:id="@+id/tipContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:textColor="#ff222222"
+        android:textSize="15sp"
+        app:collapsedDrawable="@null"
+        app:collapsedLines="3"
+        app:collapsedText="收起"
+        app:expandedDrawable="@null"
+        app:expandedText="展开"
+        app:layout_constraintTop_toBottomOf="@id/postingTitle"
+        app:tipsClickable="true"
+        app:tipsColor="#4369D3"
+        app:tipsGravity="end"
+        app:tipsUnderline="false"
+        tools:text="读书是一种享受，读书，又能增长知识，又能充实自己，享受快乐，一举两得，何乐而不为呢？ 读书是一种享受，是一种乐趣" />
+
+    <GridLayout
+        android:id="@+id/see_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tipContent" />
+
+    <!-- 活动信息 布局引入 -->
+    <FrameLayout
+        android:id="@+id/activityInfo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/see_imgs">
+
+        <!--<include layout="@layout/city_item_fragment_activity_prize_layout" />-->
+        <!--<include layout="@layout/city_recyclerview_enlist_prize_layout" />-->
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_essences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/item_post_essences_icon"
+        app:layout_constraintTop_toBottomOf="@id/activityInfo_layout" />
+
+    <LinearLayout
+        android:id="@+id/canlikediscuss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_essences">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/tipShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="分享"
+                android:textColor="#ff444444"
+                android:textSize="12dp"
+                app:drawable="@drawable/cityleftloc2"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:position="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/discuss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:minEms="1"
+                android:paddingRight="16dp"
+                android:text=""
+                android:textColor="#ff333333"
+                android:textSize="12dp"
+                app:drawable="@drawable/cityrightdiscuss"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <com.healthy.library.widget.ImageTextView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:minEms="1"
+                android:text=""
+                android:textColor="#ff333333"
+                android:textSize="12dp"
+                app:drawable="@drawable/cityrightlike"
+                app:drawableHeight="25dp"
+                app:drawableWidth="25dp"
+                app:layout_constraintRight_toRightOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="SpUsage">
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_period_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/index_ic_men_actual"
+        android:text="@string/index_calendar_title1"
+        android:textSize="12dp"
+        android:textColor="#444444"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="2dp"
+        app:drawable_size="18dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_period_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_period_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/index_ic_men_expected"
+        android:text="@string/index_calendar_title2"
+        android:textSize="12dp"
+        android:textColor="#444444"
+        android:gravity="center"
+        android:drawablePadding="2dp"
+        app:drawable_size="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_period_1"
+        app:layout_constraintEnd_toStartOf="@id/tv_period_3"
+        app:layout_constraintStart_toEndOf="@id/tv_period_1"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_period_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/index_ic_period2"
+        android:text="@string/index_calendar_title3"
+        android:drawablePadding="2dp"
+        android:textSize="12dp"
+        android:textColor="#444444"
+        android:gravity="center"
+        app:drawable_size="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_period_1"
+        app:layout_constraintEnd_toStartOf="@id/tv_period_4"
+        app:layout_constraintStart_toEndOf="@id/tv_period_2"
+        app:layout_constraintTop_toBottomOf="@id/recycler_calendar"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_period_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/index_ic_period3"
+        android:text="@string/index_calendar_title4"
+        android:drawablePadding="2dp"
+        android:textSize="12dp"
+        android:textColor="#444444"
+        android:gravity="center"
+        app:drawable_size="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_period_1"
+        app:layout_constraintEnd_toStartOf="@id/tv_period_5"
+        app:layout_constraintStart_toEndOf="@id/tv_period_3"
+        app:layout_constraintTop_toBottomOf="@id/recycler_calendar"/>
+
+    <com.healthy.library.widget.DrawableTextView
+        android:id="@+id/tv_period_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/index_ic_period4"
+        android:text="@string/index_calendar_title5"
+        android:drawablePadding="2dp"
+        android:textSize="12dp"
+        android:textColor="#444444"
+        android:gravity="center"
+        app:drawable_size="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_period_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_period_4"
+        app:layout_constraintTop_toBottomOf="@id/recycler_calendar"/>
+
+    <TextView
+        android:id="@+id/tv_pregnancy_probability"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/index_shape_pregnancy_probability"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#333333"
+        android:textSize="12dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_period_1"
+        tools:text="怀孕几率:32%"/>
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff666666"
+        android:textSize="12dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="23dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_pregnancy_probability"
+        tools:text="卵泡期，你可以开始每天记录自己的基础体温了。"/>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/colorDivider"
+        app:layout_constraintTop_toBottomOf="@id/tv_des"/>
+
+    <com.healthy.library.widget.CommonSection
+        android:id="@+id/section_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/view_divider"
+        app:section_mode="txt"
+        app:show_divider="false"
+        app:title="我怀孕了"
+        app:title_drawable_start="@drawable/index_ic_pregnancy"
+        app:txt_content_drawable_right="@drawable/index_ic_more_small"/>
+
+    <View
+        android:id="@+id/divider_section"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/section_1"/>
+
+    <com.healthy.library.widget.CommonSection
+        android:id="@+id/section_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/divider_section"
+        app:section_mode="none"
+        app:show_divider="false"
+        app:title="大姨妈来了"
+        app:title_drawable_start="@drawable/index_ic_menstruation">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:thumb="@drawable/index_selector_switch_thumb"
+            android:track="@drawable/index_selector_switch_track"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </com.healthy.library.widget.CommonSection>
+</androidx.constraintlayout.widget.ConstraintLayout>

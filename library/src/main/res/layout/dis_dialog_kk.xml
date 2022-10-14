@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/kk_ll"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kk_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-45dp"
+        android:background="@drawable/shape_disact_kk_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="60dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/kkMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="你已砍了0元"
+            android:textColor="#ff444444"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kkMoneyBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="分享给好友，可以多砍一刀哦"
+            android:textColor="#ff222222"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/shape_kkdialog_btn_bg"
+                android:gravity="center"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="继续邀请"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_share_bg"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="分享给更多的人"
+                    android:textColor="#ff666666"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/index_ic_close"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    android:drawablePadding="9dp"
+                    android:gravity="center"
+                    android:tag="@string/lib_share_wx"
+                    android:text="微信"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    app:drawable="@drawable/ic_share2_weixin"
+                    app:drawableHeight="54dp"
+                    app:drawableWidth="54dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tv_timeline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    app:position="2" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9dp"
+                    android:gravity="center"
+                    android:tag="@string/lib_share_circle"
+                    android:text="朋友圈"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    app:drawable="@drawable/ic_share2_wxcircle"
+                    app:drawableHeight="54dp"
+                    app:drawableWidth="54dp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_qq"
+                    app:layout_constraintStart_toEndOf="@id/tv_wx"
+                    app:layout_constraintTop_toTopOf="@id/tv_wx"
+                    app:position="2" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9dp"
+                    android:gravity="center"
+                    android:tag="@string/lib_share_qq"
+                    android:text="QQ"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    app:drawable="@drawable/ic_share2_qq"
+                    app:drawableHeight="54dp"
+                    app:drawableWidth="54dp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_qzone"
+                    app:layout_constraintStart_toEndOf="@id/tv_timeline"
+                    app:layout_constraintTop_toTopOf="@id/tv_wx"
+                    app:position="2" />
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_qzone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9dp"
+                    android:gravity="center"
+                    android:tag="@string/lib_share_qzone"
+                    android:text="QQ空间"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    app:drawable="@drawable/ic_share2_wxzone"
+                    app:drawableHeight="54dp"
+                    app:drawableWidth="54dp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_sina"
+                    app:layout_constraintStart_toEndOf="@id/tv_qq"
+                    app:layout_constraintTop_toTopOf="@id/tv_wx"
+                    app:position="2" />
+
+
+                <com.healthy.library.widget.ImageTextView
+                    android:id="@+id/tv_sina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9dp"
+                    android:gravity="center"
+                    android:tag="@string/lib_share_sina"
+                    android:text="新浪微博"
+                    android:textColor="#ff222222"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:drawable="@drawable/ic_share2_sina"
+                    app:drawableHeight="54dp"
+                    app:drawableWidth="54dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_qzone"
+                    app:layout_constraintTop_toTopOf="@id/tv_wx"
+                    app:position="2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/dissMissImg"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/kk_ll"
+        android:src="@drawable/dis_dialog_close" />
+    <ImageView
+        android:id="@+id/kk_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dialog_kk_ok_top" />
+</RelativeLayout>

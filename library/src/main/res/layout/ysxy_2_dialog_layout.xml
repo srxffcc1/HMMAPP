@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ysTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="欢迎使用憨妈妈"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/topContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ysTitle2"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="48dp"
+        android:text="需要您的以下权限便于为您提供更好的服务
+允许为您保障账户安全 授权设备信息，便于
+我们使⽤设备标识码保障您 的账户登录、使
+⽤处于安全的环境，同时可为您 推送专属权
+益或服务。"
+        android:textColor="#ff333333"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/agreeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/noAgreeBtn"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/shape_ysxy_agree_btn"
+        android:gravity="center"
+        android:text="继续"
+        android:textColor="#ffffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/noAgreeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="55dp"
+        android:text="跳过"
+        android:textColor="#ff999999"
+        android:textSize="16sp" />
+</RelativeLayout>

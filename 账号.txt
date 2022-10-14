@@ -1,0 +1,19 @@
+禅道:jinxiaoming    jxm@123456
+蒲公英:15651761106/jade2018
+svn:jinxiaoming/jinxm@0606
+git:jinxiaoming/980122xxx
+共享:user/123456
+禅道：zentao/1987918z
+http://47.97.229.219:82/meishealth/HMM-C-Android.git
+sharetrace   账号 ：hanyu@hanmama.com  jade@hmm
+喜马拉雅开放平台的账号 ： 15312156740/1qaz2wsx  备份一下
+@所有人
+线上日志查询账号和地址：
+地址:https://signin.aliyun.com/login.htm#/main
+用户:hmmlog@1610157996856082.onaliyun.com
+密码:Hmm_678#@*.com
+
+阿里云日志
+https://sls.console.aliyun.com/lognext/project/hmmlog/logsearch/hmm_cserver_api
+用户:hmmlog@1610157996856082.onaliyun.com
+密码:Hmm_678#@*.com

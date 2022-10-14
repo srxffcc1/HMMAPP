@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personFrame"
+    android:layout_width="wrap_content"
+    android:layout_height="28dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="3dp"
+    android:paddingTop="3dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="3dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/personIcon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/img_avatar_default"
+        app:is_circle="true" />
+
+    <TextView
+        android:id="@+id/personNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:maxEms="4"
+        android:singleLine="true"
+        android:text="爱睡觉的…"
+        android:textColor="#761828"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/personText"
+        android:layout_marginLeft="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拼团成功！"
+        android:textColor="#761828"
+        android:textSize="11sp" />
+</LinearLayout>

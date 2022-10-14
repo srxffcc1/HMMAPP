@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:background="#FFF"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    tools:ignore="MissingDefaultResource">
+
+
+    <com.healthy.library.widget.CornerImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img_avatar_default"
+        app:is_circle="true"
+        app:layout_constraintBottom_toBottomOf="@id/nameandstatus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nameandstatus" />
+
+    <LinearLayout
+        android:id="@+id/nameandstatus"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/ivHeader"
+        app:layout_constraintRight_toLeftOf="@id/toFollow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="快乐柠檬草"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/ivHeader"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_city_nofollow_red"
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:text="备孕中"
+            android:textColor="#ffffffff"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/toFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_city_nofollow_click_no"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:text="关注"
+        android:textColor="#ff29bda9"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivHeader"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivHeader" />
+</androidx.constraintlayout.widget.ConstraintLayout>

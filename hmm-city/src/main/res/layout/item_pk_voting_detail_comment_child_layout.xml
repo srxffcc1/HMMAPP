@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <RelativeLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.healthy.library.widget.CornerImageView
+                android:id="@+id/iv_customer_avatar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tx06"
+                app:is_circle="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_user_badge"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/icon_user_official_certification" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:maxWidth="240dp"
+            android:textColor="#ff333333"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/rl_user"
+            android:layout_alignTop="@id/rl_user"
+            app:layout_constraintLeft_toRightOf="@id/rl_user"
+            app:layout_constraintTop_toTopOf="@id/rl_user"
+            tools:text="快乐柠檬草快乐" />
+
+        <com.example.lib_ShapeView.view.ShapeTextView
+            android:layout_toRightOf="@id/tv_customer_name"
+            android:id="@+id/stv_user_badgeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="1dp"
+            tools:text="官方认证官方认证官方认证官方认证官方认证官方认证官方认证官方认证官方认证官方认证官方认证官方认证"
+            android:layout_marginRight="4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorWhite"
+            android:textSize="9dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_alignTop="@id/tv_customer_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_customer_name"
+            app:layout_constraintTop_toTopOf="@id/tv_customer_name"
+            app:shape_bottomRightRadius="8dp"
+            app:shape_solidColor="#3889FD"
+            app:shape_topLeftRadius="8dp"
+            app:shape_topRightRadius="8dp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tvReplyContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回复 大美丽：我生了俩全是小子，现在考虑生三胎现在考虑生三胎现在考虑生三胎现在考虑生三胎"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        android:layout_below="@+id/tabs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+
+</RelativeLayout>

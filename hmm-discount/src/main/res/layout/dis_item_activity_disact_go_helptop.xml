@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dis_kk_actbg">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/kick_float"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kickLL"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_disact_card_big"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/goodsIcon"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            app:corner_radius="3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="辩证发汗套组"
+            android:textColor="#ff222222"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/goodsIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goodsPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥128"
+            android:textColor="#ff444444"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@id/goodsName"
+            app:layout_constraintTop_toBottomOf="@id/goodsName"
+            app:layout_constraintBottom_toTopOf="@id/goodsJoinNum"/>
+
+
+        <TextView
+            android:id="@+id/goodsJoinNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="库存：124"
+            android:textColor="#ff444444"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="@id/goodsName"
+            app:layout_constraintBottom_toBottomOf="@id/goodsIcon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标砍至"
+            android:textColor="#fffc2347"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/goodsJoinNum"
+            app:layout_constraintRight_toLeftOf="@id/limitMoney"
+            app:layout_constraintTop_toTopOf="@id/goodsJoinNum" />
+
+        <TextView
+            android:id="@+id/limitMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥18.8"
+            android:textStyle="bold"
+            android:textColor="#fffc2347"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/goodsJoinNum"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/goodsJoinNum" />
+
+
+        <TextView
+            android:id="@+id/alreadyMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="已砍 元，还差 元"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/limitMoney" />
+
+        <FrameLayout
+            android:id="@+id/goodsProFF"
+            app:layout_constraintTop_toBottomOf="@id/alreadyMoney"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/goodsPro"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_weight="1"
+                    android:max="1000"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressz_bar_help"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/goodsProFFL"
+                    android:layout_weight="0"
+                    android:layout_height="1dp"></TextView>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/progress_imag"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/goodsProFFR"
+                    android:layout_weight="900"
+                    android:layout_height="1dp"></TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/shareText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="分享至微信群聊，可获得更多朋友助力"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/goodsProFF" />
+
+        <TextView
+            android:id="@+id/buttomYellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dis_kk_button_yellow"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/din_medium"
+            android:paddingBottom="15dp"
+            android:text="我也要参加"
+            android:textStyle="bold"
+            android:textColor="#ffe82243"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shareText" />
+
+        <TextView
+            android:id="@+id/buttomRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dis_kk_button_red"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="15dp"
+            android:fontFamily="@font/din_medium"
+            android:paddingBottom="15dp"
+            android:text="不好意思找人砍了，就这个价吧"
+            android:textColor="#ffffffff"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttomYellow" />
+
+        <TextView
+            android:id="@+id/limitTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="还剩 12:35:50，快来砍价吧~"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/buttomRed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/manLL"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/kickLL">
+
+
+
+        <TextView
+            android:id="@+id/helpNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多砍价活动，等你来参加"
+            android:textColor="#ff666666"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

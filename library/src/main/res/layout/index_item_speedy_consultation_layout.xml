@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11dp">
+
+    <com.example.lib_ShapeView.view.ShapeTextView
+        android:id="@+id/stv_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        android:text="儿科"
+        android:paddingVertical="1dp"
+        android:textColor="#1568FF"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_body"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radius="2dp"
+        app:shape_solidColor="#1A0092FF" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="我最近这三个月例假有时候提前，有时候推后…"
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/stv_Label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

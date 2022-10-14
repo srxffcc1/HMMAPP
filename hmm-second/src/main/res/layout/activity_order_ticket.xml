@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F9"
+    android:orientation="vertical">
+
+    <com.healthy.library.widget.TopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/status_2020"
+        app:is_show_submit="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_moss="false"
+        app:title="订单核销" />
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:status_init="content">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="35dp"
+                    app:layout_constraintBottom_toTopOf="@id/submitBtn"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="7dp"
+                            android:text="订单已完成"
+                            android:textColor="#ff333333"
+                            android:textSize="18sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/shape_sum_white_bg"
+                            android:padding="14dp">
+
+                            <ImageView
+                                android:id="@+id/userIcon"
+                                android:layout_width="21dp"
+                                android:layout_height="21dp"
+                                android:src="@drawable/order_user_icon"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/userName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="5dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="林莉雅"
+                                android:textColor="#ff333333"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+                                app:layout_constraintLeft_toRightOf="@+id/userIcon"
+                                app:layout_constraintRight_toLeftOf="@id/userPhone"
+                                app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+                            <TextView
+                                android:id="@+id/userPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="18310865143"
+                                android:textColor="#ff666666"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+                            <TextView
+                                android:id="@+id/orderNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="17dp"
+                                android:layout_marginTop="8dp"
+                                android:text="订单编号 387636484647438"
+                                android:textColor="#ff999999"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="@+id/userName"
+                                app:layout_constraintTop_toBottomOf="@+id/userName" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/shape_sum_white_bg"
+                            android:padding="14dp">
+
+                            <TextView
+                                android:id="@+id/shopName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="宝贝爱摄影（吴中店）"
+                                android:textColor="#ff333333"
+                                android:textSize="16sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:id="@+id/goodsLiner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintTop_toBottomOf="@+id/shopName">
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/shape_sum_white_bg"
+                            android:padding="14dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="实付款"
+                                android:textColor="#ff333333"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/payAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:text="0.0"
+                                android:textColor="#ff333333"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <com.example.lib_ShapeView.view.ShapeTextView
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="36dp"
+                    android:gravity="center"
+                    android:text="确认核销"
+                    android:textColor="#ffffffff"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:shape_endColor="#806FFF"
+                    app:shape_radius="22dp"
+                    app:shape_startColor="#705DFF" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </com.healthy.library.widget.StatusLayout>
+</LinearLayout>

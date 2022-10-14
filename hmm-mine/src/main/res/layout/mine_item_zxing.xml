@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        tools:ignore="SpUsage">
+
+        <com.healthy.library.watcher.AlphaTextView
+            android:id="@+id/tv_zxing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_item_new_zxing_bt_bg"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingTop="3dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="3dp"
+            android:text="核销码"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/zxing_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="2134 4516"
+            android:textColor="#222222"
+            android:textSize="23sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_category"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    tools:ignore="ResourceName">
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginBottom="6dp"
+        android:paddingBottom="5dp"
+        app:shape_radius="8dp"
+        app:shape_solidColor="#F7F7FA">
+
+        <com.healthy.library.widget.RoundedImageView
+            android:id="@+id/videoImg"
+            android:layout_width="160dp"
+            android:layout_height="97dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1_1_default2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_top_left="8dp"
+            app:riv_corner_radius_top_right="8dp" />
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="美素佳儿婴幼儿配方奶粉1段800g"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/videoImg" />
+
+        <TextView
+            android:id="@+id/tv_lookNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="1dp"
+            android:paddingBottom="12dp"
+            android:text="8000人已看"
+            android:textColor="#999999"
+            android:textSize="9dp"
+            app:layout_constraintLeft_toLeftOf="@id/videoTitle"
+            app:layout_constraintTop_toBottomOf="@+id/videoTitle" />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:minEms="1"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="12dp"
+            app:drawable="@drawable/cityrightlike"
+            app:drawableHeight="25dp"
+            app:drawableWidth="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_lookNum"
+            app:layout_constraintRight_toRightOf="@+id/videoTitle" />
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/shape_index_video_play_icon_bg"
+            android:padding="5dp"
+            android:src="@drawable/index_video_play_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/videoImg"
+            app:layout_constraintRight_toRightOf="@+id/videoImg" />
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+
+</LinearLayout>

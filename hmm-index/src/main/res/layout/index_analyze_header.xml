@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    tools:background="@color/colorRed"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:id="@+id/tv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_sans_serif_medium"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12"/>
+
+    <TextView
+        android:id="@+id/tv_week_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_sans_serif_medium"
+        android:paddingStart="0dp"
+        android:paddingEnd="3dp"
+        android:text="@string/index_analysis_prefix"
+        android:textColor="#ffffffff"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_week"
+        app:layout_constraintEnd_toStartOf="@id/tv_week"/>
+
+    <TextView
+        android:id="@+id/tv_week_suffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_sans_serif_medium"
+        android:paddingStart="3dp"
+        android:paddingEnd="0dp"
+        android:text="@string/index_analysis_suffix"
+        android:textColor="#ffffffff"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_week_prefix"
+        app:layout_constraintStart_toEndOf="@id/tv_week"/>
+
+    <ImageView
+        android:id="@+id/iv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:src="@drawable/index_ic_week_expand"
+        app:layout_constraintBottom_toBottomOf="@id/tv_week_suffix"
+        app:layout_constraintStart_toEndOf="@id/tv_week_suffix"
+        app:layout_constraintTop_toTopOf="@id/tv_week_suffix"/>
+
+    <View
+        android:id="@+id/divider_week"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/index_shape_week_divider"
+        app:layout_constraintEnd_toEndOf="@id/tv_week"
+        app:layout_constraintStart_toStartOf="@id/tv_week"
+        app:layout_constraintTop_toBottomOf="@id/tv_week"/>
+
+    <FrameLayout
+        android:id="@+id/layout_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/index_shape_analysis"
+        android:paddingStart="30dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_week"/>
+
+    <TextView
+        android:id="@+id/tv_project_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@string/font_sans_serif_medium"
+        android:text="@string/index_b_projects_title"
+        android:textColor="#ff222222"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_analysis"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

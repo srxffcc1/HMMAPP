@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.health.discount">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application>
+
+        <activity android:name=".activity.CouponListActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.KickDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.KickHelpDetailActivity"  android:screenOrientation="portrait" >
+            <intent-filter>
+                <data android:scheme="hmmpassimp" android:host="hmm" android:path="/goodsBargain"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.AssembleDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.CouponListHistoryActivity"  android:screenOrientation="portrait" />
+
+
+        <activity android:name=".activity.NewAssembleActivity"  android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".activity.MyAssembleActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.NewKickListActivity"  android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".activity.MyKickActivity"  android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.NewUserActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.PointBlockListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PointICanActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PointBlockHomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DiscountListActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.CardCenterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PublicCouponActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FlashBuyActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SpecAreaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.PlusAreaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SeckillListActivity" android:screenOrientation="portrait"/>
+        <!-- 新人礼包页面 -->
+        <activity android:name="com.health.discount.activity.NewUserGiftActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.NewUserActGiftActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F9"
+    android:orientation="vertical"
+    tools:ignore="SpUsage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.healthy.library.widget.TopBar
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:show_moss="false"
+            app:title="申请售后" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="40dp"
+            android:onClick="close"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:src="@drawable/index_ic_web_close"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_bar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.healthy.library.widget.StatusLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:status_init="content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/topShadowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/service_order_detial_card_shape"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.healthy.library.widget.ImageTextView
+                        android:id="@+id/store_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:drawablePadding="5dp"
+                        android:paddingTop="15dp"
+                        android:textColor="#ff444444"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:drawable="@drawable/goodsorderstore"
+                        app:drawableHeight="20dp"
+                        app:drawableWidth="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="婷美摩力21产后恢复金山店" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/goodsRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp" />
+                </LinearLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/numShadowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    app:hl_cornerRadius="8dp"
+                    app:hl_dx="0dp"
+                    app:hl_dy="0dp"
+                    app:hl_shadowColor="#0F000000"
+                    app:hl_shadowLimit="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topShadowLayout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp">
+
+                        <TextView
+                            android:id="@+id/num_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="申请数量"
+                            android:textColor="#ff222222"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.healthy.library.widget.IncreaseDecreaseView
+                            android:id="@+id/increase_decrease"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@id/num_title"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/num_title" />
+
+                        <TextView
+                            android:id="@+id/price_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="退款金额"
+                            android:textColor="#ff222222"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="@id/num_title"
+                            app:layout_constraintTop_toBottomOf="@id/num_title" />
+
+                        <TextView
+                            android:id="@+id/back_price_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="￥"
+                            android:textColor="#F02846"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/price_title"
+                            app:layout_constraintLeft_toRightOf="@id/price_title" />
+
+                        <TextView
+                            android:id="@+id/back_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:inputType="numberDecimal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#F02846"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="@id/price_title"
+                            app:layout_constraintLeft_toRightOf="@id/back_price_title"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <TextView
+                            android:id="@+id/back_type_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="返还方式"
+                            android:textColor="#ff222222"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="@id/price_title"
+                            app:layout_constraintTop_toBottomOf="@id/price_title" />
+
+                        <TextView
+                            android:id="@+id/back_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="支付路径原路返还"
+                            android:textColor="#444444"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/back_type_title"
+                            app:layout_constraintLeft_toRightOf="@id/back_type_title" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.lihang.ShadowLayout>
+
+                <com.lihang.ShadowLayout
+                    android:id="@+id/bottomShadowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    app:hl_cornerRadius="8dp"
+                    app:hl_dx="0dp"
+                    app:hl_dy="0dp"
+                    app:hl_shadowColor="#0F000000"
+                    app:hl_shadowLimit="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/numShadowLayout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp">
+
+                        <TextView
+                            android:id="@+id/start1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#F02846"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/reason_title"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/reason_title" />
+
+                        <TextView
+                            android:id="@+id/reason_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="申请原因"
+                            android:textColor="#ff222222"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/start1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/add_address_to_map"
+                            android:drawablePadding="7dp"
+                            android:hint="请选择"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="#222222"
+                            android:textColorHint="#ff868799"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/reason_title"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <TextView
+                            android:id="@+id/start2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#F02846"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/content_title"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/content_title" />
+
+                        <TextView
+                            android:id="@+id/content_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:text="申请说明"
+                            android:textColor="#ff222222"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/start2"
+                            app:layout_constraintTop_toBottomOf="@+id/reason_title" />
+
+                        <LinearLayout
+                            android:id="@+id/et_evall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="110dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/content_title">
+
+                            <EditText
+                                android:id="@+id/et_eva"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@null"
+                                android:gravity="top|start"
+                                android:hint="请描述申请售后服务的具体原因"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="2dp"
+                                android:paddingBottom="2dp"
+                                android:textColor="#222222"
+                                android:textColorHint="#9596A4"
+                                android:textSize="15sp"
+                                tools:ignore="LabelFor,TextFields" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_imgs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/et_evall" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.lihang.ShadowLayout>
+
+                <TextView
+                    android:id="@+id/tishi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="25dp"
+                    android:text="提交服务单后，售后专员可能与您电话沟通，请保持手机畅通"
+                    android:textColor="#ff868799"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bottomShadowLayout" />
+
+                <TextView
+                    android:id="@+id/tv_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_mall_goods_ol_vid_red_btn_big"
+
+                    android:gravity="center"
+                    android:text="提交申请"
+                    android:textColor="#ffffffff"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tishi" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@null"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_commit" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.healthy.library.widget.StatusLayout>
+
+
+</LinearLayout>

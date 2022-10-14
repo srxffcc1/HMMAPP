@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Mine</string>
+    <string name="mine_summary_pre">合计：¥</string>
+    <string name="mine_order_pay">支 付</string>
+    <string name="mine_order_cancel">取 消</string>
+    <string name="mine_order_server_cancel">取消预约</string>
+    <string name="mine_order_evaluate">评 价</string>
+    <string name="mine_order_no">订单编号：</string>
+    <string name="mine_trade_no">支付交易号：</string>
+    <string name="mine_create_time">创建时间：</string>
+    <string name="mine_pay_time">支付时间：</string>
+    <string name="mine_detail_pay">去付款</string>
+    <string name="mine_detail_evaluate">去评价</string>
+    <string name="mine_submit_evaluate">提交</string>
+    <string name="mine_evaluate_server">服务评分</string>
+    <string name="mine_evaluate_effect">效果评分</string>
+    <string name="mine_evaluate_env">环境评分</string>
+    <string name="mine_evaluate_hint">说点什么吧...</string>
+    <string name="mine_setting_logout">退出当前登录</string>
+    <string name="mine_order">订单 | 预约单</string>
+    <string name="mine_order_all">全部订单</string>
+    <string name="mine_order_to_be_paid">待付款</string>
+    <string name="mine_order_uncomment">待评价</string>
+    <string name="mine">我的</string>
+    <string name="mine_feedback_commit">提交</string>
+    <string name="mine_feedback_hint">请填写您的宝贵意见…</string>
+    <string name="mine_top_note_sub">按周期调理，恢复的更快更好</string>
+    <string name="mine_service_prefix">调理项目：</string>
+    <string name="mine_no_service_record">暂无调理记录</string>
+    <string name="mine_service_reserve_date">预约开始时间</string>
+    <string name="mine_prefix_income">我的收益</string>
+    <string name="mine_prefix_balance">憨豆豆余额</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

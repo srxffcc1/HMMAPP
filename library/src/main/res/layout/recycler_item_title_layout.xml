@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_height="wrap_content">
+
+    <com.example.lib_ShapeView.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:shape_solidColor="@color/colorWhite"
+        app:shape_topLeftRadius="16dp"
+        app:shape_topRightRadius="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="服务卷" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_b31724"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_title"
+            app:layout_constraintLeft_toRightOf="@id/tv_item_title"
+            tools:text="(2选1)" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_Remark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_title"
+            tools:text="注：为提高您的服务质量，选择卡券后，请选择服务门店" />
+
+    </com.example.lib_ShapeView.layout.ShapeConstraintLayout>
+</FrameLayout>

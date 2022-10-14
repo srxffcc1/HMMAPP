@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="18dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tipName"
+        android:drawablePadding="9dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:fontFamily="@font/din_bold"
+        android:drawableLeft="@drawable/ic_tipleft"
+        android:text="周末遛娃好去处遛娃好去处遛娃好去处遛娃好去处遛娃"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxEms="15"
+        android:textColor="#222222"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/tipJoinCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tipName"
+        app:layout_constraintTop_toTopOf="@id/tipName"
+        android:gravity="center"
+        android:layout_marginLeft="7dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/tipName"
+        android:background="@drawable/ic_city_joincount"
+        android:text="290人参与"
+        android:textColor="#ffffffff"
+        android:textSize="9sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

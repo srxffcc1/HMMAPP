@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="5dp">
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/bannerImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="351:116"
+            android:src="@drawable/img_1_1_default2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:corner_radius="8dp"
+            app:is_circle="false" />
+
+        <com.healthy.library.widget.CornerImageView
+            android:id="@+id/topImgTagIcon"
+            android:layout_width="60dp"
+            app:corner_radius="10dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="4dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="13dp"
+            app:layout_constraintTop_toTopOf="@id/bannerImg"
+            app:layout_constraintLeft_toLeftOf="@id/bannerImg"/>
+
+
+        <TextView
+            android:id="@+id/topImgTag"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_marginTop="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mall_index_nearby_shop_b"
+            tools:text="宝宝洗护专场"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            app:layout_constraintTop_toTopOf="@id/bannerImg"
+            app:layout_constraintLeft_toLeftOf="@id/topImgTagIcon"
+            />
+        <TextView
+            android:id="@+id/topImgTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="低至7折"
+            android:layout_marginTop="8dp"
+            android:singleLine="true"
+            app:layout_constraintLeft_toLeftOf="@id/topImgTag"
+            app:layout_constraintTop_toBottomOf="@id/topImgTag"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            />
+
+        <com.healthy.library.widget.ImageTextView
+            android:id="@+id/topImgSecondTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="最后疯抢全场满200元减10元"
+            app:position="3"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:maxWidth="160dp"
+            android:drawablePadding="4dp"
+            app:layout_constraintLeft_toLeftOf="@id/topImgTag"
+            app:layout_constraintTop_toBottomOf="@id/topImgTitle"
+            android:textColor="#ffffffff"
+            android:textSize="11sp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

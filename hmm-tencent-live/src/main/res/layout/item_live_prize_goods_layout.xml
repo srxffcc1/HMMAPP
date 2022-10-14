@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_weight="1"
+    android:background="@drawable/live_help_goods_bg"
+    android:orientation="horizontal"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.69"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/goodsImg"
+            android:layout_width="45dp"
+            android:layout_height="63dp"
+            android:src="@drawable/img_1_1_default" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.31"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/goodsFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_live_help_goods_tips"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text="商品"
+                android:textColor="#ffffffff"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="吃胖了的刘小胖"
+                android:textColor="#ff222222"
+                android:textSize="13sp"
+                app:layout_constraintRight_toRightOf="parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/goodsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textColor="#ff666666"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/topView"
+            app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+        <TextView
+            android:id="@+id/goodsPrice"
+            android:layout_width="128dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="6dp"
+            android:text="原价：0元"
+            android:textColor="#FA3C5A"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/goodsLabel"
+            app:layout_constraintTop_toBottomOf="@+id/goodsLabel" />
+
+        <TextView
+            android:id="@+id/cardButton"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/shape_pack_btn"
+            android:gravity="center"
+            android:text="查看详情"
+            android:textColor="#FA3C5A"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

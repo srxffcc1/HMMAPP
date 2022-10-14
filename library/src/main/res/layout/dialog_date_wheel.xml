@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.healthy.library.watcher.AlphaTextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wheel_cancel"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:textColor="#9596A4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.healthy.library.watcher.AlphaTextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wheel_confirm"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:textColor="#FF6266"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_cancel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16dp"
+        tools:ignore="SpUsage"
+        android:textColor="#222222"/>
+
+    <com.healthy.library.widget.WheelPicker
+        android:id="@+id/picker_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/picker_month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+    <com.healthy.library.widget.WheelPicker
+        android:id="@+id/picker_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/picker_day"
+        app:layout_constraintStart_toEndOf="@id/picker_year"
+        app:layout_constraintTop_toTopOf="@id/picker_year"/>
+
+    <com.healthy.library.widget.WheelPicker
+        android:id="@+id/picker_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/picker_month"
+        app:layout_constraintTop_toTopOf="@id/picker_year"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
